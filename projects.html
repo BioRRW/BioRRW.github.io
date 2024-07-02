@@ -6,45 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reed Woyda - Projects</title>
 
-    <!--
-    - favicon
-    -->
+    <!-- favicon -->
     <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-    <!--
-    - custom css link
-    -->
+    <!-- custom css link -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
-    <!--
-    - google font link
-    -->
+    <!-- google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXQLH66J4S"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-LXQLH66J4S');
     </script>
 </head>
 
 <body>
 
-    <!--
-      - #MAIN
-    -->
-
+    <!-- MAIN -->
     <main>
 
-        <!--
-          - #SIDEBAR
-        -->
-
+        <!-- SIDEBAR -->
         <aside class="sidebar" data-sidebar>
 
             <div class="sidebar-info">
@@ -75,17 +63,14 @@
 
                 <ul class="contacts-list">
                     <li class="contact-item">
-
                         <div class="icon-box">
                             <img src="./assets/images/git.png" alt="GitHub Logo" style="width: 24px; height: 24px;">
                         </div>
 
                         <div class="contact-info">
                             <p class="contact-title">GitHub</p>
-
                             <a href="https://github.com/BioRRW" class="contact-link">https://github.com/BioRRW</a>
                         </div>
-
                     </li>
 
                     <li class="contact-item">
@@ -99,67 +84,43 @@
                     </li>
 
                     <li class="contact-item">
-
                         <div class="icon-box">
                             <img src="./assets/images/location-logo.png" alt="Location Logo" style="width: 24px; height: 24px;">
                         </div>
 
                         <div class="contact-info">
                             <p class="contact-title">Location</p>
-
                             <address>Fort Collins, CO USA</address>
                         </div>
-
                     </li>
-
                 </ul>
 
                 <div class="separator"></div>
-
-
             </div>
-
         </aside>
 
-
-        <!--
-          - #main-content
-        -->
-
+        <!-- main-content -->
         <div class="main-content">
 
-            <!--
-              - #NAVBAR
-            -->
-
+            <!-- NAVBAR -->
             <nav class="navbar">
-
                 <ul class="navbar-list">
-
                     <li class="navbar-item">
                         <a href="index.html" class="navbar-link">About</a>
                     </li>
-                    
                     <li class="navbar-item">
                         <a href="resume.html" class="navbar-link">Resume</a>
                     </li>
-
                     <li class="navbar-item">
                         <a href="projects.html" class="navbar-link active">Data Projects</a>
-                    </li>                    
-
+                    </li>
                     <li class="navbar-item">
                         <a href="wood.html" class="navbar-link">Wood Projects</a>
                     </li>
-
                 </ul>
-
             </nav>
 
-            <!--
-                  - #BLOG
-                -->
-
+            <!-- BLOG -->
             <article class="blog active" data-page="blog">
 
                 <header>
@@ -178,26 +139,23 @@
 
                                 <div class="blog-content">
                                     <h3 class="h3 blog-item-title">
-                                        Reads2Resistome: Hybrid and non-hybrid whole genome assembler with resistome identification for Illumina, Nanopore and PacBio reads.
+                                        Reads2Resistome: Hybrid and non-hybrid whole genome assembler with resistome identification for Illumina, Nanopore, and PacBio reads.
                                     </h3>
 
                                     <p class="blog-text">
-                                        R2R is a bioinformatics pipeline for quality control, assembly, annotation and resistome characterization of bacterial genomes. Assembly can be done by either a hybrid approach or a non-hybrid approach. Illumina paired-end reads along with Oxford Nanopore or PacBio long reads are acceptable for hybrid assembly. Non-hybrid assembly can be performed with Illumina paired-end reads or Oxford Nanopore or PacBio long reads. Resistome characterization includes identification of virulence factors and genes, antimicrobial resistance genes, serotype, plasmid replicons, antigen genes, and cgMLST gene alleles. Mixtisque provides multiple output files: 1) MultiQC-aggregated quality control and assembly reports (.html), 2) Individual FastQC reports 3) assembled, annotated contigs (.gfa), and 4) resistome report (.csv). There are additional output files, see documentation for details.
+                                        R2R is a bioinformatics pipeline for quality control, assembly, annotation, and resistome characterization of bacterial genomes.
                                     </p>
                                 </div>
 
                             </a>
                         </li>
+
                         <li class="blog-post-item">
-                            <a href="" target="_blank">
+                            <a href="https://github.com/BioRRW/COMET" target="_blank">
 
                                 <figure class="blog-banner-box">
                                     <img src="./assets/images/COMET-logo-1.jpeg" alt="COMET: CustOmizable Metagenome-assembled-genome Extraction Toolkit" loading="lazy">
                                 </figure>
-                                <figure class="blog-banner-box">
-                                    <img src="./assets/images/wetlands-small-workflow-3.png" alt="COMET Workflow" loading="lazy">
-                                </figure>
-
 
                                 <div class="blog-content">
                                     <h3 class="h3 blog-item-title">
@@ -205,16 +163,15 @@
                                     </h3>
 
                                     <p class="blog-text">
-                                        Public GitHub release coming soon. 
+                                        COMET is a toolkit for customizable metagenome-assembled-genome extraction, with a public GitHub release coming soon.
                                     </p>
                                 </div>
 
                             </a>
                         </li>
 
-                        <!-- New JGI Data Fetch and Process Script Project -->
                         <li class="blog-post-item">
-                            <a href="" target="_blank">
+                            <a href="https://github.com/BioRRW/JGI-Data-Fetch-Process" target="_blank">
 
                                 <div class="blog-content">
                                     <h3 class="h3 blog-item-title">
@@ -222,7 +179,7 @@
                                     </h3>
 
                                     <p class="blog-text">
-                                        This Python script is designed to fetch and process genomic data from the Joint Genome Institute (JGI) API, allowing users to request file downloads programmatically based on given taxon IDs. It handles assembly files (fasta), bin files (fasta), and raw data (fastq) files, generating metadata and output tables for further analysis.
+                                        This Python script is designed to fetch and process genomic data from the Joint Genome Institute (JGI) API, allowing users to request file downloads programmatically based on given taxon IDs.
                                     </p>
                                 </div>
 
@@ -230,81 +187,34 @@
                         </li>
 
                         <li class="blog-post-item">
-                            <a href="" target="_blank">
-       
+                            <a href="https://github.com/BioRRW/TnSeq-Pathway-Analysis" target="_blank">
+
                                 <div class="blog-content">
                                     <h3 class="h3 blog-item-title">
                                         TnSeq-Pathway-Analysis
                                     </h3>
-                        
+
                                     <p class="blog-text">
                                         Repository describing how to generate metabolic maps using MOP and R (pathview). This was used for the generation of preliminary data for the Spring 2024 NIH Salmonella grant.
                                     </p>
-                        
-                                    <p class="blog-text">
-                                        <strong>Results:</strong><br>
-                                        <em>TnSeq-Analysis-Results-RW-11022023.pptx</em>: This presentation contains an overview of the analysis performed and what output files may be generated.<br>
-                                        <em>Maps-MetaT-TnSeq/</em> and <em>Maps-TnSeq-All/</em>: These directories contain example output metabolic maps.<br>
-                                        <em>MOP-Analysis/</em>: This directory contains output from MOP. This includes some example output maps as well as the HTML webpages generated by MOP.
-                                    </p>
-                        
-                                    <p class="blog-text">
-                                        <strong>R-based Metabolic maps using Pathview:</strong><br>
-                                        <em>R_script_Metabolis-Maps/</em>: This directory contains an R script used to generate metabolic maps using the Pathview Package.<br>
-                                        <em>R script:</em> <code>Metabolic-Maps.R</code><br>
-                                        <em>Input files:</em> <code>metabolic-maps-example-input.csv</code>, <code>metabolites-compound-ID.csv</code>
-                                    </p>
-                        
-                                    <p class="blog-text">
-                                        <strong>MOP analysis:</strong><br>
-                                        <em>mop.py</em> is a script located on the W2 server: <code>/ORG-Data/scripts/mop.py</code><br>
-                                        <em>MOP usage:</em> <code>mop.py -a AUGMUDORIG_ANNOTATION_OUT.txt -d ALL.txt -o AUGMUD_mop.html -t formula</code><br>
-                                        <em>Example command:</em> <code>python /ORG-Data/scripts/mop.py -a AUGMUDORIG_ANNOTATION_OUT.txt -d ALL.txt -o AUGMUD_mop.html -t formula</code>
-                                    </p>
-                        
-                                    <p class="blog-text">
-                                        <strong>General input files and raw data:</strong><br>
-                                        <em>KEGG-Pathway-Spreadsheets/</em>: This directory contains various spreadsheets such as:<br>
-                                        <ul>
-                                            <li><em>all-KO-RNAseq-KEGG-Pathways.xlsx</em></li>
-                                            <li><em>all-KO-Tnseq-KEGG-Pathways.xlsx</em></li>
-                                            <li><em>Combined-KEGG-Pathways.xlsx</em></li>
-                                            <li><em>essential-KO-HFD-Fiber-output.xlsx</em></li>
-                                            <li><em>essential-KO-HFD-Pathways-No-Fiber.xlsx</em></li>
-                                            <li><em>Research Diets and Yersinia Fitness Data.xlsx</em> - contains raw TnSeq data</li>
-                                            <li><em>RNAseq_data_getmm.xlsx</em> - contains TMM counts</li>
-                                        </ul>
-                                    </p>
-                        
-                                    <p class="blog-text">
-                                        <strong>Other scripts:</strong><br>
-                                        <em>MOP-TNSeq-RNASeq/</em>: This directory was used for running <em>mop.py</em> in addition to converting gene IDs to the correct formats. The renaming python script may be useful for users who need to convert compound names and/or gene IDs between various formats.
-                                    </p>
                                 </div>
-                        
+
                             </a>
                         </li>
-
-                        
                     </ul>
 
                 </section>
 
             </article>
 
-
         </div>
 
     </main>
 
-    <!--
-      - custom js link
-    -->
+    <!-- custom js link -->
     <script src="./assets/js/script.js"></script>
 
-    <!--
-      - ionicon link
-    -->
+    <!-- ionicon link -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

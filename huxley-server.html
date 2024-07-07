@@ -17,6 +17,20 @@
         gtag('js', new Date());
         gtag('config', 'G-LXQLH66J4S');
     </script>
+    <style>
+        .status-light {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .green-light {
+            background-color: green;
+        }
+        .red-light {
+            background-color: red;
+        }
+    </style>
 </head>
 
 <body>
@@ -104,18 +118,20 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script>
         async function fetchServerStatus() {
-            // Fetch server status from a backend endpoint
-            // For demonstration, we assume this endpoint returns JSON with server statuses
-            const response = await fetch('/api/server-status');
+            const response = await fetch('/status');
             const data = await response.json();
 
-            document.getElementById('huxley-status').innerText = data.huxley ? 'Online' : 'Offline';
-            document.getElementById('huxley-status').classList.add(data.huxley ? 'green-light' : 'red-light');
+            const huxleyStatus = document.getElementById('huxley-status');
+            const valheimStatus = document.getElementById('valheim-status');
+            const serverInfo = document.getElementById('server-info');
 
-            document.getElementById('valheim-status').innerText = data.valheim ? 'Online' : 'Offline';
-            document.getElementById('valheim-status').classList.add(data.valheim ? 'green-light' : 'red-light');
+            huxleyStatus.innerText = 'Online';
+            huxleyStatus.classList.add('green-light');
 
-            document.getElementById('server-info').innerText = `Time Since Restart: ${data.valheimUptime}\nActive World: ${data.activeWorld}`;
+            valheimStatus.innerText = data.server_status === 'online' ? 'Online' : 'Offline';
+            valheimStatus.classList.add(data.server_status === 'online' ? 'green-light' : 'red-light');
+
+            serverInfo.innerText = `Time Since Restart: ${data.uptime}\nActive World: ${data.world_name}`;
         }
 
         fetchServerStatus();

@@ -1690,6 +1690,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     position: relative;
     width: max-content;
     margin: auto;
+    margin-top: 60px; /* Add margin to push down the content */
   }
 
 
@@ -1698,17 +1699,21 @@ textarea.form-input::-webkit-resizer { display: none; }
    * NAVBAR
    */
 
-  .navbar {
-    position: absolute;
-    bottom: auto;
-    top: 0;
-    left: auto;
-    right: 0;
-    width: max-content;
-    border-radius: 0 20px;
-    padding: 0 20px;
-    box-shadow: none;
-  }
+.navbar {
+  position: fixed;
+  bottom: auto;
+  top: 0; /* Ensure it's fixed at the top */
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: hsla(240, 1%, 17%, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--jet);
+  border-radius: 12px 12px 0 0;
+  box-shadow: var(--shadow-2);
+  z-index: 5;
+  padding: 10px 0; /* Adjust padding to ensure proper spacing */
+}
 
   .navbar-list {
     gap: 30px;

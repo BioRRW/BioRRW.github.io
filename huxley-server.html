@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta http-equiv="X-UA-Compatible" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +31,6 @@
         }
     </style>
 </head>
-
 <body>
     <main>
         <aside class="sidebar" data-sidebar>
@@ -118,17 +116,10 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script>
         async function fetchServerStatus() {
-            console.log('Attempting to fetch server status...');
+            console.log("Attempting to fetch server status...");
             try {
                 const response = await fetch('https://192.168.10.115:5000/status');
-                console.log('Fetch response:', response);
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-
                 const data = await response.json();
-                console.log('Server Status Data:', data);
 
                 const huxleyStatus = document.getElementById('huxley-status');
                 const valheimStatus = document.getElementById('valheim-status');
@@ -142,12 +133,11 @@
 
                 serverInfo.innerText = `Time Since Restart: ${data.uptime}\nActive World: ${data.world_name}`;
             } catch (error) {
-                console.error('Error fetching server status:', error);
+                console.error("Error fetching server status:", error);
             }
         }
 
         fetchServerStatus();
     </script>
 </body>
-
 </html>

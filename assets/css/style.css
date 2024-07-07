@@ -1690,7 +1690,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     position: relative;
     width: max-content;
     margin: auto;
-    margin-top: 60px; /* Add margin to push down the content */
+    margin-top: 80px; /* Add margin to push down the content */
   }
 
 
@@ -1701,8 +1701,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .navbar {
   position: fixed;
-  bottom: auto;
-  top: 0; /* Ensure it's fixed at the top */
+  top: 0;
   left: 0;
   right: 0;
   width: 100%;
@@ -1712,7 +1711,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   border-radius: 12px 12px 0 0;
   box-shadow: var(--shadow-2);
   z-index: 5;
-  padding: 10px 0; /* Adjust padding to ensure proper spacing */
+  padding: 10px 0;
 }
 
   .navbar-list {

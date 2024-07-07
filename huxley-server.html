@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huxley Server Project</title>
+    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXQLH66J4S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-LXQLH66J4S');
+    </script>
+</head>
+
+<body>
+    <main>
+        <aside class="sidebar" data-sidebar>
+            <div class="sidebar-info">
+                <figure class="avatar-box">
+                    <img src="./assets/images/profile_picture_1.jpg" alt="Reed Woyda" width="80">
+                </figure>
+                <div class="info-content">
+                    <h1 class="name" title="Reed Woyda">Reed Woyda</h1>
+                    <p class="title">Bioinformatician</p>
+                    <p class="title">Microbial Ecosystems Laboratory</p>
+                    <p class="title">Colorado State University</p>
+                </div>
+                <button class="info_more-btn" data-sidebar-btn>
+                    <span>Show Contacts</span>
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
+            </div>
+            <div class="sidebar-info_more">
+                <div class="separator"></div>
+                <ul class="contacts-list">
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <img src="./assets/images/git.png" alt="Gmail Logo" style="width: 24px; height: 24px;">
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">GitHub</p>
+                            <a href="https://github.com/BioRRW" class="contact-link">https://github.com/BioRRW</a>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <img src="./assets/images/gmail-logo.png" alt="Gmail Logo" style="width: 24px; height: 24px;">
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+                            <a href="mailto:reedwoyda@gmail.com" class="contact-link">reedwoyda@gmail.com</a>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <img src="./assets/images/location-logo.png" alt="Gmail Logo" style="width: 24px; height: 24px;">
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
+                            <address>Fort Collins, CO USA</address>
+                        </div>
+                    </li>
+                </ul>
+                <div class="separator"></div>
+            </div>
+        </aside>
+        <div class="main-content">
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item"><a href="index.html" class="navbar-link">About</a></li>
+                    <li class="navbar-item"><a href="resume.html" class="navbar-link">Resume</a></li>
+                    <li class="navbar-item"><a href="projects.html" class="navbar-link">Data Projects</a></li>
+                    <li class="navbar-item"><a href="wood.html" class="navbar-link">Wood Projects</a></li>
+                    <li class="navbar-item"><a href="huxley.html" class="navbar-link active">Huxley Server Project</a></li>
+                </ul>
+            </nav>
+            <article class="about active" data-page="about">
+                <header>
+                    <h2 class="h2 article-title">Huxley Server Project</h2>
+                </header>
+                <section class="about-text">
+                    <div>
+                        <h3>Server Status</h3>
+                        <p>Huxley Server: <span id="huxley-status" class="status-light"></span></p>
+                        <p>Valheim Server: <span id="valheim-status" class="status-light"></span></p>
+                    </div>
+                    <div>
+                        <h3>Additional Information</h3>
+                        <p id="server-info"></p>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <script src="./assets/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        async function fetchServerStatus() {
+            // Fetch server status from a backend endpoint
+            // For demonstration, we assume this endpoint returns JSON with server statuses
+            const response = await fetch('/api/server-status');
+            const data = await response.json();
+
+            document.getElementById('huxley-status').innerText = data.huxley ? 'Online' : 'Offline';
+            document.getElementById('huxley-status').classList.add(data.huxley ? 'green-light' : 'red-light');
+
+            document.getElementById('valheim-status').innerText = data.valheim ? 'Online' : 'Offline';
+            document.getElementById('valheim-status').classList.add(data.valheim ? 'green-light' : 'red-light');
+
+            document.getElementById('server-info').innerText = `Time Since Restart: ${data.valheimUptime}\nActive World: ${data.activeWorld}`;
+        }
+
+        fetchServerStatus();
+    </script>
+</body>
+
+</html>

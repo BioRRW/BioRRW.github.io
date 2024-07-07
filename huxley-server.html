@@ -120,24 +120,25 @@
             try {
                 const response = await fetch('https://192.168.10.115:5000/status');
                 const data = await response.json();
-
+        
                 const huxleyStatus = document.getElementById('huxley-status');
                 const valheimStatus = document.getElementById('valheim-status');
                 const serverInfo = document.getElementById('server-info');
-
+        
                 huxleyStatus.innerText = 'Online';
                 huxleyStatus.classList.add('green-light');
-
+        
                 valheimStatus.innerText = data.server_status === 'online' ? 'Online' : 'Offline';
                 valheimStatus.classList.add(data.server_status === 'online' ? 'green-light' : 'red-light');
-
+        
                 serverInfo.innerText = `Time Since Restart: ${data.uptime}\nActive World: ${data.world_name}`;
             } catch (error) {
                 console.error("Error fetching server status:", error);
             }
         }
-
+        
         fetchServerStatus();
+
     </script>
 </body>
 </html>

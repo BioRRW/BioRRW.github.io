@@ -16,58 +16,35 @@
 \*-----------------------------------*/
 
 :root {
-
   /**
    * colors
    */
 
   /* gradient */
-
-  --bg-gradient-onyx: linear-gradient(
+  --bg-gradient-lightblue: linear-gradient(
     to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
+    hsl(210, 100%, 95%) 3%, 
+    hsl(210, 100%, 100%) 97%
   );
-  --bg-gradient-jet: linear-gradient(
+  --bg-gradient-blue: linear-gradient(
     to bottom right, 
-    hsla(240, 1%, 18%, 0.251) 0%, 
-    hsla(240, 2%, 11%, 0) 100%
-  ), hsl(240, 2%, 13%);
-  --bg-gradient-yellow-1: linear-gradient(
-    to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
-    hsla(36, 100%, 69%, 0) 50%
-  );
-  --bg-gradient-yellow-2: linear-gradient(
-    135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
-    hsla(35, 100%, 68%, 0) 59.86%
-  ), hsl(240, 2%, 13%);
-  --border-gradient-onyx: linear-gradient(
-    to bottom right, 
-    hsl(0, 0%, 25%) 0%, 
-    hsla(0, 0%, 25%, 0) 50%
-  );
-  --text-gradient-yellow: linear-gradient(
+    hsla(210, 100%, 90%, 0.251) 0%, 
+    hsla(210, 100%, 98%, 0) 100%
+  ), hsl(210, 100%, 97%);
+  --text-gradient-blue: linear-gradient(
     to right, 
-    hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
+    hsl(210, 100%, 30%), 
+    hsl(210, 100%, 35%)
   );
 
-  /* solid */
-
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(0, 0%, 7%);
-  --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
+  /* solid colors */
+  --navy: hsl(210, 100%, 20%);
+  --dark-blue: hsl(210, 100%, 10%);
+  --light-blue-1: hsl(210, 100%, 90%);
+  --light-blue-2: hsl(210, 100%, 95%);
+  --white: hsl(0, 0%, 100%);
+  --gray: hsl(0, 0%, 20%);
+  --gray-70: hsla(0, 0%, 20%, 0.7);
 
   /**
    * typography
@@ -96,11 +73,11 @@
    * shadow
    */
   
-  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
-  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
-  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
-  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
-  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
+  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
+  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.075);
+  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.125);
 
   /**
    * transition
@@ -108,12 +85,7 @@
 
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
-
 }
-
-
-
-
 
 /*-----------------------------------*\
   #RESET
@@ -147,17 +119,17 @@ input, textarea {
 }
 
 ::selection {
-  background: var(--orange-yellow-crayola);
-  color: var(--smoky-black);
+  background: var(--light-blue-1);
+  color: var(--dark-blue);
 }
 
-:focus { outline-color: var(--orange-yellow-crayola); }
+:focus { outline-color: var(--light-blue-1); }
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
-
-
+body {
+  background: var(--white);
+}
 
 
 
@@ -224,7 +196,7 @@ article.active {
 .h3,
 .h4,
 .h5 {
-  color: var(--white-2);
+  color: var(--onyx);
   text-transform: capitalize;
 }
 
@@ -453,52 +425,45 @@ main {
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
-
 .navbar {
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--jet);
-  border-radius: 12px 12px 0 0;
+  background: rgba(173, 216, 230, 0.75); /* Light blue with 75% opacity */
+  border-bottom: 1px solid var(--light-blue-2);
   box-shadow: var(--shadow-2);
   z-index: 5;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
+  gap: 20px;
 }
 
 .navbar-link {
-  color: var(--light-gray);
+  color: var(--navy);
   font-size: var(--fs-8);
-  padding: 20px 7px;
+  padding: 10px 15px;
   transition: color var(--transition-1);
 }
 
 .navbar-link:hover,
-.navbar-link:focus { color: var(--light-gray-70); }
-
-.navbar-link.active { color: var(--orange-yellow-crayola); }
-
-
-
-
-
+.navbar-link:focus {
+  color: var(--dark-blue);
+}
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
 
 .about .article-title { margin-bottom: 15px; }
 
-.about-text {
-  color: var(--light-gray);
+.about-text p {
+  color: var(--onyx);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
@@ -1027,7 +992,14 @@ main {
 }
 
 
+/* Style for the resume text */
+body.resume {
+  color: var(--text-color, #333); /* Replace #333 with your desired color */
+}
 
+.resume .h2, .resume .h3, .resume .h4, .resume .h5, .resume .h6, .resume p, .resume a, .resume ul, .resume li {
+  color: var(--text-color, #333); /* Replace #333 with your desired color */
+}
 
 
 /*-----------------------------------*\
@@ -1555,7 +1527,16 @@ textarea.form-input::-webkit-resizer { display: none; }
    * REUSED STYLE
    */
 
-  .sidebar, article { width: 700px; }
+    .sidebar,
+    article {
+      background: var(--white-1);
+      border: 1px solid var(--light-gray);
+      border-radius: 20px;
+      padding: 15px;
+      box-shadow: var(--shadow-1);
+      z-index: 1;
+    }
+    
 
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 

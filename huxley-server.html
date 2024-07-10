@@ -36,7 +36,22 @@
             border-radius: 10px;
             background-color: #f9f9f9;
         }
+        .description ul {
+        list-style: disc;
+        padding-left: 20px;
+        }
+
+        .description ul ul {
+            list-style: circle;
+            padding-left: 40px;
+        }
+        a {
+        display: inline;
+        }
     </style>
+
+
+
 </head>
 <body>
     <main>
@@ -146,14 +161,17 @@
                         <li>&#8226; Virtualization with KVM or VirtualBox</li>
                     </ul>  
                     <br>
-                    <h2><strong>Huxley Valheim Dedicated Server</strong></h2>
-                    <p>Setting up the Valheim server on Huxley involved leveraging several tools and packages to ensure efficient management and status monitoring. The server was set up using a <a href="https://flask.palletsprojects.com/" target="_blank">Flask</a> application, which is a lightweight WSGI web application framework in Python. The server status is monitored using <a href="https://freedesktop.org/wiki/Software/systemd/" target="_blank">systemd</a>, a system and service manager for Linux operating systems. The Flask application uses <a href="https://docs.python.org/3/library/subprocess.html" target="_blank">subprocess</a> to execute system commands and gather server status information. For secure communication, SSL certificates were generated using <a href="https://www.openssl.org/" target="_blank">OpenSSL</a>, ensuring encrypted data transfer. The status information is displayed on a GitHub page, utilizing <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a> for the front-end design. Additionally, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a> was employed to fetch and display the server status dynamically, ensuring real-time updates. This setup not only provides an efficient gaming experience but also integrates modern web technologies for robust monitoring and management. While someone off-network cannot see the server status, it is a fun way for my wife and I to see how our Valheim server is running. Here is a link to the <a href="https://www.itsgeekhead.com/tuts/valheim-backup-server/" target="_blank">tutorial</a> I followed for the initial Valheim dedicated server setup.</p>
-
+                    <br>
+                    <h2><strong>Huxley Valheim Dedicated Server:</strong></h2>
+                    <br>
+                    <p>Setting up the Valheim server on Huxley involved leveraging several tools and packages to ensure efficient management and status monitoring. The server was set up using a <a href="https://flask.palletsprojects.com/" target="_blank">Flask</a> application, which is a lightweight WSGI web application framework in Python. The server status is monitored using <a href="https://freedesktop.org/wiki/Software/systemd/" target="_blank">systemd</a>, a system and service manager for Linux operating systems. The Flask application uses <a href="https://docs.python.org/3/library/subprocess.html" target="_blank">subprocess</a> to execute system commands and gather server status information. For secure communication, SSL certificates were generated using <a href="https://www.openssl.org/" target="_blank">OpenSSL</a>, ensuring encrypted data transfer. The status information is displayed on a GitHub page, utilizing <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a> for the front-end design. Additionally, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a> was employed to fetch and display the server status dynamically, ensuring real-time updates. This setup not only provides an efficient gaming experience but also integrates modern web technologies for robust monitoring and management. Here is a link to the <a href="https://www.itsgeekhead.com/tuts/valheim-backup-server/" target="_blank">tutorial</a> I followed for the initial Valheim dedicated server setup.</p>
+                    <br>
+                    <p> While someone off-network cannot see the server status and additional server information below, it is a fun way for my wife and I to see how our Huxley server and Valheim server are running.</p>
                 </section>
 
                 <section class="about-text">
                     <div>
-                        <h3>Server Status</h3>
+                        <h3>Huxley Server Status</h3>
                         <p>Huxley Server: <span id="huxley-status" class="status-light"></span></p>
                         <p>Valheim Server: <span id="valheim-status" class="status-light"></span></p>
                     </div>

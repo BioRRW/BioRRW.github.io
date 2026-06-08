@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery | Custom Woodworking</title>
+    <meta name="description" content="View our gallery of custom handcrafted furniture and woodworking projects built in Fort Collins, Colorado.">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Playfair+Display:400,700" rel="stylesheet">
+    
+    <style>
+        /* Basic Reset & Typography (Matches Main Page) */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #2c2a29; background-color: #faf9f7; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: #1a1a1a; }
+        a { text-decoration: none; color: inherit; transition: color 0.3s; }
+        a:hover { color: #8b5a2b; }
+        
+        /* Layout Utilities */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .section-padding { padding: 60px 0 100px 0; }
+        
+        /* Navigation (Matches Main Page) */
+        header { padding: 20px 0; background: #fff; border-bottom: 1px solid #e8e5e1; position: sticky; top: 0; z-index: 100; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .nav-links a { margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+        
+        /* Page Header */
+        .page-header { padding: 60px 20px 20px 20px; text-align: center; }
+        .page-header h1 { font-size: 3rem; margin-bottom: 15px; }
+        .page-header p { max-width: 700px; margin: 0 auto; color: #555; }
+
+        /* Gallery Grid Layout */
+        .gallery-grid {
+            display: grid;
+            /* This creates responsive columns that won't get smaller than 350px */
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        /* Individual Gallery Item */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            background: #fff;
+            /* Aspect ratio box for placeholders */
+            min-height: 300px; 
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Image Styling */
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures images fill the box without stretching */
+            transition: transform 0.5s ease;
+            display: block;
+        }
+
+        /* The Overlay (Text that appears on hover) */
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(26,26,26,0.95), rgba(26,26,26,0));
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 0 20px;
+        }
+
+        /* Hover Effect Mechanics */
+        .gallery-item:hover img {
+            transform: scale(1.05); /* Slight zoom on image */
+        }
+        .gallery-item:hover .gallery-overlay {
+            height: 100%; /* Brings the overlay up */
+            padding-bottom: 30px;
+        }
+
+        /* Overlay Text Styling */
+        .gallery-overlay h3 {
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s ease 0.1s;
+        }
+        .gallery-overlay p {
+            color: #e8e5e1;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s ease 0.2s;
+        }
+
+        /* Make text fade in and slide up when hovered */
+        .gallery-item:hover .gallery-overlay h3,
+        .gallery-item:hover .gallery-overlay p {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Responsive adjustments for mobile navigation */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* Footer */
+        footer { background: #1a1a1a; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <strong>CUSTOM WOODWORKING</strong> 
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">About Me</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="handyman.html">Handyman Services</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header container">
+        <h1>Project Gallery</h1>
+        <p>A collection of recent custom furniture builds and architectural woodworking. From precision-cut mortise-and-tenon joinery to seamless built-in installations, every piece is built to last generations.</p>
+    </section>
+
+    <section class="section-padding container">
+        <div class="gallery-grid">
+
+            <figure class="gallery-item">
+                <img src="images/hard-maple-nursery-crib-front-view.jpg" 
+                     alt="Custom handcrafted hard maple nursery crib built in Fort Collins" 
+                     loading="lazy" width="800" height="600">
+                <figcaption class="gallery-overlay">
+                    <h3>Hard Maple Crib</h3>
+                    <p>Constructed entirely from locally sourced hard maple, featuring hand-cut joinery and finished with natural, child-safe tung oil.</p>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="images/custom-white-oak-sliding-dovetail-dresser.jpg" 
+                     alt="Solid oak 6-drawer dresser utilizing sliding dovetails" 
+                     loading="lazy" width="800" height="600">
+                <figcaption class="gallery-overlay">
+                    <h3>White Oak Dresser</h3>
+                    <p>A classic design built with structural integrity in mind. The drawer casings utilize traditional sliding dovetails, cut meticulously by hand using a 240mm Dozuki saw.</p>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="images/8-foot-custom-built-in-wall-bookshelf.jpg" 
+                     alt="An 8-foot tall custom built-in bookshelf and plant stand spanning a full wall." 
+                     loading="lazy" width="800" height="600">
+                <figcaption class="gallery-overlay">
+                    <h3>Wall-to-Wall Library</h3>
+                    <p>A massive, 8-by-8 foot custom built-in shelving unit designed specifically to fit the client's space, serving as both a heavy-duty library bookshelf and a dedicated display for indoor plants.</p>
+                </figcaption>
+            </figure>
+
+             <figure class="gallery-item">
+                <img src="images/custom-walnut-fireplace-mantle-surround.jpg" 
+                     alt="Custom woodworking project featuring a new seamless walnut mantle surrounding an existing brick fireplace" 
+                     loading="lazy" width="800" height="600">
+                <figcaption class="gallery-overlay">
+                    <h3>Walnut Fireplace Surround</h3>
+                    <p>Modernizing a living space without demolition. This custom walnut surround was handcrafted to wrap perfectly around the home's existing masonry.</p>
+                </figcaption>
+            </figure>
+
+            </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Custom Woodworking. Serving Fort Collins and surrounding areas.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

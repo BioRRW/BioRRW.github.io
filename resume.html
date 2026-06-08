@@ -1,643 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta http-equiv="X-UA-Compatible" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reed Woyda - Resume</title>
+    <title>Custom Woodworking & Furniture</title>
+    <meta name="description" content="Handcrafted, heirloom-quality furniture and reliable residential handyman services in Fort Collins, CO.">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Playfair+Display:400,700" rel="stylesheet">
+    
+    <style>
+        /* =========================================
+           1. BASIC RESET & TYPOGRAPHY
+           ========================================= */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #2c2a29; background-color: #faf9f7;}
+        h1, h2, h3 { font-family: 'Playfair Display', serif; margin-bottom: 1rem; color: #1a1a1a; }
+        a { text-decoration: none; color: inherit; transition: color 0.3s; }
+        a:hover { color: #8b5a2b; }
+        
+        /* Layout Utilities */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .section-padding { padding: 80px 0; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .bg-light { background: #faf9f7; }
+        .bg-dark { background: #2c2a29; color: #f4f4f4; }
+        .bg-dark h2, .bg-dark p { color: #f4f4f4; }
 
-    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/css/style.css">
+        /* Buttons */
+        .btn { display: inline-block; padding: 12px 30px; background: #4a3f35; color: #fff; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; transition: background 0.3s; border: none; cursor: pointer; }
+        .btn:hover { background: #2c2a29; color: #fff; }
+        .btn-outline { background: transparent; border: 2px solid #fff; color: #fff; }
+        .btn-outline:hover { background: #fff; color: #2c2a29; }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+        /* =========================================
+           2. NAVIGATION
+           ========================================= */
+        header { padding: 20px 0; background: #fff; border-bottom: 1px solid #e8e5e1; position: sticky; top: 0; z-index: 100; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .nav-links a { margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXQLH66J4S"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-LXQLH66J4S');
-    </script>
+        /* =========================================
+           3. BACKGROUND IMAGES & PARALLAX SECTIONS
+           ========================================= */
+        
+        /* IMAGE 1: Hero Section (Bookshelf) */
+        .hero { 
+            padding: 180px 20px; 
+
+            text-align: center; 
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./assets/images/wood/custom-built-in-wall-bookshelf.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Added Parallax here too for consistency! */
+            color: #fff; 
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; color: #fff; }
+
+        /* IMAGE 2: First Divider (Fireplace) */
+        .parallax-divider {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./assets/images/wood/custom-white-oak-fireplace-surround.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            padding: 150px 20px;
+            text-align: center;
+            color: #fff;
+        }
+        .parallax-divider h2 { color: #fff; font-size: 2.5rem; }
+
+        /* IMAGE 3: Second Divider (Nursery Crib) */
+        .parallax-divider-2 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./assets/images/wood/custom-nursery-crib-adjustable.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            padding: 150px 20px;
+            text-align: center;
+            color: #fff;
+        }
+        .parallax-divider-2 h2 { color: #fff; font-size: 2.5rem; }
+
+        /* =========================================
+           4. RESPONSIVE DESIGN
+           ========================================= */
+        @media (max-width: 768px) {
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            /* Mobile browsers sometimes struggle with fixed backgrounds, so we switch them to scroll */
+            .hero, .parallax-divider, .parallax-divider-2 { background-attachment: scroll; }
+        }
+        
+        /* Footer */
+        footer { background: #1a1a1a; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; }
+    </style>
 </head>
-
 <body>
 
-    <main>
-
-        <aside class="sidebar" data-sidebar>
-
-            <div class="sidebar-info">
-
-                <figure class="avatar-box">
-                    <img src="./assets/images/profile_picture_1.jpg" alt="Reed Woyda" width="80">
-                </figure>
-
-                <div class="info-content">
-                    <h1 class="name" title="Reed Woyda">Reed Woyda</h1>
-
-                    <p class="title">Bioinformatician</p>
-                    <p class="title">Microbial Ecosystems Laboratory</p>
-                    <p class="title">Colorado State University</p>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <strong>CUSTOM WOODWORKING</strong> 
                 </div>
-
-                <button class="info_more-btn" data-sidebar-btn>
-                    <span>Show Contacts</span>
-
-                    <ion-icon name="chevron-down"></ion-icon>
-                </button>
-
-            </div>
-
-            <div class="sidebar-info_more">
-
-                <div class="separator"></div>
-
-                <ul class="contacts-list">
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <img src="./assets/images/git.png" alt="GitHub Logo" style="width: 24px; height: 24px;">
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">GitHub</p>
-
-                            <a href="https://github.com/BioRRW" class="contact-link">https://github.com/BioRRW</a>
-                        </div>
-
-                    </li>
-
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <img src="./assets/images/gmail-logo.png" alt="Gmail Logo" style="width: 24px; height: 24px;">
-                        </div>
-                        <div class="contact-info">
-                            <p class="contact-title">Email</p>
-                            <a href="mailto:reed.woyda@colostate.edu" class="contact-link">reed.woyda@colostate.edu</a>
-                        </div>
-                    </li>
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <img src="./assets/images/location-logo.png" alt="Location Logo" style="width: 24px; height: 24px;">
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Location</p>
-
-                            <address>Fort Collins, CO USA</address>
-                        </div>
-
-                    </li>
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <img src="./assets/images/calendar.png" alt="Calendar Logo" style="width: 24px; height: 24px;">
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Book a Meeting</p>
-                            <a href="https://calendar.app.google/1oATsnMo5c2Yi3H28" class="contact-link">Book a Meeting</a>
-                        </div>
-
-                    </li>                    
-                </ul>
-
-                <div class="separator"></div>
-
-            </div>
-
-        </aside>
-
-        <div class="main-content">
-
-            <nav class="navbar">
-
-                <nav class="navbar">
-
-                    <ul class="navbar-list">
-
-                        <li class="navbar-item">
-                            <a href="index.html" class="navbar-link">About</a>
-                        </li>
-                        
-                        <li class="navbar-item">
-                            <a href="resume.html" class="navbar-link active">Resume</a>
-                        </li>
-    
-                        <li class="navbar-item">
-                            <a href="projects.html" class="navbar-link">Bioinformatics Projects</a>
-                        </li>                    
-    
-                        <li class="navbar-item">
-                            <a href="wood.html" class="navbar-link">Wood Projects</a>
-                        </li>
-    
-                        <li class="navbar-item">
-                            <a href="huxley-server.html" class="navbar-link">Huxley Server Project</a>
-                        </li>
-                    </ul>
-    
-                </nav>
-
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About Me</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="handyman.html">Handyman Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
             </nav>
-
-            <article class="resume active" data-page="resume">
-
-                <header>
-                    <h2 class="h2 article-title" style="color: navy-blue;">Resume</h2>
-                </header>
-
-                <!-- Education Section -->
-                <section class="timeline">
-                    <div class="content-card" style="color: navy-blue;">
-                        <h3 class="h3" style="color: navy-blue;">Education</h3>
-
-                        <!-- Ph.D. in Cell and Molecular Biology -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <h4 class="h4" style="color: navy-blue;">Doctorate of Philosophy of Science: Cell and Molecular Biology</h4>
-                            <h5 style="color: navy-blue;">May 2023</h5>
-                            <p style="color: navy-blue;">Colorado State University, Fort Collins, CO</p>
-                        </div>
-
-                        <!-- Master's in Microbiology/Immunology -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <h4 class="h4" style="color: navy-blue;">Master of Science Degree: Microbiology/Immunology</h4>
-                            <h5 style="color: navy-blue;">May 2019</h5>
-                            <p style="color: navy-blue;">Colorado State University, Fort Collins, CO</p>
-                        </div>
-
-                        <!-- TEFL Certification -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <h4 class="h4" style="color: navy-blue;">International TEFOL Certification</h4>
-                            <h5 style="color: navy-blue;">August 2017</h5>
-                            <p style="color: navy-blue;">Australian Vietnam School of English, Ho Chi Minh City, Vietnam</p>
-                        </div>
-
-                        <!-- Bachelor's in Mathematics and Biotechnology -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <h4 class="h4" style="color: navy-blue;">Bachelor of Science Degree: Mathematics and Biotechnology (Computer Science Minor)</h4>
-                            <h5 style="color: navy-blue;">May 2017</h5>
-                            <p style="color: navy-blue;">Minnesota State University Mankato, Mankato, MN</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Skills Section -->
-                <section class="timeline">
-                    <div class="content-card" style="color: navy-blue;">
-                        <h3 class="h3 skills-title" style="color: navy-blue;">Skills</h3>
-
-                        <div class="skills-container" style="display: flex;">
-
-                            <!-- Column 1 -->
-                            <div class="skills-column" style="flex: 1;">
-                                <ul style="list-style: none; padding: 0; color: navy-blue;">
-                                    <li>&#8226; Linux Proficiency</li>
-                                    <li>&#8226; Bioinformatics Pipeline Development
-                                        <ul style="list-style: none; padding: 0; margin-left: 1em;">
-                                            <li>&#8226; Nextflow</li>
-                                        </ul>
-                                    </li>
-                                    <li>&#8226; Containerization
-                                        <ul style="list-style: none; padding: 0; margin-left: 1em;">
-                                            <li>&#8226; Nextflow/Conda/Docker</li>
-                                        </ul>
-                                    </li>
-                                    <li>&#8226; Programming/Statistical software/Computing
-                                        <ul style="list-style: none; padding: 0; margin-left: 1em;">
-                                            <li>&#8226; C++, Python, Bash, R</li>
-                                        </ul>
-                                    </li>
-                                    <li>&#8226; Database Management
-                                        <ul style="list-style: none; padding: 0; margin-left: 1em;">
-                                            <li>&#8226; SQL</li>
-                                        </ul>
-                                    </li>
-                                    <li>&#8226; Version Control Systems
-                                        <ul style="list-style: none; padding: 0; margin-left: 1em;">
-                                            <li>&#8226; Git, GitHub</li>
-                                        </ul>
-                                    </li>
-                                    <li>&#8226; Visualization
-                                        <ul style="list-style: none; padding: 0; margin-left: 1em;">
-                                            <li>&#8226; R (ggplot2, dplyr)</li>
-                                            <li>&#8226; Python (pandas, matplotlib)</li>
-                                        </ul>
-                                    </li>
-                                    <li>&#8226; Metagenomics
-                                        <ul style="list-style: none; padding: 0; margin-left: 1em;">
-                                            <li>&#8226; QC, Assembly, Binning, Diversity, Metabolic Analysis</li>
-                                        </ul>
-                                    </li>
-                                    <li>&#8226; Genomics/Comparative Genomics/Phylogenetics</li>
-                                </ul>
-                            </div>
-
-                            <!-- Column 2 -->
-                            <div class="skills-column" style="flex: 1;">
-                                <ul style="list-style: none; padding: 0; color: navy-blue;">
-                                    <li>&#8226; Wet Lab
-                                        <ul style="list-style: none; padding: 0; margin-left: 1em;">
-                                            <li>&#8226; Gel Electrophoresis (DNA/RNA/Protein)</li>
-                                            <li>&#8226; PCR and qPCR</li>
-                                            <li>&#8226; Affinity Chromatography</li>
-                                            <li>&#8226; Illumina Lib. Prep.</li>
-                                            <li>&#8226; Animal Dissection</li>
-                                            <li>&#8226; Bacterial culture / isolation / transformation</li>
-                                        </ul>
-                                    </li>
-                                    <li>&#8226; Soft skills
-                                        <ul style="list-style: none; padding: 0; margin-left: 1em;">
-                                            <li>&#8226; Multidisciplinary team member</li>
-                                            <li>&#8226; Experimental design</li>
-                                            <li>&#8226; Data management</li>
-                                            <li>&#8226; Excellent documentation</li>
-                                            <li>&#8226; Scientific Communicator</li>
-                                            <li>&#8226; Bioinformatics teaching and mentoring</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Experience Section -->
-                <section class="timeline">
-                    <div class="content-card" style="color: navy-blue;">
-                        <h3 class="h3" style="color: navy-blue;">Experience</h3>
-
-                        <!-- Microbial Ecosystems Lab -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <h4 class="h4" style="color: navy-blue;">Microbial Ecosystems Lab</h4>
-                            <h5 style="color: navy-blue;">June 2023 – July 2024</h5>
-                            <h5 style="color: navy-blue;">Research Scientist</h5>
-                            <h6 style="color: navy-blue;">Colorado State University, Fort Collins CO</h6>
-                            <p style="color: navy-blue;">Full-Time: 40+ Hours/Week</p>
-                            <br>
-                            <p style="color: navy-blue;">
-                                <br>
-                                <strong>Bioinformatics Pipeline Engineer</strong>
-                                <ul style="list-style: disc; color: navy-blue;">
-                                    <li>&#8226; Spearheaded the development of DRAM2 (Distilled and Refined Annotation of Metabolism) and COMET (CustOmizable Metagenome-assembled-genome Extraction Toolkit) software pipelines.</li>
-                                    <li>&#8226; Designed software to scale seamlessly from tens to thousands of input samples, effectively utilizing tens to thousands of CPUs.</il>
-                                    <li>&#8226; Engineered version-controlled pipelines in Nextflow, integrating Singularity, Docker, and Conda dependencies.</li>
-                                    <li>&#8226; Implemented pipelines for high-performance computing clusters, utilizing job schedulers (SLURM).</li>
-                                    <li>&#8226; Optimized data analysis workflows to enhance computational efficiency and accuracy.</li>
-                                    <li>&#8226; Ensured robust and scalable bioinformatics solutions through rigorous testing and validation.</li>
-                                    <li>&#8226; Documented pipelines rigorously in various formats (GitHub, ReadTheDocs).</li>
-                                </ul>
-                                <br>
-                                <strong>DSRI (Data Science Research Initiative) Liaison and CoSMic Data Science Team Contributor</strong>
-                                <ul style="list-style: disc; color: navy-blue;">
-                                    <li>&#8226; Communicated and collaborated with the DSRI Riviera HPC cluster administrators to streamline data analysis processes.</li>
-                                    <li>&#8226; Presented DRAM software at the Undergraduate Research Poster Session, showcasing innovative bioinformatics tools.</li>
-                                    <li>&#8226; Liaised with DSRI Riviera server administrators to ensure optimal configuration for lab computing needs.</li>
-                                    <li>&#8226; Contributed to software development on the DSRI Riviera server, enhancing computational training workshops and data management practices.</li>
-                                    <li>&#8226; Engaged in CoSMic Network activities to drive the development and integration of advanced bioinformatics tools.</li>
-                                </ul>
-                                <br>
-                                <strong>Computational Mentorship and Collaborative Project Leadership</strong>
-                                <ul style="list-style: disc; color: navy-blue;">
-                                    <li>&#8226; Mentored a first-year PhD student, providing guidance on computational framework development and coursework.</li>
-                                    <li>&#8226; Supported lab members with troubleshooting assistance and strategic problem-solving.</li>
-                                    <li>&#8226; Facilitated the use of bioinformatic tools across various lab projects, promoting best practices in genomic data analysis.</li>
-                                    <li>&#8226; Collaborated on impactful projects with the Department of Energy, Dr. Tiffany Weir, Dr. Susan De Long, NIH, Department of Energy, The Ohio State University, demonstrating leadership in bioinformatics and practical applications of genomic research.</li>
-                                </ul>
-                            </p>
-                        </div>
-
-                        <!-- USDA -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <h4 class="h4" style="color: navy-blue;">U.S. Department of Agriculture (USDA)</h4>
-                            <h5 style="color: navy-blue;">June 2019 – August 2020</h5>
-                            <h5 style="color: navy-blue;">Agricultural Research Service (ARS) Research Participation Program Fellow</h5>
-                            <h6 style="color: navy-blue;">Colorado State University, Fort Collins CO</h6>
-                            <h6 style="color: navy-blue;">PhD Candidate, Abdo Lab, Colorado State University</h6>
-                            <p style="color: navy-blue;">Full-Time: 40+ Hours/Week</p>
-                            <br>
-                            <p style="color: navy-blue;">
-                                <strong>Bioinformatics Pipeline Developer</strong>
-                                <ul style="list-style: disc; color: navy-blue;">
-                                    <li>&#8226; Developed Reads2Resistome, an integrated bioinformatics pipeline for bacterial DNA data analysis, accommodating both short and long-read sequencing data.</li>
-                                    <li>&#8226; Engineered software to scale efficiently on HPCs: processing tens to thousands of input samples.</li>
-                                    <li>&#8226; Streamlined the assembly of high-quality bacterial genomes and analyses such as antimicrobial resistance gene and virulence factor identification.</li>
-                                    <li>&#8226; Enhanced the utility of individual tools by combining them into a cohesive software package capable of processing tens to hundreds of bacterial genomic samples simultaneously.</li>
-                                    <li>&#8226; Documented data processes through process diagrams and step-by-step tutorials available on GitHub.</li>
-                                    <li>&#8226; Managed a sustainable, user-friendly software application using Python, R, Bash, Singularity, and Nextflow, suitable for high-performance computing environments.</li>
-                                    <li>&#8226; Implemented data governance practices, developing standards, maintaining metadata, and ensuring data consistency.</li>
-                                    <li>&#8226; Benchmarked the data tool using standardized genetic data, significantly reducing quality control and analysis time.</li>
-                                </ul>
-                                <br>
-                                <strong>Reads2Resistome Tutorial for ARS Scientists on SCINET CERES High-Performance Computing Infrastructure</strong>
-                                <ul style="list-style: disc; color: navy-blue;">
-                                    <li>&#8226; Hosted and taught an informational and tutorial-based session on Reads2Resistome for USDA-ARS scientists.</li>
-                                    <li>&#8226; Communicated effectively with ARS scientists to develop and execute a hands-on tutorial on the SCINET CERES high-performance computing infrastructure.</li>
-                                    <li>&#8226; Highlighted Reads2Resistome in the October 2020 USDA-ARS SCINET newsletter.</li>
-                                </ul>
-                                <br>
-                                <strong>Soil Microbiome Researcher: Metagenomic Analyst</strong>
-                                <ul style="list-style: disc; color: navy-blue;">
-                                    <li>&#8226; Tracked modifications in soil microbial communities and their impact on functional capabilities across different land uses and soil types in Paragominas, Brazil.</li>
-                                    <li>&#8226; Assessed data quality, performed filtering and trimming of low-quality sequences, and conducted taxonomic classification and metagenomic assembly.</li>
-                                    <li>&#8226; Measured diversity within and between samples using alpha and beta diversity metrics in R, utilizing packages such as vegan, phyloseq, and metagenomseq.</li>
-                                </ul>
-                                <br>
-                                <strong>Grant Proposal Developer: PhD Preliminary Exam</strong>
-                                <ul style="list-style: disc; color: navy-blue;">
-                                    <li>&#8226; Effectively communicated with the program director, committee members, and my advisor to develop a comprehensive research proposal investigating bovine mastitis diagnosis, treatment, and prevention.</li>
-                                    <li>&#8226; Authored a National Institutes of Health (NIH) grant proposal, clearly defining the specific aims and objectives, and successfully defended the proposal to a committee of academic and governmental researchers.</li>
-                                    <li>&#8226; Developed an experimental design that included a detailed sampling scheme, proper use of controls, and a robust data management plan, ensuring the reliability and reproducibility of the research.</li>
-                                    <li>&#8226; Hypothesized and investigated that bedding material in cowsheds acts as a primary environmental reservoir for mastitis-associated pathogens and antimicrobial resistance genes, through extensive literature review and innovative research techniques.</li>
-                                    <li>&#8226; Outlined and implemented specific techniques such as temporal sample collection in state-of-the-art dairy farms with automated milking systems, high-throughput chromosomal conformation capture (Hi-C) on metagenomic samples, and metatranscriptomic sequencing to analyze the presence and abundance of antimicrobial resistance genes.</li>
-                                </ul>
-                                <br>
-                                <strong>Data Automation Specialist and Comparative Genomics Analyst</strong>
-                                <ul style="list-style: disc; color: navy-blue;">
-                                    <li>&#8226; Automated data retrieval from GenBank and NCBI’s BioProject for nearly 800 bacterial isolates, facilitating a comprehensive investigation of pathogenic Escherichia coli isolates.</li>
-                                    <li>&#8226; Standardized data to ensure unbiased results and maintained isolate metadata consistency.</li>
-                                    <li>&#8226; Performed additional data analysis using Python, Bash, and the Reads2Resistome pipeline, including quality control and phylogenetic analysis.</li>
-                                    <li>&#8226; Documented all processes and results to ensure reproducibility and transparency.</li>
-                                    <li>&#8226; Conducted phylogenetic analysis to understand the evolutionary relatedness of bacterial isolates, using Snippy to identify single nucleotide polymorphisms (SNPs) and RAxML for phylogenetic tree construction.</li>
-                                    <li>&#8226; Utilized a Linux high-performance computing environment, running the phylogenetic analysis over 70 days using 64 CPU nodes, and performed bootstrapping to assess nodal support.</li>
-                                    <li>&#8226; Communicated findings effectively to other analysts and collaborators, highlighting the prevalence of antimicrobial resistance in E. coli isolates from both poultry agricultural and human clinical sources.</li>
-                                    <li>&#8226; Highlighted the need for ongoing monitoring of antimicrobials of high importance to human medicine in poultry agriculture to mitigate their impact on human health.</li>
-                                </ul>
-                                <br>
-                                <strong>Guest Lecturer: Metagenomics Analysis</strong>
-                                <ul style="list-style: disc; color: navy-blue;">
-                                    <li>&#8226; Developed and executed educational lectures for graduate students on bacterial metagenomics, genome assembly, and RNA-sequencing analysis.</li>
-                                    <li>&#8226; Designed learning materials and tutorials available on GitHub to facilitate student learning.</li>
-                                    <li>&#8226; Taught taxonomic classification of bacterial shotgun metagenomic sequencing data, bacterial genome assembly, and RNA-sequencing analysis using tools like FastQC, Trimmomatic, Kraken2, DESeq2, GAGE, GGPlot2, and Tidyverse.</li>
-                                </ul>
-                            </p>
-                        </div>
-
-                        <!-- NIH -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <h4 class="h4" style="color: navy-blue;">National Institutes of Health (NIH)</h4>
-                            <h5 style="color: navy-blue;">August 2020 – August 2022</h5>
-                            <h5 style="color: navy-blue;">T32 Training Program Fellow</h5>
-                            <h6 style="color: navy-blue;">Colorado State University, Fort Collins CO</h6>
-                            <h6 style="color: navy-blue;">PhD Candidate, Abdo Lab, Colorado State University</h6>
-                            <p style="color: navy-blue;">Full-Time: 40+ Hours/Week</p>
-                            <br>
-                            <p style="color: navy-blue;">
-                                <strong>DNA Extraction and Sequencing Specialist</strong>
-                                <ul style="list-style: disc; color: navy-blue;">
-                                    <li>&#8226; Extracted DNA and prepared next-generation sequencing libraries for over 300 bacterial isolates, including commensal and pathogenic species such as Escherichia coli, Enterococcus, Staphylococcus, Salmonella, and Campylobacter.</li>
-                                    <li>&#8226; Communicated effectively with my advisor and ARS collaborators to develop and execute protocols for large-scale bacterial DNA sequencing.</li>
-                                    <li>&#8226; Designed, developed, and implemented standard operating procedures for DNA extraction and library preparation, ensuring consistency in data output.</li>
-                                    <li>&#8226; Recorded and documented extensive details of DNA concentrations and sequencing quality, providing comprehensive results to analysts and collaborators.</li>
-                                    <li>&#8226; Utilized the Reads2Resistome pipeline for further data analysis, employing programming languages such as Python, R, Bash, Nextflow, and Singularity.</li>
-                                </ul>
-                                <br>
-                                <strong>RNA Sequencing Analyst</strong>
-                                <ul style="list-style: disc; color: navy-blue;">
-                                    <li>&#8226; Collaborated with a Mycobacterium tuberculosis research group to develop an RNA sequencing analysis pipeline for gene expression data.</li>
-                                    <li>&#8226; Engaged with the principal investigator and wet-lab researchers to gather data requirements and facilitate analysis.</li>
-                                    <li>&#8226; Created and maintained data collection tools and developed a comprehensive data pipeline in R.</li>
-                                    <li>&#8226; Performed detailed analyses and generated reports on differential expression of regulatory pathways subjected to different drug treatments.</li>
-                                    <li>&#8226; Ensured data consistency through routine checks and documented all processes, utilizing packages like DESeq2, GAGE, GGPlot2, and Tidyverse for analysis and visualization.</li>
-                                </ul>
-                            </p>
-                        </div>
-
-                        <!-- Student Researcher -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <h4 class="h4" style="color: navy-blue;">Student Researcher</h4>
-                            <h5 style="color: navy-blue;">August 2018 May 2019</h5>
-                            <h6 style="color: navy-blue;">Colorado State University, Fort Collins CO</h6>
-                            <h6 style="color: navy-blue;">Borlee Lab, Infectious Disease Research Center</h6>
-                            <p style="color: navy-blue;">Part-time: 30 Hours/Week</p>
-                            <p style="color: navy-blue;">$13/Hour</p>
-                            <br>
-                            <p style="color: navy-blue;">
-                                <strong>Bacterial Colonization Researcher</strong>
-                                <ul style="list-style: disc; color: navy-blue;">
-                                    <li>&#8226; Genetically engineered bacteria with a fluorescent marker to successfully colonize the gut of Aedes aegypti mosquitoes, aiming to prevent the spread of specific viruses.</li>
-                                    <li>&#8226; Developed data standardization and standard operating procedures for bacterial feeding, dissection, and imaging using confocal microscopy.</li>
-                                    <li>&#8226; Collaborated with analysts to gather data requirements, ensuring data consistency with a control mosquito colony.</li>
-                                    <li>&#8226; Produced fluorescent images and quantitative measurements of labeled bacterial species within mosquito guts.</li>
-                                    <li>&#8226; Implemented data standards and management solutions for the care of mosquito colonies and confocal microscope imaging.</li>
-                                </ul>
-                                <br>
-                                <strong>Genetic Engineering Specialist</strong>
-                                <ul style="list-style: disc; color: navy-blue;">
-                                    <li>&#8226; Communicated with Pebble Labs to develop and execute the engineering of new bacterial genetic information using bioinformatics and microbiological techniques.</li>
-                                    <li>&#8226; Analyzed DNA sequencing data of the fluorescence gene cassette, identifying base pair deletions affecting fluorescence.</li>
-                                    <li>&#8226; Generated diagrams and visual maps of bacterial genetic information to communicate improvements to Pebble Labs.</li>
-                                    <li>&#8226; Constructed a new plasmid with the correct fluorescence gene cassette and transformed it into the bacterial species of interest, enhancing imaging efficiency.</li>
-                                </ul>
-                            </p>
-                        </div>
-
-                        <!-- Camas Incorporated -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <h4 class="h4" style="color: navy-blue;">Camas Incorporated, Le Center, MN</h4>
-                            <h5 style="color: navy-blue;">June 2016 - June 2017</h5>
-                            <h5 style="color: navy-blue;">Research and Development/Quality Control Position</h5>
-                            <h6 style="color: navy-blue;">Le Sueur, MN</h6>
-                            <p style="color: navy-blue;">Part-time: 35 Hours/Week</p>
-                            <p style="color: navy-blue;">$12/Hour</p>
-                            <br>
-                            <p style="color: navy-blue;">
-                                <strong>Microbial Identification Specialist</strong>
-                                <ul style="list-style: disc; color: navy-blue;">
-                                    <li>&#8226; Created and improved data collection protocols for disease detection and diagnosis in food-producing animals.</li>
-                                    <li>&#8226; Performed bacterial isolation, culturing, identification, and sample collection from various biological and environmental samples (e.g., swine, dairy, cattle).</li>
-                                    <li>&#8226; Dissected deceased animal specimens, collected organ samples, and used plating methods to isolate potentially disease-causing microorganisms.</li>
-                                    <li>&#8226; Identified the genus and species of pathogenic microorganisms and performed qPCR to identify virulence factors.</li>
-                                </ul>
-                                <br>
-                                <strong>Quality Control Technician</strong>
-                                <ul style="list-style: disc; color: navy-blue;">
-                                    <li>&#8226; Enhanced the efficiency of biochemical detection processes for testing and quality control of company products.</li>
-                                    <li>&#8226; Conducted quality control testing and documented extensive written and visual reports.</li>
-                                    <li>&#8226; Tested the performance of company products on client samples, generating comprehensive documentation.</li>
-                                    <li>&#8226; Optimized standard operating procedures, increasing the number of samples processed from small scale (1-2 samples) to large scale (96-well and 384-well: 8-12 samples).</li>
-                                    <li>&#8226; Collaborated with coworkers to gather data requirements and ensure accurate quality control testing using biochemical detection methods such as ELISA and qPCR.</li>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Accomplishments and Awards Section -->
-                <section class="timeline">
-                    <div class="content-card" style="color: navy-blue;">
-                        <h3 class="h3" style="color: navy-blue;">Accomplishments and Awards</h3>
-
-                        <div class="content-card" style="color: navy-blue;">
-                            <h4 class="h4" style="color: navy-blue;">Front Range Microbiome Symposium 2024</h4>
-                            <ul style="list-style: disc; color: navy-blue;">
-                                <li>&#8226; First Place 12-minute talk</li>
-                                <li>&#8226; Presentation: "DRAM2: Empowering Microbiome Exploration with Advanced MultiOmics Analytics for Ecosystem-Specific Profiling"</li>
-                                <li>&#8226; Recognized for innovative contributions to microbiome research and exceptional presentation skills.</li>
-                            </ul>
-                        </div>
-
-                        <div class="content-card" style="color: navy-blue;">
-                            <h4 class="h4" style="color: navy-blue;">College of Veterinary Medicine and Biomedical Science Research Day 2022</h4>
-                            <ul style="list-style: disc; color: navy-blue;">
-                                <li>&#8226; 1st Place Poster Presentation</li>
-                                <li>&#8226; Title: "Occurrence and Persistence of Food-Borne Pathogens in Peanut Hull-Based Litter under Antibiotic-Free Broiler Chicken Production"</li>
-                                <li>&#8226; Awarded for excellence in presenting and communicating scientific research, demonstrating significant impact on the field of veterinary microbiology.</li>
-                            </ul>
-                        </div>
-
-                        <div class="content-card" style="color: navy-blue;">
-                            <h4 class="h4" style="color: navy-blue;">October 2020 USDA-ARS SCINet Newsletter</h4>
-                            <ul style="list-style: disc; color: navy-blue;">
-                                <li>&#8226; Featured Highlight: Reads2Resistome Software Pipeline</li>
-                                <li>&#8226; The Reads2Resistome tool was spotlighted as a cutting-edge bioinformatics software for analyzing bacterial genetic sequencing data.</li>
-                                <li><a href="https://scinet.usda.gov/assets/pdf/newsletters/SCINET-Newsletter-October-2020.pdf" target="_blank" rel="noopener noreferrer">USDA-ARS SCINet Newsletter - October 2020</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="content-card" style="color: navy-blue;">
-                            <h4 class="h4" style="color: navy-blue;">Graduate Student Poster Presentation, Rocky Mountain ASM 2019</h4>
-                            <ul style="list-style: disc; color: navy-blue;">
-                                <li>&#8226; 2nd Place Poster Presentation</li>
-                                <li>&#8226; Title: "Antibiotic-Free Chicken Production: A Characterization of the Bacterial Resistome"</li>
-                                <li>&#8226; Recognized for exceptional research and presentation on antimicrobial resistance in poultry production.</li>
-                            </ul>
-                        </div>
-
-                        <div class="content-card" style="color: navy-blue;">
-                            <h4 class="h4" style="color: navy-blue;">Excellence in Student Teaching and Tutoring in Computer Science 2013-2017</h4>
-                            <ul style="list-style: disc; color: navy-blue;">
-                                <li>&#8226; Minnesota State University Mankato (Dr. Dean Kelley: dean.kelley@mnsu.edu)</li>
-                                <li>&#8226; Provided extensive tutoring in Computer Science courses including Introduction to Programming I and II, Algorithmic Structures, and Operating Systems.</li>
-                                <li>&#8226; For 4 years, worked as a tutor and teaching assistant, holding tutoring hours, grading assignments, and assisting students with weekly programming projects, earning recognition for outstanding teaching and mentorship.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Publications Section -->
-                <section class="timeline">
-                    <div class="content-card" style="color: navy-blue;">
-                        <h3 class="h3" style="color: navy-blue;">Publications</h3>
-                
-                        <!-- Publication 1 -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <strong>Title:</strong> Microbial polyphenol metabolism is part of the thawing permafrost carbon cycle<br>
-                            <strong>Authors:</strong> Bridget B. McGivern, Dylan R. Cronin, Jared B. Ellenbogen, Mikayla A. Borton, Eleanor L. Knutson, Viviana Freire-Zapata, John A. Bouranis, Lukas Bernhardt, Alma I. Hernandez, Rory M. Flynn, Reed Woyda, Alexandra B. Cory, Rachel M. Wilson, Jeffrey P. Chanton, Ben J. Woodcroft, Jessica G. Ernakovich, Malak M. Tfaily, Matthew B. Sullivan, Gene W. Tyson, Virginia I. Rich, Ann E. Hagerman & Kelly C. Wrighton<br>
-                            <strong>Date:</strong> 2024<br>
-                            <strong>Journal:</strong> Nat Microbiol<br>
-                            <a href="https://doi.org/10.1038/s41564-024-01691-0" target="_blank" rel="noopener noreferrer">https://doi.org/10.1038/s41564-024-01691-0</a>
-                        </div>
-                
-                        <!-- Publication 2 -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <strong>Title:</strong> Genetic Characteristics of Salmonella Isolates Recovered From Reused Broiler Litter Over Three Successive Flocks<br>
-                            <strong>Authors:</strong> Reed Woyda, Adelumola Oladeinde, Dinku Endale, Timothy Strickland, Jodie Plumblee Lawrence, Zaid Abdo<br>
-                            <strong>Date:</strong> 2024<br>
-                            <strong>Journal:</strong> Journal of Food Protection<br>
-                            <a href="https://doi.org/10.1016/j.jfp.2024.100236" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.jfp.2024.100236</a>
-                        </div>
-                
-                        <!-- Publication 3 -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <strong>Title:</strong> Virulence factors and antimicrobial resistance profiles of Campylobacter isolates recovered from consecutively reused broiler litter<br>
-                            <strong>Authors:</strong> Reed Woyda, Adelumola Oladeinde, Dinku Endale, Timothy Strickland, Jodie Plumblee Lawrence, Zaid Abdo<br>
-                            <strong>Date:</strong> 2023<br>
-                            <strong>Journal:</strong> Microbiol Spectr<br>
-                            <a href="https://doi.org/10.1128/spectrum.03236-23" target="_blank" rel="noopener noreferrer">https://doi.org/10.1128/spectrum.03236-23</a>
-                        </div>
-                
-                        <!-- Publication 4 -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <strong>Title:</strong> Population genomic analysis of an emerging pathogen Lonsdalea quercina affecting various species of oaks in western North America<br>
-                            <strong>Authors:</strong> O Kozhar, RA Sitz, R Woyda, L Legg, JR Ibarra Caballero, IS Pearse<br>
-                            <strong>Date:</strong> 2023<br>
-                            <strong>Journal:</strong> Sci Rep<br>
-                            <a href="https://doi.org/10.1038/s41598-023-41976-8" target="_blank" rel="noopener noreferrer">https://doi.org/10.1038/s41598-023-41976-8</a>
-                        </div>
-                
-                        <!-- Publication 5 -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <strong>Title:</strong> Management and environmental factors influence the prevalence and abundance of food-borne pathogens and commensal bacteria in peanut hull-based broiler litter<br>
-                            <strong>Authors:</strong> Adelumola Oladeinde, Babafela Awosile, Reed Woyda, Zaid Abdo, Dinku Endale, Timothy Strickland<br>
-                            <strong>Date:</strong> 2022<br>
-                            <strong>Journal:</strong> Poultry Science<br>
-                            <a href="https://doi.org/10.1016/j.psj.2022.102313" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.psj.2022.102313</a>
-                        </div>
-                
-                        <!-- Publication 6 -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <strong>Title:</strong> Horizontal Gene Transfer Is the Main Driver of Antimicrobial Resistance in Broiler Chicks Infected with Salmonella enterica Serovar Heidelberg<br>
-                            <strong>Authors:</strong> Adelumola Oladeinde, Zaid Abdo, Maximilian O. Press, Kimberly Cook, Nelson A. Cox, Benjamin Zwirzitze, Reed Woyda, Steven M. Lakin, Jesse C. Thomas IV<br>
-                            <strong>Date:</strong> 2021<br>
-                            <strong>Journal:</strong> Msystems<br>
-                            <a href="https://doi.org/10.1128/msystems.00729-21" target="_blank" rel="noopener noreferrer">https://doi.org/10.1128/msystems.00729-21</a>
-                        </div>
-                
-                        <!-- Publication 7 -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <strong>Title:</strong> Horizontal Gene Transfer and Acquired Antibiotic Resistance in Salmonella enterica Serovar Heidelberg following In Vitro Incubation in Broiler Ceca<br>
-                            <strong>Authors:</strong> Adelumola Oladeinde, Kimberly Cook, Steven M. Lakin, Reed Woyda, Zaid Abdo<br>
-                            <strong>Date:</strong> 2019<br>
-                            <strong>Journal:</strong> Applied and Environmental Microbiology<br>
-                            <a href="https://doi.org/10.1128/AEM.01903-19" target="_blank" rel="noopener noreferrer">https://doi.org/10.1128/AEM.01903-19</a>
-                        </div>
-                
-                        <!-- Publication 8 -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <strong>Title:</strong> Litter commensal bacteria can limit the horizontal gene transfer of antimicrobial resistance to Salmonella in chickens<br>
-                            <strong>Authors:</strong> Adelumola Oladeinde, Zaid Abdo, Benjamin Zwirzitz, Reed Woyda, Steven M. Lakin, Maximilian O. Press, Kimberly Cook, Nelson A. Cox, Jesse C. Thomas IV, Torey Looft, Michael J. Rothrock, Gregory Zock, Jodie Plumblee Lawrence, Denice Cudnik, Casey Ritz, Samuel E. Aggrey, Ivan Liachko, Jonas Grove, Crystal Wiersma<br>
-                            <strong>Date:</strong> 2021<br>
-                            <strong>Journal:</strong> bioRxiv<br>
-                            <a href="https://doi.org/10.1101/2021.04.02.438293" target="_blank" rel="noopener noreferrer">https://doi.org/10.1101/2021.04.02.438293</a>
-                        </div>
-                
-                        <!-- Publication 9 -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <strong>Title:</strong> Reads2Resistome: An adaptable and high-throughput whole-genome sequencing pipeline for bacterial resistome characterization<br>
-                            <strong>Authors:</strong> Reed Woyda, Adelumola Oladeinde, Zaid Abdo<br>
-                            <strong>Date:</strong> 2020<br>
-                            <strong>Journal:</strong> bioRxiv<br>
-                            <a href="https://doi.org/10.1101/2020.05.18.102715" target="_blank" rel="noopener noreferrer">https://doi.org/10.1101/2020.05.18.102715</a>
-                            <a href="https://scinet.usda.gov/assets/pdf/newsletters/SCINET-Newsletter-October-2020.pdf" target="_blank" rel="noopener noreferrer">USDA-ARS SCINet Newsletter - October 2020</a>
-                            <a href="https://github.com/BioRRW/Reads2Resistome" target="_blank" rel="noopener noreferrer">https://github.com/BioRRW/Reads2Resistome</a>
-                        </div>
-                
-                        <!-- Publication 10 -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <strong>Title:</strong> Gene flux and acid-imposed selection are the main drivers of antimicrobial resistance in broiler chicks infected with Salmonella enterica serovar Heidelberg<br>
-                            <strong>Authors:</strong> Adelumola Oladeinde, Zaid Abdo, Benjamin Zwirzitz, Reed Woyda, Steven M. Lakin, Maximilian O. Press, Kimberly Cook, Nelson A. Cox, Jesse C. Thomas IV, Torey Looft, Douglas E. Cosby, Arthur Hinton Jr., Jean Guard, Eric Line, Michael J. Rothrock, Mark E. Berrang, Kyler Herrington, Gregory Zock, Jodie Plumblee Lawrence, Denice Cudnik, Sandra House, Kimberly Ingram, Leah Lariscy, Martin Wagner, Samuel E. Aggrey, Lilong Chai, Casey Ritz<br>
-                            <strong>Date:</strong> 2021<br>
-                            <strong>Journal:</strong> bioRxiv<br>
-                            <a href="https://doi.org/10.1101/2021.02.25.432983" target="_blank" rel="noopener noreferrer">https://doi.org/10.1101/2021.02.25.432983</a>
-                        </div>
-                
-                        <!-- Publication 11 -->
-                        <div class="content-card" style="color: navy-blue;">
-                            <strong>Title:</strong> Competition is a determinant of multidrug resistant plasmid acquisition in Salmonella<br>
-                            <strong>Authors:</strong> Adelumola Oladeinde, Zaid Abdo, Benjamin Zwirzitz, Reed Woyda, Steven M. Lakin, Maximilian O. Press, Kimberly Cook, Nelson A. Cox, Jesse C. Thomas IV, Torey Looft, Michael J. Rothrock, Gregory Zock, Jodie Plumblee Lawrence, Denice Cudnik, Casey Ritz, Samuel E. Aggrey<br>
-                            <strong>Date:</strong> 2021<br>
-                            <strong>Journal:</strong> bioRxiv<br>
-                            <a href="https://doi.org/10.1101/2021.04.02.438293" target="_blank" rel="noopener noreferrer">https://doi.org/10.1101/2021.04.02.438293</a>
-                        </div>
-                    </div>
-                </section>
-
-            </article>
-
         </div>
+    </header>
 
-    </main>
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Heirloom-Quality Custom Furniture</h1>
+            <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">Handcrafted in Fort Collins, Colorado. Built to last generations using traditional joinery and timeless design.</p>
+            <br><br>
+            <a href="gallery.html" class="btn">View My Work</a>
+            <a href="handyman.html" class="btn btn-outline" style="margin-left: 10px;">Handyman Services</a>
+        </div>
+    </section>
 
-    <script src="./assets/js/script.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <section id="about" class="section-padding">
+        <div class="container grid-2">
+            
+            <img src="./assets/images/woodworking-dog-crib-custom.jpg" 
+                 alt="Woodworker Reed Woyda building a custom crib in his Fort Collins shop" 
+                 style="width: 100%; height: 450px; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);" 
+                 loading="lazy">
+                 
+            <div>
+                <h2>About Me</h2>
+                <p>With seven years of professional experience in residential construction—handling everything from framing and roofing to meticulous finish work—I bring a deep understanding of structural integrity to every project.</p>
+                <br>
+                <p>Today, my true passion lies in fine woodworking. I specialize in building custom furniture utilizing robust techniques like sliding dovetails and mortise-and-tenon joints. Whether I'm hand-cutting joints with a 240mm Dozuki saw or applying natural tung oil to a hard maple dresser, I focus on the meticulous details that make a piece truly special.</p>
+                <br>
+                <a href="#contact" class="btn" style="border: 2px solid #4a3f35;">Let's Build Something</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="parallax-divider">
+        <div class="container">
+            <h2>Built to Last Generations</h2>
+        </div>
+    </section>  
+
+    <section id="gallery" class="section-padding bg-light">
+        <div class="container text-center">
+            <h2>Recent Projects</h2>
+            <p style="margin-bottom: 40px;">A selection of recent furniture builds and fine woodworking projects.</p>
+            
+            <div class="grid-3">
+                
+                <div>
+                    <img src="./assets/images/custom-nursery-crib-adjustable.jpg" 
+                         alt="Adjustable custom hard maple nursery crib built in Fort Collins" 
+                         style="width: 100%; height: 300px; object-fit: cover; margin-bottom: 15px; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);" 
+                         loading="lazy">
+                    <h3>Hard Maple Crib</h3>
+                </div>
+                
+                <div>
+                    <img src="./assets/images/handcrafted-hard-maple-dresser-custom.jpg" 
+                         alt="Custom handcrafted hard maple dresser finished with natural tung oil" 
+                         style="width: 100%; height: 300px; object-fit: cover; margin-bottom: 15px; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);" 
+                         loading="lazy">
+                    <h3>Custom Dresser</h3>
+                </div>
+                
+                <div>
+                    <img src="./assets/images/custom-dresser-dovetail-maple.jpg" 
+                         alt="Close-up detail of hand-cut sliding dovetail joinery on a custom maple dresser" 
+                         style="width: 100%; height: 300px; object-fit: cover; margin-bottom: 15px; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);" 
+                         loading="lazy">
+                    <h3>Joinery & Details</h3>
+                </div>
+                
+            </div>
+            <br><br>
+            <a href="gallery.html" class="btn" style="border: 2px solid #4a3f35;">View Full Gallery</a>
+        </div>
+    </section>
+
+    <section class="parallax-divider-2">
+        <div class="container">
+            <h2>Handcrafted for Your Home</h2>
+        </div>
+    </section>  
+
+    <section class="section-padding bg-dark text-center">
+        <div class="container" style="max-width: 800px;">
+            <h2>Need help around the house?</h2>
+            <p>Beyond fine furniture, I offer dedicated residential repair and handyman services. Backed by years of trade experience, I can help you tackle your home improvement to-do list safely and correctly.</p>
+            <br>
+            <a href="handyman.html" style="background: #fff; color: #2c2a29;" class="btn">Explore Handyman Services</a>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding">
+        <div class="container text-center" style="max-width: 600px;">
+            <h2>Get in Touch</h2>
+            <p style="margin-bottom: 30px;">Fill out the form below to request a quote for custom furniture or handyman work.</p>
+            
+            <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 15px; text-align: left;">
+                <label>
+                    Name
+                    <input type="text" name="name" style="width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;" required>
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" style="width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;" required>
+                </label>
+                <label>
+                    What type of project do you need help with?
+                    <select name="project_type" style="width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                        <option value="furniture">Custom Furniture Build</option>
+                        <option value="handyman">Handyman / Home Repair</option>
+                        <option value="other">Other Inquiry</option>
+                    </select>
+                </label>
+                <label>
+                    Project Details
+                    <textarea name="message" rows="5" placeholder="Tell me a bit about materials, dimensions, or the repairs needed..." style="width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit;" required></textarea>
+                </label>
+                <button type="submit" class="btn" style="border: 2px solid #4a3f35;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 RW Custom Woodworking. Serving Fort Collins and surrounding areas.</p>
+        </div>
+    </footer>
 
 </body>
-
 </html>

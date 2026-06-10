@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architectural Repair | Woyda Design-Build</title>
+    <meta name="description" content="High-end architectural repair and structural handyman services in Fort Collins, Colorado.">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Playfair+Display:400,700" rel="stylesheet">
+    
+    <style>
+        /* Basic Reset & Typography */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #2c2a29; background-color: #faf9f7; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: #1a1a1a; }
+        a { text-decoration: none; color: inherit; transition: color 0.3s; }
+        a:hover { color: #8b5a2b; }
+        
+        /* Layout Utilities */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .section-padding { padding: 80px 0; }
+        
+        /* Navigation */
+        header { padding: 20px 0; background: #fff; border-bottom: 1px solid #e8e5e1; position: sticky; top: 0; z-index: 100; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .nav-links a { margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+        
+        /* Page Header */
+        .page-header { padding: 80px 20px 40px 20px; text-align: center; }
+        .page-header h1 { font-size: 3.5rem; margin-bottom: 15px; }
+        .page-header p { max-width: 700px; margin: 0 auto; color: #555; font-size: 1.1rem; }
+
+        /* Buttons */
+        .btn { display: inline-block; padding: 12px 30px; background: #4a3f35; color: #fff; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; transition: background 0.3s; border: none; cursor: pointer; }
+        .btn:hover { background: #2c2a29; color: #fff; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+        }
+        
+        /* Footer */
+        footer { background: #1a1a1a; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; margin-top: auto; }
+        
+        /* Flexbox body to keep footer at bottom on short pages */
+        body { display: flex; flex-direction: column; min-height: 100vh; }
+        .main-content { flex: 1; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><strong>WOYDA DESIGN-BUILD</strong></div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">About</a>
+                    <a href="gallery.html">Portfolio</a>
+                    <a href="handyman.html" style="color: #8b5a2b;">Architectural Repair</a>
+                    <a href="index.html#contact">Consultation</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <section class="page-header container">
+            <h1>Architectural Repair</h1>
+            <p>Expert structural and cosmetic repairs backed by seven years of residential construction experience. Doing the specialized jobs standard contractors won't touch.</p>
+        </section>
+
+        <section class="container section-padding text-center" style="max-width: 800px; background: #fff; padding: 60px 40px; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 60px;">
+            <h2 style="margin-bottom: 20px;">Detailed Services Coming Soon</h2>
+            <p style="margin-bottom: 20px;">I am currently updating this page with a full list of architectural repair services, including structural deck restorations, custom framing fixes, and high-end built-in modifications.</p>
+            <p style="margin-bottom: 40px;">In the meantime, if your home requires a complex repair that demands the precision of a fine woodworker and the structural intuition of a home builder, I am currently accepting consultation requests.</p>
+            
+            <a href="index.html#contact" class="btn">Request a Repair Consultation</a>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Woyda Design-Build. Serving Fort Collins and the Front Range.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

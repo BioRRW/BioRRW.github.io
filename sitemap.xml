@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main Homepage (Clean Root Domain - Priority 1.00) -->
+  <url>
+    <loc>https://rwcustomfurniture.com/</loc>
+    <lastmod>2026-06-22T17:25:29+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://rwcustomfurniture.com/about.html</loc>
+    <lastmod>2026-06-22T17:25:29+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Portfolio / Gallery -->
+  <url>
+    <loc>https://rwcustomfurniture.com/gallery.html</loc>
+    <lastmod>2026-06-22T17:25:29+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Craftsman Handyman Services -->
+  <url>
+    <loc>https://rwcustomfurniture.com/handyman.html</loc>
+    <lastmod>2026-06-22T17:25:29+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Consultation / Contact -->
+  <url>
+    <loc>https://rwcustomfurniture.com/consultation.html</loc>
+    <lastmod>2026-06-22T17:25:29+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+</urlset>

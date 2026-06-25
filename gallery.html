@@ -3,11 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | RW Custom Furniture</title>
-    <meta name="description" content="View our portfolio of bespoke handcrafted furniture, architectural built-ins, and fine woodworking projects built in Fort Collins, Colorado.">
+    <title>Custom Woodworking & Handyman Portfolio | RW Custom Furniture</title>
+    <meta name="description" content="Explore our portfolio of bespoke handcrafted furniture, fine woodworking, and precision craftsman handyman repairs completed in Fort Collins, Colorado.">
     
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Playfair+Display:400,700" rel="stylesheet">
     
+    <!-- Local Business Schema for Image/Gallery Discovery -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["HomeAndConstructionBusiness", "FurnitureStore"],
+      "name": "RW Custom Furniture",
+      "url": "https://rwcustomfurniture.com",
+      "image": "https://rwcustomfurniture.com/assets/images/wood/woodworking-dog-crib-custom.jpg",
+      "description": "Boutique custom woodworking, fine furniture design, and precision craftsman handyman services in Fort Collins, CO.",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Fort Collins",
+        "addressRegion": "CO",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.5853,
+        "longitude": -105.0844
+    	},
+      "areaServed": [
+        {"@type": "AdministrativeArea", "name": "Fort Collins"},
+        {"@type": "AdministrativeArea", "name": "Loveland"},
+        {"@type": "AdministrativeArea", "name": "Windsor"},
+        {"@type": "AdministrativeArea", "name": "Northern Colorado"}
+      ]
+    }
+    </script>
+
     <style>
         /* Basic Reset & Typography */
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -52,6 +82,11 @@
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .gallery-grid { grid-template-columns: 1fr; }
+            /* Mobile touch UX enhancement: forces descriptions to display clean on mobile screens */
+            .gallery-overlay { height: auto; background: rgba(26,26,26,0.85); position: relative; padding: 15px 20px; }
+            .gallery-overlay h3 { opacity: 1; transform: translateY(0); font-size: 1.1rem; }
+            .gallery-item { min-height: auto; }
+            .gallery-item img { height: 280px; }
         }
         footer { background: #1a1a1a; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; margin-top: 60px; }
     </style>
@@ -66,7 +101,7 @@
                     <a href="index.html">Home</a>
                     <a href="index.html#about">About</a>
                     <a href="gallery.html" style="color: #8b5a2b;">Portfolio</a>
-                    <a href="handyman.html">Architectural Repair</a>
+                    <a href="handyman.html">Handyman Services</a>
                     <a href="index.html#contact">Consultation</a>
                 </div>
             </nav>
@@ -75,7 +110,7 @@
 
     <section class="page-header container">
         <h1>Project Portfolio</h1>
-        <p>A curated collection of recent commissions and architectural woodworking. From precision-cut mortise-and-tenon joinery to seamless built-in installations, every piece is engineered for your space and built to last generations.</p>
+        <p>A curated collection of custom commissions, fine woodworking, and residential repairs. From precision hand-cut joinery to honest, reliable home care, every project is completed with a craftsman's attention to detail.</p>
     </section>
 
     <section class="container">
@@ -84,7 +119,7 @@
             <h2>Heirloom Nursery Commissions</h2>
         </div>
         <div class="gallery-grid">
-            <figure class="gallery-item"><img src="./assets/images/wood/custom-nursery-crib-adjustable.jpg" alt="Adjustable custom hard maple nursery crib built in Fort Collins" loading="lazy"><figcaption class="gallery-overlay"><h3>Adjustable Nursery Crib</h3></figcaption></figure>
+            <figure class="gallery-item"><img src="./assets/images/wood/custom-nursery-crib-adjustable.jpg" alt="Adjustable custom hard maple nursery crib built in Fort Collins CO" loading="lazy"><figcaption class="gallery-overlay"><h3>Adjustable Nursery Crib</h3></figcaption></figure>
             <figure class="gallery-item"><img src="./assets/images/wood/custom-maple-crib-adjustable.jpg" alt="Custom hard maple adjustable crib showcasing joinery" loading="lazy"><figcaption class="gallery-overlay"><h3>Hard Maple Crib</h3></figcaption></figure>
             <figure class="gallery-item"><img src="./assets/images/wood/custom-crib-saftey-rail-maple.jpg" alt="Hard maple crib safety rail detail" loading="lazy"><figcaption class="gallery-overlay"><h3>Safety Rail Details</h3></figcaption></figure>
             <figure class="gallery-item"><img src="./assets/images/wood/hard-maple-crib-mattress.jpg" alt="Hard maple crib showing sturdy mattress support" loading="lazy"><figcaption class="gallery-overlay"><h3>Sturdy Construction</h3></figcaption></figure>
@@ -96,7 +131,7 @@
             <h2>Fine Furniture & Precision Joinery</h2>
         </div>
         <div class="gallery-grid">
-            <figure class="gallery-item"><img src="./assets/images/wood/handcrafted-hard-maple-dresser-custom.jpg" alt="Custom handcrafted hard maple dresser finished with natural tung oil" loading="lazy"><figcaption class="gallery-overlay"><h3>Hard Maple Dresser</h3></figcaption></figure>
+            <figure class="gallery-item"><img src="./assets/images/wood/handcrafted-hard-maple-dresser-custom.jpg" alt="Custom handcrafted hard maple dresser finished with natural tung oil in Fort Collins" loading="lazy"><figcaption class="gallery-overlay"><h3>Hard Maple Dresser</h3></figcaption></figure>
             <figure class="gallery-item"><img src="./assets/images/wood/handcrafted-custom-dresser-wood.jpg" alt="Handcrafted custom wood dresser" loading="lazy"><figcaption class="gallery-overlay"><h3>Solid Wood Construction</h3></figcaption></figure>
             <figure class="gallery-item"><img src="./assets/images/wood/custom-dresser-dovetail-maple.jpg" alt="Close-up of sliding dovetail joinery on a custom maple dresser" loading="lazy"><figcaption class="gallery-overlay"><h3>Hand Cut Dovetail Drawers</h3></figcaption></figure>
             <figure class="gallery-item"><img src="./assets/images/wood/custom-dresser-dovetail.jpg" alt="Hand-cut sliding dovetail joinery detail" loading="lazy"><figcaption class="gallery-overlay"><h3>Hand-Cut Joinery</h3></figcaption></figure>
@@ -105,11 +140,21 @@
             <figure class="gallery-item"><img src="./assets/images/wood/blum-softclose-drawer-hard-maple.jpg" alt="Hard maple drawer fitted with Blum soft-close hardware" loading="lazy"><figcaption class="gallery-overlay"><h3>Blum Soft-Close Hardware</h3></figcaption></figure>
         </div>
 
+        <!-- NEWLY ADDED TARGET CATEGORY FOR HANDYMAN DISCOVERY -->
+        <div class="category-header">
+            <h2>Craftsman Handyman & Home Repairs</h2>
+        </div>
+        <div class="gallery-grid">
+            <figure class="gallery-item"><img src="./assets/images/wood/fence-gate-repair-fort-collins.jpg" alt="Craftsman Handyman Services - Structural wooden fence and gate repair in Fort Collins CO" loading="lazy"><figcaption class="gallery-overlay"><h3>Fence & Gate Structural Repair</h3></figcaption></figure>
+            <figure class="gallery-item"><img src="./assets/images/wood/deck-board-restoration-repair.jpg" alt="Craftsman Handyman Services - Custom deck framing and outdoor board repairs" loading="lazy"><figcaption class="gallery-overlay"><h3>Deck Restoration & Maintenance</h3></figcaption></figure>
+            <figure class="gallery-item"><img src="./assets/images/wood/tv-mounting-drywall-anchoring.jpg" alt="Craftsman Handyman Services - Secure wall hanging and heavy TV mounting" loading="lazy"><figcaption class="gallery-overlay"><h3>Precision Wall Mounting & Hanging</h3></figcaption></figure>
+        </div>
+
         <div class="category-header">
             <h2>Architectural Built-Ins & Mantels</h2>
         </div>
         <div class="gallery-grid">
-            <figure class="gallery-item"><img src="./assets/images/wood/custom-built-in-wall-bookshelf.jpg" alt="8-foot custom built-in bookshelf spanning a full wall" loading="lazy"><figcaption class="gallery-overlay"><h3>Wall-to-Wall Library Built-In</h3></figcaption></figure>
+            <figure class="gallery-item"><img src="./assets/images/wood/custom-built-in-wall-bookshelf.jpg" alt="8-foot custom built-in bookshelf spanning a full wall in Fort Collins Colorado" loading="lazy"><figcaption class="gallery-overlay"><h3>Wall-to-Wall Library Built-In</h3></figcaption></figure>
             <figure class="gallery-item"><img src="./assets/images/wood/custom-plant-bookshelf-built-in.jpg" alt="Custom built-in plant stand and bookshelf" loading="lazy"><figcaption class="gallery-overlay"><h3>Plant Stand & Bookshelf</h3></figcaption></figure>
             <figure class="gallery-item"><img src="./assets/images/wood/custom-mantle-over-existing-fireplace.jpg" alt="Custom wood mantel built over an existing fireplace" loading="lazy"><figcaption class="gallery-overlay"><h3>Mantel Over Existing Fireplace</h3></figcaption></figure>
             <figure class="gallery-item"><img src="./assets/images/wood/custom-built-in-mantle-fireplace.jpg" alt="Custom built-in mantel over fireplace" loading="lazy"><figcaption class="gallery-overlay"><h3>Built-In Fireplace Surround</h3></figcaption></figure>
@@ -121,7 +166,7 @@
             <h2>Media Consoles & Living Spaces</h2>
         </div>
         <div class="gallery-grid">
-            <figure class="gallery-item"><img src="./assets/images/wood/live-edge-modern-tv-stand.jpg" alt="Modern live-edge wood TV stand" loading="lazy"><figcaption class="gallery-overlay"><h3>Live-Edge Modern Media Console</h3></figcaption></figure>
+            <figure class="gallery-item"><img src="./assets/images/wood/live-edge-modern-tv-stand.jpg" alt="Modern live-edge wood TV stand built in Colorado" loading="lazy"><figcaption class="gallery-overlay"><h3>Live-Edge Modern Media Console</h3></figcaption></figure>
             <figure class="gallery-item"><img src="./assets/images/wood/handcrafted-custom-tv-stand-modern.jpg" alt="Handcrafted modern custom TV stand" loading="lazy"><figcaption class="gallery-overlay"><h3>Modern Entertainment Console</h3></figcaption></figure>
             <figure class="gallery-item"><img src="./assets/images/wood/live-edge-tv-modern-oak.jpg" alt="Modern live-edge oak TV stand" loading="lazy"><figcaption class="gallery-overlay"><h3>Live-Edge Oak Media Console</h3></figcaption></figure>
             <figure class="gallery-item"><img src="./assets/images/wood/custom-tv-stand-live-edge.jpg" alt="Custom live-edge TV console" loading="lazy"><figcaption class="gallery-overlay"><h3>Custom Live-Edge Media Stand</h3></figcaption></figure>
@@ -175,9 +220,13 @@
 
     </section>
 
+    <!-- Optimized Footer Component with Normalized NAP Signals -->
     <footer>
-        <div class="container">
-            <p>&copy; 2026 RW Custom Furniture. Serving Fort Collins and the Front Range.</p>
+        <div class="container" style="line-height: 1.8;">
+            <p><strong>RW Custom Furniture & Craftsman Handyman Services</strong></p>
+            <p>Based in Fort Collins, CO | Serving Fort Collins, Loveland, and the Front Range</p>
+            <p style="margin-top: 5px;">Ready to start? <a href="consultation.html" style="text-decoration: underline; font-weight: 700;">Request a Consultation</a></p>
+            <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa;">&copy; 2026 RW Custom Furniture. All Rights Reserved.</p>
         </div>
     </footer>
 

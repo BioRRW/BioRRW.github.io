@@ -12,6 +12,8 @@
 
     <link rel="icon" href="https://rwcustomfurniture.com/assets/images/wood/RW_logo_custom_furniture.png" type="image/png" sizes="any">
 
+     <link rel="canonical" href="https://rwcustomfurniture.com/handyman">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -78,7 +80,22 @@
     <style>
         /* Basic Reset & Typography */
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #2c2a29; background-color: #faf9f7; }
+        
+        /* Flexbox body with Fixed Parallax/Static Background Setup */
+        body { 
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif; 
+            line-height: 1.6; 
+            color: #2c2a29; 
+            background-image: url("./assets/images/wood/raised-bed-fort-collins-custom.jpg");
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
         h1, h2, h3 { font-family: 'Playfair Display', serif; color: #1a1a1a; }
         a { text-decoration: none; color: inherit; transition: color 0.3s; }
         a:hover { color: #8b5a2b; }
@@ -88,15 +105,29 @@
         .text-center { text-align: center; }
         .section-padding { padding: 60px 0; }
         
-        /* Navigation */
+        /* Navigation (Stays cleanly pinned at the top) */
         header { padding: 20px 0; background: #fff; border-bottom: 1px solid #e8e5e1; position: sticky; top: 0; z-index: 100; }
         nav { display: flex; justify-content: space-between; align-items: center; }
         .nav-links a { margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
         
-        /* Page Header */
-        .page-header { padding: 80px 20px 40px 20px; text-align: center; }
+        /* Main Content Wrapper */
+        .main-content { flex: 1; }
+
+        /* Premium Frosted Overlay Block to insulate text and maintain high contrast */
+        .content-card-overlay {
+            background-color: rgba(250, 249, 247, 0.94);
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border: 1px solid rgba(232, 229, 225, 0.7);
+        }
+
+        /* Page Header Configuration */
+        .page-header { padding: 40px 20px 20px 20px; text-align: center; }
         .page-header h1 { font-size: 3.5rem; margin-bottom: 15px; }
-        .page-header p { max-width: 700px; margin: 0 auto; color: #555; font-size: 1.1rem; }
+        .page-header p { max-width: 750px; margin: 0 auto; color: #4a3f35; font-size: 1.15rem; }
 
         /* Services Grid Layout */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 40px; }
@@ -108,23 +139,20 @@
         .service-details li::before { content: "•"; color: #8b5a2b; position: absolute; left: 0; font-weight: bold; }
 
         /* Call To Action Box */
-        .cta-box { background: #fff; padding: 50px 40px; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); margin-top: 60px; margin-bottom: 60px; border: 1px solid #e8e5e1; }
+        .cta-box { background: #fff; padding: 50px 40px; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); margin-top: 60px; margin-bottom: 20px; border: 1px solid #e8e5e1; }
 
         /* Buttons */
-        .btn { display: inline-block; padding: 12px 30px; background: #4a3f35; color: #fff; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; transition: background 0.3s; border: none; cursor: pointer; margin-top: 10px; }
+        .btn { display: inline-block; padding: 12px 30px; background: #4a3f35; color: #fff; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; transition: background 0.3s; border: none; cursor: pointer; margin-top: 10px; font-weight: 700; }
         .btn:hover { background: #2c2a29; color: #fff; }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
+            .content-card-overlay { padding: 20px; }
             .page-header h1 { font-size: 2.5rem; }
         }
         
         /* Footer */
-        footer { background: #1a1a1a; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; margin-top: auto; }
-        
-        /* Flexbox body setup */
-        body { display: flex; flex-direction: column; min-height: 100vh; }
-        .main-content { flex: 1; }
+        footer { background: #1a1a1a; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; border-top: 1px solid #2c2a29; }
     </style>
 </head>
 <body>
@@ -134,115 +162,121 @@
             <nav>
                 <div class="logo"><strong>RW Custom Furniture</strong></div>
                 <div class="nav-links">
-                    <a href="/index">Home</a>
+                    <a href="/">Home</a>
                     <a href="/about">About</a>
                     <a href="/gallery">Portfolio</a>
                     <a href="/handyman" style="color: #8b5a2b;">Handyman Services</a>
-                    <a href="/consultation">Consultation</
+                    <a href="/consultation">Consultation</a>
                 </div>
             </nav>
         </div>
     </header>
 
     <div class="main-content">
-        <section class="page-header container">
-            <h1>Craftsman Handyman Services</h1>
-            <p>Honest, reliable, and straightforward help for your home improvement needs. Bringing the precise attention to detail of an independent craftsman to residential home care in Fort Collins.</p>
-        </section>
-
-        <!-- Services Grid Section -->
-        <section class="container">
-            <div class="services-grid">
+        <div class="container section-padding">
+            <div class="content-card-overlay">
                 
-                <!-- Service 1: TV Mounting -->
-                <div class="service-card">
-                    <div>
-                        <h3>TV Mounting & Wall Hanging</h3>
-                        <p>Whether you need your television completely centered on standard drywall or securely anchored directly into historic brick, I bring the precision, proper stud-finders, and heavy-duty mounts to make sure it is level and built to hold safely.</p>
-                    </div>
-                    <ul class="service-details">
-                        <li>Drywall & brick wall installations</li>
-                        <li>Heavy-duty anchoring & perfect leveling</li>
-                        <li>Clean workspaces, completely swept down</li>
-                    </ul>
-                </div>
+                <section class="page-header">
+                    <h1>Craftsman Handyman Services</h1>
+                    <p>Honest, reliable, and straightforward help for your home improvement needs. Bringing the precise attention to detail of an independent craftsman to residential home care in Fort Collins.</p>
+                </section>
 
-                <!-- Service 2: Painting -->
-                <div class="service-card">
-                    <div>
-                        <h3>Painting & Room Refreshes</h3>
-                        <p>Specializing in clean accent walls and thorough, crisp single-room updates. I place my focus entirely on handling the tedious, essential prep work—meticulous taping, canvas floor covering, and drywall patching—so your space looks flawlessly clean.</p>
-                    </div>
-                    <ul class="service-details">
-                        <li>Accent walls & small room painting</li>
-                        <li>Flawless surface prep, patching, & taping</li>
-                        <li>Crisp, neat edge lines without the mess</li>
-                    </ul>
-                </div>
+                <!-- Services Grid Section -->
+                <section>
+                    <div class="services-grid">
+                        
+                        <!-- Service 1: TV Mounting -->
+                        <div class="service-card">
+                            <div>
+                                <h3>TV Mounting & Wall Hanging</h3>
+                                <p>Whether you need your television completely centered on standard drywall or securely anchored directly into historic brick, I bring the precision, proper stud-finders, and heavy-duty mounts to make sure it is level and built to hold safely.</p>
+                            </div>
+                            <ul class="service-details">
+                                <li>Drywall & brick wall installations</li>
+                                <li>Heavy-duty anchoring & perfect leveling</li>
+                                <li>Clean workspaces, completely swept down</li>
+                            </ul>
+                        </div>
 
-                <!-- Service 3: Room Measurement -->
-                <div class="service-card">
-                    <div>
-                        <h3>Precision Room Measurement</h3>
-                        <p>Planning a complex furniture layout, mapping out new flooring material square footage, or getting your preliminary layout numbers together for a renovation permit? I will handle the math, complete a detailed walk-through, and supply clean dimensions.</p>
-                    </div>
-                    <ul class="service-details">
-                        <li>Exact dimension charting & cross-checks</li>
-                        <li>Clear, accurate floor plan sketches</li>
-                        <li>Perfect prep work for layout planning</li>
-                    </ul>
-                </div>
+                        <!-- Service 2: Painting -->
+                        <div class="service-card">
+                            <div>
+                                <h3>Painting & Room Refreshes</h3>
+                                <p>Specializing in clean accent walls and thorough, crisp single-room updates. I place my focus entirely on handling the tedious, essential prep work—meticulous taping, canvas floor covering, and drywall patching—so your space looks flawlessly clean.</p>
+                            </div>
+                            <ul class="service-details">
+                                <li>Accent walls & small room painting</li>
+                                <li>Flawless surface prep, patching, & taping</li>
+                                <li>Crisp, neat edge lines without the mess</li>
+                            </ul>
+                        </div>
 
-                <!-- Service 4: Deck, Fence & Outdoor Care -->
-                <div class="service-card">
-                    <div>
-                        <h3>Deck, Fence & Outdoor Care</h3>
-                        <p>From fixing sticking gate latches and replacing weathered deck boards to helping out with seasonal yard cleanups, I bring reliable craftsman care to your yard. I focus on practical, high-quality maintenance that keeps your exterior looking sharp.</p>
-                    </div>
-                    <ul class="service-details">
-                        <li>Replacing broken deck planks & spindles</li>
-                        <li>Adjusting gate hinges, latches, & post supports</li>
-                        <li>Light pruning, weeding, & seasonal yard cleanup</li>
-                    </ul>
-                </div>
+                        <!-- Service 3: Room Measurement -->
+                        <div class="service-card">
+                            <div>
+                                <h3>Precision Room Measurement</h3>
+                                <p>Planning a complex furniture layout, mapping out new flooring material square footage, or getting your preliminary layout numbers together for a renovation permit? I will handle the math, complete a detailed walk-through, and supply clean dimensions.</p>
+                            </div>
+                            <ul class="service-details">
+                                <li>Exact dimension charting & cross-checks</li>
+                                <li>Clear, accurate floor plan sketches</li>
+                                <li>Perfect prep work for layout planning</li>
+                            </ul>
+                        </div>
 
-                <!-- Service 5: Residential Moving Help -->
-                <div class="service-card">
-                    <div>
-                        <h3>Careful Moving Support</h3>
-                        <p>Providing reliable, honest, and respectful muscle to help you sort out your next move. I don't bring enterprise equipment like heavy appliance straps or industrial dollies, but I am highly careful with standard furniture and delicate boxes.</p>
-                    </div>
-                    <ul class="service-details">
-                        <li>Packing, loading, & organizing trucks</li>
-                        <li>Exceptional respect for fragile items</li>
-                        <li>Hardworking, reliable labor until finished</li>
-                    </ul>
-                </div>
+                        <!-- Service 4: Deck, Fence & Outdoor Care -->
+                        <div class="service-card">
+                            <div>
+                                <h3>Deck, Fence & Outdoor Care</h3>
+                                <p>From fixing sticking gate latches and replacing weathered deck boards to helping out with seasonal yard cleanups, I bring reliable craftsman care to your yard. I focus on practical, high-quality maintenance that keeps your exterior looking sharp.</p>
+                            </div>
+                            <ul class="service-details">
+                                <li>Replacing broken deck planks & spindles</li>
+                                <li>Adjusting gate hinges, latches, & post supports</li>
+                                <li>Light pruning, weeding, & seasonal yard cleanup</li>
+                            </ul>
+                        </div>
 
-                <!-- Service 6: Home Technology Help -->
-                <div class="service-card">
-                    <div>
-                        <h3>Home Technology Setup</h3>
-                        <p>Straightforward, highly patient technical assistance for your home. I don't configure enterprise-level corporate networks or business databases here—just clean, reliable technical assistance to keep your daily home technology working right.</p>
-                    </div>
-                    <ul class="service-details">
-                        <li>Home Wi-Fi & router configurations</li>
-                        <li>Smart home device installations</li>
-                        <li>Family photo backup & digital organizing</li>
-                    </ul>
-                </div>
+                        <!-- Service 5: Residential Moving Help -->
+                        <div class="service-card">
+                            <div>
+                                <h3>Careful Moving Support</h3>
+                                <p>Providing reliable, honest, and respectful muscle to help you sort out your next move. I don't bring enterprise equipment like heavy appliance straps or industrial dollies, but I am highly careful with standard furniture and delicate boxes.</p>
+                            </div>
+                            <ul class="service-details">
+                                <li>Packing, loading, & organizing trucks</li>
+                                <li>Exceptional respect for fragile items</li>
+                                <li>Hardworking, reliable labor until finished</li>
+                            </ul>
+                        </div>
 
+                        <!-- Service 6: Home Technology Help -->
+                        <div class="service-card">
+                            <div>
+                                <h3>Home Technology Setup</h3>
+                                <p>Straightforward, highly patient technical assistance for your home. I don't configure enterprise-level corporate networks or business databases here—just clean, reliable technical assistance to keep your daily home technology working right.</p>
+                            </div>
+                            <ul class="service-details">
+                                <li>Home Wi-Fi & router configurations</li>
+                                <li>Smart home device installations</li>
+                                <li>Family photo backup & digital organizing</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Call to Action Section -->
+                <section class="text-center">
+                    <div class="cta-box" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+                        <h2 style="margin-bottom: 20px;">Need an Honest, Precision Fix?</h2>
+                        <p style="margin-bottom: 30px; color: #555;">I deal directly with every single client, maintain absolute communication milestones, and promise to treat your property with complete care. Let me know what project you are trying to get off your plate.</p>
+                        <a href="/#contact" class="btn">Request Project Consultation</a>
+                    </div>
+                </section>
+                
             </div>
-        </section>
-
-        <!-- Call to Action Section -->
-        <section class="container text-center">
-            <div class="cta-box" style="max-width: 800px; margin-left: auto; margin-right: auto;">
-                <h2 style="margin-bottom: 20px;">Need an Honest, Precision Fix?</h2>
-                <p style="margin-bottom: 30px; color: #555;">I deal directly with every single client, maintain absolute communication milestones, and promise to treat your property with complete care. Let me know what project you are trying to get off your plate.</p>
-                <a href="/index#contact" class="btn">Request Project Consultation</a>
-            </div>
-        </section>
+        </div>
     </div>
 
     <!-- Optimized Footer Component with Normalized NAP Signals -->
@@ -254,7 +288,6 @@
             <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa;">&copy; 2026 RW Custom Furniture. All Rights Reserved.</p>
         </div>
     </footer>
-
 
 </body>
 </html>

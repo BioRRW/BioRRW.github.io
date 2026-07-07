@@ -12,6 +12,8 @@
 
     <link rel="icon" href="https://rwcustomfurniture.com/assets/images/wood/RW_logo_custom_furniture.png" type="image/png" sizes="any">
 
+     <link rel="canonical" href="https://rwcustomfurniture.com/gallery">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Woodworking & Handyman Portfolio | RW Custom Furniture</title>
@@ -100,6 +102,34 @@
             .gallery-item img { height: 280px; }
         }
         footer { background: #1a1a1a; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; margin-top: 60px; }
+
+        /* Styling for the new smaller, italicized subtext */
+        .gallery-subtext {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: #e8e5e1; /* A soft cream color so it doesn't fight the white title */
+            margin-top: 5px;
+            
+            /* Matches your existing h3 animation styling */
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s ease 0.15s; /* Slightly longer delay than h3 for a tiered fade-in effect */
+        }
+
+        /* Forces the subtext to reveal perfectly alongside the h3 on hover */
+        .gallery-item:hover .gallery-overlay .gallery-subtext {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Keeps it looking sharp and readable inside your existing mobile styling */
+        @media (max-width: 768px) {
+            .gallery-subtext {
+                opacity: 1;
+                transform: translateY(0);
+                font-size: 0.85rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -167,6 +197,7 @@
         <div class="gallery-grid">
             <figure class="gallery-item"><img src="./assets/images/wood/custom-built-in-wall-bookshelf.jpg" alt="8-foot custom built-in bookshelf spanning a full wall in Fort Collins Colorado" loading="lazy"><figcaption class="gallery-overlay"><h3>Wall-to-Wall Library Built-In</h3></figcaption></figure>
             <figure class="gallery-item"><img src="./assets/images/wood/custom-plant-bookshelf-built-in.jpg" alt="Custom built-in plant stand and bookshelf" loading="lazy"><figcaption class="gallery-overlay"><h3>Plant Stand & Bookshelf</h3></figcaption></figure>
+            <figure class="gallery-item"><img src="./assets/images/wood/built-in-bookshelf-plant-stand.jpg" alt="Full wall bookshelf" loading="lazy"><figcaption class="gallery-overlay"><h3>Plant Stand & Bookshelf</h3></figcaption></figure>
             <figure class="gallery-item"><img src="./assets/images/wood/custom-mantle-over-existing-fireplace.jpg" alt="Custom wood mantel built over an existing fireplace" loading="lazy"><figcaption class="gallery-overlay"><h3>Mantel Over Existing Fireplace</h3></figcaption></figure>
             <figure class="gallery-item"><img src="./assets/images/wood/custom-built-in-mantle-fireplace.jpg" alt="Custom built-in mantel over fireplace" loading="lazy"><figcaption class="gallery-overlay"><h3>Built-In Fireplace Surround</h3></figcaption></figure>
             <figure class="gallery-item"><img src="./assets/images/wood/custom-wood-mantle-fireplace.jpg" alt="Handcrafted wood fireplace mantel" loading="lazy"><figcaption class="gallery-overlay"><h3>Handcrafted Wood Mantel</h3></figcaption></figure>
@@ -223,10 +254,26 @@
         </div>
         <div class="gallery-grid">
             <figure class="gallery-item"><img src="./assets/images/wood/custom-driftwood-lamp-edison.jpg" alt="Custom driftwood lamp with Edison bulb" loading="lazy"><figcaption class="gallery-overlay"><h3>Driftwood Edison Lamp</h3></figcaption></figure>
-            <figure class="gallery-item"><img src="./assets/images/wood/lamp-stand-driftwood.jpg" alt="Handcrafted driftwood lamp stand" loading="lazy"><figcaption class="gallery-overlay"><h3>Driftwood Lamp Stand</h3></figcaption></figure>
+            <figure class="gallery-item">
+                <img src="./assets/images/wood/lamp-stand-driftwood.jpg" alt="Handcrafted driftwood lamp stand" loading="lazy">
+                <figcaption class="gallery-overlay">
+                    <h3>Driftwood Lamp Stand</h3>
+                    <p class="gallery-subtext">Please contact for stained glass artist contact info</p>
+                </figcaption>
+            </figure>
             <figure class="gallery-item"><img src="./assets/images/wood/driftwood-art-gift-heart.jpg" alt="Custom driftwood heart art piece" loading="lazy"><figcaption class="gallery-overlay"><h3>Driftwood Heart Art</h3></figcaption></figure>
             <figure class="gallery-item"><img src="./assets/images/wood/driftwood-art-gift-heart-custom.jpg" alt="Handcrafted driftwood heart gift" loading="lazy"><figcaption class="gallery-overlay"><h3>Handcrafted Heart Gift</h3></figcaption></figure>
             <figure class="gallery-item"><img src="./assets/images/wood/custom-wood-art-gift-heart.jpg" alt="Custom wooden heart gift art" loading="lazy"><figcaption class="gallery-overlay"><h3>Custom Wooden Heart Art</h3></figcaption></figure>
+        </div>
+
+        <div class="category-header">
+            <h2>Other Projects</h2>
+        </div>
+        <div class="gallery-grid">
+            <figure class="gallery-item"><img src="./assets/images/wood/dish-rack-custom-build-craft.jpg" alt="Custom Fort Collins crafts" loading="lazy"><figcaption class="gallery-overlay"><h3>Custom Fort Collins crafts</h3></figcaption></figure>
+            <figure class="gallery-item"><img src="./assets/images/wood/custom-plant-raised-bed.jpg" alt="Raised garden bed Fort Collins" loading="lazy"><figcaption class="gallery-overlay"><h3>Custom Raised Bed</h3></figcaption></figure>
+            <figure class="gallery-item"><img src="./assets/images/wood/raised-bed-fort-collins-custom.jpg" alt="Custom raised bed" loading="lazy"><figcaption class="gallery-overlay"><h3>Custom Raised Bed</h3></figcaption></figure>
+            <figure class="gallery-item"><img src="./assets/images/wood/custom-picture-frame.jpg" alt="Custom picture frame" loading="lazy"><figcaption class="gallery-overlay"><h3>Custom Picture Frames</h3></figcaption></figure>
         </div>
 
     </section>

@@ -1,231 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta http-equiv="X-UA-Compatible" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reed Woyda - Contact</title>
-
-    <!--
-      - favicon
-    -->
-    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-    <!--
-      - custom css link
-    -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-    <!--
-      - google font link
-    -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXQLH66J4S"></script>
+    <!-- Google tag (gtag.js) - Fixed to match your main stream -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKDEGPV486"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
-        gtag('config', 'G-LXQLH66J4S');
+        gtag('config', 'G-HKDEGPV486');
     </script>
+
+    <!-- Standardized Branding Favicon -->
+    <link rel="icon" href="https://rwcustomfurniture.com/assets/images/wood/RW_logo_custom_furniture.png" type="image/png" sizes="any">
+
+    <!-- Explicit Canonical Tag for Extensionless URL -->
+    <link rel="canonical" href="https://rwcustomfurniture.com/contact">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact & Consultation | RW Custom Furniture</title>
+    <meta name="description" content="Get in touch with RW Custom Furniture for high-end commissions, architectural built-ins, and precision craftsman handyman services in Fort Collins, CO.">
+
+    <!-- Stylesheets and Webfonts -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Base Reset & Parallax Background Setup */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body { 
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif; 
+            line-height: 1.6; 
+            color: #2c2a29; 
+            background-image: url("./assets/images/wood/custom-furniture-fort-collins.jpg");
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Fixed Navigation Header matching your site theme */
+        header.site-header { padding: 20px 0; background: #fff; border-bottom: 1px solid #e8e5e1; position: sticky; top: 0; z-index: 100; width: 100%; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Montserrat', sans-serif; }
+        .nav-links a { margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; text-decoration: none; color: inherit; transition: color 0.3s; }
+        .nav-links a:hover { color: #8b5a2b; }
+
+        /* Main Content Layout Adjustments */
+        main { flex: 1; max-width: 800px; width: 100%; margin: 60px auto; padding: 0 20px; }
+
+        /* Frosted Glass Overlay Card Container */
+        .content-card-overlay {
+            background-color: rgba(250, 249, 247, 0.95);
+            border-radius: 8px;
+            padding: 45px 40px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border: 1px solid rgba(232, 229, 225, 0.8);
+        }
+
+        h2.article-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #1a1a1a; margin-bottom: 10px; text-align: center; }
+        p.subtitle { text-align: center; color: #555; margin-bottom: 35px; font-size: 1.05rem; }
+        .form-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #4a3f35; margin-bottom: 20px; border-bottom: 2px solid #e8e5e1; padding-bottom: 8px; }
+
+        /* Clean Form Input Elements styling overrides */
+        .form { display: flex; flex-direction: column; gap: 20px; }
+        .input-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .form-input { width: 100%; padding: 14px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; background: #fff; color: #2c2a29; outline: none; transition: border-color 0.3s; }
+        .form-input:focus { border-color: #8b5a2b; }
+        textarea.form-input { min-height: 180px; resize: vertical; }
+
+        /* Interactive Submission Button styling */
+        .form-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 30px; background: #4a3f35; color: #fff; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; font-weight: 700; border: none; cursor: pointer; transition: background 0.3s; align-self: flex-start; }
+        .form-btn:hover { background: #2c2a29; }
+        .form-btn ion-icon { font-size: 1.2rem; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .input-wrapper { grid-template-columns: 1fr; gap: 20px; }
+            .content-card-overlay { padding: 30px 20px; }
+            main { margin: 30px auto; }
+            .form-btn { width: 100%; }
+        }
+
+        /* Standardized Branding Footer */
+        footer { background: #1a1a1a; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; border-top: 1px solid #2c2a29; margin-top: auto; }
+    </style>
 </head>
 
 <body>
 
-    <!--
-      - #MAIN
-    -->
+    <!-- Unified Website Navigation Header -->
+    <header class="site-header">
+        <div class="nav-container">
+            <div class="logo"><strong>RW Custom Furniture</strong></div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/gallery">Portfolio</a>
+                <a href="/handyman">Handyman Services</a>
+                <a href="/contact" style="color: #8b5a2b;">Consultation</a>
+            </div>
+        </div>
+    </header>
 
+    <!-- Main Content Container with Intake Form -->
     <main>
-
-        <!--
-          - #SIDEBAR
-        -->
-
-        <aside class="sidebar" data-sidebar>
-
-            <div class="sidebar-info">
-
-                <figure class="avatar-box">
-                    <img src="./assets/images/profile_picture_1.jpg" alt="Reed Woyda" width="80">
-                </figure>
-
-                <div class="info-content">
-                    <h1 class="name" title="Reed Woyda">Reed Woyda</h1>
-
-                    <p class="title">Lead Software Engineer</p>
-                </div>
-
-                <button class="info_more-btn" data-sidebar-btn>
-                    <span>Show Contacts</span>
-
-                    <ion-icon name="chevron-down"></ion-icon>
-                </button>
-
-            </div>
-
-            <div class="sidebar-info_more">
-
-                <div class="separator"></div>
-
-                <ul class="contacts-list">
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="mail-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Email</p>
-
-                            <a href="mailto:selimyildiz91@gmail.com" class="contact-link">selimyildiz91@gmail.com</a>
-                        </div>
-
-                    </li>
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="phone-portrait-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Phone</p>
-
-                            <a href="tel:+46700093165" class="contact-link">+46 70 009 31 65</a>
-                        </div>
-
-                    </li>
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="calendar-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Birthday</p>
-
-                            <time datetime="1991-02-18">February 18, 1991</time>
-                        </div>
-
-                    </li>
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="location-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Location</p>
-
-                            <address>Lund, Skane, Sweden</address>
-                        </div>
-
-                    </li>
-
-                </ul>
-
-                <div class="separator"></div>
-
-                <ul class="social-list">
-
-                    <li class="social-item">
-                        <a href="https://stackoverflow.com/users/5519709/selim-yildiz" class="social-link">
-                            <ion-icon name="logo-stackoverflow"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://twitter.com/yildizseli" target="_blank" class="social-link">
-                            <ion-icon name="logo-twitter"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://medium.com/@selimyildiz91" class="social-link">
-                            <ion-icon name="logo-medium"></ion-icon>
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </aside>
-
-
-
-
-
-        <!--
-          - #main-content
-        -->
-
-        <div class="main-content">
-
-            <!--
-              - #NAVBAR
-            -->
-
-            <nav class="navbar">
-
-                <ul class="navbar-list">
-
-
-                    <li class="navbar-item">
-                        <a href="index.html" class="navbar-link">About</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="resume.html" class="navbar-link">Resume</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="blog.html" class="navbar-link">Blog</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="#" class="navbar-link active">Contact</a>
-                    </li>
-
-
-                </ul>
-
-            </nav>
-
-            <!--
-              - #CONTACT
-            -->
+        <div class="content-card-overlay">
 
             <article class="contact active" data-page="contact">
 
                 <header>
-                    <h2 class="h2 article-title">Contact</h2>
+                    <h2 class="h2 article-title">Project Consultation</h2>
+                    <p class="subtitle">Let's build something built to take a beating. Describe your project concept, repair needs, or dimensions below.</p>
                 </header>
 
                 <section class="contact-form">
-
-                    <h3 class="h3 form-title">Contact Form</h3>
+                    <h3 class="h3 form-title">Design-Build Intake</h3>
 
                     <form action="https://docs.google.com/forms/d/e/1FAIpQLSdHuaCNbJULvQgHst6sPGT2tW5I8PzSLpKuL5MbUudQeFL6ag/formResponse"
-                          target="_self" method="POST" id="mG61Hd"
-                          name="EmailForm" class="form" data-form>
+                          target="_self" method="POST" id="mG61Hd" name="EmailForm" class="form">
 
                         <div class="input-wrapper">
-                            <input type="text" name="entry.810455347" class="form-input" placeholder="Full name" required data-form-input>
-
-                            <input type="email" name="entry.637228470" class="form-input" placeholder="Email address" required data-form-input>
+                            <input type="text" name="entry.810455347" class="form-input" placeholder="Full Name" required>
+                            <input type="email" name="entry.637228470" class="form-input" placeholder="Email Address" required>
                         </div>
 
-                        <textarea name="entry.723078861" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+                        <textarea name="entry.723078861" class="form-input" placeholder="Tell me about your custom furniture commission or residential home care needs..." required></textarea>
 
-                        <button class="form-btn" type="submit" disabled data-form-btn>
+                        <!-- Removed the 'disabled' attribute so your users can actually send messages immediately -->
+                        <button class="form-btn" type="submit">
                             <ion-icon name="paper-plane"></ion-icon>
                             <span>Send Message</span>
                         </button>
@@ -236,25 +148,20 @@
             </article>
 
         </div>
-
     </main>
 
+    <!-- Unified Footer Component -->
+    <footer>
+        <div class="container" style="line-height: 1.8;">
+            <p><strong>RW Custom Furniture & Craftsman Handyman Services</strong></p>
+            <p>Based in Fort Collins, CO | Serving Fort Collins, Loveland, and the Front Range</p>
+            <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa;">&copy; 2026 RW Custom Furniture. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-
-
-
-
-    <!--
-      - custom js link
-    -->
-    <script src="./assets/js/script.js"></script>
-
-    <!--
-      - ionicon link
-    -->
+    <!-- Icon and Functional Support Scripts -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
-
 </html>

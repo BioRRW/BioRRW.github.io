@@ -24,7 +24,22 @@
     <style>
         /* Basic Reset & Typography */
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #2c2a29; background-color: #faf9f7; }
+        
+        /* Flexbox body with Parallax/Static Background Image Setup */
+        body { 
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif; 
+            line-height: 1.6; 
+            color: #2c2a29; 
+            background-image: url("./assets/images/wood/custom-furniture-fort-collins.jpg");
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
         h1, h2, h3 { font-family: 'Playfair Display', serif; color: #1a1a1a; margin-bottom: 15px; }
         a { text-decoration: none; color: inherit; transition: color 0.3s; }
         a:hover { color: #8b5a2b; }
@@ -32,18 +47,32 @@
         /* Layout Utilities */
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .text-center { text-align: center; }
-        .section-padding { padding: 80px 0; }
+        .section-padding { padding: 60px 0; }
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
         
-        /* Navigation */
+        /* Navigation (Fixed solid white header remains pinned at top) */
         header { padding: 20px 0; background: #fff; border-bottom: 1px solid #e8e5e1; position: sticky; top: 0; z-index: 100; }
         nav { display: flex; justify-content: space-between; align-items: center; }
         .nav-links a { margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
         
-        /* Page Header */
-        .page-header { padding: 80px 20px 40px 20px; text-align: center; }
+        /* Main Content Wrapper */
+        .main-content { flex: 1; }
+
+        /* Premium Frosted Overlay Block for high-contrast layout insulation */
+        .content-card-overlay {
+            background-color: rgba(250, 249, 247, 0.94);
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border: 1px solid rgba(232, 229, 225, 0.7);
+        }
+
+        /* Page Header Configuration */
+        .page-header { padding: 40px 20px 20px 20px; text-align: center; }
         .page-header h1 { font-size: 3.5rem; margin-bottom: 15px; }
-        .page-header p { max-width: 700px; margin: 0 auto; color: #555; font-size: 1.1rem; }
+        .page-header p { max-width: 750px; margin: 0 auto; color: #4a3f35; font-size: 1.15rem; }
 
         /* Process Steps */
         .process-step { margin-bottom: 30px; }
@@ -51,7 +80,7 @@
         .process-step p { font-size: 0.95rem; color: #555; }
 
         /* Form Styling */
-        .contact-form { background: #fff; padding: 40px; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .contact-form { background: #fff; padding: 40px; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e8e5e1; }
         .form-group { margin-bottom: 20px; }
         .form-group label { display: block; font-size: 0.9rem; font-weight: 700; margin-bottom: 8px; color: #2c2a29; }
         .form-control { width: 100%; padding: 12px; border: 1px solid #d5dbdb; border-radius: 4px; font-family: inherit; font-size: 1rem; background: #faf9f7; transition: border-color 0.3s; }
@@ -65,14 +94,13 @@
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .grid-2, .form-row { grid-template-columns: 1fr; gap: 30px; }
+            .content-card-overlay { padding: 20px; }
+            .page-header h1 { font-size: 2.5rem; }
+            .contact-form { padding: 20px; }
         }
         
         /* Footer */
-        footer { background: #1a1a1a; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; margin-top: auto; }
-        
-        /* Flexbox body to keep footer at bottom */
-        body { display: flex; flex-direction: column; min-height: 100vh; }
-        .main-content { flex: 1; }
+        footer { background: #1a1a1a; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; border-top: 1px solid #2c2a29; }
     </style>
 </head>
 <body>
@@ -82,7 +110,7 @@
             <nav>
                 <div class="logo"><strong>RW CUSTOM FURNITURE</strong></div>
                 <div class="nav-links">
-                    <a href="/index">Home</a>
+                    <a href="/">Home</a>
                     <a href="/about">About</a>
                     <a href="/gallery">Portfolio</a>
                     <a href="/handyman">Handyman Services</a>
@@ -93,86 +121,89 @@
     </header>
 
     <div class="main-content">
-        <section class="page-header container">
-            <h1>Start a Project</h1>
-            <p>Every heirloom piece and architectural built-in begins with a conversation. Fill out the form below to initiate the design process and engineer a solution perfectly tailored to your space.</p>
-        </section>
-
-        <section class="container section-padding">
-            <div class="grid-2">
+        <div class="container section-padding">
+            <div class="content-card-overlay">
                 
-                <!-- Left Column: The Process -->
-                <div>
-                    <h2 style="margin-bottom: 30px;">The Design-Build Approach</h2>
+                <section class="page-header">
+                    <h1>Start a Project</h1>
+                    <p>Every heirloom piece and architectural built-in begins with a conversation. Fill out the form below to initiate the design process and engineer a solution perfectly tailored to your space.</p>
+                </section>
+
+                <div class="grid-2">
                     
-                    <div class="process-step">
-                        <h3>1. The Initial Consultation</h3>
-                        <p>We begin by discussing your space, lifestyle, and aesthetic preferences. I focus on understanding how you intend to use the piece and the flow of your room to ensure perfect proportions and durability.</p>
+                    <!-- Left Column: The Process -->
+                    <div>
+                        <h2 style="margin-bottom: 30px;">The Design-Build Approach</h2>
+                        
+                        <div class="process-step">
+                            <h3>1. The Initial Consultation</h3>
+                            <p>We begin by discussing your space, lifestyle, and aesthetic preferences. I focus on understanding how you intend to use the piece and the flow of your room to ensure perfect proportions and durability.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <h3>2. 3D Drafting & Design</h3>
+                            <p>Before any wood is cut, I provide comprehensive 3D CAD models. This allows you to visualize the exact scale, joinery, and design details in your space, eliminating decision fatigue and guaranteeing the final result.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <h3>3. Material Selection & Deposit</h3>
+                            <p>Once the design is approved, we finalize the selection of premium, locally sourced hardwoods (such as elm, hard maple, or white oak). A 50% materials deposit secures your place in the build schedule.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <h3>4. The Build & Delivery</h3>
+                            <p>Your piece is handcrafted in my Fort Collins shop utilizing traditional joinery and meticulous finishing techniques. Upon completion, I personally deliver and install the work in your home.</p>
+                        </div>
                     </div>
 
-                    <div class="process-step">
-                        <h3>2. 3D Drafting & Design</h3>
-                        <p>Before any wood is cut, I provide comprehensive 3D CAD models. This allows you to visualize the exact scale, joinery, and design details in your space, eliminating decision fatigue and guaranteeing the final result.</p>
+                    <!-- Right Column: The Form -->
+                    <div>
+                        <form action="https://formsubmit.co/reedwoyda@gmail.com" method="POST" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first_name">First Name</label>
+                                    <input type="text" id="first_name" name="first_name" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last_name">Last Name</label>
+                                    <input type="text" id="last_name" name="last_name" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="project_type">Project Category</label>
+                                <select id="project_type" name="project_type" class="form-control" required>
+                                    <option value="" disabled selected>Select a category...</option>
+                                    <option value="furniture">Custom Fine Furniture</option>
+                                    <option value="built_in">Architectural Built-Ins / Closets</option>
+                                    <option value="repair">Structural / Architectural Repair</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="details">Project Details & Vision</label>
+                                <textarea id="details" name="details" rows="6" class="form-control" placeholder="Please describe the space, your preferred materials, dimensions, or any specific problems you are trying to solve..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn">Request Consultation</button>
+                        </form>
                     </div>
 
-                    <div class="process-step">
-                        <h3>3. Material Selection & Deposit</h3>
-                        <p>Once the design is approved, we finalize the selection of premium, locally sourced hardwoods (such as elm, hard maple, or white oak). A 50% materials deposit secures your place in the build schedule.</p>
-                    </div>
-
-                    <div class="process-step">
-                        <h3>4. The Build & Delivery</h3>
-                        <p>Your piece is handcrafted in my Fort Collins shop utilizing traditional joinery and meticulous finishing techniques. Upon completion, I personally deliver and install the work in your home.</p>
-                    </div>
                 </div>
-
-                <!-- Right Column: The Form -->
-                <div>
-                    <form action="https://formsubmit.co/reedwoyda@gmail.com" method="POST" class="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="first_name">First Name</label>
-                                <input type="text" id="first_name" name="first_name" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="last_name">Last Name</label>
-                                <input type="text" id="last_name" name="last_name" class="form-control" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="project_type">Project Category</label>
-                            <select id="project_type" name="project_type" class="form-control" required>
-                                <option value="" disabled selected>Select a category...</option>
-                                <option value="furniture">Custom Fine Furniture</option>
-                                <option value="built_in">Architectural Built-Ins / Closets</option>
-                                <option value="repair">Structural / Architectural Repair</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="details">Project Details & Vision</label>
-                            <textarea id="details" name="details" rows="6" class="form-control" placeholder="Please describe the space, your preferred materials, dimensions, or any specific problems you are trying to solve..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn">Request Consultation</button>
-                    </form>
-                </div>
-
             </div>
-        </section>
+        </div>
     </div>
 
     <!-- Optimized Footer Component with Normalized NAP Signals -->
@@ -184,7 +215,6 @@
             <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa;">&copy; 2026 RW Custom Furniture. All Rights Reserved.</p>
         </div>
     </footer>
-
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-09 22:18:12",
+  "last_updated": "2026-07-09 23:26:30",
   "breweries": {
     "Stodgy Brewing": [
       {
@@ -96,31 +96,8 @@
     "Maxline Brewing": [],
     "Zwei Brewing": [],
     "Mythmaker Brewing": [],
-    "Odell Brewing": [
-      {
-        "listing": "12PM Friday July 10, 2026 College Night 11AM Saturday July 11, 2026 DENIM DAYS! Rodeo Weekend Party & Slushies All Day! 12PM Saturday July 11, 2026 BIG SLUSH PARTY PAIL DAY More Events"
-      },
-      {
-        "listing": "12PM Friday July 10, 2026 College Night"
-      },
-      {
-        "listing": "11AM Saturday July 11, 2026 DENIM DAYS! Rodeo Weekend Party & Slushies All Day!"
-      },
-      {
-        "listing": "12PM Saturday July 11, 2026 BIG SLUSH PARTY PAIL DAY"
-      }
-    ],
+    "Odell Brewing": [],
     "New Belgium": [],
-    "Purpose Brewing": [
-      {
-        "listing": "Back Taproom Events Food Trucks Back Taproom Hours Our Story Brewery Contact us Back Book an Event Event Pricing Harvest Host"
-      },
-      {
-        "listing": "Back Taproom Events Food Trucks"
-      },
-      {
-        "listing": "What's On Tap What's Happening Taproom Events Food Trucks About Us Taproom Hours Our Story Brewery Contact us"
-      }
-    ]
+    "Purpose Brewing": []
   }
 }

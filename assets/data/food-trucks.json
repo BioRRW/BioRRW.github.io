@@ -1,126 +1,162 @@
 {
-  "last_updated": "2026-07-09 23:52:26",
+  "last_updated": "2026-07-09 23:57:28",
   "breweries": {
     "Stodgy Brewing": [
       {
-        "listing": "Thursday, 7/9 Scratch Quisine 4:00 PM - 8:00 PM"
+        "listing": "Thursday, 7/9 Scratch Quisine 4:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Friday, 7/10 Las Catrinas 1:00 PM - 8:00 PM"
+        "listing": "Friday, 7/10 Las Catrinas 1:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Saturday, 7/11 La Piadina 12:00 PM - 8:00 PM"
+        "listing": "Saturday, 7/11 La Piadina 12:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Sunday, 7/12 La Campechana 12:00 PM - 7:00 PM"
+        "listing": "Sunday, 7/12 La Campechana 12:00 PM - 7:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Monday, 7/13 Dumpling Hut 4:00 PM - 8:00 PM"
+        "listing": "Monday, 7/13 Dumpling Hut 4:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Tuesday, 7/14 Georgia Boys BBQ 4:00 PM - 8:00 PM"
+        "listing": "Tuesday, 7/14 Georgia Boys BBQ 4:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Wednesday, 7/15 Shell on Wheels 1:00 PM - 8:00 PM"
+        "listing": "Wednesday, 7/15 Shell on Wheels 1:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Thursday, 7/16 Scrooge Maki 4:00 PM - 8:00 PM"
+        "listing": "Thursday, 7/16 Scrooge Maki 4:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Friday, 7/17 Marchios Grill 1:00 PM - 8:00 PM"
+        "listing": "Friday, 7/17 Marchios Grill 1:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Saturday, 7/18 Marchios Grill 12:00 PM - 8:00 PM"
+        "listing": "Saturday, 7/18 Marchios Grill 12:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Sunday, 7/19 Huka Sushi 12:00 PM - 7:00 PM"
+        "listing": "Sunday, 7/19 Huka Sushi 12:00 PM - 7:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Monday, 7/20 The Smoke Post 4:00 PM - 8:00 PM"
+        "listing": "Monday, 7/20 The Smoke Post 4:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Tuesday, 7/21 Sweaty Moose 4:00 PM - 8:00 PM"
+        "listing": "Tuesday, 7/21 Sweaty Moose 4:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Wednesday, 7/22 Yes Chef! 4:00 PM - 8:00 PM"
+        "listing": "Wednesday, 7/22 Yes Chef! 4:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Thursday, 7/23 Scratch Quisine 4:00 PM - 8:00 PM"
+        "listing": "Thursday, 7/23 Scratch Quisine 4:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Friday, 7/24 Las Catrinas 1:00 PM - 8:00 PM"
+        "listing": "Friday, 7/24 Las Catrinas 1:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Saturday, 7/25 La Piadina 12:00 PM - 8:00 PM"
+        "listing": "Saturday, 7/25 La Piadina 12:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Sunday, 7/26 La Campechana 12:00 PM - 7:00 PM"
+        "listing": "Sunday, 7/26 La Campechana 12:00 PM - 7:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Monday, 7/27 Dumpling Hut 4:00 PM - 8:00 PM"
+        "listing": "Monday, 7/27 Dumpling Hut 4:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Tuesday, 7/28 Georgia Boys BBQ 4:00 PM - 8:00 PM"
+        "listing": "Tuesday, 7/28 Georgia Boys BBQ 4:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Wednesday, 7/29 Shell on Wheels 1:00 PM - 8:00 PM"
+        "listing": "Wednesday, 7/29 Shell on Wheels 1:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Thursday, 7/30 Scrooge Maki 4:00 PM - 8:00 PM"
+        "listing": "Thursday, 7/30 Scrooge Maki 4:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Friday, 7/31 Marchios Grill 1:00 PM - 8:00 PM"
+        "listing": "Friday, 7/31 Marchios Grill 1:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Saturday, 8/1 La Piadina 12:00 PM - 8:00 PM"
+        "listing": "Saturday, 8/1 La Piadina 12:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Sunday, 8/2 Huka Sushi 12:00 PM - 7:00 PM"
+        "listing": "Sunday, 8/2 Huka Sushi 12:00 PM - 7:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Monday, 8/3 The Smoke Post 4:00 PM - 8:00 PM"
+        "listing": "Monday, 8/3 The Smoke Post 4:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Tuesday, 8/4 Sweaty Moose 4:00 PM - 8:00 PM"
+        "listing": "Tuesday, 8/4 Sweaty Moose 4:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Wednesday, 8/5 Yes Chef! 4:00 PM - 8:00 PM"
+        "listing": "Wednesday, 8/5 Yes Chef! 4:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Thursday, 8/6 Scratch Quisine 4:00 PM - 8:00 PM"
+        "listing": "Thursday, 8/6 Scratch Quisine 4:00 PM - 8:00 PM",
+        "is_placeholder": false
       },
       {
-        "listing": "Friday, 8/7 Las Catrinas 1:00 PM - 8:00 PM"
+        "listing": "Friday, 8/7 Las Catrinas 1:00 PM - 8:00 PM",
+        "is_placeholder": false
       }
     ],
     "Maxline Brewing": [
       {
-        "listing": "Check current lineup online ➔"
+        "listing": "Schedule rotating online.",
+        "is_placeholder": true
       }
     ],
     "Zwei Brewing": [
       {
-        "listing": "View weekly rotation schedule ➔"
+        "listing": "Schedule rotating online.",
+        "is_placeholder": true
       }
     ],
     "Mythmaker Brewing": [
       {
-        "listing": "View weekly calendar ➔"
+        "listing": "Schedule rotating online.",
+        "is_placeholder": true
       }
     ],
     "Odell Brewing": [
       {
-        "listing": "View patio event schedule ➔"
+        "listing": "Schedule rotating online.",
+        "is_placeholder": true
       }
     ],
     "New Belgium": [
       {
-        "listing": "View taproom truck schedule ➔"
+        "listing": "Schedule rotating online.",
+        "is_placeholder": true
       }
     ],
     "Purpose Brewing": [
       {
-        "listing": "View weekend truck schedule ➔"
+        "listing": "Schedule rotating online.",
+        "is_placeholder": true
       }
     ]
   }

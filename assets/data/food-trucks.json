@@ -1,0 +1,88 @@
+{
+  "last_updated": "2026-07-09 06:00:12",
+  "breweries": {
+    "Stodgy Brewing": [
+      {
+        "day_listing": "Thursday, 7/9: Corndoggies 4:00 PM - 8:00 PM"
+      },
+      {
+        "day_listing": "Friday, 7/10: Trampiche (Argentine Empanadas) 3:00 PM - 8:00 PM"
+      },
+      {
+        "day_listing": "Saturday, 7/11: Choice City Wings 12:00 PM - 8:00 PM"
+      },
+      {
+        "day_listing": "Sunday, 7/12: The Iron Wok 12:00 PM - 7:00 PM"
+      }
+    ],
+    "Maxline Brewing": [
+      {
+        "truck": "Bedrock BBQ",
+        "schedule": "Thursday, July 9 @ 4:00 pm - 8:00 pm"
+      },
+      {
+        "truck": "Project Taco",
+        "schedule": "Friday, July 10 @ 2:00 pm - 9:00 pm"
+      },
+      {
+        "truck": "Mac'N Full Food Truck",
+        "schedule": "Saturday, July 11 @ 12:00 pm - 8:00 pm"
+      }
+    ],
+    "Zwei Brewing": [
+      {
+        "listing": "Thu: Scrimscraw Pizza 4-8pm"
+      },
+      {
+        "listing": "Fri: Big G's Food Shack 2-8pm"
+      },
+      {
+        "listing": "Sat: Colorado Native BBQ 12-8pm"
+      },
+      {
+        "listing": "Sun: Pretzel Logistics 1-6pm"
+      }
+    ],
+    "Mythmaker Brewing": [
+      {
+        "listing": "Thursday Food Truck: Angry Hippo Sandwiches (4-8pm)"
+      },
+      {
+        "listing": "Friday Food Truck: Shell on Wheels Seafood (3-8pm)"
+      },
+      {
+        "listing": "Saturday Food Truck: G-Force Pizza (1-8pm)"
+      }
+    ],
+    "Odell Brewing": [
+      {
+        "listing": "Thursday July 9: Silver Seed (Vegan Eats) serving 12:00pm - 8:00pm on the patio."
+      },
+      {
+        "listing": "Friday July 10: Backyard Bird Chicken Truck serving 11:30am - 8:30pm."
+      },
+      {
+        "listing": "Saturday July 11: The Taco Stop serving 11:30am - 8:30pm."
+      }
+    ],
+    "New Belgium": [
+      {
+        "listing": "Fort Collins Taproom Food Truck Feature - July 9: Waffle Lab (11:30am - 7:30pm)"
+      },
+      {
+        "listing": "Fort Collins Taproom Food Truck Feature - July 10: Nomad Street Chew (11:00am - 8:00pm)"
+      },
+      {
+        "listing": "Fort Collins Taproom Food Truck Feature - July 11: Intersect Clean Eats (11:00am - 8:00pm)"
+      }
+    ],
+    "Purpose Brewing": [
+      {
+        "listing": "Serving this Friday (7/10): Austin Taco Truck from 3:00pm until sold out."
+      },
+      {
+        "listing": "Serving this Saturday (7/11): On-The-Hook Fish and Chips from 1:00pm - 7:00pm."
+      }
+    ]
+  }
+}

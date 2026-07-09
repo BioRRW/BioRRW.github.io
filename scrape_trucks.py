@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import requests
 from bs4 import BeautifulSoup
@@ -14,46 +15,45 @@ def clean_text(text):
 def scrape_stodgy():
     try:
         url = "https://stodgybrewing.com/food/"
-        res = requests.get(url, headers=HEADERS, timeout=10)
+        res = requests.get(url, headers=HEADERS, timeout=12)
         soup = BeautifulSoup(res.text, 'html.parser')
         trucks = []
         for item in soup.find_all('li'):
             text = clean_text(item.get_text())
             if any(day in text for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]):
-                trucks.append({"listing": text})
-        return trucks if trucks else [{"listing": "Check current lineup online ➔"}]
+                trucks.append({"listing": text, "is_placeholder": False})
+        return trucks if trucks else [{"listing": "Schedule rotating online.", "is_placeholder": True}]
     except:
-        return [{"listing": "Check current lineup online ➔"}]
+        return [{"listing": "Schedule rotating online.", "is_placeholder": True}]
 
 def scrape_maxline():
     try:
         url = "https://maxlinebrewing.com/events/categories/food-trucks/"
-        res = requests.get(url, headers=HEADERS, timeout=10)
+        res = requests.get(url, headers=HEADERS, timeout=12)
         soup = BeautifulSoup(res.text, 'html.parser')
         trucks = []
         for event in soup.find_all(class_="tribe-events-calendar-list__event-details"):
             title = event.find(class_="tribe-events-calendar-list__event-title")
             dt = event.find(class_="tribe-events-calendar-list__event-datetime")
             if title and dt:
-                trucks.append({"listing": f"{clean_text(title.get_text())} — {clean_text(dt.get_text())}"})
-        return trucks if trucks else [{"listing": "Check current lineup online ➔"}]
+                trucks.append({"listing": f"{clean_text(title.get_text())} — {clean_text(dt.get_text())}", "is_placeholder": False})
+        return trucks if trucks else [{"listing": "Schedule rotating online.", "is_placeholder": True}]
     except:
-        return [{"listing": "Check current lineup online ➔"}]
+        return [{"listing": "Schedule rotating online.", "is_placeholder": True}]
 
 def main():
-    print("Executing fail-safe brewery data pipeline...")
+    print("Initiating production data-sync routine...")
     
-    # Static fallbacks ensure the card ALWAYS shows up on your dashboard with a link if live scraping fails
     master_schedule = {
         "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "breweries": {
             "Stodgy Brewing": scrape_stodgy(),
             "Maxline Brewing": scrape_maxline(),
-            "Zwei Brewing": [{"listing": "View weekly rotation schedule ➔"}],
-            "Mythmaker Brewing": [{"listing": "View weekly calendar ➔"}],
-            "Odell Brewing": [{"listing": "View patio event schedule ➔"}],
-            "New Belgium": [{"listing": "View taproom truck schedule ➔"}],
-            "Purpose Brewing": [{"listing": "View weekend truck schedule ➔"}]
+            "Zwei Brewing": [{"listing": "Schedule rotating online.", "is_placeholder": True}],
+            "Mythmaker Brewing": [{"listing": "Schedule rotating online.", "is_placeholder": True}],
+            "Odell Brewing": [{"listing": "Schedule rotating online.", "is_placeholder": True}],
+            "New Belgium": [{"listing": "Schedule rotating online.", "is_placeholder": True}],
+            "Purpose Brewing": [{"listing": "Schedule rotating online.", "is_placeholder": True}]
         }
     }
     
@@ -63,7 +63,7 @@ def main():
         
     with open(os.path.join(output_dir, "food-trucks.json"), "w", encoding="utf-8") as f:
         json.dump(master_schedule, f, indent=2, ensure_ascii=False)
-    print("Failsafe data sync complete.")
+    print("Payload compiled and delivered successfully.")
 
 if __name__ == "__main__":
     main()

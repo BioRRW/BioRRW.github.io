@@ -138,11 +138,11 @@
     <!-- Interactive Dashboard Script -->
     <script>
         const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        const currentDayName = daysOfWeek[new Date().getDay()]; // Dynamically targets today's actual string day name
+        const currentDayName = daysOfWeek[new Date().getDay()]; 
         let rawTruckData = {};
 
-        // Fetch the automated JSON file outputted by your background python pipeline
-        fetch('/assets/data/food-trucks.json')
+        // Appended custom dynamic millisecond parameter string to bypass aggressive browser memory cache rules
+        fetch('/assets/data/food-trucks.json?v=' + new Date().getTime())
             .then(res => res.json())
             .then(payload => {
                 rawTruckData = payload;
@@ -156,12 +156,11 @@
 
         function renderDashboard(mode) {
             const grid = document.getElementById('dashboard-grid');
-            grid.innerHTML = ''; // Clear container
+            grid.innerHTML = ''; 
 
             for (const [brewery, listings] of Object.entries(rawTruckData.breweries)) {
                 let filteredListings = [...listings];
 
-                // If user clicks "Tonight's Trucks", filter listings to text matching today's name string
                 if (mode === 'today') {
                     filteredListings = listings.filter(item => {
                         const fullText = (item.day_listing || item.schedule || item.listing || "").toLowerCase();
@@ -171,10 +170,10 @@
 
                 if (filteredListings.length === 0) continue;
 
-                // Create a beautiful dashboard display card for the brewery
                 const card = document.createElement('div');
                 card.className = 'brewery-card';
                 
+                // Clean layout template text free of strings
                 let cardHTML = `<h3>${brewery}</h3>`;
                 
                 filteredListings.forEach(item => {
@@ -193,12 +192,11 @@
             }
 
             if (grid.innerHTML === '') {
-                grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #777;">No food trucks found listed for ${currentDayName} lines. Check back tomorrow morning!</div>`;
+                grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #777;">No food trucks found listed for ${currentDayName}. Check back tomorrow morning!</div>`;
             }
         }
 
         function filterSchedule(mode) {
-            // Update button styles
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');

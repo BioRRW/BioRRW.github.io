@@ -73,7 +73,7 @@
             font-size: 0.95rem;
             line-height: 1.4;
             margin: 8px 0;
-            padding: 4px 0;
+            padding: 6px 0;
         }
         
         /* Highlighting Dynamic Items */
@@ -81,6 +81,7 @@
             background-color: #fff9db;
             border-left: 3px solid #fab005;
             padding-left: 8px !important;
+            font-weight: 500;
         }
         .no-trucks {
             grid-column: 1 / -1;
@@ -100,14 +101,17 @@
             <div id="update-time">Connecting to scraper sync...</div>
         </header>
 
+        <!-- Navigation / Controls -->
         <div class="controls">
             <button class="filter-btn active" onclick="filterSchedule('all', event)">Show Full Week</button>
             <button class="filter-btn" onclick="filterSchedule('today', event)">Just Today</button>
         </div>
 
+        <!-- Dynamic Dashboard Grid -->
         <main id="dashboard-grid"></main>
     </div>
 
+    <!-- JavaScript Application Logic -->
     <script>
         const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         const monthsOfYear = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
@@ -134,10 +138,27 @@
                 console.error("Data loading failure:", err);
             });
 
+        // Validates whether text represents a genuine schedule entry
+        // Filters out footer links, nav menus, and strings with zero day configurations
+        function isValidScheduleItem(textLower) {
+            if (textLower.includes("back taproom") || textLower.includes("our story") || textLower.includes("contact us") || textLower.includes("about us")) {
+                return false;
+            }
+            
+            const containsDay = daysOfWeek.some(day => {
+                const dLower = day.toLowerCase();
+                return textLower.includes(dLower) || textLower.includes(dLower.substring(0, 3));
+            });
+
+            return containsDay;
+        }
+
         function isListingToday(textContent) {
             if (!textContent) return false;
             
             const textLower = textContent.toLowerCase();
+            if (!isValidScheduleItem(textLower)) return false;
+
             const dayLower = currentDayName.toLowerCase();
             const dayShortLower = dayLower.substring(0, 3);
 
@@ -165,10 +186,15 @@
             if (!rawTruckData.breweries) return;
 
             for (const [brewery, listings] of Object.entries(rawTruckData.breweries)) {
-                let filteredListings = [...listings];
+                // Step 1: Filter out raw navigation/garbage string rows immediately
+                let filteredListings = listings.filter(item => {
+                    const textContent = item.day_listing || item.schedule || item.listing || "";
+                    return isValidScheduleItem(textContent.toLowerCase());
+                });
 
+                // Step 2: If 'Just Today' filter is selected, strip non-today rows
                 if (mode === 'today') {
-                    filteredListings = listings.filter(item => {
+                    filteredListings = filteredListings.filter(item => {
                         const textContent = item.day_listing || item.schedule || item.listing || "";
                         return isListingToday(textContent);
                     });

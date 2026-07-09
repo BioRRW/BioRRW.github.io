@@ -1,208 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKDEGPV486"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-HKDEGPV486');
-    </script>
-
-    <link rel="icon" href="https://rwcustomfurniture.com/assets/images/wood/RW_logo_custom_furniture.png" type="image/png" sizes="any">
-    <link rel="canonical" href="https://rwcustomfurniture.com/food-trucks">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fort Collins Brewery Food Truck Dashboard | RW Custom Furniture</title>
-    <meta name="description" content="A live, automated tracker showing daily food truck schedules across local Fort Collins breweries.">
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const now = new Date();
+    const currentDayName = daysOfWeek[now.getDay()]; 
+    const currentMonthNum = now.getMonth() + 1; // e.g. 7 for July
+    const currentDateNum = now.getDate();       // e.g. 9
     
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Playfair+Display:400,700" rel="stylesheet">
-    
-    <style>
-        /* Basic Reset & Typography */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
-        body { 
-            display: flex; 
-            flex-direction: column; 
-            min-height: 100vh;
-            font-family: 'Montserrat', sans-serif; 
-            line-height: 1.6; 
-            color: #2c2a29; 
-            background-image: url("./assets/images/wood/raised-bed-fort-collins-custom.jpg");
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        
-        h1, h2, h3 { font-family: 'Playfair Display', serif; color: #1a1a1a; }
-        a { text-decoration: none; color: inherit; transition: color 0.3s; }
-        a:hover { color: #8b5a2b; }
-        
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .section-padding { padding: 60px 0; }
-        header { padding: 20px 0; background: #fff; border-bottom: 1px solid #e8e5e1; position: sticky; top: 0; z-index: 100; }
-        nav { display: flex; justify-content: space-between; align-items: center; }
-        .nav-links a { margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
-        
-        .main-content { flex: 1; }
+    let rawTruckData = {};
 
-        /* Content Card Overlay */
-        .content-card-overlay {
-            background-color: rgba(250, 249, 247, 0.95);
-            border-radius: 8px;
-            padding: 40px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(232, 229, 225, 0.7);
+    fetch('/assets/data/food-trucks.json?v=' + now.getTime())
+        .then(res => res.json())
+        .then(payload => {
+            rawTruckData = payload;
+            document.getElementById('update-time').innerText = `Scraper Engine Sync: ${payload.last_updated}`;
+            renderDashboard('all');
+        })
+        .catch(err => {
+            document.getElementById('update-time').innerText = "System offline. Unable to download schedule arrays.";
+            console.error("Data loading failure:", err);
+        });
+
+    function isListingToday(textContent) {
+        const textLower = textContent.toLowerCase();
+        const dayLower = currentDayName.toLowerCase();
+        const dayShortLower = dayLower.substring(0,3);
+
+        // Verify the text actually references today's day string
+        if (!textLower.includes(dayLower) && !textLower.includes(dayShortLower)) {
+            return false;
         }
 
-        .page-header { text-align: center; margin-bottom: 40px; }
-        .page-header h1 { font-size: 3rem; margin-bottom: 10px; }
-        .timestamp { font-size: 0.85rem; color: #777; font-style: italic; margin-top: 5px; }
-
-        /* Filter Controls */
-        .filter-controls { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; }
-        .filter-btn { padding: 10px 20px; background: #fff; border: 1px solid #4a3f35; color: #4a3f35; border-radius: 4px; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; cursor: pointer; transition: all 0.3s; }
-        .filter-btn.active, .filter-btn:hover { background: #4a3f35; color: #fff; }
-
-        /* Dashboard Grid */
-        .truck-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
-        .brewery-card { background: #fff; border-radius: 6px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border-top: 4px solid #4a3f35; transition: transform 0.3s; }
-        .brewery-card:hover { transform: translateY(-3px); }
-        .brewery-card h3 { font-size: 1.4rem; color: #4a3f35; margin-bottom: 15px; border-bottom: 1px solid #e8e5e1; padding-bottom: 5px; }
+        // Precision check: If the listing contains a date format (e.g., 7/9 or July 9), check if it matches today's numbers
+        const slashRegex = new RegExp(`${currentMonthNum}\\/${currentDateNum}\\b`);
+        const wordRegex = new RegExp(`(july|jul)\\s*${currentDateNum}\\b`);
         
-        .listing-item { font-size: 0.95rem; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #f5f2ee; }
-        .listing-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-        .highlight-today { background: #fffdf0; border-left: 3px solid #8b5a2b; padding-left: 8px; }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .content-card-overlay { padding: 20px; }
-            .page-header h1 { font-size: 2.2rem; }
+        // If there's a date in the text but it's NOT today's numeric date, it belongs to another week
+        if ((textLower.includes('/') && !slashRegex.test(textLower)) || 
+            ((textLower.includes('july') || textLower.includes('jul')) && !wordRegex.test(textLower))) {
+            return false;
         }
         
-        footer { background: #1a1a1a; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; border-top: 1px solid #2c2a29; }
-    </style>
-</head>
-<body>
+        return true;
+    }
 
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo"><strong>RW CUSTOM FURNITURE</strong></div>
-                <div class="nav-links">
-                    <a href="/">Home</a>
-                    <a href="/about">About</a>
-                    <a href="/gallery">Portfolio</a>
-                    <a href="/handyman">Handyman Services</a>
-                    <a href="/consultation">Consultation</a>
-                </div>
-            </nav>
-        </div>
-    </header>
+    function renderDashboard(mode) {
+        const grid = document.getElementById('dashboard-grid');
+        grid.innerHTML = ''; 
 
-    <div class="main-content">
-        <div class="container section-padding">
-            <div class="content-card-overlay">
+        for (const [brewery, listings] of Object.entries(rawTruckData.breweries)) {
+            let filteredListings = [...listings];
+
+            if (mode === 'today') {
+                filteredListings = listings.filter(item => {
+                    const textContent = item.day_listing || item.schedule || item.listing || "";
+                    return isListingToday(textContent);
+                });
+            }
+
+            if (filteredListings.length === 0) continue;
+
+            const card = document.createElement('div');
+            card.className = 'brewery-card';
+            let cardHTML = `<h3>${brewery}</h3>`;
+            
+            filteredListings.forEach(item => {
+                const textContent = item.day_listing || item.listing || (item.truck ? `${item.truck} — ${item.schedule}` : "");
+                const isToday = isListingToday(textContent);
                 
-                <section class="page-header">
-                    <h1>FoCo Brewery Food Trucks</h1>
-                    <p>What's cooking at the taprooms today? Schedules are aggregated and updated automatically every morning.</p>
-                    <div class="timestamp" id="update-time">Loading live schedule engine...</div>
-                </section>
-
-                <div class="filter-controls">
-                    <button class="filter-btn active" onclick="filterSchedule('all')">Full Week</button>
-                    <button class="filter-btn" onclick="filterSchedule('today')">Tonight's Trucks</button>
-                </div>
-
-                <div class="truck-grid" id="dashboard-grid">
-                    <!-- Dynamic brewery content blocks will render here -->
-                </div>
-                
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="container">
-            <p><strong>RW Custom Furniture & Local Utilities Engine</strong></p>
-            <p>Based in Fort Collins, CO | Automated Scraping System Core v1.0</p>
-            <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa;">&copy; 2026 RW Custom Furniture. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Interactive Dashboard Script -->
-    <script>
-        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        const currentDayName = daysOfWeek[new Date().getDay()]; 
-        let rawTruckData = {};
-
-        // Appended custom dynamic millisecond parameter string to bypass aggressive browser memory cache rules
-        fetch('/assets/data/food-trucks.json?v=' + new Date().getTime())
-            .then(res => res.json())
-            .then(payload => {
-                rawTruckData = payload;
-                document.getElementById('update-time').innerText = `Scraper Engine Sync: ${payload.last_updated}`;
-                renderDashboard('all');
-            })
-            .catch(err => {
-                document.getElementById('update-time').innerText = "System offline. Unable to download schedule arrays.";
-                console.error("Data loading failure:", err);
+                cardHTML += `
+                    <div class="listing-item ${isToday ? 'highlight-today' : ''}">
+                        ${isToday ? '<strong>[TODAY]</strong> ' : ''}${textContent}
+                    </div>
+                `;
             });
 
-        function renderDashboard(mode) {
-            const grid = document.getElementById('dashboard-grid');
-            grid.innerHTML = ''; 
-
-            for (const [brewery, listings] of Object.entries(rawTruckData.breweries)) {
-                let filteredListings = [...listings];
-
-                if (mode === 'today') {
-                    filteredListings = listings.filter(item => {
-                        const fullText = (item.day_listing || item.schedule || item.listing || "").toLowerCase();
-                        return fullText.includes(currentDayName.toLowerCase()) || fullText.includes(currentDayName.substring(0,3).toLowerCase());
-                    });
-                }
-
-                if (filteredListings.length === 0) continue;
-
-                const card = document.createElement('div');
-                card.className = 'brewery-card';
-                
-                // Clean layout template text free of strings
-                let cardHTML = `<h3>${brewery}</h3>`;
-                
-                filteredListings.forEach(item => {
-                    const textContent = item.day_listing || item.listing || (item.truck ? `${item.truck} — ${item.schedule}` : "");
-                    const isToday = textContent.toLowerCase().includes(currentDayName.toLowerCase()) || textContent.toLowerCase().includes(currentDayName.substring(0,3).toLowerCase());
-                    
-                    cardHTML += `
-                        <div class="listing-item ${isToday ? 'highlight-today' : ''}">
-                            ${isToday ? '<strong>[TODAY]</strong> ' : ''}${textContent}
-                        </div>
-                    `;
-                });
-
-                card.innerHTML = cardHTML;
-                grid.appendChild(card);
-            }
-
-            if (grid.innerHTML === '') {
-                grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #777;">No food trucks found listed for ${currentDayName}. Check back tomorrow morning!</div>`;
-            }
+            card.innerHTML = cardHTML;
+            grid.appendChild(card);
         }
 
-        function filterSchedule(mode) {
-            const buttons = document.querySelectorAll('.filter-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            
-            renderDashboard(mode);
+        if (grid.innerHTML === '') {
+            grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #777;">No food trucks found listed for today. Check back tomorrow morning!</div>`;
         }
-    </script>
-</body>
-</html>
+    }
+
+    function filterSchedule(mode) {
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+        renderDashboard(mode);
+    }

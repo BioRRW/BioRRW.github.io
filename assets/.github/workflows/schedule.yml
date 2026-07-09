@@ -1,0 +1,31 @@
+name: Daily FoCo Food Truck Scraper
+on:
+  schedule:
+    - cron: '0 12 * * *' # Runs automatically every single day at 6:00 AM Mountain Time
+  workflow_dispatch: # Allows you to manually trigger it via a button on GitHub if you want
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-node-version: '3.10'
+
+    - name: Install Scraping Dependecies
+      run: pip install beautifulsoup4 requests
+
+    - name: Execute Scraper Script
+      run: python scrape_trucks.py
+
+    - name: Commit Fresh Data File to your GitHub Pages Site
+      run: |
+        git config --global user.name "GitHub Actions Bot"
+        git config --global user.email "actions@github.com"
+        git add assets/data/food-trucks.json
+        git commit -m "Automated update of local food truck schedules" || exit 0
+        git push

@@ -82,11 +82,12 @@
             display: flex; 
             flex-direction: column;
             height: 450px; 
+            transition: all 0.4s ease; 
         }
         
         .brewery-card:hover { transform: translateY(-3px); transition: transform 0.2s ease; }
         .brewery-card h3 { font-size: 1.4rem; color: #4a3f35; margin-bottom: 15px; border-bottom: 1px solid #e8e5e1; padding-bottom: 5px; }
-        
+
         .listings-container { 
             flex-grow: 1; 
             overflow-y: auto; 
@@ -205,10 +206,10 @@
     </footer>
 
     <script>
-        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         const now = new Date();
-        const currentDayName = daysOfWeek[now.getDay()]; 
-        const currentMonthNum = now.getMonth() + 1; 
+        const currentDayName = now.toLocaleDateString('en-US', { weekday: 'long' });
+        const currentMonthName = now.toLocaleDateString('en-US', { month: 'long' });
+        const currentMonthShort = now.toLocaleDateString('en-US', { month: 'short' });
         const currentDateNum = now.getDate();       
         
         let globalPayload = {};
@@ -227,16 +228,13 @@
 
         function isToday(text) {
             const textLower = text.toLowerCase();
-            const dateStr = `${currentMonthNum}/${currentDateNum}`;
-            const wordStr = `july ${currentDateNum}`;
-            const wordShortStr = `jul ${currentDateNum}`;
-
-            // Prevent matching future identical dates across different months
-            if (textLower.includes('/') && !textLower.includes(dateStr)) return false;
-            if ((textLower.includes('july') || textLower.includes('jul')) && (!textLower.includes(wordStr) && !textLower.includes(wordShortStr))) return false;
-
-            // Flag if the text explicitly mentions today's day of the week
-            return textLower.includes(currentDayName.toLowerCase()) || textLower.includes(currentDayName.substring(0,3).toLowerCase());
+            // Matches full month name or short version + current date (e.g., "July 10" or "Jul 10")
+            const dateMatch = textLower.includes(currentMonthName.toLowerCase()) || textLower.includes(currentMonthShort.toLowerCase());
+            const dayMatch = textLower.includes(currentDateNum.toString());
+            
+            // Flag if the text mentions today's day of the week OR today's specific date
+            return (textLower.includes(currentDayName.toLowerCase()) || textLower.includes(currentDayName.substring(0,3).toLowerCase())) 
+                   || (dateMatch && dayMatch);
         }
 
         function renderDashboard(mode) {
@@ -250,35 +248,28 @@
                 "Purpose Brewing": "listings-purpose"
             };
 
-            Object.values(mappings).forEach(id => {
-                document.getElementById(id).innerHTML = "";
-                document.getElementById(id).closest('.brewery-card').style.display = "flex";
-            });
-
             for (const [name, containerId] of Object.entries(mappings)) {
                 const targetElement = document.getElementById(containerId);
+                const card = targetElement.closest('.brewery-card');
                 
-                // Because the backend is now surgically accurate, we just read the raw array directly
                 let lines = globalPayload.breweries ? globalPayload.breweries[name] || [] : [];
-
+                
                 if (mode === 'today') {
                     lines = lines.filter(line => isToday(line));
                 }
 
-                if (lines.length === 0) {
-                    if (mode === 'today') {
-                        document.getElementById(containerId).closest('.brewery-card').style.display = "none";
-                    } else {
-                        targetElement.innerHTML = `<div class="listing-item" style="color:#777; font-style:italic;">Schedule rotating on platform.</div>`;
-                    }
+                if (mode === 'today' && lines.length === 0) {
+                    card.style.display = "none";
                 } else {
-                    lines.forEach(text => {
-                        const todayFlag = isToday(text);
-                        targetElement.innerHTML += `
-                            <div class="listing-item ${todayFlag ? 'highlight-today' : ''}">
-                                ${todayFlag ? '<strong>[TODAY]</strong> ' : ''}${text}
-                            </div>`;
-                    });
+                    card.style.display = "flex";
+                    targetElement.innerHTML = lines.length === 0 
+                        ? `<div class="listing-item" style="color:#777; font-style:italic;">No trucks scheduled.</div>`
+                        : lines.map(text => {
+                            const todayFlag = isToday(text);
+                            return `<div class="listing-item ${todayFlag ? 'highlight-today' : ''}">
+                                        ${todayFlag ? '<strong>[TODAY]</strong> ' : ''}${text}
+                                    </div>`;
+                        }).join('');
                 }
             }
         }

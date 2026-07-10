@@ -199,7 +199,7 @@
     <footer>
         <div class="container">
             <p><strong>RW Custom Furniture & Local Utilities Engine</strong></p>
-            <p>Based in Fort Collins, CO | Automated Scraping System Core v2.1</p>
+            <p>Based in Fort Collins, CO | Automated Scraping System Core v3.0</p>
             <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa;">&copy; 2026 RW Custom Furniture. All Rights Reserved.</p>
         </div>
     </footer>
@@ -213,11 +213,6 @@
         
         let globalPayload = {};
 
-        // Explicit filter loops to throw out navigation elements
-        const BLACKLIST = ["our story", "contact us", "hours", "brewery", "book an event", "event pricing", "harvest host", "what's on tap", "about us", "taproom hours", "back taproom", "back book an event", "package beer", "beer flights", "tours on fridays", "dog friendly patio"];
-        // Strict pattern matching tags to target real food vendors
-        const FOOD_KEYWORDS = ["pizza", "truck", "quisine", "cuisine", "taco", "burger", "crab", "fusion", "catrinas", "piadina", "smash", "loaded", "potatoes", "slider", "eats", "chef", "dumpling", "maki", "grill", "smoke", "moose", "scratch"];
-
         fetch('/assets/data/food-trucks.json?v=' + now.getTime())
             .then(res => res.json())
             .then(payload => {
@@ -230,37 +225,18 @@
                 console.error(err);
             });
 
-        function getNormalizedText(item) {
-            if (!item) return "";
-            if (item.day_listing) return item.day_listing;
-            if (item.listing) return item.listing;
-            if (item.truck && item.schedule) return `${item.truck} — ${item.schedule}`;
-            return item.truck || "";
-        }
-
         function isToday(text) {
             const textLower = text.toLowerCase();
             const dateStr = `${currentMonthNum}/${currentDateNum}`;
             const wordStr = `july ${currentDateNum}`;
             const wordShortStr = `jul ${currentDateNum}`;
 
+            // Prevent matching future identical dates across different months
             if (textLower.includes('/') && !textLower.includes(dateStr)) return false;
             if ((textLower.includes('july') || textLower.includes('jul')) && (!textLower.includes(wordStr) && !textLower.includes(wordShortStr))) return false;
 
+            // Flag if the text explicitly mentions today's day of the week
             return textLower.includes(currentDayName.toLowerCase()) || textLower.includes(currentDayName.substring(0,3).toLowerCase());
-        }
-
-        function parseBreweryData(arrayData, breweryName) {
-            if (!arrayData || arrayData.length === 0) return [];
-            
-            let lines = arrayData.map(item => getNormalizedText(item))
-                                .filter(text => text.length > 8 && !BLACKLIST.some(j => text.toLowerCase().includes(j)));
-
-            // Apply a strict context filter specifically for Odell and broad text blocks to weed out concerts/festivals
-            if (breweryName === "Odell Brewing" || breweryName === "Mythmaker Brewing" || breweryName === "Purpose Brewing") {
-                lines = lines.filter(text => FOOD_KEYWORDS.some(kwd => text.toLowerCase().includes(kwd)));
-            }
-            return lines;
         }
 
         function renderDashboard(mode) {
@@ -281,8 +257,9 @@
 
             for (const [name, containerId] of Object.entries(mappings)) {
                 const targetElement = document.getElementById(containerId);
-                const rawItems = globalPayload.breweries ? globalPayload.breweries[name] : [];
-                let lines = parseBreweryData(rawItems, name);
+                
+                // Because the backend is now surgically accurate, we just read the raw array directly
+                let lines = globalPayload.breweries ? globalPayload.breweries[name] || [] : [];
 
                 if (mode === 'today') {
                     lines = lines.filter(line => isToday(line));

@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Playfair+Display:400,700" rel="stylesheet">
     
     <style>
-        /* Basic Reset & Typography */
+        /* Base Page Configurations */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body { 
@@ -49,7 +49,6 @@
         
         .main-content { flex: 1; }
 
-        /* Content Card Overlay */
         .content-card-overlay {
             background-color: rgba(250, 249, 247, 0.95);
             border-radius: 8px;
@@ -63,12 +62,12 @@
         .page-header h1 { font-size: 3rem; margin-bottom: 10px; }
         .timestamp { font-size: 0.85rem; color: #777; font-style: italic; margin-top: 5px; }
 
-        /* Filter Controls */
+        /* Filter Tabs */
         .filter-controls { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; }
         .filter-btn { padding: 10px 20px; background: #fff; border: 1px solid #4a3f35; color: #4a3f35; border-radius: 4px; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; cursor: pointer; transition: all 0.3s; }
         .filter-btn.active, .filter-btn:hover { background: #4a3f35; color: #fff; }
 
-        /* Multi-Column Layout Grid Rules */
+        /* Structural Grid - Alignment Set to Top Line */
         .truck-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
@@ -76,6 +75,7 @@
             align-items: start; 
         }
         
+        /* Hardcapped Uniform Card Structures */
         .brewery-card { 
             background: #fff; 
             border-radius: 6px; 
@@ -84,7 +84,7 @@
             border-top: 4px solid #4a3f35; 
             display: flex; 
             flex-direction: column;
-            max-height: 500px; 
+            height: 450px; 
         }
         
         .brewery-card:hover { transform: translateY(-3px); transition: transform 0.2s ease; }
@@ -94,15 +94,19 @@
             flex-grow: 1; 
             overflow-y: auto; 
             padding-right: 5px;
+            margin-bottom: 15px;
         }
         
         .listings-container::-webkit-scrollbar { width: 4px; }
         .listings-container::-webkit-scrollbar-track { background: #f1f1f1; }
         .listings-container::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 2px; }
 
-        .listing-item { font-size: 0.95rem; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #f5f2ee; line-height: 1.4; word-wrap: break-word; }
+        .listing-item { font-size: 0.93rem; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #f5f2ee; line-height: 1.4; word-wrap: break-word; color: #333; }
         .listing-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-        .highlight-today { background: #fffdf0; border-left: 3px solid #8b5a2b; padding-left: 8px; font-weight: 700; }
+        .highlight-today { background: #fffdf0; border-left: 3px solid #8b5a2b; padding-left: 8px; font-weight: 700; color: #000; }
+        
+        .action-link-btn { display: inline-block; font-size: 0.82rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; color: #8b5a2b; border-bottom: 1px dashed #8b5a2b; padding-bottom: 2px; align-self: flex-start; margin-top: auto; }
+        .action-link-btn:hover { color: #4a3f35; border-bottom-color: #4a3f35; }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
@@ -145,9 +149,51 @@
                     <button class="filter-btn" id="btn-today" onclick="filterSchedule('today')">Just Today</button>
                 </div>
 
-                <!-- FIXED GRID CONTAINER INTACT -->
+                <!-- HARDCODED STRUCTURAL GRID CELLS -->
                 <div class="truck-grid" id="dashboard-grid">
-                    <!-- Cards will inject dynamically inside here -->
+                    
+                    <div class="brewery-card" id="card-stodgy">
+                        <h3>Stodgy Brewing</h3>
+                        <div class="listings-container" id="listings-stodgy"></div>
+                        <a href="https://stodgybrewing.com/food/" target="_blank" class="action-link-btn">View Platform ➔</a>
+                    </div>
+
+                    <div class="brewery-card" id="card-maxline">
+                        <h3>Maxline Brewing</h3>
+                        <div class="listings-container" id="listings-maxline"></div>
+                        <a href="https://maxlinebrewing.com/events/categories/food-trucks/" target="_blank" class="action-link-btn">View Platform ➔</a>
+                    </div>
+
+                    <div class="brewery-card" id="card-zwei">
+                        <h3>Zwei Brewing</h3>
+                        <div class="listings-container" id="listings-zwei"></div>
+                        <a href="https://www.zweibrewing.com/food-trucks.aspx" target="_blank" class="action-link-btn">View Platform ➔</a>
+                    </div>
+
+                    <div class="brewery-card" id="card-mythmaker">
+                        <h3>Mythmaker Brewing</h3>
+                        <div class="listings-container" id="listings-mythmaker"></div>
+                        <a href="https://www.mythmakerbrewing.com/" target="_blank" class="action-link-btn">View Platform ➔</a>
+                    </div>
+
+                    <div class="brewery-card" id="card-odell">
+                        <h3>Odell Brewing</h3>
+                        <div class="listings-container" id="listings-odell"></div>
+                        <a href="https://www.odellbrewing.com/locations/fort-collins/" target="_blank" class="action-link-btn">View Platform ➔</a>
+                    </div>
+
+                    <div class="brewery-card" id="card-newbelgium">
+                        <h3>New Belgium</h3>
+                        <div class="listings-container" id="listings-newbelgium"></div>
+                        <a href="https://www.newbelgium.com/taproom/fort-collins/" target="_blank" class="action-link-btn">View Platform ➔</a>
+                    </div>
+
+                    <div class="brewery-card" id="card-purpose">
+                        <h3>Purpose Brewing</h3>
+                        <div class="listings-container" id="listings-purpose"></div>
+                        <a href="https://purposebrewing.com/" target="_blank" class="action-link-btn">View Platform ➔</a>
+                    </div>
+
                 </div>
                 
             </div>
@@ -157,7 +203,7 @@
     <footer>
         <div class="container">
             <p><strong>RW Custom Furniture & Local Utilities Engine</strong></p>
-            <p>Based in Fort Collins, CO | Automated Scraping System Core v1.5</p>
+            <p>Based in Fort Collins, CO | Automated Scraping System Core v2.0</p>
             <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa;">&copy; 2026 RW Custom Furniture. All Rights Reserved.</p>
         </div>
     </footer>
@@ -169,98 +215,92 @@
         const currentMonthNum = now.getMonth() + 1; 
         const currentDateNum = now.getDate();       
         
-        let rawTruckData = {};
+        let globalPayload = {};
 
-        // Expanded navigation filter keyword targets
-        const JUNK_BLACKLIST = [
-            "our story", "contact us", "hours", "brewery", "book an event", "event pricing", 
-            "harvest host", "what's on tap", "about us", "taproom hours", "back taproom",
-            "live music", "music sundays", "slush party", "back book an event"
-        ];
+        // Hard navigation filter keys to discard messy menu links
+        const BLACKLIST = ["our story", "contact us", "hours", "brewery", "book an event", "event pricing", "harvest host", "what's on tap", "about us", "taproom hours", "back taproom", "back book an event"];
 
         fetch('/assets/data/food-trucks.json?v=' + now.getTime())
             .then(res => res.json())
             .then(payload => {
-                rawTruckData = payload;
+                globalPayload = payload;
                 document.getElementById('update-time').innerText = `Scraper Engine Sync: ${payload.last_updated}`;
                 renderDashboard('all');
             })
             .catch(err => {
-                document.getElementById('update-time').innerText = "System offline. Unable to download schedule arrays.";
+                document.getElementById('update-time').innerText = "System engine synchronization offline.";
                 console.error(err);
             });
 
-        function getListingText(item) {
+        function getNormalizedText(item) {
             if (!item) return "";
             if (item.day_listing) return item.day_listing;
             if (item.listing) return item.listing;
             if (item.truck && item.schedule) return `${item.truck} — ${item.schedule}`;
-            if (item.truck) return item.truck;
-            return "";
+            return item.truck || "";
         }
 
-        function isListingJunk(text) {
+        function isToday(text) {
             const textLower = text.toLowerCase();
-            if (text.length < 10) return true;
-            return JUNK_BLACKLIST.some(junk => textLower.includes(junk));
+            const dateStr = `${currentMonthNum}/${currentDateNum}`;
+            const wordStr = `july ${currentDateNum}`;
+            const wordShortStr = `jul ${currentDateNum}`;
+
+            // Strict date pattern match to stop second-week duplicates from lighting up
+            if (textLower.includes('/') && !textLower.includes(dateStr)) return false;
+            if ((textLower.includes('july') || textLower.includes('jul')) && (!textLower.includes(wordStr) && !textLower.includes(wordShortStr))) return false;
+
+            return textLower.includes(currentDayName.toLowerCase()) || textLower.includes(currentDayName.substring(0,3).toLowerCase());
         }
 
-        function isListingToday(textContent) {
-            const textLower = textContent.toLowerCase();
-            const dayLower = currentDayName.toLowerCase();
-            const dayShortLower = dayLower.substring(0,3);
-
-            if (!textLower.includes(dayLower) && !textLower.includes(dayShortLower)) {
-                return false;
-            }
-
-            const slashRegex = new RegExp(`${currentMonthNum}\\/${currentDateNum}\\b`);
-            if (textLower.includes('/') && !slashRegex.test(textLower)) {
-                return false;
-            }
-
-            const wordRegex = new RegExp(`(july|jul)\\s*${currentDateNum}\\b`);
-            if ((textLower.includes('july') || textLower.includes('jul')) && !wordRegex.test(textLower)) {
-                return false;
-            }
-            
-            return true;
+        function parseBreweryData(arrayData) {
+            if (!arrayData || arrayData.length === 0) return [];
+            return arrayData.map(item => getNormalizedText(item))
+                            .filter(text => text.length > 12 && !BLACKLIST.some(j => text.toLowerCase().includes(j)));
         }
 
         function renderDashboard(mode) {
-            const grid = document.getElementById('dashboard-grid');
-            grid.innerHTML = ''; 
+            const mappings = {
+                "Stodgy Brewing": "listings-stodgy",
+                "Maxline Brewing": "listings-maxline",
+                "Zwei Brewing": "listings-zwei",
+                "Mythmaker Brewing": "listings-mythmaker",
+                "Odell Brewing": "listings-odell",
+                "New Belgium": "listings-newbelgium",
+                "Purpose Brewing": "listings-purpose"
+            };
 
-            for (const [brewery, listings] of Object.entries(rawTruckData.breweries)) {
-                if (!listings || listings.length === 0) continue;
+            // Reset all structural containers 
+            Object.values(mappings).forEach(id => {
+                document.getElementById(id).innerHTML = "";
+                document.getElementById(id).closest('.brewery-card').style.display = "flex";
+            });
 
-                let processedListings = listings.map(item => ({
-                    rawText: getListingText(item),
-                    isToday: isListingToday(getListingText(item))
-                })).filter(item => item.rawText !== "" && !isListingJunk(item.rawText));
+            for (const [name, containerId] of Object.entries(mappings)) {
+                const targetElement = document.getElementById(containerId);
+                const rawItems = globalPayload.breweries ? globalPayload.breweries[name] : [];
+                let lines = parseBreweryData(rawItems);
 
                 if (mode === 'today') {
-                    processedListings = processedListings.filter(item => item.isToday);
+                    lines = lines.filter(line => isToday(line));
                 }
 
-                if (processedListings.length === 0) continue;
-
-                const card = document.createElement('div');
-                card.className = 'brewery-card';
-                
-                let cardHTML = `<div class="listings-container"><h3>${brewery}</h3>`;
-                
-                processedListings.forEach(item => {
-                    cardHTML += `
-                        <div class="listing-item ${item.isToday ? 'highlight-today' : ''}">
-                            ${item.isToday ? '<strong>[TODAY]</strong> ' : ''}${item.rawText}
-                        </div>
-                    `;
-                });
-                
-                cardHTML += `</div>`;
-                card.innerHTML = cardHTML;
-                grid.appendChild(card);
+                if (lines.length === 0) {
+                    if (mode === 'today') {
+                        // Hide the card on the screen completely if filtering for "Just Today" and nothing matches
+                        document.getElementById(containerId).closest('.brewery-card').style.display = "none";
+                    } else {
+                        targetElement.innerHTML = `<div class="listing-item" style="color:#777; font-style:italic;">Schedule rotating on platform.</div>`;
+                    }
+                } else {
+                    lines.forEach(text => {
+                        const todayFlag = isToday(text);
+                        targetElement.innerHTML += `
+                            <div class="listing-item ${todayFlag ? 'highlight-today' : ''}">
+                                ${todayFlag ? '<strong>[TODAY]</strong> ' : ''}${text}
+                            </div>`;
+                    });
+                }
             }
         }
 

@@ -68,18 +68,46 @@
         .filter-btn { padding: 10px 20px; background: #fff; border: 1px solid #4a3f35; color: #4a3f35; border-radius: 4px; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; cursor: pointer; transition: all 0.3s; }
         .filter-btn.active, .filter-btn:hover { background: #4a3f35; color: #fff; }
 
-        /* Dashboard Grid Layout */
-        .truck-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; }
-        .brewery-card { background: #fff; border-radius: 6px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border-top: 4px solid #4a3f35; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s; }
-        .brewery-card:hover { transform: translateY(-3px); }
+        /* FIXED DASHBOARD GRID */
+        .truck-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+            gap: 25px; 
+            align-items: start; /* Prevents long cards like Stodgy from dragging others down */
+        }
+        
+        .brewery-card { 
+            background: #fff; 
+            border-radius: 6px; 
+            padding: 25px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03); 
+            border-top: 4px solid #4a3f35; 
+            display: flex; 
+            flex-direction: column;
+            max-height: 450px; /* Caps the maximum height to keep elements perfectly uniform */
+        }
+        
+        .brewery-card:hover { transform: translateY(-3px); transition: transform 0.2s ease; }
         .brewery-card h3 { font-size: 1.4rem; color: #4a3f35; margin-bottom: 15px; border-bottom: 1px solid #e8e5e1; padding-bottom: 5px; }
         
-        .listings-container { flex-grow: 1; }
+        /* Dynamic scroll handling for massive multi-week lists like Stodgy */
+        .listings-container { 
+            flex-grow: 1; 
+            overflow-y: auto; 
+            margin-bottom: 15px;
+            padding-right: 5px;
+        }
+        
+        /* Custom scrollbar formatting to look clean and minimal */
+        .listings-container::-webkit-scrollbar { width: 4px; }
+        .listings-container::-webkit-scrollbar-track { background: #f1f1f1; }
+        .listings-container::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 2px; }
+
         .listing-item { font-size: 0.95rem; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #f5f2ee; line-height: 1.4; }
         .listing-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-        .highlight-today { background: #fffdf0; border-left: 3px solid #8b5a2b; padding-left: 8px; font-weight: 500; }
+        .highlight-today { background: #fffdf0; border-left: 3px solid #8b5a2b; padding-left: 8px; font-weight: 700; }
         
-        .action-link-btn { display: inline-block; margin-top: 15px; font-size: 0.85rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; color: #8b5a2b; border-bottom: 1px dashed #8b5a2b; padding-bottom: 2px; }
+        .action-link-btn { display: inline-block; font-size: 0.85rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; color: #8b5a2b; border-bottom: 1px dashed #8b5a2b; padding-bottom: 2px; align-self: flex-start; }
         .action-link-btn:hover { color: #4a3f35; border-bottom-color: #4a3f35; }
 
         @media (max-width: 768px) {
@@ -124,8 +152,7 @@
                 </div>
 
                 <div class="truck-grid" id="dashboard-grid">
-                    <!-- Cards render dynamically -->
-                </div>
+                    </div>
                 
             </div>
         </div>
@@ -134,7 +161,7 @@
     <footer>
         <div class="container">
             <p><strong>RW Custom Furniture & Local Utilities Engine</strong></p>
-            <p>Based in Fort Collins, CO | Automated Scraping System Core v1.1</p>
+            <p>Based in Fort Collins, CO | Automated Scraping System Core v1.2</p>
             <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa;">&copy; 2026 RW Custom Furniture. All Rights Reserved.</p>
         </div>
     </footer>
@@ -179,13 +206,11 @@
                 return false;
             }
 
-            // Numeric check against strings like 7/9 or 7/16
             const slashRegex = new RegExp(`${currentMonthNum}\\/${currentDateNum}\\b`);
             if (textLower.includes('/') && !slashRegex.test(textLower)) {
                 return false;
             }
 
-            // Word verification against fields like July 9 or Jul 9
             const wordRegex = new RegExp(`(july|jul)\\s*${currentDateNum}\\b`);
             if ((textLower.includes('july') || textLower.includes('jul')) && !wordRegex.test(textLower)) {
                 return false;
@@ -205,14 +230,14 @@
                     filteredListings = listings.filter(item => isListingToday(item.listing));
                 }
 
-                // If a brewery doesn't have an active live schedule block, we show its placeholder anchor card instead of skipping it
+                if (filteredListings.length === 0 && mode === 'today') continue;
+
                 const card = document.createElement('div');
                 card.className = 'brewery-card';
                 
                 let cardHTML = `<div class="listings-container"><h3>${brewery}</h3>`;
                 
                 if (filteredListings.length === 0 || filteredListings[0].is_placeholder) {
-                    if (mode === 'today') continue; // Skip displaying blank placeholder listings on "Just Today" view
                     cardHTML += `
                         <div class="listing-item" style="color: #666; font-style: italic;">
                             Schedules are rotating weekly on their platform.

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-10 00:14:06",
+  "last_updated": "2026-07-10 00:43:09",
   "breweries": {
     "Stodgy Brewing": [
       {
@@ -95,29 +95,149 @@
     ],
     "Maxline Brewing": [],
     "Zwei Brewing": [],
-    "Mythmaker Brewing": [],
+    "Mythmaker Brewing": [
+      {
+        "listing": "Mondays: Trivia - 6:00pm"
+      },
+      {
+        "listing": "Wednesdays: Bingo - 6:00pm"
+      },
+      {
+        "listing": "Saturday, July 4th - Independence Day"
+      },
+      {
+        "listing": "Saturday, July 11th - Colorado Brewers Rendezvous"
+      },
+      {
+        "listing": "Saturday, July 11th"
+      },
+      {
+        "listing": "Sunday, July 19th - Crowded Bookshelf Pop-Up"
+      },
+      {
+        "listing": "Tuesday, July 28th - Michael's Going Away Party 🍁"
+      },
+      {
+        "listing": "Tuesday, July 28th"
+      },
+      {
+        "listing": "Saturday, August 1st - Picklepalooza 2026"
+      }
+    ],
     "Odell Brewing": [
       {
+        "listing": "Taproom Features Outdoor Patio Dog Friendly Patio Daily Food Trucks Package Beer To-Go + Growlers and Crowlers Non-Alcoholic Options Beer Flights Tours on Fridays, Saturdays and Sundays at 1:00pm and 3:00pm"
+      },
+      {
+        "listing": "Dog Friendly Patio"
+      },
+      {
+        "listing": "Tours on Fridays, Saturdays and Sundays at 1:00pm and 3:00pm"
+      },
+      {
+        "listing": "FriekRaspberry Cherry SourBarrel-Aged. Cherry Pie. Raspberry Jam. 5.7 ABV"
+      },
+      {
+        "listing": "FriekRaspberry Cherry SourBarrel-Aged. Cherry Pie. Raspberry Jam."
+      },
+      {
+        "listing": "La Piadina Italian Flatbreads Mondays"
+      },
+      {
+        "listing": "NoCo Pizza Pizza Selected Tuesdays"
+      },
+      {
+        "listing": "Selected Tuesdays"
+      },
+      {
+        "listing": "Shell on Wheels Crab Cakes Selected Tuesdays"
+      },
+      {
+        "listing": "Scrooge Maki Asian Fusion Selected Wednesdays"
+      },
+      {
+        "listing": "Selected Wednesdays"
+      },
+      {
+        "listing": "Scratch Quisine Asian Fusion Cuisine Selected Wednesdays"
+      },
+      {
+        "listing": "Jersey Cowboy Smash Burgers Every Thursday"
+      },
+      {
+        "listing": "Yes Chef! Selected Thursdays"
+      },
+      {
+        "listing": "Selected Thursdays"
+      },
+      {
+        "listing": "Fat Tomato Every Friday"
+      },
+      {
+        "listing": "Double Wide Burgers Selected Fridays"
+      },
+      {
+        "listing": "Selected Fridays"
+      },
+      {
+        "listing": "Culture Alley Caribbean Selected Fridays"
+      },
+      {
+        "listing": "Mac'n A Lustful Marriage Between Macaroni and Cheese Every Saturday"
+      },
+      {
+        "listing": "Las Catrinas Authentic Guadalajara Taco Experience Every Saturday"
+      },
+      {
+        "listing": "Baked Loaded Baked Potatoes & Sliders Sundays"
+      },
+      {
+        "listing": "Scratch Quisine Asian Fusion Selected Sundays"
+      },
+      {
+        "listing": "Selected Sundays"
+      },
+      {
+        "listing": "Santa Elenas Wood Smoked Mexican Selected Sundays"
+      },
+      {
+        "listing": "Friday July 10, 2026 12PM-8PM"
+      },
+      {
+        "listing": "Friday July 10, 2026"
+      },
+      {
+        "listing": "11AM Saturday July 11, 2026 DENIM DAYS! Rodeo Weekend Party & Slushies All Day! 12PM Saturday July 11, 2026 BIG SLUSH PARTY PAIL DAY 3PM Sunday July 12, 2026 Live Music Sundays at Odell Brewing Co. More Events"
+      },
+      {
         "listing": "11AM Saturday July 11, 2026 DENIM DAYS! Rodeo Weekend Party & Slushies All Day!"
+      },
+      {
+        "listing": "11AM Saturday July 11, 2026"
+      },
+      {
+        "listing": "Saturday July 11, 2026"
       },
       {
         "listing": "12PM Saturday July 11, 2026 BIG SLUSH PARTY PAIL DAY"
       },
       {
+        "listing": "12PM Saturday July 11, 2026"
+      },
+      {
         "listing": "3PM Sunday July 12, 2026 Live Music Sundays at Odell Brewing Co."
+      },
+      {
+        "listing": "3PM Sunday July 12, 2026"
+      },
+      {
+        "listing": "Sunday July 12, 2026"
+      },
+      {
+        "listing": "Live Music Sundays at Odell Brewing Co."
       }
     ],
     "New Belgium": [],
-    "Purpose Brewing": [
-      {
-        "listing": "Back Taproom Events Food Trucks Back Taproom Hours Our Story Brewery Contact us Back Book an Event Event Pricing Harvest Host"
-      },
-      {
-        "listing": "Back Taproom Events Food Trucks"
-      },
-      {
-        "listing": "What's On Tap What's Happening Taproom Events Food Trucks About Us Taproom Hours Our Story Brewery Contact us"
-      }
-    ]
+    "Purpose Brewing": []
   }
 }

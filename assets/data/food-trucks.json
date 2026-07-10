@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-10 01:05:22",
+  "last_updated": "2026-07-10 01:16:06",
   "breweries": {
     "Stodgy Brewing": [
       {
@@ -93,11 +93,7 @@
         "day_listing": "Friday, 8/7 Las Catrinas 1:00 PM - 8:00 PM"
       }
     ],
-    "Maxline Brewing": [
-      {
-        "listing": "Schedules rotating weekly on their platform."
-      }
-    ],
+    "Maxline Brewing": [],
     "Zwei Brewing": [],
     "Mythmaker Brewing": [
       {
@@ -169,6 +165,9 @@
         "listing": "Jersey Cowboy Smash Burgers Every Thursday"
       },
       {
+        "listing": "Every Thursday"
+      },
+      {
         "listing": "Yes Chef! Selected Thursdays"
       },
       {
@@ -188,6 +187,9 @@
       },
       {
         "listing": "Mac'n A Lustful Marriage Between Macaroni and Cheese Every Saturday"
+      },
+      {
+        "listing": "Every Saturday"
       },
       {
         "listing": "Las Catrinas Authentic Guadalajara Taco Experience Every Saturday"

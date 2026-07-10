@@ -25,7 +25,7 @@ jobs:
     - name: Install Scraping Dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install beautifulsoup4 requests
+        pip install beautifulsoup4 requests icalendar recurring-ical-events
 
     - name: Execute Scraper Script
       run: python scrape_trucks.py

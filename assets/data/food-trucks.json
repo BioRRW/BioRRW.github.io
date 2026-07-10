@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-10 13:15:45",
+  "last_updated": "2026-07-10 13:21:33",
   "breweries": {
     "Stodgy Brewing": [
       "Thursday, 7/9 Scratch Quisine 4:00 PM - 8:00 PM",
@@ -208,6 +208,23 @@
       "Dec 26 - Shell on Wheels",
       "Dec 19 - Shell on Wheels",
       "Dec 12 - Shell on Wheels"
+    ],
+    "Odell Brewing": [
+      "Mondays - La Piadina",
+      "Selected Tuesdays - NoCo Pizza",
+      "Selected Tuesdays - Shell on Wheels",
+      "Selected Wednesdays - Scrooge Maki",
+      "Selected Wednesdays - Scratch Quisine",
+      "Every Thursday - Jersey Cowboy",
+      "Selected Thursdays - Yes Chef!",
+      "Every Friday - Fat Tomato",
+      "Selected Fridays - Double Wide Burgers",
+      "Selected Fridays - Culture Alley",
+      "Every Saturday - Mac'n",
+      "Every Saturday - Las Catrinas",
+      "Sundays - Baked",
+      "Selected Sundays - Scratch Quisine",
+      "Selected Sundays - Santa Elenas"
     ]
   }
 }

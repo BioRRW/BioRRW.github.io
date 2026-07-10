@@ -155,7 +155,7 @@
     <footer>
         <div class="container">
             <p><strong>RW Custom Furniture & Local Utilities Engine</strong></p>
-            <p>Based in Fort Collins, CO | Automated Scraping System Core v1.3</p>
+            <p>Based in Fort Collins, CO | Automated Scraping System Core v1.4</p>
             <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa;">&copy; 2026 RW Custom Furniture. All Rights Reserved.</p>
         </div>
     </footer>
@@ -169,6 +169,13 @@
         
         let rawTruckData = {};
 
+        // Navigation elements and general non-food event keywords to filter out dynamically
+        const JUNK_BLACKLIST = [
+            "our story", "contact us", "hours", "brewery", "book an event", "event pricing", 
+            "harvest host", "what's on tap", "about us", "taproom hours", "back taproom",
+            "live music", "music sundays", "slush party"
+        ];
+
         fetch('/assets/data/food-trucks.json?v=' + now.getTime())
             .then(res => res.json())
             .then(payload => {
@@ -181,7 +188,6 @@
                 console.error(err);
             });
 
-        // Helper to extract exact text content regardless of what schema key name the script used
         function getListingText(item) {
             if (!item) return "";
             if (item.day_listing) return item.day_listing;
@@ -189,6 +195,13 @@
             if (item.truck && item.schedule) return `${item.truck} — ${item.schedule}`;
             if (item.truck) return item.truck;
             return "";
+        }
+
+        function isListingJunk(text) {
+            const textLower = text.toLowerCase();
+            // Drop short snippets or phrases explicitly containing menu tracking words
+            if (text.length < 10) return true;
+            return JUNK_BLACKLIST.some(junk => textLower.includes(junk));
         }
 
         function isListingToday(textContent) {
@@ -200,7 +213,6 @@
                 return false;
             }
 
-            // Lock out secondary multi-week duplicate highlights (e.g. distinguishing 7/9 from 7/16)
             const slashRegex = new RegExp(`${currentMonthNum}\\/${currentDateNum}\\b`);
             if (textLower.includes('/') && !slashRegex.test(textLower)) {
                 return false;
@@ -221,13 +233,12 @@
             for (const [brewery, listings] of Object.entries(rawTruckData.breweries)) {
                 if (!listings || listings.length === 0) continue;
 
-                // Map clean text variants across all listings
+                // Process data, cleaning out junk menu navigation elements instantly
                 let processedListings = listings.map(item => ({
                     rawText: getListingText(item),
                     isToday: isListingToday(getListingText(item))
-                })).filter(item => item.rawText !== "");
+                })).filter(item => item.rawText !== "" && !isListingJunk(item.rawText));
 
-                // Filter out non-matching rows if the user clicked "Just Today"
                 if (mode === 'today') {
                     processedListings = processedListings.filter(item => item.isToday);
                 }

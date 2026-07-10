@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Playfair+Display:400,700" rel="stylesheet">
     
     <style>
-        /* Base Page Configurations */
+        /* Base Reset & Typography */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body { 
@@ -62,12 +62,10 @@
         .page-header h1 { font-size: 3rem; margin-bottom: 10px; }
         .timestamp { font-size: 0.85rem; color: #777; font-style: italic; margin-top: 5px; }
 
-        /* Filter Tabs */
         .filter-controls { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; }
         .filter-btn { padding: 10px 20px; background: #fff; border: 1px solid #4a3f35; color: #4a3f35; border-radius: 4px; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; cursor: pointer; transition: all 0.3s; }
         .filter-btn.active, .filter-btn:hover { background: #4a3f35; color: #fff; }
 
-        /* Structural Grid - Alignment Set to Top Line */
         .truck-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
@@ -75,7 +73,6 @@
             align-items: start; 
         }
         
-        /* Hardcapped Uniform Card Structures */
         .brewery-card { 
             background: #fff; 
             border-radius: 6px; 
@@ -149,7 +146,6 @@
                     <button class="filter-btn" id="btn-today" onclick="filterSchedule('today')">Just Today</button>
                 </div>
 
-                <!-- HARDCODED STRUCTURAL GRID CELLS -->
                 <div class="truck-grid" id="dashboard-grid">
                     
                     <div class="brewery-card" id="card-stodgy">
@@ -203,7 +199,7 @@
     <footer>
         <div class="container">
             <p><strong>RW Custom Furniture & Local Utilities Engine</strong></p>
-            <p>Based in Fort Collins, CO | Automated Scraping System Core v2.0</p>
+            <p>Based in Fort Collins, CO | Automated Scraping System Core v2.1</p>
             <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa;">&copy; 2026 RW Custom Furniture. All Rights Reserved.</p>
         </div>
     </footer>
@@ -217,12 +213,10 @@
         
         let globalPayload = {};
 
-        // Hard navigation filter keys to discard messy menu links and non-food patio events
-        const BLACKLIST = [
-            "our story", "contact us", "hours", "brewery", "book an event", "event pricing", 
-            "harvest host", "what's on tap", "about us", "taproom hours", "back taproom", 
-            "back book an event", "denim days", "slush party", "live music", "sundays at odell"
-        ];
+        // Explicit filter loops to throw out navigation elements
+        const BLACKLIST = ["our story", "contact us", "hours", "brewery", "book an event", "event pricing", "harvest host", "what's on tap", "about us", "taproom hours", "back taproom", "back book an event", "package beer", "beer flights", "tours on fridays", "dog friendly patio"];
+        // Strict pattern matching tags to target real food vendors
+        const FOOD_KEYWORDS = ["pizza", "truck", "quisine", "cuisine", "taco", "burger", "crab", "fusion", "catrinas", "piadina", "smash", "loaded", "potatoes", "slider", "eats", "chef", "dumpling", "maki", "grill", "smoke", "moose", "scratch"];
 
         fetch('/assets/data/food-trucks.json?v=' + now.getTime())
             .then(res => res.json())
@@ -250,17 +244,23 @@
             const wordStr = `july ${currentDateNum}`;
             const wordShortStr = `jul ${currentDateNum}`;
 
-            // Strict date pattern match to stop second-week duplicates from lighting up
             if (textLower.includes('/') && !textLower.includes(dateStr)) return false;
             if ((textLower.includes('july') || textLower.includes('jul')) && (!textLower.includes(wordStr) && !textLower.includes(wordShortStr))) return false;
 
             return textLower.includes(currentDayName.toLowerCase()) || textLower.includes(currentDayName.substring(0,3).toLowerCase());
         }
 
-        function parseBreweryData(arrayData) {
+        function parseBreweryData(arrayData, breweryName) {
             if (!arrayData || arrayData.length === 0) return [];
-            return arrayData.map(item => getNormalizedText(item))
-                            .filter(text => text.length > 12 && !BLACKLIST.some(j => text.toLowerCase().includes(j)));
+            
+            let lines = arrayData.map(item => getNormalizedText(item))
+                                .filter(text => text.length > 8 && !BLACKLIST.some(j => text.toLowerCase().includes(j)));
+
+            // Apply a strict context filter specifically for Odell and broad text blocks to weed out concerts/festivals
+            if (breweryName === "Odell Brewing" || breweryName === "Mythmaker Brewing" || breweryName === "Purpose Brewing") {
+                lines = lines.filter(text => FOOD_KEYWORDS.some(kwd => text.toLowerCase().includes(kwd)));
+            }
+            return lines;
         }
 
         function renderDashboard(mode) {
@@ -274,7 +274,6 @@
                 "Purpose Brewing": "listings-purpose"
             };
 
-            // Reset all structural containers 
             Object.values(mappings).forEach(id => {
                 document.getElementById(id).innerHTML = "";
                 document.getElementById(id).closest('.brewery-card').style.display = "flex";
@@ -283,7 +282,7 @@
             for (const [name, containerId] of Object.entries(mappings)) {
                 const targetElement = document.getElementById(containerId);
                 const rawItems = globalPayload.breweries ? globalPayload.breweries[name] : [];
-                let lines = parseBreweryData(rawItems);
+                let lines = parseBreweryData(rawItems, name);
 
                 if (mode === 'today') {
                     lines = lines.filter(line => isToday(line));
@@ -291,7 +290,6 @@
 
                 if (lines.length === 0) {
                     if (mode === 'today') {
-                        // Hide the card on the screen completely if filtering for "Just Today" and nothing matches
                         document.getElementById(containerId).closest('.brewery-card').style.display = "none";
                     } else {
                         targetElement.innerHTML = `<div class="listing-item" style="color:#777; font-style:italic;">Schedule rotating on platform.</div>`;

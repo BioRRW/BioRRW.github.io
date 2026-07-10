@@ -1,263 +1,192 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKDEGPV486"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-HKDEGPV486');
-    </script>
+import os
+import re
+import json
+import requests
+from bs4 import BeautifulSoup
+from datetime import datetime
 
-    <link rel="icon" href="https://rwcustomfurniture.com/assets/images/wood/RW_logo_custom_furniture.png" type="image/png" sizes="any">
-    <link rel="canonical" href="https://rwcustomfurniture.com/food-trucks">
+# Global configuration to mimic a regular desktop browser and bypass simple bot-walls
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5"
+}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fort Collins Brewery Food Truck Dashboard | RW Custom Furniture</title>
-    <meta name="description" content="A live, automated tracker showing daily food truck schedules across local Fort Collins breweries.">
-    
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Playfair+Display:400,700" rel="stylesheet">
-    
-    <style>
-        /* Basic Reset & Typography */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+def clean_text(text):
+    """Utility to strip out extra whitespaces and newline breaks."""
+    return re.sub(r'\s+', ' ', text).strip() if text else ""
+
+def scrape_stodgy():
+    """Scrapes Stodgy Brewing's clean list items."""
+    try:
+        url = "https://stodgybrewing.com/food/"
+        response = requests.get(url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        trucks = []
         
-        body { 
-            display: flex; 
-            flex-direction: column; 
-            min-height: 100vh;
-            font-family: 'Montserrat', sans-serif; 
-            line-height: 1.6; 
-            color: #2c2a29; 
-            background-image: url("./assets/images/wood/raised-bed-fort-collins-custom.jpg");
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+        # Stodgy lists their truck schedules inside standard clean list elements
+        for item in soup.find_all('li'):
+            text = item.get_text()
+            if any(day in text for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]):
+                trucks.append({"day_listing": clean_text(text)})
+        return trucks
+    except Exception as e:
+        print(f"Error scraping Stodgy: {e}")
+        return []
+
+def scrape_maxline():
+    """Scrapes Maxline Brewing's WordPress Event Calendar category feed."""
+    try:
+        url = "https://maxlinebrewing.com/events/categories/food-trucks/"
+        response = requests.get(url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        trucks = []
         
-        h1, h2, h3 { font-family: 'Playfair Display', serif; color: #1a1a1a; }
-        a { text-decoration: none; color: inherit; transition: color 0.3s; }
-        a:hover { color: #8b5a2b; }
-        
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .section-padding { padding: 60px 0; }
-        header { padding: 20px 0; background: #fff; border-bottom: 1px solid #e8e5e1; position: sticky; top: 0; z-index: 100; }
-        nav { display: flex; justify-content: space-between; align-items: center; }
-        .nav-links a { margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
-        
-        .main-content { flex: 1; }
-
-        /* Content Card Overlay */
-        .content-card-overlay {
-            background-color: rgba(250, 249, 247, 0.95);
-            border-radius: 8px;
-            padding: 40px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(232, 229, 225, 0.7);
-        }
-
-        .page-header { text-align: center; margin-bottom: 40px; }
-        .page-header h1 { font-size: 3rem; margin-bottom: 10px; }
-        .timestamp { font-size: 0.85rem; color: #777; font-style: italic; margin-top: 5px; }
-
-        /* Filter Controls */
-        .filter-controls { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; }
-        .filter-btn { padding: 10px 20px; background: #fff; border: 1px solid #4a3f35; color: #4a3f35; border-radius: 4px; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; cursor: pointer; transition: all 0.3s; }
-        .filter-btn.active, .filter-btn:hover { background: #4a3f35; color: #fff; }
-
-        /* Multi-Column Layout Grid Rules */
-        .truck-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
-            gap: 25px; 
-            align-items: start; 
-        }
-        
-        .brewery-card { 
-            background: #fff; 
-            border-radius: 6px; 
-            padding: 25px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03); 
-            border-top: 4px solid #4a3f35; 
-            display: flex; 
-            flex-direction: column;
-            max-height: 500px; 
-        }
-        
-        .brewery-card:hover { transform: translateY(-3px); transition: transform 0.2s ease; }
-        .brewery-card h3 { font-size: 1.4rem; color: #4a3f35; margin-bottom: 15px; border-bottom: 1px solid #e8e5e1; padding-bottom: 5px; }
-        
-        .listings-container { 
-            flex-grow: 1; 
-            overflow-y: auto; 
-            padding-right: 5px;
-        }
-        
-        .listings-container::-webkit-scrollbar { width: 4px; }
-        .listings-container::-webkit-scrollbar-track { background: #f1f1f1; }
-        .listings-container::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 2px; }
-
-        .listing-item { font-size: 0.95rem; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #f5f2ee; line-height: 1.4; word-wrap: break-word; }
-        .listing-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-        .highlight-today { background: #fffdf0; border-left: 3px solid #8b5a2b; padding-left: 8px; font-weight: 700; }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .content-card-overlay { padding: 20px; }
-            .page-header h1 { font-size: 2.2rem; }
-        }
-        
-        footer { background: #1a1a1a; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; border-top: 1px solid #2c2a29; }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo"><strong>RW CUSTOM FURNITURE</strong></div>
-                <div class="nav-links">
-                    <a href="/">Home</a>
-                    <a href="/about">About</a>
-                    <a href="/gallery">Portfolio</a>
-                    <a href="/handyman">Handyman Services</a>
-                    <a href="/consultation">Consultation</a>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <div class="main-content">
-        <div class="container section-padding">
-            <div class="content-card-overlay">
-                
-                <section class="page-header">
-                    <h1>Local Brewery Food Truck Schedule</h1>
-                    <p>What's cooking at the taprooms today? Schedules are aggregated and updated automatically every morning.</p>
-                    <div class="timestamp" id="update-time">Loading live schedule engine...</div>
-                </section>
-
-                <div class="filter-controls">
-                    <button class="filter-btn active" id="btn-all" onclick="filterSchedule('all')">Show Full Week</button>
-                    <button class="filter-btn" id="btn-today" onclick="filterSchedule('today')">Just Today</button>
-                </div>
-
-                <div class="truck-grid" id="dashboard-grid">
-                    </div>
-                
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="container">
-            <p><strong>RW Custom Furniture & Local Utilities Engine</strong></p>
-            <p>Based in Fort Collins, CO | Automated Scraping System Core v1.3</p>
-            <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa;">&copy; 2026 RW Custom Furniture. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        const now = new Date();
-        const currentDayName = daysOfWeek[now.getDay()]; 
-        const currentMonthNum = now.getMonth() + 1; 
-        const currentDateNum = now.getDate();       
-        
-        let rawTruckData = {};
-
-        fetch('/assets/data/food-trucks.json?v=' + now.getTime())
-            .then(res => res.json())
-            .then(payload => {
-                rawTruckData = payload;
-                document.getElementById('update-time').innerText = `Scraper Engine Sync: ${payload.last_updated}`;
-                renderDashboard('all');
-            })
-            .catch(err => {
-                document.getElementById('update-time').innerText = "System offline. Unable to download schedule arrays.";
-                console.error(err);
-            });
-
-        // Helper to extract exact text content regardless of what schema key name the script used
-        function getListingText(item) {
-            if (!item) return "";
-            if (item.day_listing) return item.day_listing;
-            if (item.listing) return item.listing;
-            if (item.truck && item.schedule) return `${item.truck} — ${item.schedule}`;
-            if (item.truck) return item.truck;
-            return "";
-        }
-
-        function isListingToday(textContent) {
-            const textLower = textContent.toLowerCase();
-            const dayLower = currentDayName.toLowerCase();
-            const dayShortLower = dayLower.substring(0,3);
-
-            if (!textLower.includes(dayLower) && !textLower.includes(dayShortLower)) {
-                return false;
-            }
-
-            // Lock out secondary multi-week duplicate highlights (e.g. distinguishing 7/9 from 7/16)
-            const slashRegex = new RegExp(`${currentMonthNum}\\/${currentDateNum}\\b`);
-            if (textLower.includes('/') && !slashRegex.test(textLower)) {
-                return false;
-            }
-
-            const wordRegex = new RegExp(`(july|jul)\\s*${currentDateNum}\\b`);
-            if ((textLower.includes('july') || textLower.includes('jul')) && !wordRegex.test(textLower)) {
-                return false;
-            }
+        # Selects elements from Maxline's modern event block components
+        for event in soup.find_all(class_="tribe-events-calendar-list__event-details"):
+            title_el = event.find(class_="tribe-events-calendar-list__event-title")
+            date_el = event.find(class_="tribe-events-calendar-list__event-datetime")
             
-            return true;
+            if title_el and date_el:
+                trucks.append({
+                    "truck": clean_text(title_el.get_text()),
+                    "schedule": clean_text(date_el.get_text())
+                })
+        return trucks
+    except Exception as e:
+        print(f"Error scraping Maxline: {e}")
+        return []
+
+def scrape_zwei():
+    """Scrapes Zwei Brewing's ASPX structure by targeting the main menu wrappers."""
+    try:
+        url = "https://www.zweibrewing.com/food-trucks.aspx"
+        response = requests.get(url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        trucks = []
+        
+        # Zwei maps out their grid elements using generic paragraph elements within text containers
+        main_content = soup.find(id="main-content") or soup.find(class_="content") or soup.body
+        if main_content:
+            for p in main_content.find_all('p'):
+                text = p.get_text()
+                if any(day in text for day in ["Mon:", "Tue:", "Wed:", "Thu:", "Fri:", "Sat:", "Sun:", "Monday", "Friday"]):
+                    trucks.append({"listing": clean_text(text)})
+        return trucks
+    except Exception as e:
+        print(f"Error scraping Zwei: {e}")
+        return []
+
+def scrape_mythmaker():
+    """Scrapes Mythmaker's text frames by searching for key day identifiers."""
+    try:
+        url = "https://www.mythmakerbrewing.com/"
+        response = requests.get(url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        trucks = []
+        
+        # Mythmaker keeps text sequences updated inside their generic text and span blocks
+        for element in soup.find_all(['p', 'span', 'div']):
+            text = element.get_text()
+            # Strict string validation to grab food truck references while dropping trivia or general text
+            if any(day in text for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]):
+                if "truck" in text.lower() or "food" in text.lower() or "at mythmaker" in text.lower():
+                    cleaned = clean_text(text)
+                    if cleaned and len(cleaned) < 150 and {"listing": cleaned} not in trucks:
+                        trucks.append({"listing": cleaned})
+        return trucks
+    except Exception as e:
+        print(f"Error scraping Mythmaker: {e}")
+        return []
+
+def scrape_odell():
+    """Scrapes Odell's location page for upcoming patio event listings."""
+    try:
+        url = "https://www.odellbrewing.com/locations/fort-collins/"
+        response = requests.get(url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        trucks = []
+        
+        # Focuses on events or text containing explicit truck data
+        for block in soup.find_all(class_=re.compile(r'(event|calendar|truck|info)', re.I)):
+            text = block.get_text()
+            if any(day in text for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]):
+                cleaned = clean_text(text)
+                if cleaned and 20 < len(cleaned) < 200 and {"listing": cleaned} not in trucks:
+                    trucks.append({"listing": cleaned})
+        return trucks
+    except Exception as e:
+        print(f"Error scraping Odell: {e}")
+        return []
+
+def scrape_new_belgium():
+    """Target endpoint for New Belgium's corporate tour/taproom system API layout."""
+    try:
+        # Pulling directly from their live events/calendar pages
+        url = "https://www.newbelgium.com/taproom/fort-collins/"
+        response = requests.get(url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        trucks = []
+        
+        for item in soup.find_all(class_=re.compile(r'(event|card|schedule|food)', re.I)):
+            text = item.get_text()
+            if "truck" in text.lower() or "food" in text.lower():
+                cleaned = clean_text(text)
+                if cleaned and len(cleaned) < 180 and {"listing": cleaned} not in trucks:
+                    trucks.append({"listing": cleaned})
+        return trucks
+    except Exception as e:
+        print(f"Error scraping New Belgium: {e}")
+        return []
+
+def scrape_purpose():
+    """Scrapes Purpose Brewing's single-page structure for localized details."""
+    try:
+        url = "https://purposebrewing.com/"
+        response = requests.get(url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        trucks = []
+        
+        # Grabs text frames listing times or dates 
+        for el in soup.find_all(['p', 'h3', 'div', 'li']):
+            text = el.get_text()
+            if "truck" in text.lower() or "food" in text.lower() or "serving" in text.lower():
+                cleaned = clean_text(text)
+                if cleaned and 15 < len(cleaned) < 150 and {"listing": cleaned} not in trucks:
+                    trucks.append({"listing": cleaned})
+        return trucks
+    except Exception as e:
+        print(f"Error scraping Purpose: {e}")
+        return []
+
+def main():
+    print("Initiating full Northern Colorado brewery food truck scrape sequence...")
+    
+    # Initialize the output master data block
+    master_schedule = {
+        "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "breweries": {
+            "Stodgy Brewing": scrape_stodgy(),
+            "Maxline Brewing": scrape_maxline(),
+            "Zwei Brewing": scrape_zwei(),
+            "Mythmaker Brewing": scrape_mythmaker(),
+            "Odell Brewing": scrape_odell(),
+            "New Belgium": scrape_new_belgium(),
+            "Purpose Brewing": scrape_purpose()
         }
+    }
+    
+    # Target directory handling (creates directory if missing inside local or remote actions system)
+    output_dir = "assets/data"
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+        
+    output_path = os.path.join(output_dir, "food-trucks.json")
+    
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(master_schedule, f, indent=2, ensure_ascii=False)
+        
+    print(f"Scrape executed successfully. Comprehensive payload saved to: {output_path}")
 
-        function renderDashboard(mode) {
-            const grid = document.getElementById('dashboard-grid');
-            grid.innerHTML = ''; 
-
-            for (const [brewery, listings] of Object.entries(rawTruckData.breweries)) {
-                if (!listings || listings.length === 0) continue;
-
-                // Map clean text variants across all listings
-                let processedListings = listings.map(item => ({
-                    rawText: getListingText(item),
-                    isToday: isListingToday(getListingText(item))
-                })).filter(item => item.rawText !== "");
-
-                // Filter out non-matching rows if the user clicked "Just Today"
-                if (mode === 'today') {
-                    processedListings = processedListings.filter(item => item.isToday);
-                }
-
-                if (processedListings.length === 0) continue;
-
-                const card = document.createElement('div');
-                card.className = 'brewery-card';
-                
-                let cardHTML = `<div class="listings-container"><h3>${brewery}</h3>`;
-                
-                processedListings.forEach(item => {
-                    cardHTML += `
-                        <div class="listing-item ${item.isToday ? 'highlight-today' : ''}">
-                            ${item.isToday ? '<strong>[TODAY]</strong> ' : ''}${item.rawText}
-                        </div>
-                    `;
-                });
-                
-                cardHTML += `</div>`;
-                card.innerHTML = cardHTML;
-                grid.appendChild(card);
-            }
-        }
-
-        function filterSchedule(mode) {
-            document.getElementById('btn-all').classList.toggle('active', mode === 'all');
-            document.getElementById('btn-today').classList.toggle('active', mode === 'today');
-            renderDashboard(mode);
-        }
-    </script>
-</body>
-</html>
+if __name__ == "__main__":
+    main()

@@ -68,12 +68,12 @@
         .filter-btn { padding: 10px 20px; background: #fff; border: 1px solid #4a3f35; color: #4a3f35; border-radius: 4px; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; cursor: pointer; transition: all 0.3s; }
         .filter-btn.active, .filter-btn:hover { background: #4a3f35; color: #fff; }
 
-        /* FIXED DASHBOARD GRID */
+        /* Multi-Column Layout Grid Rules */
         .truck-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
             gap: 25px; 
-            align-items: start; /* Prevents long cards like Stodgy from dragging others down */
+            align-items: start; 
         }
         
         .brewery-card { 
@@ -84,31 +84,25 @@
             border-top: 4px solid #4a3f35; 
             display: flex; 
             flex-direction: column;
-            max-height: 450px; /* Caps the maximum height to keep elements perfectly uniform */
+            max-height: 500px; 
         }
         
         .brewery-card:hover { transform: translateY(-3px); transition: transform 0.2s ease; }
         .brewery-card h3 { font-size: 1.4rem; color: #4a3f35; margin-bottom: 15px; border-bottom: 1px solid #e8e5e1; padding-bottom: 5px; }
         
-        /* Dynamic scroll handling for massive multi-week lists like Stodgy */
         .listings-container { 
             flex-grow: 1; 
             overflow-y: auto; 
-            margin-bottom: 15px;
             padding-right: 5px;
         }
         
-        /* Custom scrollbar formatting to look clean and minimal */
         .listings-container::-webkit-scrollbar { width: 4px; }
         .listings-container::-webkit-scrollbar-track { background: #f1f1f1; }
         .listings-container::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 2px; }
 
-        .listing-item { font-size: 0.95rem; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #f5f2ee; line-height: 1.4; }
+        .listing-item { font-size: 0.95rem; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #f5f2ee; line-height: 1.4; word-wrap: break-word; }
         .listing-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
         .highlight-today { background: #fffdf0; border-left: 3px solid #8b5a2b; padding-left: 8px; font-weight: 700; }
-        
-        .action-link-btn { display: inline-block; font-size: 0.85rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; color: #8b5a2b; border-bottom: 1px dashed #8b5a2b; padding-bottom: 2px; align-self: flex-start; }
-        .action-link-btn:hover { color: #4a3f35; border-bottom-color: #4a3f35; }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
@@ -161,7 +155,7 @@
     <footer>
         <div class="container">
             <p><strong>RW Custom Furniture & Local Utilities Engine</strong></p>
-            <p>Based in Fort Collins, CO | Automated Scraping System Core v1.2</p>
+            <p>Based in Fort Collins, CO | Automated Scraping System Core v1.3</p>
             <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa;">&copy; 2026 RW Custom Furniture. All Rights Reserved.</p>
         </div>
     </footer>
@@ -175,16 +169,6 @@
         
         let rawTruckData = {};
 
-        const breweryLinks = {
-            "Stodgy Brewing": "https://stodgybrewing.com/food/",
-            "Maxline Brewing": "https://maxlinebrewing.com/events/categories/food-trucks/",
-            "Zwei Brewing": "https://www.zweibrewing.com/food-trucks.aspx",
-            "Mythmaker Brewing": "https://www.mythmakerbrewing.com/home/about-us",
-            "Odell Brewing": "https://www.odellbrewing.com/locations/fort-collins/",
-            "New Belgium": "https://www.newbelgium.com/taproom/fort-collins/",
-            "Purpose Brewing": "https://purposebrewing.com/"
-        };
-
         fetch('/assets/data/food-trucks.json?v=' + now.getTime())
             .then(res => res.json())
             .then(payload => {
@@ -197,6 +181,16 @@
                 console.error(err);
             });
 
+        // Helper to extract exact text content regardless of what schema key name the script used
+        function getListingText(item) {
+            if (!item) return "";
+            if (item.day_listing) return item.day_listing;
+            if (item.listing) return item.listing;
+            if (item.truck && item.schedule) return `${item.truck} — ${item.schedule}`;
+            if (item.truck) return item.truck;
+            return "";
+        }
+
         function isListingToday(textContent) {
             const textLower = textContent.toLowerCase();
             const dayLower = currentDayName.toLowerCase();
@@ -206,6 +200,7 @@
                 return false;
             }
 
+            // Lock out secondary multi-week duplicate highlights (e.g. distinguishing 7/9 from 7/16)
             const slashRegex = new RegExp(`${currentMonthNum}\\/${currentDateNum}\\b`);
             if (textLower.includes('/') && !slashRegex.test(textLower)) {
                 return false;
@@ -224,37 +219,35 @@
             grid.innerHTML = ''; 
 
             for (const [brewery, listings] of Object.entries(rawTruckData.breweries)) {
-                let filteredListings = [...listings];
+                if (!listings || listings.length === 0) continue;
 
+                // Map clean text variants across all listings
+                let processedListings = listings.map(item => ({
+                    rawText: getListingText(item),
+                    isToday: isListingToday(getListingText(item))
+                })).filter(item => item.rawText !== "");
+
+                // Filter out non-matching rows if the user clicked "Just Today"
                 if (mode === 'today') {
-                    filteredListings = listings.filter(item => isListingToday(item.listing));
+                    processedListings = processedListings.filter(item => item.isToday);
                 }
 
-                if (filteredListings.length === 0 && mode === 'today') continue;
+                if (processedListings.length === 0) continue;
 
                 const card = document.createElement('div');
                 card.className = 'brewery-card';
                 
                 let cardHTML = `<div class="listings-container"><h3>${brewery}</h3>`;
                 
-                if (filteredListings.length === 0 || filteredListings[0].is_placeholder) {
+                processedListings.forEach(item => {
                     cardHTML += `
-                        <div class="listing-item" style="color: #666; font-style: italic;">
-                            Schedules are rotating weekly on their platform.
+                        <div class="listing-item ${item.isToday ? 'highlight-today' : ''}">
+                            ${item.isToday ? '<strong>[TODAY]</strong> ' : ''}${item.rawText}
                         </div>
                     `;
-                } else {
-                    filteredListings.forEach(item => {
-                        const isToday = isListingToday(item.listing);
-                        cardHTML += `
-                            <div class="listing-item ${isToday ? 'highlight-today' : ''}">
-                                ${isToday ? '<strong>[TODAY]</strong> ' : ''}${item.listing}
-                            </div>
-                        `;
-                    });
-                }
+                });
                 
-                cardHTML += `</div><a href="${breweryLinks[brewery]}" target="_blank" class="action-link-btn">View Full Schedule ➔</a>`;
+                cardHTML += `</div>`;
                 card.innerHTML = cardHTML;
                 grid.appendChild(card);
             }

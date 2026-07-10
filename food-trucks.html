@@ -228,13 +228,19 @@
 
         function isToday(text) {
             const textLower = text.toLowerCase();
-            // Matches full month name or short version + current date (e.g., "July 10" or "Jul 10")
-            const dateMatch = textLower.includes(currentMonthName.toLowerCase()) || textLower.includes(currentMonthShort.toLowerCase());
-            const dayMatch = textLower.includes(currentDateNum.toString());
             
-            // Flag if the text mentions today's day of the week OR today's specific date
-            return (textLower.includes(currentDayName.toLowerCase()) || textLower.includes(currentDayName.substring(0,3).toLowerCase())) 
-                   || (dateMatch && dayMatch);
+            // Check for explicit date (July 10)
+            const matchesMonth = textLower.includes(currentMonthName.toLowerCase()) || textLower.includes(currentMonthShort.toLowerCase());
+            const matchesDate = textLower.includes(currentDateNum.toString());
+            
+            // If the text contains a date, it must match today's date to be [TODAY]
+            if (matchesMonth) {
+                return matchesDate;
+            }
+            
+            // Fallback: If no date is found, check for the day of the week 
+            // (Only do this if you are sure the schedule is only for the current week!)
+            return textLower.includes(currentDayName.toLowerCase()) || textLower.includes(currentDayName.substring(0,3).toLowerCase());
         }
 
         function renderDashboard(mode) {

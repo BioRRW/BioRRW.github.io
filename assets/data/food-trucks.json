@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-07-10 13:37:35",
+  "last_updated": "2026-07-10 14:14:12",
   "breweries": {
     "Stodgy Brewing": [
-      "Thursday, 7/9 Scratch Quisine 4:00 PM - 8:00 PM",
       "Friday, 7/10 Las Catrinas 1:00 PM - 8:00 PM",
       "Saturday, 7/11 La Piadina 12:00 PM - 8:00 PM",
       "Sunday, 7/12 La Campechana 12:00 PM - 7:00 PM",
@@ -31,7 +30,8 @@
       "Tuesday, 8/4 Sweaty Moose 4:00 PM - 8:00 PM",
       "Wednesday, 8/5 Yes Chef! 4:00 PM - 8:00 PM",
       "Thursday, 8/6 Scratch Quisine 4:00 PM - 8:00 PM",
-      "Friday, 8/7 Las Catrinas 1:00 PM - 8:00 PM"
+      "Friday, 8/7 Las Catrinas 1:00 PM - 8:00 PM",
+      "Saturday, 8/8 Yes Chef! 12:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Monday, July 6 - Huka Sushi",
@@ -112,16 +112,40 @@
       "The Colorado Room Food Cart - Wed Aug 26, 2026 - 4:00 pm - 8:00 pm"
     ],
     "Mythmaker Brewing": [
+      "Friday, Jul 10 - The Colorado Roam",
+      "Saturday, Jul 11 - Matador",
       "Sunday, Jul 12 - Culture Alley Cuisines",
+      "Monday, Jul 13 - Baked Food Truck",
+      "Tuesday, Jul 14 - Dero's African Food",
+      "Wednesday, Jul 15 - Scratch Quisine ",
+      "Thursday, Jul 16 - Bayou Smokehouse",
       "Friday, Jul 17 - NoCo Pizza",
+      "Saturday, Jul 18 - La Piadina",
+      "Sunday, Jul 19 - Culture Alley Cuisines",
+      "Sunday, Jul 19 - Crowded Bookshelf Pop Up",
+      "Monday, Jul 20 - Scratch Quisine",
+      "Tuesday, Jul 21 - Dero's African Food",
+      "Wednesday, Jul 22 - Scrooge Maki",
+      "Thursday, Jul 23 - Santa Elena's",
+      "Friday, Jul 24 - La Tapitia",
+      "Saturday, Jul 25 - Matador",
       "Sunday, Jul 26 - Culture Alley Cuisines",
+      "Monday, Jul 27 - Baked Food Truck",
+      "Tuesday, Jul 28 - Dero's African Food",
+      "Tuesday, Jul 28 - Michael's Going Away Party",
       "Wednesday, Jul 29 - Double Wide Burgers",
-      "Wednesday, Aug 5 - Burger Bingo!",
-      "Wednesday, Aug 26 - Double Wide Burgers",
-      "Tuesday, Sep 1 - Dero's African Food",
-      "Wednesday, Oct 21 - Double Wide Burgers",
-      "Wednesday, Nov 18 - Double Wide Burgers",
-      "Wednesday, Dec 16 - Double Wide Burgers"
+      "Thursday, Jul 30 - Scratch Quisine",
+      "Friday, Jul 31 - NoCo Pizza",
+      "Saturday, Aug 1 - Pickle Palooza ",
+      "Saturday, Aug 1 - Matador",
+      "Sunday, Aug 2 - Culture Alley Cuisines",
+      "Monday, Aug 3 - Scratch Quisine",
+      "Tuesday, Aug 4 - Dero's African Food",
+      "Wednesday, Aug 5 - Jersey Cowboy ",
+      "Thursday, Aug 6 - Santa Elena's",
+      "Friday, Aug 7 - The Colorado Roam",
+      "Saturday, Aug 8 - La Piadina",
+      "Sunday, Aug 9 - The Smoke Post"
     ],
     "New Belgium": [
       "Friday, July 10, 2026 - Antojitos DelSureste",

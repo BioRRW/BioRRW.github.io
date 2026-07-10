@@ -4,6 +4,9 @@ import json
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
+from icalendar import Calendar
+import recurring_ical_events
+from datetime import datetime, timedelta
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
@@ -56,25 +59,52 @@ def scrape_maxline():
     except: return []
 
 def scrape_mythmaker():
+    """
+    Production ICS parser: Expands recurring events (RRULE) 
+    and uses a blacklist to capture all food vendors.
+    """
     try:
         url = "https://calendar.google.com/calendar/ical/c_50raf1sssnkevsaiokod7rgjjg%40group.calendar.google.com/public/basic.ics"
         res = requests.get(url, headers=HEADERS, timeout=10)
-        ics_data = re.sub(r'\r\n\s+', '', res.text)
-        events, today = [], datetime.now().date()
-        for match in re.finditer(r'BEGIN:VEVENT(.*?)END:VEVENT', ics_data, re.DOTALL):
-            event_str = match.group(1)
-            summary = re.search(r'SUMMARY:(.*?)(?:\r\n|$)', event_str)
-            dtstart = re.search(r'DTSTART(?:;[^:]+)?:(.*?)(?:\r\n|$)', event_str)
-            if summary and dtstart:
-                title, dt_raw = summary.group(1).strip(), dtstart.group(1).strip()
-                try:
-                    dt_obj = datetime.strptime(dt_raw[:8], "%Y%m%d").date()
-                    if dt_obj >= today and any(kwd in title.lower() for kwd in ["truck", "food", "bbq", "pizza", "burger", "taco", "cuisine"]):
-                        events.append((dt_obj, f"{dt_obj.strftime('%A, %b %-d')} - {title}"))
-                except: pass
-        events.sort(key=lambda x: x[0])
-        return [item[1] for item in events]
-    except: return []
+        
+        # Parse the calendar
+        calendar = Calendar.from_ical(res.text)
+        
+        # Set the window: Today to 30 days out
+        start_date = datetime.now()
+        end_date = start_date + timedelta(days=30)
+        
+        # Expand recurring events (RRULE)
+        events = recurring_ical_events.of(calendar).between(start_date, end_date)
+        
+        # BLACKLIST: Only events that are definitely NOT food trucks
+        non_food_keywords = [
+            "trivia", "quiz", "run club", "yoga", "social", 
+            "swaps", "league", "joggers", "lagers", "bingo"
+        ]
+        
+        trucks = []
+        for event in events:
+            title = str(event.get('summary'))
+            start = event.get('dtstart').dt
+            dt_obj = start.date() if hasattr(start, 'date') else start
+            
+            # Check if this event is on the blacklist
+            is_non_food = any(kwd in title.lower() for kwd in non_food_keywords)
+            
+            # If it's not a non-food event, add it
+            if not is_non_food:
+                formatted_str = f"{dt_obj.strftime('%A, %b %-d')} - {title}"
+                trucks.append((dt_obj, formatted_str))
+                
+        # Deduplicate and sort by date
+        unique_trucks = sorted(list(set(trucks)), key=lambda x: x[0])
+        return [item[1] for item in unique_trucks]
+        
+    except Exception as e:
+        print(f"[ERROR] Mythmaker production scrape failed: {e}")
+        # Fallback to empty list or your manual list if the feed is totally dead
+        return []
 
 def scrape_new_belgium():
     try:

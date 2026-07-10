@@ -10,30 +10,8 @@ HEADERS = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
 }
 
-# Master blacklist to block navigation menus and non-food events on the backend
-BLACKLIST = [
-    "our story", "contact us", "taproom hours", "back taproom", "book an event", 
-    "event pricing", "harvest host", "what's on tap", "about us", "gift card", 
-    "careers", "privacy policy", "live music", "music sundays", "denim days"
-]
-
 def clean_text(text):
     return " ".join(text.split()).strip() if text else ""
-
-def is_valid_listing(text):
-    text_lower = text.lower()
-    if len(text) < 12 or len(text) > 200:
-        return False
-    # Must not contain layout/nav junk phrases
-    if any(junk in text_lower for junk in BLACKLIST):
-        return False
-    # Must explicitly mention a food element or a clear schedule day indicator
-    has_food_context = any(kwd in text_lower for kwd in ["truck", "food", "serving", "kitchen", "eats", "cuisine", "chef"])
-    has_day_context = any(day in text for day in ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Monday", "Thursday", "Friday", "Saturday", "Sunday"])
-    return has_food_context or has_day_context
-
-def fallback_item():
-    return [{"listing": "Schedules rotating weekly on taproom platforms."}]
 
 def scrape_stodgy():
     try:
@@ -45,9 +23,9 @@ def scrape_stodgy():
             text = clean_text(item.get_text())
             if any(day in text for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]):
                 trucks.append({"day_listing": text})
-        return trucks if trucks else fallback_item()
+        return trucks
     except:
-        return fallback_item()
+        return []
 
 def scrape_maxline():
     try:
@@ -60,43 +38,45 @@ def scrape_maxline():
             dt = event.find(class_="tribe-events-calendar-list__event-datetime")
             if title and dt:
                 trucks.append({"truck": clean_text(title.get_text()), "schedule": clean_text(dt.get_text())})
-        return trucks if trucks else fallback_item()
+        return trucks
     except:
-        return fallback_item()
+        return []
 
-def scrape_by_body_search(url):
-    """Fallback parser that safely scans page elements for specific food strings if primary targets shift."""
+def scrape_broad_body(url):
+    """Fallback text mining processor that pulls clean sentence segments from structural blocks."""
     try:
         res = requests.get(url, headers=HEADERS, timeout=12)
         soup = BeautifulSoup(res.text, 'html.parser')
-        # Remove script and style elements entirely to avoid messy background layout syntax matches
-        for script in soup(["script", "style", "nav", "header", "footer"]):
-            script.decompose()
+        
+        # Decompose code assets and tracking modules instantly
+        for s in soup(["script", "style", "nav", "header", "footer", "noscript"]):
+            s.decompose()
             
         trucks = []
-        for el in soup.find_all(['p', 'li', 'div', 'span', 'h4']):
-            text = clean_text(el.get_text())
-            if is_valid_listing(text):
-                item = {"listing": text}
-                if item not in trucks:
-                    trucks.append(item)
-        return trucks if trucks else fallback_item()
+        for element in soup.find_all(['p', 'li', 'h4', 'span', 'div']):
+            text = clean_text(element.get_text())
+            if len(text) > 15 and len(text) < 180:
+                if any(day in text for day in ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]):
+                    item = {"listing": text}
+                    if item not in trucks:
+                        trucks.append(item)
+        return trucks
     except:
-        return fallback_item()
+        return []
 
 def main():
-    print("Initiating production-stabilized Northern Colorado food truck scrape loop...")
+    print("Executing structural data collection engine...")
     
     master_schedule = {
         "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "breweries": {
             "Stodgy Brewing": scrape_stodgy(),
             "Maxline Brewing": scrape_maxline(),
-            "Zwei Brewing": scrape_by_body_search("https://www.zweibrewing.com/food-trucks.aspx"),
-            "Mythmaker Brewing": scrape_by_body_search("https://www.mythmakerbrewing.com/home/about-us"),
-            "Odell Brewing": scrape_by_body_search("https://www.odellbrewing.com/locations/fort-collins/"),
-            "New Belgium": scrape_by_body_search("https://www.newbelgium.com/taproom/fort-collins/"),
-            "Purpose Brewing": scrape_by_body_search("https://purposebrewing.com/")
+            "Zwei Brewing": scrape_broad_body("https://www.zweibrewing.com/food-trucks.aspx"),
+            "Mythmaker Brewing": scrape_broad_body("https://www.mythmakerbrewing.com/"),
+            "Odell Brewing": scrape_broad_body("https://www.odellbrewing.com/locations/fort-collins/"),
+            "New Belgium": scrape_broad_body("https://www.newbelgium.com/taproom/fort-collins/"),
+            "Purpose Brewing": scrape_broad_body("https://purposebrewing.com/")
         }
     }
     
@@ -106,7 +86,7 @@ def main():
         
     with open(os.path.join(output_dir, "food-trucks.json"), "w", encoding="utf-8") as f:
         json.dump(master_schedule, f, indent=2, ensure_ascii=False)
-    print("Pipeline execution completed successfully.")
+    print("Data alignment sync locked and delivered.")
 
 if __name__ == "__main__":
     main()

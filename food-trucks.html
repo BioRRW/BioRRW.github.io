@@ -145,8 +145,10 @@
                     <button class="filter-btn" id="btn-today" onclick="filterSchedule('today')">Just Today</button>
                 </div>
 
+                <!-- FIXED GRID CONTAINER INTACT -->
                 <div class="truck-grid" id="dashboard-grid">
-                    </div>
+                    <!-- Cards will inject dynamically inside here -->
+                </div>
                 
             </div>
         </div>
@@ -155,7 +157,7 @@
     <footer>
         <div class="container">
             <p><strong>RW Custom Furniture & Local Utilities Engine</strong></p>
-            <p>Based in Fort Collins, CO | Automated Scraping System Core v1.4</p>
+            <p>Based in Fort Collins, CO | Automated Scraping System Core v1.5</p>
             <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa;">&copy; 2026 RW Custom Furniture. All Rights Reserved.</p>
         </div>
     </footer>
@@ -169,11 +171,11 @@
         
         let rawTruckData = {};
 
-        // Navigation elements and general non-food event keywords to filter out dynamically
+        // Expanded navigation filter keyword targets
         const JUNK_BLACKLIST = [
             "our story", "contact us", "hours", "brewery", "book an event", "event pricing", 
             "harvest host", "what's on tap", "about us", "taproom hours", "back taproom",
-            "live music", "music sundays", "slush party"
+            "live music", "music sundays", "slush party", "back book an event"
         ];
 
         fetch('/assets/data/food-trucks.json?v=' + now.getTime())
@@ -199,7 +201,6 @@
 
         function isListingJunk(text) {
             const textLower = text.toLowerCase();
-            // Drop short snippets or phrases explicitly containing menu tracking words
             if (text.length < 10) return true;
             return JUNK_BLACKLIST.some(junk => textLower.includes(junk));
         }
@@ -233,7 +234,6 @@
             for (const [brewery, listings] of Object.entries(rawTruckData.breweries)) {
                 if (!listings || listings.length === 0) continue;
 
-                // Process data, cleaning out junk menu navigation elements instantly
                 let processedListings = listings.map(item => ({
                     rawText: getListingText(item),
                     isToday: isListingToday(getListingText(item))

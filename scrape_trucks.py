@@ -33,29 +33,28 @@ def scrape_maxline():
         res = requests.get(url, headers=HEADERS, timeout=12)
         soup = BeautifulSoup(res.text, 'html.parser')
         trucks = []
-        for event in soup.find_all(class_="tribe-events-calendar-list__event-details"):
-            title = event.find(class_="tribe-events-calendar-list__event-title")
-            dt = event.find(class_="tribe-events-calendar-list__event-datetime")
-            if title and dt:
-                trucks.append({"truck": clean_text(title.get_text()), "schedule": clean_text(dt.get_text())})
+        # Pull explicitly from their custom event card text containers
+        for container in soup.find_all(class_=re.compile(r'(event-details|event-meta|tribe-events-calendar-list)', re.I)):
+            text = clean_text(container.get_text())
+            if any(day in text for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]):
+                if len(text) > 15 and len(text) < 180 and {"listing": text} not in trucks:
+                    trucks.append({"listing": text})
         return trucks
     except:
         return []
 
 def scrape_broad_body(url):
-    """Fallback text mining processor that pulls clean sentence segments from structural blocks."""
     try:
         res = requests.get(url, headers=HEADERS, timeout=12)
         soup = BeautifulSoup(res.text, 'html.parser')
         
-        # Decompose code assets and tracking modules instantly
         for s in soup(["script", "style", "nav", "header", "footer", "noscript"]):
             s.decompose()
             
         trucks = []
         for element in soup.find_all(['p', 'li', 'h4', 'span', 'div']):
             text = clean_text(element.get_text())
-            if len(text) > 15 and len(text) < 180:
+            if len(text) > 15 and len(text) < 220:
                 if any(day in text for day in ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]):
                     item = {"listing": text}
                     if item not in trucks:
@@ -65,7 +64,7 @@ def scrape_broad_body(url):
         return []
 
 def main():
-    print("Executing structural data collection engine...")
+    print("Executing final high-accuracy food truck scrape run...")
     
     master_schedule = {
         "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -73,7 +72,7 @@ def main():
             "Stodgy Brewing": scrape_stodgy(),
             "Maxline Brewing": scrape_maxline(),
             "Zwei Brewing": scrape_broad_body("https://www.zweibrewing.com/food-trucks.aspx"),
-            "Mythmaker Brewing": scrape_broad_body("https://www.mythmakerbrewing.com/"),
+            "Mythmaker Brewing": scrape_broad_body("https://www.mythmakerbrewing.com/home/events-food-truck-calendar"), # Target sub-path
             "Odell Brewing": scrape_broad_body("https://www.odellbrewing.com/locations/fort-collins/"),
             "New Belgium": scrape_broad_body("https://www.newbelgium.com/taproom/fort-collins/"),
             "Purpose Brewing": scrape_broad_body("https://purposebrewing.com/")
@@ -86,7 +85,7 @@ def main():
         
     with open(os.path.join(output_dir, "food-trucks.json"), "w", encoding="utf-8") as f:
         json.dump(master_schedule, f, indent=2, ensure_ascii=False)
-    print("Data alignment sync locked and delivered.")
+    print("All schedules packed.")
 
 if __name__ == "__main__":
     main()

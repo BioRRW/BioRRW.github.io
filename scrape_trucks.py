@@ -106,6 +106,22 @@ def scrape_purpose():
         return trucks
     except: return []
 
+def scrape_odell():
+    try:
+        url = "https://www.odellbrewing.com/locations/fort-collins/"
+        res = requests.get(url, headers=HEADERS, timeout=10)
+        soup = BeautifulSoup(res.text, 'html.parser')
+        trucks = []
+        food_container = soup.find('div', id='food')
+        if food_container:
+            for item in food_container.find_all('div', class_='food-item'):
+                name = item.find('h4')
+                date = item.find('div', class_='date')
+                if name and date:
+                    trucks.append(f"{clean_text(date.get_text())} - {clean_text(name.get_text())}")
+        return trucks
+    except: return []
+
 # --- PRODUCTION SAVER ---
 
 def main():
@@ -117,7 +133,8 @@ def main():
             "Maxline Brewing": scrape_maxline(),
             "Mythmaker Brewing": scrape_mythmaker(),
             "New Belgium": scrape_new_belgium(),
-            "Purpose Brewing": scrape_purpose()
+            "Purpose Brewing": scrape_purpose(),
+            "Odell Brewing": scrape_odell(),
         }
     }
     # Save to your assets folder

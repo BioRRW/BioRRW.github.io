@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-07-10 14:24:39",
+  "last_updated": "2026-07-11 13:16:48",
   "breweries": {
     "Stodgy Brewing": [
-      "Friday, 7/10 Las Catrinas 1:00 PM - 8:00 PM",
       "Saturday, 7/11 La Piadina 12:00 PM - 8:00 PM",
       "Sunday, 7/12 La Campechana 12:00 PM - 7:00 PM",
       "Monday, 7/13 Dumpling Hut 4:00 PM - 8:00 PM",
@@ -31,13 +30,10 @@
       "Wednesday, 8/5 Yes Chef! 4:00 PM - 8:00 PM",
       "Thursday, 8/6 Scratch Quisine 4:00 PM - 8:00 PM",
       "Friday, 8/7 Las Catrinas 1:00 PM - 8:00 PM",
-      "Saturday, 8/8 Yes Chef! 12:00 PM - 8:00 PM"
+      "Saturday, 8/8 Yes Chef! 12:00 PM - 8:00 PM",
+      "Sunday, 8/9 La Campechana 12:00 PM - 7:00 PM"
     ],
     "Zwei Brewing": [
-      "Monday, July 6 - Huka Sushi",
-      "Tuesday, July 7 - Angry Hippie Tacos",
-      "Wednesday, July 8 - Charlotte's Lil Kitchen",
-      "Thursday, July 9 - La Piadina",
       "Friday, July 10 - Double Wide Burgers",
       "Saturday, July 11 - Bohemian Wurst",
       "Sunday, July 12 - Santa Elena's",
@@ -62,7 +58,6 @@
       "Friday, July 31 - Double Wide Burgers"
     ],
     "Maxline Brewing": [
-      "Pig Pickin' BBQ - Fri Jul 10, 2026 - 3:00 pm - 8:00 pm",
       "Double Wide Burgers (Noon until they run out) - Sat Jul 11, 2026 - 12:00 pm - 8:00 pm",
       "La Tapatia - Sun Jul 12, 2026 - 12:00 pm - 6:00 pm",
       "The Goodness - Mon Jul 13, 2026 - 4:00 pm - 7:00 pm",
@@ -109,10 +104,10 @@
       "Huka Sushi - Sun Aug 23, 2026 - 12:00 pm - 6:00 pm",
       "The Goodness - Mon Aug 24, 2026 - 4:00 pm - 7:00 pm",
       "El Torito Loko - Tue Aug 25, 2026 - 4:00 pm - 7:00 pm",
-      "The Colorado Room Food Cart - Wed Aug 26, 2026 - 4:00 pm - 8:00 pm"
+      "The Colorado Room Food Cart - Wed Aug 26, 2026 - 4:00 pm - 8:00 pm",
+      "Corndoggies - Thu Aug 27, 2026 - 4:00 pm - 8:00 pm"
     ],
     "Mythmaker Brewing": [
-      "Friday, Jul 10 - The Colorado Roam",
       "Saturday, Jul 11 - Matador",
       "Sunday, Jul 12 - Culture Alley Cuisines",
       "Monday, Jul 13 - Baked Food Truck",
@@ -131,13 +126,13 @@
       "Saturday, Jul 25 - Matador",
       "Sunday, Jul 26 - Culture Alley Cuisines",
       "Monday, Jul 27 - Baked Food Truck",
-      "Tuesday, Jul 28 - Dero's African Food",
       "Tuesday, Jul 28 - Michael's Going Away Party",
+      "Tuesday, Jul 28 - Dero's African Food",
       "Wednesday, Jul 29 - Double Wide Burgers",
       "Thursday, Jul 30 - Scratch Quisine",
       "Friday, Jul 31 - NoCo Pizza",
-      "Saturday, Aug 1 - Pickle Palooza ",
       "Saturday, Aug 1 - Matador",
+      "Saturday, Aug 1 - Pickle Palooza ",
       "Sunday, Aug 2 - Culture Alley Cuisines",
       "Monday, Aug 3 - Scratch Quisine",
       "Tuesday, Aug 4 - Dero's African Food",
@@ -148,7 +143,6 @@
       "Sunday, Aug 9 - The Smoke Post"
     ],
     "New Belgium": [
-      "Friday, July 10, 2026 - Antojitos DelSureste",
       "Saturday, July 11, 2026 - Fat Tomato Inc.",
       "Saturday, July 11, 2026 - Georgia Boys BBQ",
       "Sunday, July 12, 2026 - Fork Yeah!",

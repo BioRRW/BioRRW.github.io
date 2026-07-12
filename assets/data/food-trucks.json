@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-07-11 13:16:48",
+  "last_updated": "2026-07-12 13:17:35",
   "breweries": {
     "Stodgy Brewing": [
-      "Saturday, 7/11 La Piadina 12:00 PM - 8:00 PM",
       "Sunday, 7/12 La Campechana 12:00 PM - 7:00 PM",
       "Monday, 7/13 Dumpling Hut 4:00 PM - 8:00 PM",
       "Tuesday, 7/14 Georgia Boys BBQ 4:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Thursday, 8/6 Scratch Quisine 4:00 PM - 8:00 PM",
       "Friday, 8/7 Las Catrinas 1:00 PM - 8:00 PM",
       "Saturday, 8/8 Yes Chef! 12:00 PM - 8:00 PM",
-      "Sunday, 8/9 La Campechana 12:00 PM - 7:00 PM"
+      "Sunday, 8/9 La Campechana 12:00 PM - 7:00 PM",
+      "Monday, 8/10 Dumpling Hut 4:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Friday, July 10 - Double Wide Burgers",
@@ -58,7 +58,6 @@
       "Friday, July 31 - Double Wide Burgers"
     ],
     "Maxline Brewing": [
-      "Double Wide Burgers (Noon until they run out) - Sat Jul 11, 2026 - 12:00 pm - 8:00 pm",
       "La Tapatia - Sun Jul 12, 2026 - 12:00 pm - 6:00 pm",
       "The Goodness - Mon Jul 13, 2026 - 4:00 pm - 7:00 pm",
       "El Torito Loko - Tue Jul 14, 2026 - 4:00 pm - 7:00 pm",
@@ -105,10 +104,10 @@
       "The Goodness - Mon Aug 24, 2026 - 4:00 pm - 7:00 pm",
       "El Torito Loko - Tue Aug 25, 2026 - 4:00 pm - 7:00 pm",
       "The Colorado Room Food Cart - Wed Aug 26, 2026 - 4:00 pm - 8:00 pm",
-      "Corndoggies - Thu Aug 27, 2026 - 4:00 pm - 8:00 pm"
+      "Corndoggies - Thu Aug 27, 2026 - 4:00 pm - 8:00 pm",
+      "Scrooge Maki - Fri Aug 28, 2026 - 3:00 pm - 8:00 pm"
     ],
     "Mythmaker Brewing": [
-      "Saturday, Jul 11 - Matador",
       "Sunday, Jul 12 - Culture Alley Cuisines",
       "Monday, Jul 13 - Baked Food Truck",
       "Tuesday, Jul 14 - Dero's African Food",
@@ -140,11 +139,10 @@
       "Thursday, Aug 6 - Santa Elena's",
       "Friday, Aug 7 - The Colorado Roam",
       "Saturday, Aug 8 - La Piadina",
-      "Sunday, Aug 9 - The Smoke Post"
+      "Sunday, Aug 9 - The Smoke Post",
+      "Monday, Aug 10 - Scrooge Maki"
     ],
     "New Belgium": [
-      "Saturday, July 11, 2026 - Fat Tomato Inc.",
-      "Saturday, July 11, 2026 - Georgia Boys BBQ",
       "Sunday, July 12, 2026 - Fork Yeah!",
       "Sunday, July 12, 2026 - Gator Tails",
       "Monday, July 13, 2026 - Dero's African Food",
@@ -187,7 +185,6 @@
       "Monday, August 31, 2026 - Dero's African Food"
     ],
     "Purpose Brewing": [
-      "Jul 10 - Shell on Wheels",
       "Jul 17 - Shell on Wheels",
       "Jul 24 - Shell on Wheels",
       "Jul 31 - Shell on Wheels",
@@ -196,6 +193,7 @@
       "Aug 21 - Shell on Wheels",
       "Aug 28 - Shell on Wheels",
       "Sep 4 - Shell on Wheels",
+      "Jul 10 - Shell on Wheels",
       "Jul 3 - Shell on Wheels",
       "Jun 26 - Shell on Wheels",
       "Jun 19 - Shell on Wheels",
@@ -224,8 +222,7 @@
       "Jan 9 - NO SHELL ON WHEELS - Closed for repairs!",
       "Jan 2 - Shell on Wheels",
       "Dec 26 - Shell on Wheels",
-      "Dec 19 - Shell on Wheels",
-      "Dec 12 - Shell on Wheels"
+      "Dec 19 - Shell on Wheels"
     ],
     "Odell Brewing": [
       "Mondays - La Piadina",

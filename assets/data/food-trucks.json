@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-07-13 14:31:50",
+  "last_updated": "2026-07-14 13:40:53",
   "breweries": {
     "Stodgy Brewing": [
-      "Monday, 7/13 Dumpling Hut 4:00 PM - 8:00 PM",
       "Tuesday, 7/14 Georgia Boys BBQ 4:00 PM - 8:00 PM",
       "Wednesday, 7/15 Shell on Wheels 1:00 PM - 8:00 PM",
       "Thursday, 7/16 Scrooge Maki 4:00 PM - 8:00 PM",
@@ -31,12 +30,10 @@
       "Saturday, 8/8 Yes Chef! 12:00 PM - 8:00 PM",
       "Sunday, 8/9 La Campechana 12:00 PM - 7:00 PM",
       "Monday, 8/10 Dumpling Hut 4:00 PM - 8:00 PM",
-      "Tuesday, 8/11 Georgia Boys BBQ 4:00 PM - 8:00 PM"
+      "Tuesday, 8/11 Georgia Boys BBQ 4:00 PM - 8:00 PM",
+      "Wednesday, 8/12 Shell on Wheels 1:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
-      "Friday, July 10 - Double Wide Burgers",
-      "Saturday, July 11 - Bohemian Wurst",
-      "Sunday, July 12 - Santa Elena's",
       "Monday, July 13 - Tacos El Torito Loko",
       "Tuesday, July 14 - La Piadina",
       "Wednesday, July 15 - NOCO Pizza Company",
@@ -58,7 +55,6 @@
       "Friday, July 31 - Double Wide Burgers"
     ],
     "Maxline Brewing": [
-      "The Goodness - Mon Jul 13, 2026 - 4:00 pm - 7:00 pm",
       "El Torito Loko - Tue Jul 14, 2026 - 4:00 pm - 7:00 pm",
       "The Colorado Room Food Cart - Wed Jul 15, 2026 - 4:00 pm - 8:00 pm",
       "La Piadina - Thu Jul 16, 2026 - 4:00 pm - 8:00 pm",
@@ -105,17 +101,17 @@
       "The Colorado Room Food Cart - Wed Aug 26, 2026 - 4:00 pm - 8:00 pm",
       "Corndoggies - Thu Aug 27, 2026 - 4:00 pm - 8:00 pm",
       "Scrooge Maki - Fri Aug 28, 2026 - 3:00 pm - 8:00 pm",
-      "Double Wide Burgers (Noon until they run out) - Sat Aug 29, 2026 - 12:00 pm - 8:00 pm"
+      "Double Wide Burgers (Noon until they run out) - Sat Aug 29, 2026 - 12:00 pm - 8:00 pm",
+      "Georgia Boys Food Truck - Sun Aug 30, 2026 - 12:00 pm - 6:00 pm"
     ],
     "Mythmaker Brewing": [
-      "Monday, Jul 13 - Baked Food Truck",
       "Tuesday, Jul 14 - Dero's African Food",
       "Wednesday, Jul 15 - Scratch Quisine ",
       "Thursday, Jul 16 - Bayou Smokehouse",
       "Friday, Jul 17 - NoCo Pizza",
       "Saturday, Jul 18 - La Piadina",
-      "Sunday, Jul 19 - Culture Alley Cuisines",
       "Sunday, Jul 19 - Crowded Bookshelf Pop Up",
+      "Sunday, Jul 19 - Culture Alley Cuisines",
       "Monday, Jul 20 - Scratch Quisine",
       "Tuesday, Jul 21 - Dero's African Food",
       "Wednesday, Jul 22 - Scrooge Maki",
@@ -124,8 +120,8 @@
       "Saturday, Jul 25 - Matador",
       "Sunday, Jul 26 - Culture Alley Cuisines",
       "Monday, Jul 27 - Baked Food Truck",
-      "Tuesday, Jul 28 - Michael's Going Away Party",
       "Tuesday, Jul 28 - Dero's African Food",
+      "Tuesday, Jul 28 - Michael's Going Away Party",
       "Wednesday, Jul 29 - Double Wide Burgers",
       "Thursday, Jul 30 - Scratch Quisine",
       "Friday, Jul 31 - NoCo Pizza",
@@ -140,10 +136,10 @@
       "Saturday, Aug 8 - La Piadina",
       "Sunday, Aug 9 - The Smoke Post",
       "Monday, Aug 10 - Scrooge Maki",
-      "Tuesday, Aug 11 - Dero's African Food"
+      "Tuesday, Aug 11 - Dero's African Food",
+      "Wednesday, Aug 12 - Scratch Quisine "
     ],
     "New Belgium": [
-      "Monday, July 13, 2026 - Dero's African Food",
       "Wednesday, July 15, 2026 - Las Catrina's",
       "Friday, July 17, 2026 - Antojitos DelSureste",
       "Saturday, July 18, 2026 - Fat Tomato Inc.",

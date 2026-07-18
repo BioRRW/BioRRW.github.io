@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-07-17 13:25:42",
+  "last_updated": "2026-07-18 13:12:34",
   "breweries": {
     "Stodgy Brewing": [
-      "Friday, 7/17 Marchios Grill 1:00 PM - 8:00 PM",
       "Saturday, 7/18 Marchios Grill 12:00 PM - 8:00 PM",
       "Sunday, 7/19 Huka Sushi 12:00 PM - 7:00 PM",
       "Monday, 7/20 The Smoke Post 4:00 PM - 8:00 PM",
@@ -31,13 +30,10 @@
       "Wednesday, 8/12 Shell on Wheels 1:00 PM - 8:00 PM",
       "Thursday, 8/13 Scrooge Maki 4:00 PM - 8:00 PM",
       "Friday, 8/14 Marchios Grill 1:00 PM - 8:00 PM",
-      "Saturday, 8/15 Georgia Boys 12:00 PM - 8:00 PM"
+      "Saturday, 8/15 Georgia Boys 12:00 PM - 8:00 PM",
+      "Sunday, 8/16 Huka Sushi 12:00 PM - 7:00 PM"
     ],
     "Zwei Brewing": [
-      "Monday, July 13 - Tacos El Torito Loko",
-      "Tuesday, July 14 - La Piadina",
-      "Wednesday, July 15 - NOCO Pizza Company",
-      "Thursday, July 16 - Schnitzel Wagon",
       "Friday, July 17 - Huka Sushi",
       "Saturday, July 18 - Pierogies Factory",
       "Sunday, July 19 - Fat Tomato",
@@ -55,7 +51,6 @@
       "Friday, July 31 - Double Wide Burgers"
     ],
     "Maxline Brewing": [
-      "Scrooge Maki - Fri Jul 17, 2026 - 3:00 pm - 8:00 pm",
       "Double Wide Burgers (Noon until they run out) - Sat Jul 18, 2026 - 12:00 pm - 8:00 pm",
       "Georgia Boys Food Truck - Sun Jul 19, 2026 - 12:00 pm - 6:00 pm",
       "The Goodness - Mon Jul 20, 2026 - 4:00 pm - 7:00 pm",
@@ -102,13 +97,13 @@
       "Georgia Boys Food Truck - Sun Aug 30, 2026 - 12:00 pm - 6:00 pm",
       "The Goodness - Mon Aug 31, 2026 - 4:00 pm - 7:00 pm",
       "El Torito Loko - Tue Sep 1, 2026 - 4:00 pm - 7:00 pm",
-      "Jersey Cowboy - Wed Sep 2, 2026 - 4:00 pm - 8:00 pm"
+      "Jersey Cowboy - Wed Sep 2, 2026 - 4:00 pm - 8:00 pm",
+      "YES CHEF! Trailer - Thu Sep 3, 2026 - 4:00 pm - 8:00 pm"
     ],
     "Mythmaker Brewing": [
-      "Friday, Jul 17 - NoCo Pizza",
       "Saturday, Jul 18 - La Piadina",
-      "Sunday, Jul 19 - Crowded Bookshelf Pop Up",
       "Sunday, Jul 19 - Culture Alley Cuisines",
+      "Sunday, Jul 19 - Crowded Bookshelf Pop Up",
       "Monday, Jul 20 - Scratch Quisine",
       "Tuesday, Jul 21 - Dero's African Food",
       "Wednesday, Jul 22 - Scrooge Maki",
@@ -117,13 +112,13 @@
       "Saturday, Jul 25 - Matador",
       "Sunday, Jul 26 - Culture Alley Cuisines",
       "Monday, Jul 27 - Baked Food Truck",
-      "Tuesday, Jul 28 - Dero's African Food",
       "Tuesday, Jul 28 - Michael's Going Away Party",
+      "Tuesday, Jul 28 - Dero's African Food",
       "Wednesday, Jul 29 - Double Wide Burgers",
       "Thursday, Jul 30 - Scratch Quisine",
       "Friday, Jul 31 - NoCo Pizza",
-      "Saturday, Aug 1 - Matador",
       "Saturday, Aug 1 - Pickle Palooza ",
+      "Saturday, Aug 1 - Matador",
       "Sunday, Aug 2 - Culture Alley Cuisines",
       "Monday, Aug 3 - Scratch Quisine",
       "Tuesday, Aug 4 - Dero's African Food",
@@ -141,7 +136,6 @@
       "Sunday, Aug 16 - Culture Alley Cuisines"
     ],
     "New Belgium": [
-      "Friday, July 17, 2026 - Antojitos DelSureste",
       "Saturday, July 18, 2026 - Fat Tomato Inc.",
       "Saturday, July 18, 2026 - Jersey Cowboy",
       "Sunday, July 19, 2026 - Fork Yeah!",
@@ -183,7 +177,6 @@
       "Monday, August 31, 2026 - Dero's African Food"
     ],
     "Purpose Brewing": [
-      "Jul 17 - Shell on Wheels",
       "Jul 24 - Shell on Wheels",
       "Jul 31 - Shell on Wheels",
       "Aug 7 - Shell on Wheels",
@@ -191,6 +184,7 @@
       "Aug 21 - Shell on Wheels",
       "Aug 28 - Shell on Wheels",
       "Sep 4 - Shell on Wheels",
+      "Jul 17 - Shell on Wheels",
       "Jul 10 - Shell on Wheels",
       "Jul 3 - Shell on Wheels",
       "Jun 26 - Shell on Wheels",
@@ -219,8 +213,7 @@
       "Jan 16 - Shell on Wheels",
       "Jan 9 - NO SHELL ON WHEELS - Closed for repairs!",
       "Jan 2 - Shell on Wheels",
-      "Dec 26 - Shell on Wheels",
-      "Dec 19 - Shell on Wheels"
+      "Dec 26 - Shell on Wheels"
     ],
     "Odell Brewing": [
       "Mondays - La Piadina",

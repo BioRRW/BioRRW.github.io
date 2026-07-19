@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-07-18 13:12:34",
+  "last_updated": "2026-07-19 13:15:14",
   "breweries": {
     "Stodgy Brewing": [
-      "Saturday, 7/18 Marchios Grill 12:00 PM - 8:00 PM",
       "Sunday, 7/19 Huka Sushi 12:00 PM - 7:00 PM",
       "Monday, 7/20 The Smoke Post 4:00 PM - 8:00 PM",
       "Tuesday, 7/21 Sweaty Moose 4:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Thursday, 8/13 Scrooge Maki 4:00 PM - 8:00 PM",
       "Friday, 8/14 Marchios Grill 1:00 PM - 8:00 PM",
       "Saturday, 8/15 Georgia Boys 12:00 PM - 8:00 PM",
-      "Sunday, 8/16 Huka Sushi 12:00 PM - 7:00 PM"
+      "Sunday, 8/16 Huka Sushi 12:00 PM - 7:00 PM",
+      "Monday, 8/17 The Smoke Post 4:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Friday, July 17 - Huka Sushi",
@@ -51,7 +51,6 @@
       "Friday, July 31 - Double Wide Burgers"
     ],
     "Maxline Brewing": [
-      "Double Wide Burgers (Noon until they run out) - Sat Jul 18, 2026 - 12:00 pm - 8:00 pm",
       "Georgia Boys Food Truck - Sun Jul 19, 2026 - 12:00 pm - 6:00 pm",
       "The Goodness - Mon Jul 20, 2026 - 4:00 pm - 7:00 pm",
       "El Torito Loko - Tue Jul 21, 2026 - 4:00 pm - 7:00 pm",
@@ -98,12 +97,12 @@
       "The Goodness - Mon Aug 31, 2026 - 4:00 pm - 7:00 pm",
       "El Torito Loko - Tue Sep 1, 2026 - 4:00 pm - 7:00 pm",
       "Jersey Cowboy - Wed Sep 2, 2026 - 4:00 pm - 8:00 pm",
-      "YES CHEF! Trailer - Thu Sep 3, 2026 - 4:00 pm - 8:00 pm"
+      "YES CHEF! Trailer - Thu Sep 3, 2026 - 4:00 pm - 8:00 pm",
+      "Pig Pickin' BBQ - Fri Sep 4, 2026 - 3:00 pm - 8:00 pm"
     ],
     "Mythmaker Brewing": [
-      "Saturday, Jul 18 - La Piadina",
-      "Sunday, Jul 19 - Culture Alley Cuisines",
       "Sunday, Jul 19 - Crowded Bookshelf Pop Up",
+      "Sunday, Jul 19 - Culture Alley Cuisines",
       "Monday, Jul 20 - Scratch Quisine",
       "Tuesday, Jul 21 - Dero's African Food",
       "Wednesday, Jul 22 - Scrooge Maki",
@@ -117,8 +116,8 @@
       "Wednesday, Jul 29 - Double Wide Burgers",
       "Thursday, Jul 30 - Scratch Quisine",
       "Friday, Jul 31 - NoCo Pizza",
-      "Saturday, Aug 1 - Pickle Palooza ",
       "Saturday, Aug 1 - Matador",
+      "Saturday, Aug 1 - Pickle Palooza ",
       "Sunday, Aug 2 - Culture Alley Cuisines",
       "Monday, Aug 3 - Scratch Quisine",
       "Tuesday, Aug 4 - Dero's African Food",
@@ -133,11 +132,10 @@
       "Thursday, Aug 13 - Santa Elena's",
       "Friday, Aug 14 - NoCo Pizza",
       "Saturday, Aug 15 - La Piadina",
-      "Sunday, Aug 16 - Culture Alley Cuisines"
+      "Sunday, Aug 16 - Culture Alley Cuisines",
+      "Monday, Aug 17 - Scratch Quisine"
     ],
     "New Belgium": [
-      "Saturday, July 18, 2026 - Fat Tomato Inc.",
-      "Saturday, July 18, 2026 - Jersey Cowboy",
       "Sunday, July 19, 2026 - Fork Yeah!",
       "Monday, July 20, 2026 - Dero's African Food",
       "Wednesday, July 22, 2026 - Las Catrina's",

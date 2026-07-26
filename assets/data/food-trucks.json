@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-07-25 13:23:23",
+  "last_updated": "2026-07-26 13:19:15",
   "breweries": {
     "Stodgy Brewing": [
-      "Saturday, 7/25 La Piadina 12:00 PM - 8:00 PM",
       "Sunday, 7/26 La Campechana 12:00 PM - 7:00 PM",
       "Monday, 7/27 Dumpling Hut 4:00 PM - 8:00 PM",
       "Tuesday, 7/28 Georgia Boys BBQ 4:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Thursday, 8/20 Scratch Quisine 4:00 PM - 8:00 PM",
       "Friday, 8/21 Las Catrinas 1:00 PM - 8:00 PM",
       "Saturday, 8/22 La Piadina 12:00 PM - 8:00 PM",
-      "Sunday, 8/23 La Campechana 12:00 PM - 7:00 PM"
+      "Sunday, 8/23 La Campechana 12:00 PM - 7:00 PM",
+      "Monday, 8/24 Dumpling Hut 4:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Friday, July 24 - Double Wide Burgers",
@@ -44,7 +44,6 @@
       "Friday, July 31 - Double Wide Burgers"
     ],
     "Maxline Brewing": [
-      "Double Wide Burgers (Noon until they run out) - Sat Jul 25, 2026 - 12:00 pm - 8:00 pm",
       "Huka Sushi - Sun Jul 26, 2026 - 12:00 pm - 6:00 pm",
       "The Goodness - Mon Jul 27, 2026 - 4:00 pm - 7:00 pm",
       "El Torito Loko - Tue Jul 28, 2026 - 4:00 pm - 7:00 pm",
@@ -91,19 +90,19 @@
       "El Torito Loko - Tue Sep 8, 2026 - 4:00 pm - 7:00 pm",
       "The Colorado Room Food Cart - Wed Sep 9, 2026 - 4:00 pm - 8:00 pm",
       "La Piadina - Thu Sep 10, 2026 - 4:00 pm - 8:00 pm",
-      "Scrooge Maki - Fri Sep 11, 2026 - 3:00 pm - 8:00 pm"
+      "Scrooge Maki - Fri Sep 11, 2026 - 3:00 pm - 8:00 pm",
+      "Double Wide Burgers (Noon until they run out) - Sat Sep 12, 2026 - 12:00 pm - 8:00 pm"
     ],
     "Mythmaker Brewing": [
-      "Saturday, Jul 25 - Matador",
       "Sunday, Jul 26 - Culture Alley Cuisines",
       "Monday, Jul 27 - Baked Food Truck",
-      "Tuesday, Jul 28 - Dero's African Food",
       "Tuesday, Jul 28 - Michael's Going Away Party",
+      "Tuesday, Jul 28 - Dero's African Food",
       "Wednesday, Jul 29 - Double Wide Burgers",
       "Thursday, Jul 30 - Scratch Quisine",
       "Friday, Jul 31 - NoCo Pizza",
-      "Saturday, Aug 1 - Pickle Palooza ",
       "Saturday, Aug 1 - Matador",
+      "Saturday, Aug 1 - Pickle Palooza ",
       "Sunday, Aug 2 - Culture Alley Cuisines",
       "Monday, Aug 3 - Scratch Quisine",
       "Tuesday, Aug 4 - Dero's African Food",
@@ -124,14 +123,13 @@
       "Wednesday, Aug 19 - Jersey Cowboy ",
       "Thursday, Aug 20 - Bayou Smokehouse",
       "Friday, Aug 21 - La Tapitia",
-      "Saturday, Aug 22 - Matador",
       "Saturday, Aug 22 - Reptile & Amphibian Center of the Rockies Fundraiser",
+      "Saturday, Aug 22 - Matador",
       "Sunday, Aug 23 - Crowded Bookshelf Pop Up",
-      "Sunday, Aug 23 - The Smoke Post"
+      "Sunday, Aug 23 - The Smoke Post",
+      "Monday, Aug 24 - Scrooge Maki"
     ],
     "New Belgium": [
-      "Saturday, July 25, 2026 - Fat Tomato Inc.",
-      "Saturday, July 25, 2026 - Georgia Boys BBQ",
       "Sunday, July 26, 2026 - Fork Yeah!",
       "Sunday, July 26, 2026 - Gator Tails",
       "Monday, July 27, 2026 - Dero's African Food",

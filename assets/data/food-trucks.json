@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-07-29 14:07:47",
+  "last_updated": "2026-07-30 13:57:55",
   "breweries": {
     "Stodgy Brewing": [
-      "Wednesday, 7/29 Shell on Wheels 1:00 PM - 8:00 PM",
       "Thursday, 7/30 Scrooge Maki 4:00 PM - 8:00 PM",
       "Friday, 7/31 Marchios Grill 1:00 PM - 8:00 PM",
       "Saturday, 8/1 La Piadina 12:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Monday, 8/24 Dumpling Hut 4:00 PM - 8:00 PM",
       "Tuesday, 8/25 Georgia Boys BBQ 4:00 PM - 8:00 PM",
       "Wednesday, 8/26 Shell on Wheels 1:00 PM - 8:00 PM",
-      "Thursday, 8/27 Scrooge Maki 4:00 PM - 8:00 PM"
+      "Thursday, 8/27 Scrooge Maki 4:00 PM - 8:00 PM",
+      "Friday, 8/28 Marchios Grill 1:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Monday, July 27 - Tacos El Torito Loko",
@@ -72,7 +72,6 @@
       "Monday, August 31 - Southern Soul"
     ],
     "Maxline Brewing": [
-      "The Colorado Room Food Cart - Wed Jul 29, 2026 - 4:00 pm - 8:00 pm",
       "Corndoggies - Thu Jul 30, 2026 - 4:00 pm - 8:00 pm",
       "Scrooge Maki - Fri Jul 31, 2026 - 3:00 pm - 8:00 pm",
       "Double Wide Burgers (Noon until they run out) - Sat Aug 1, 2026 - 12:00 pm - 8:00 pm",
@@ -119,10 +118,10 @@
       "Double Wide Burgers (Noon until they run out) - Sat Sep 12, 2026 - 12:00 pm - 8:00 pm",
       "Georgia Boys Food Truck - Sun Sep 13, 2026 - 12:00 pm - 6:00 pm",
       "The Goodness - Mon Sep 14, 2026 - 4:00 pm - 7:00 pm",
-      "El Torito Loko - Tue Sep 15, 2026 - 4:00 pm - 7:00 pm"
+      "El Torito Loko - Tue Sep 15, 2026 - 4:00 pm - 7:00 pm",
+      "Jersey Cowboy - Wed Sep 16, 2026 - 4:00 pm - 8:00 pm"
     ],
     "Mythmaker Brewing": [
-      "Wednesday, Jul 29 - Double Wide Burgers",
       "Thursday, Jul 30 - Scratch Quisine",
       "Friday, Jul 31 - NoCo Pizza",
       "Saturday, Aug 1 - Pickle Palooza ",
@@ -147,17 +146,18 @@
       "Wednesday, Aug 19 - Jersey Cowboy ",
       "Thursday, Aug 20 - Bayou Smokehouse",
       "Friday, Aug 21 - La Tapitia",
-      "Saturday, Aug 22 - Reptile & Amphibian Center of the Rockies Fundraiser",
       "Saturday, Aug 22 - Matador",
-      "Sunday, Aug 23 - The Smoke Post",
+      "Saturday, Aug 22 - Reptile & Amphibian Center of the Rockies Fundraiser",
       "Sunday, Aug 23 - Crowded Bookshelf Pop Up",
+      "Sunday, Aug 23 - The Smoke Post",
       "Monday, Aug 24 - Scrooge Maki",
       "Tuesday, Aug 25 - Dero's African Food",
       "Wednesday, Aug 26 - Double Wide Burgers",
-      "Thursday, Aug 27 - Scratch Quisine"
+      "Thursday, Aug 27 - Scratch Quisine",
+      "Friday, Aug 28 - NoCo Pizza",
+      "Saturday, Aug 29 - Cousin's Maine Lobster"
     ],
     "New Belgium": [
-      "Wednesday, July 29, 2026 - Las Catrina's",
       "Friday, July 31, 2026 - Antojitos DelSureste",
       "Saturday, August 1, 2026 - Fat Tomato Inc.",
       "Saturday, August 1, 2026 - Jersey Cowboy",

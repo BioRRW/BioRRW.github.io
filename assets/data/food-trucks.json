@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-08-01 13:17:45",
+  "last_updated": "2026-08-02 13:18:09",
   "breweries": {
     "Stodgy Brewing": [
-      "Saturday, 8/1 La Piadina 12:00 PM - 8:00 PM",
       "Sunday, 8/2 Huka Sushi 12:00 PM - 7:00 PM",
       "Monday, 8/3 The Smoke Post 4:00 PM - 8:00 PM",
       "Tuesday, 8/4 Sweaty Moose 4:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Thursday, 8/27 Scrooge Maki 4:00 PM - 8:00 PM",
       "Friday, 8/28 Marchios Grill 1:00 PM - 8:00 PM",
       "Saturday, 8/29 Yes Chef 11:00 AM - 7:00 PM",
-      "Sunday, 8/30 Huka Sushi 12:00 PM - 7:00 PM"
+      "Sunday, 8/30 Huka Sushi 12:00 PM - 7:00 PM",
+      "Monday, 8/31 The Smoke Post 4:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Friday, July 31 - Double Wide Burgers",
@@ -68,7 +68,6 @@
       "Monday, August 31 - Southern Soul"
     ],
     "Maxline Brewing": [
-      "Double Wide Burgers (Noon until they run out) - Sat Aug 1, 2026 - 12:00 pm - 8:00 pm",
       "Georgia Boys Food Truck - Sun Aug 2, 2026 - 12:00 pm - 6:00 pm",
       "The Goodness - Mon Aug 3, 2026 - 4:00 pm - 7:00 pm",
       "El Torito Loko - Tue Aug 4, 2026 - 4:00 pm - 7:00 pm",
@@ -115,11 +114,10 @@
       "El Torito Loko - Tue Sep 15, 2026 - 4:00 pm - 7:00 pm",
       "Jersey Cowboy - Wed Sep 16, 2026 - 4:00 pm - 8:00 pm",
       "The Schnitzel Wagon - Thu Sep 17, 2026 - 4:00 pm - 8:00 pm",
-      "Pig Pickin' BBQ - Fri Sep 18, 2026 - 3:00 pm - 8:00 pm"
+      "Pig Pickin' BBQ - Fri Sep 18, 2026 - 3:00 pm - 8:00 pm",
+      "Double Wide Burgers (Noon until they run out) - Sat Sep 19, 2026 - 12:00 pm - 8:00 pm"
     ],
     "Mythmaker Brewing": [
-      "Saturday, Aug 1 - Pickle Palooza ",
-      "Saturday, Aug 1 - Matador",
       "Sunday, Aug 2 - Culture Alley Cuisines",
       "Monday, Aug 3 - Scratch Quisine",
       "Tuesday, Aug 4 - Dero's African Food",
@@ -142,19 +140,18 @@
       "Friday, Aug 21 - La Tapitia",
       "Saturday, Aug 22 - Reptile & Amphibian Center of the Rockies Fundraiser",
       "Saturday, Aug 22 - Matador",
-      "Sunday, Aug 23 - Crowded Bookshelf Pop Up",
       "Sunday, Aug 23 - The Smoke Post",
+      "Sunday, Aug 23 - Crowded Bookshelf Pop Up",
       "Monday, Aug 24 - Scrooge Maki",
       "Tuesday, Aug 25 - Dero's African Food",
       "Wednesday, Aug 26 - Double Wide Burgers",
       "Thursday, Aug 27 - Scratch Quisine",
       "Friday, Aug 28 - NoCo Pizza",
       "Saturday, Aug 29 - Cousin's Maine Lobster",
-      "Sunday, Aug 30 - Culture Alley Cuisines"
+      "Sunday, Aug 30 - Culture Alley Cuisines",
+      "Monday, Aug 31 - Scratch Quisine"
     ],
     "New Belgium": [
-      "Saturday, August 1, 2026 - Fat Tomato Inc.",
-      "Saturday, August 1, 2026 - Jersey Cowboy",
       "Sunday, August 2, 2026 - Fork Yeah!",
       "Monday, August 3, 2026 - Dero's African Food",
       "Wednesday, August 5, 2026 - Las Catrina's",
@@ -183,9 +180,14 @@
     "Purpose Brewing": [
       "Aug 7 - Shell on Wheels",
       "Aug 14 - Shell on Wheels",
+      "Aug 15 - Saucers Pizza!",
       "Aug 21 - Shell on Wheels",
       "Aug 28 - Shell on Wheels",
       "Sep 4 - Shell on Wheels",
+      "Sep 11 - Shell on Wheels",
+      "Sep 18 - Shell on Wheels",
+      "Sep 25 - Shell on Wheels",
+      "Oct 2 - Shell on Wheels",
       "Jul 31 - Shell on Wheels",
       "Jul 24 - Shell on Wheels",
       "Jul 17 - Shell on Wheels",

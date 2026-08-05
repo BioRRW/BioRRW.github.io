@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-08-04 14:08:11",
+  "last_updated": "2026-08-05 14:06:14",
   "breweries": {
     "Stodgy Brewing": [
-      "Tuesday, 8/4 Sweaty Moose 4:00 PM - 8:00 PM",
       "Wednesday, 8/5 Yes Chef! 4:00 PM - 8:00 PM",
       "Thursday, 8/6 Scratch Quisine 4:00 PM - 8:00 PM",
       "Friday, 8/7 Las Catrinas 1:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Sunday, 8/30 Huka Sushi 12:00 PM - 7:00 PM",
       "Monday, 8/31 The Smoke Post 4:00 PM - 8:00 PM",
       "Tuesday, 9/1 Sweaty Moose 4:00 PM - 8:00 PM",
-      "Wednesday, 9/2 Yes Chef! 4:00 PM - 8:00 PM"
+      "Wednesday, 9/2 Yes Chef! 4:00 PM - 8:00 PM",
+      "Thursday, 9/3 Scratch Quisine 4:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Monday, August 3 - Southern Soul",
@@ -66,7 +66,6 @@
     ],
     "Maxline Brewing": [],
     "Mythmaker Brewing": [
-      "Tuesday, Aug 4 - Dero's African Food",
       "Wednesday, Aug 5 - Jersey Cowboy ",
       "Thursday, Aug 6 - Santa Elena's",
       "Friday, Aug 7 - The Colorado Roam",
@@ -84,8 +83,8 @@
       "Wednesday, Aug 19 - Jersey Cowboy ",
       "Thursday, Aug 20 - Bayou Smokehouse",
       "Friday, Aug 21 - La Tapitia",
-      "Saturday, Aug 22 - Matador",
       "Saturday, Aug 22 - Reptile & Amphibian Center of the Rockies Fundraiser",
+      "Saturday, Aug 22 - Matador",
       "Sunday, Aug 23 - The Smoke Post",
       "Sunday, Aug 23 - Crowded Bookshelf Pop Up",
       "Monday, Aug 24 - Scrooge Maki",
@@ -97,7 +96,8 @@
       "Sunday, Aug 30 - Culture Alley Cuisines",
       "Monday, Aug 31 - Scratch Quisine",
       "Tuesday, Sep 1 - Dero's African Food",
-      "Wednesday, Sep 2 - Jersey Cowboy "
+      "Wednesday, Sep 2 - Jersey Cowboy ",
+      "Thursday, Sep 3 - The Dumpling Hut"
     ],
     "New Belgium": [
       "Wednesday, August 5, 2026 - Las Catrina's",

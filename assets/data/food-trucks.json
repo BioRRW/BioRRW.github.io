@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-08-07 13:00:02",
+  "last_updated": "2026-08-08 12:44:45",
   "breweries": {
     "Stodgy Brewing": [
-      "Friday, 8/7 Las Catrinas 1:00 PM - 8:00 PM",
       "Saturday, 8/8 Yes Chef! 12:00 PM - 8:00 PM",
       "Sunday, 8/9 La Campechana 12:00 PM - 7:00 PM",
       "Monday, 8/10 Dumpling Hut 4:00 PM - 8:00 PM",
@@ -31,13 +30,10 @@
       "Wednesday, 9/2 Yes Chef! 4:00 PM - 8:00 PM",
       "Thursday, 9/3 Scratch Quisine 4:00 PM - 8:00 PM",
       "Friday, 9/4 Las Catrinas 1:00 PM - 8:00 PM",
-      "Saturday, 9/5 La Piadina 12:00 PM - 8:00 PM"
+      "Saturday, 9/5 La Piadina 12:00 PM - 8:00 PM",
+      "Sunday, 9/6 La Campechana 12:00 PM - 7:00 PM"
     ],
     "Zwei Brewing": [
-      "Monday, August 3 - Southern Soul",
-      "Tuesday, August 4 - Angry Hippie Tacos",
-      "Wednesday, August 5 - Schnitzel Wagon",
-      "Thursday, August 6 - La Piadina",
       "Friday, August 7 - Double Wide Burgers",
       "Saturday, August 8 - Schnitzel Wagon",
       "Sunday, August 9 - Shell On Wheels",
@@ -66,7 +62,6 @@
     ],
     "Maxline Brewing": [],
     "Mythmaker Brewing": [
-      "Friday, Aug 7 - The Colorado Roam",
       "Saturday, Aug 8 - La Piadina",
       "Sunday, Aug 9 - The Smoke Post",
       "Monday, Aug 10 - Scrooge Maki",
@@ -81,8 +76,8 @@
       "Wednesday, Aug 19 - Jersey Cowboy ",
       "Thursday, Aug 20 - Bayou Smokehouse",
       "Friday, Aug 21 - La Tapitia",
-      "Saturday, Aug 22 - Reptile & Amphibian Center of the Rockies Fundraiser",
       "Saturday, Aug 22 - Matador",
+      "Saturday, Aug 22 - Reptile & Amphibian Center of the Rockies Fundraiser",
       "Sunday, Aug 23 - Crowded Bookshelf Pop Up",
       "Sunday, Aug 23 - The Smoke Post",
       "Monday, Aug 24 - Scrooge Maki",
@@ -101,7 +96,6 @@
       "Sunday, Sep 6 - Culture Alley"
     ],
     "New Belgium": [
-      "Friday, August 7, 2026 - Antojitos DelSureste",
       "Saturday, August 8, 2026 - Fat Tomato Inc.",
       "Saturday, August 8, 2026 - Georgia Boys BBQ",
       "Sunday, August 9, 2026 - Fork Yeah!",
@@ -124,7 +118,7 @@
       "Monday, August 31, 2026 - Dero's African Food"
     ],
     "Purpose Brewing": [
-      "Aug 7 - Shell on Wheels",
+      "Aug 8 - La Campechana",
       "Aug 14 - Shell on Wheels",
       "Aug 15 - Saucers Pizza!",
       "Aug 15 - Bayou Smokehouse Cajun",
@@ -135,6 +129,7 @@
       "Sep 18 - Shell on Wheels",
       "Sep 25 - Shell on Wheels",
       "Oct 2 - Shell on Wheels",
+      "Aug 7 - Shell on Wheels",
       "Jul 31 - Shell on Wheels",
       "Jul 24 - Shell on Wheels",
       "Jul 17 - Shell on Wheels",
@@ -163,8 +158,7 @@
       "Feb 13 - Shell on Wheels",
       "Feb 6 - Shell on Wheels",
       "Jan 30 - Shell on Wheels",
-      "Jan 16 - Shell on Wheels",
-      "Jan 9 - NO SHELL ON WHEELS - Closed for repairs!"
+      "Jan 16 - Shell on Wheels"
     ],
     "Odell Brewing": [
       "Mondays - La Piadina",

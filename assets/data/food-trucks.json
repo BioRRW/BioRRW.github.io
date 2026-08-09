@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-08-08 12:44:45",
+  "last_updated": "2026-08-09 12:47:26",
   "breweries": {
     "Stodgy Brewing": [
-      "Saturday, 8/8 Yes Chef! 12:00 PM - 8:00 PM",
       "Sunday, 8/9 La Campechana 12:00 PM - 7:00 PM",
       "Monday, 8/10 Dumpling Hut 4:00 PM - 8:00 PM",
       "Tuesday, 8/11 Georgia Boys BBQ 4:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Thursday, 9/3 Scratch Quisine 4:00 PM - 8:00 PM",
       "Friday, 9/4 Las Catrinas 1:00 PM - 8:00 PM",
       "Saturday, 9/5 La Piadina 12:00 PM - 8:00 PM",
-      "Sunday, 9/6 La Campechana 12:00 PM - 7:00 PM"
+      "Sunday, 9/6 La Campechana 12:00 PM - 7:00 PM",
+      "Monday, 9/7 Dumpling Hut 4:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Friday, August 7 - Double Wide Burgers",
@@ -62,7 +62,6 @@
     ],
     "Maxline Brewing": [],
     "Mythmaker Brewing": [
-      "Saturday, Aug 8 - La Piadina",
       "Sunday, Aug 9 - The Smoke Post",
       "Monday, Aug 10 - Scrooge Maki",
       "Tuesday, Aug 11 - Dero's African Food",
@@ -76,10 +75,10 @@
       "Wednesday, Aug 19 - Jersey Cowboy ",
       "Thursday, Aug 20 - Bayou Smokehouse",
       "Friday, Aug 21 - La Tapitia",
-      "Saturday, Aug 22 - Matador",
       "Saturday, Aug 22 - Reptile & Amphibian Center of the Rockies Fundraiser",
-      "Sunday, Aug 23 - Crowded Bookshelf Pop Up",
+      "Saturday, Aug 22 - Matador",
       "Sunday, Aug 23 - The Smoke Post",
+      "Sunday, Aug 23 - Crowded Bookshelf Pop Up",
       "Monday, Aug 24 - Scrooge Maki",
       "Tuesday, Aug 25 - Dero's African Food",
       "Wednesday, Aug 26 - Double Wide Burgers",
@@ -93,11 +92,10 @@
       "Thursday, Sep 3 - The Dumpling Hut",
       "Friday, Sep 4 - Scratch Quisine",
       "Saturday, Sep 5 - La Piadina",
-      "Sunday, Sep 6 - Culture Alley"
+      "Sunday, Sep 6 - Culture Alley",
+      "Monday, Sep 7 - Saucers Pizza"
     ],
     "New Belgium": [
-      "Saturday, August 8, 2026 - Fat Tomato Inc.",
-      "Saturday, August 8, 2026 - Georgia Boys BBQ",
       "Sunday, August 9, 2026 - Fork Yeah!",
       "Monday, August 10, 2026 - Dero's African Food",
       "Wednesday, August 12, 2026 - Las Catrina's",

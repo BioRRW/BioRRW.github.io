@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-08-09 12:47:26",
+  "last_updated": "2026-08-10 13:04:20",
   "breweries": {
     "Stodgy Brewing": [
-      "Sunday, 8/9 La Campechana 12:00 PM - 7:00 PM",
       "Monday, 8/10 Dumpling Hut 4:00 PM - 8:00 PM",
       "Tuesday, 8/11 Georgia Boys BBQ 4:00 PM - 8:00 PM",
       "Wednesday, 8/12 Shell on Wheels 1:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Friday, 9/4 Las Catrinas 1:00 PM - 8:00 PM",
       "Saturday, 9/5 La Piadina 12:00 PM - 8:00 PM",
       "Sunday, 9/6 La Campechana 12:00 PM - 7:00 PM",
-      "Monday, 9/7 Dumpling Hut 4:00 PM - 8:00 PM"
+      "Monday, 9/7 Dumpling Hut 4:00 PM - 8:00 PM",
+      "Tuesday, 9/8 Georgia Boys BBQ 4:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Friday, August 7 - Double Wide Burgers",
@@ -62,7 +62,6 @@
     ],
     "Maxline Brewing": [],
     "Mythmaker Brewing": [
-      "Sunday, Aug 9 - The Smoke Post",
       "Monday, Aug 10 - Scrooge Maki",
       "Tuesday, Aug 11 - Dero's African Food",
       "Wednesday, Aug 12 - Scratch Quisine ",
@@ -75,8 +74,8 @@
       "Wednesday, Aug 19 - Jersey Cowboy ",
       "Thursday, Aug 20 - Bayou Smokehouse",
       "Friday, Aug 21 - La Tapitia",
-      "Saturday, Aug 22 - Reptile & Amphibian Center of the Rockies Fundraiser",
       "Saturday, Aug 22 - Matador",
+      "Saturday, Aug 22 - Reptile & Amphibian Center of the Rockies Fundraiser",
       "Sunday, Aug 23 - The Smoke Post",
       "Sunday, Aug 23 - Crowded Bookshelf Pop Up",
       "Monday, Aug 24 - Scrooge Maki",
@@ -96,7 +95,6 @@
       "Monday, Sep 7 - Saucers Pizza"
     ],
     "New Belgium": [
-      "Sunday, August 9, 2026 - Fork Yeah!",
       "Monday, August 10, 2026 - Dero's African Food",
       "Wednesday, August 12, 2026 - Las Catrina's",
       "Friday, August 14, 2026 - Antojitos DelSureste",
@@ -116,7 +114,6 @@
       "Monday, August 31, 2026 - Dero's African Food"
     ],
     "Purpose Brewing": [
-      "Aug 8 - La Campechana",
       "Aug 14 - Shell on Wheels",
       "Aug 15 - Saucers Pizza!",
       "Aug 15 - Bayou Smokehouse Cajun",
@@ -127,6 +124,7 @@
       "Sep 18 - Shell on Wheels",
       "Sep 25 - Shell on Wheels",
       "Oct 2 - Shell on Wheels",
+      "Aug 8 - La Campechana",
       "Aug 7 - Shell on Wheels",
       "Jul 31 - Shell on Wheels",
       "Jul 24 - Shell on Wheels",
@@ -155,8 +153,7 @@
       "Feb 20 - Shell on Wheels",
       "Feb 13 - Shell on Wheels",
       "Feb 6 - Shell on Wheels",
-      "Jan 30 - Shell on Wheels",
-      "Jan 16 - Shell on Wheels"
+      "Jan 30 - Shell on Wheels"
     ],
     "Odell Brewing": [
       "Mondays - La Piadina",

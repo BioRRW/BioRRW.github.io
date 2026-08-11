@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-08-10 13:04:20",
+  "last_updated": "2026-08-11 13:01:03",
   "breweries": {
     "Stodgy Brewing": [
-      "Monday, 8/10 Dumpling Hut 4:00 PM - 8:00 PM",
       "Tuesday, 8/11 Georgia Boys BBQ 4:00 PM - 8:00 PM",
       "Wednesday, 8/12 Shell on Wheels 1:00 PM - 8:00 PM",
       "Thursday, 8/13 Scrooge Maki 4:00 PM - 8:00 PM",
@@ -31,12 +30,10 @@
       "Saturday, 9/5 La Piadina 12:00 PM - 8:00 PM",
       "Sunday, 9/6 La Campechana 12:00 PM - 7:00 PM",
       "Monday, 9/7 Dumpling Hut 4:00 PM - 8:00 PM",
-      "Tuesday, 9/8 Georgia Boys BBQ 4:00 PM - 8:00 PM"
+      "Tuesday, 9/8 Georgia Boys BBQ 4:00 PM - 8:00 PM",
+      "Wednesday, 9/9 Shell on Wheels 1:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
-      "Friday, August 7 - Double Wide Burgers",
-      "Saturday, August 8 - Schnitzel Wagon",
-      "Sunday, August 9 - Shell On Wheels",
       "Monday, August 10 - Tacos El Torito Loko",
       "Tuesday, August 11 - La Piadina",
       "Wednesday, August 12 - NOCO Pizza Company",
@@ -62,7 +59,6 @@
     ],
     "Maxline Brewing": [],
     "Mythmaker Brewing": [
-      "Monday, Aug 10 - Scrooge Maki",
       "Tuesday, Aug 11 - Dero's African Food",
       "Wednesday, Aug 12 - Scratch Quisine ",
       "Thursday, Aug 13 - Santa Elena's",
@@ -74,10 +70,10 @@
       "Wednesday, Aug 19 - Jersey Cowboy ",
       "Thursday, Aug 20 - Bayou Smokehouse",
       "Friday, Aug 21 - La Tapitia",
-      "Saturday, Aug 22 - Matador",
       "Saturday, Aug 22 - Reptile & Amphibian Center of the Rockies Fundraiser",
-      "Sunday, Aug 23 - The Smoke Post",
+      "Saturday, Aug 22 - Matador",
       "Sunday, Aug 23 - Crowded Bookshelf Pop Up",
+      "Sunday, Aug 23 - The Smoke Post",
       "Monday, Aug 24 - Scrooge Maki",
       "Tuesday, Aug 25 - Dero's African Food",
       "Wednesday, Aug 26 - Double Wide Burgers",
@@ -92,10 +88,10 @@
       "Friday, Sep 4 - Scratch Quisine",
       "Saturday, Sep 5 - La Piadina",
       "Sunday, Sep 6 - Culture Alley",
-      "Monday, Sep 7 - Saucers Pizza"
+      "Monday, Sep 7 - Saucers Pizza",
+      "Wednesday, Sep 9 - Scratch Quisine"
     ],
     "New Belgium": [
-      "Monday, August 10, 2026 - Dero's African Food",
       "Wednesday, August 12, 2026 - Las Catrina's",
       "Friday, August 14, 2026 - Antojitos DelSureste",
       "Saturday, August 15, 2026 - Fat Tomato Inc.",

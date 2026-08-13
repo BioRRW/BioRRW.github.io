@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-08-12 13:05:43",
+  "last_updated": "2026-08-13 13:06:43",
   "breweries": {
     "Stodgy Brewing": [
-      "Wednesday, 8/12 Shell on Wheels 1:00 PM - 8:00 PM",
       "Thursday, 8/13 Scrooge Maki 4:00 PM - 8:00 PM",
       "Friday, 8/14 Marchios Grill 1:00 PM - 8:00 PM",
       "Saturday, 8/15 Georgia Boys 12:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Monday, 9/7 Dumpling Hut 4:00 PM - 8:00 PM",
       "Tuesday, 9/8 Georgia Boys BBQ 4:00 PM - 8:00 PM",
       "Wednesday, 9/9 Shell on Wheels 1:00 PM - 8:00 PM",
-      "Thursday, 9/10 Scrooge Maki 4:00 PM - 8:00 PM"
+      "Thursday, 9/10 Scrooge Maki 4:00 PM - 8:00 PM",
+      "Friday, 9/11 The Red Cat 1:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Monday, August 10 - Tacos El Torito Loko",
@@ -58,7 +58,6 @@
       "Monday, August 31 - Southern Soul"
     ],
     "Maxline Brewing": [
-      "The Colorado Room Food Cart - Wed Aug 12, 2026 - 4:00 pm - 8:00 pm",
       "La Piadina - Thu Aug 13, 2026 - 4:00 pm - 8:00 pm",
       "Scrooge Maki - Fri Aug 14, 2026 - 3:00 pm - 8:00 pm",
       "Double Wide Burgers (Noon until they run out) - Sat Aug 15, 2026 - 12:00 pm - 8:00 pm",
@@ -105,10 +104,10 @@
       "Double Wide Burgers (Noon until they run out) - Sat Sep 26, 2026 - 12:00 pm - 8:00 pm",
       "Georgia Boys Food Truck - Sun Sep 27, 2026 - 12:00 pm - 6:00 pm",
       "The Goodness - Mon Sep 28, 2026 - 4:00 pm - 7:00 pm",
-      "El Torito Loko - Tue Sep 29, 2026 - 4:00 pm - 7:00 pm"
+      "El Torito Loko - Tue Sep 29, 2026 - 4:00 pm - 7:00 pm",
+      "The Colorado Room Food Cart - Wed Sep 30, 2026 - 4:00 pm - 8:00 pm"
     ],
     "Mythmaker Brewing": [
-      "Wednesday, Aug 12 - Scratch Quisine ",
       "Thursday, Aug 13 - Santa Elena's",
       "Friday, Aug 14 - NoCo Pizza",
       "Saturday, Aug 15 - La Piadina",
@@ -116,7 +115,7 @@
       "Monday, Aug 17 - Scratch Quisine",
       "Tuesday, Aug 18 - Dero's African Food",
       "Wednesday, Aug 19 - Jersey Cowboy ",
-      "Thursday, Aug 20 - Bayou Smokehouse",
+      "Thursday, Aug 20 - Red Truck ",
       "Friday, Aug 21 - La Tapitia",
       "Saturday, Aug 22 - Reptile & Amphibian Center of the Rockies Fundraiser",
       "Saturday, Aug 22 - Matador",
@@ -138,10 +137,11 @@
       "Sunday, Sep 6 - Culture Alley",
       "Monday, Sep 7 - Saucers Pizza",
       "Wednesday, Sep 9 - Scratch Quisine",
-      "Thursday, Sep 10 - The Red Cat Food Truck"
+      "Thursday, Sep 10 - The Red Cat Food Truck",
+      "Friday, Sep 11 - NoCo Pizza",
+      "Saturday, Sep 12 - Mythmaker Brewing Oktoberfest Party"
     ],
     "New Belgium": [
-      "Wednesday, August 12, 2026 - Las Catrina's",
       "Friday, August 14, 2026 - Antojitos DelSureste",
       "Saturday, August 15, 2026 - Fat Tomato Inc.",
       "Saturday, August 15, 2026 - Jersey Cowboy",

@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-08-23 12:07:22",
+  "last_updated": "2026-08-24 12:10:25",
   "breweries": {
     "Stodgy Brewing": [
-      "Saturday, 8/22 La Piadina 12:00 PM - 8:00 PM",
       "Sunday, 8/23 La Campechana 12:00 PM - 7:00 PM",
       "Monday, 8/24 Dumpling Hut 4:00 PM - 8:00 PM",
       "Tuesday, 8/25 Georgia Boys BBQ 4:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Thursday, 9/17 Scratch Quisine 4:00 PM - 8:00 PM",
       "Friday, 9/18 Las Catrinas 1:00 PM - 8:00 PM",
       "Saturday, 9/19 La Piadina 12:00 PM - 8:00 PM",
-      "Sunday, 9/20 La Campechana 12:00 PM - 7:00 PM"
+      "Sunday, 9/20 La Campechana 12:00 PM - 7:00 PM",
+      "Monday, 9/21 Dumpling Hut 4:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Friday, August 21 - Double Wide Burgers",
@@ -47,7 +47,6 @@
       "Monday, August 31 - Southern Soul"
     ],
     "Maxline Brewing": [
-      "Huka Sushi - Sun Aug 23, 2026 - 12:00 pm - 6:00 pm",
       "The Goodness - Mon Aug 24, 2026 - 4:00 pm - 7:00 pm",
       "El Torito Loko - Tue Aug 25, 2026 - 4:00 pm - 7:00 pm",
       "Jersey Cowboy - Wed Aug 26, 2026 - 4:00 pm - 8:00 pm",
@@ -94,11 +93,10 @@
       "Jersey Cowboy - Wed Oct 7, 2026 - 4:00 pm - 8:00 pm",
       "La Piadina - Thu Oct 8, 2026 - 4:00 pm - 8:00 pm",
       "Scrooge Maki - Fri Oct 9, 2026 - 3:00 pm - 8:00 pm",
-      "Double Wide Burgers (Noon until they run out) - Sat Oct 10, 2026 - 12:00 pm - 8:00 pm"
+      "Double Wide Burgers (Noon until they run out) - Sat Oct 10, 2026 - 12:00 pm - 8:00 pm",
+      "Georgia Boys Food Truck - Sun Oct 11, 2026 - 12:00 pm - 6:00 pm"
     ],
     "Mythmaker Brewing": [
-      "Sunday, Aug 23 - Crowded Bookshelf Pop Up",
-      "Sunday, Aug 23 - The Smoke Post",
       "Monday, Aug 24 - Scrooge Maki",
       "Tuesday, Aug 25 - Dero's African Food",
       "Wednesday, Aug 26 - Double Wide Burgers",
@@ -118,21 +116,20 @@
       "Wednesday, Sep 9 - Scratch Quisine",
       "Thursday, Sep 10 - The Red Cat Food Truck",
       "Friday, Sep 11 - NoCo Pizza",
-      "Saturday, Sep 12 - Matador Food Truck",
       "Saturday, Sep 12 - Mythmaker Brewing Oktoberfest Party",
+      "Saturday, Sep 12 - Matador Food Truck",
       "Sunday, Sep 13 - Culture Alley",
       "Monday, Sep 14 - Scratch Quisine",
       "Tuesday, Sep 15 - Dero's African Food",
       "Wednesday, Sep 16 - Jersey Cowboy ",
       "Friday, Sep 18 - The Red Cat Food Truck",
       "Saturday, Sep 19 - Red Cat Food truck",
-      "Sunday, Sep 20 - Crowded Bookshelf Pop Up",
       "Sunday, Sep 20 - Culture Alley",
-      "Monday, Sep 21 - Red Cat Food Truck"
+      "Sunday, Sep 20 - Crowded Bookshelf Pop Up",
+      "Monday, Sep 21 - Red Cat Food Truck",
+      "Tuesday, Sep 22 - Dero's African Food"
     ],
     "New Belgium": [
-      "Sunday, August 23, 2026 - Fork Yeah!",
-      "Sunday, August 23, 2026 - Gator Tails",
       "Monday, August 24, 2026 - Dero's African Food",
       "Wednesday, August 26, 2026 - Las Catrina's",
       "Friday, August 28, 2026 - Antojitos DelSureste",

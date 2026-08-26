@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-08-25 12:10:46",
+  "last_updated": "2026-08-26 12:11:02",
   "breweries": {
     "Stodgy Brewing": [
-      "Monday, 8/24 Dumpling Hut 4:00 PM - 8:00 PM",
       "Tuesday, 8/25 Georgia Boys BBQ 4:00 PM - 8:00 PM",
       "Wednesday, 8/26 Shell on Wheels 1:00 PM - 8:00 PM",
       "Thursday, 8/27 Scrooge Maki 4:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Saturday, 9/19 La Piadina 12:00 PM - 8:00 PM",
       "Sunday, 9/20 La Campechana 12:00 PM - 7:00 PM",
       "Monday, 9/21 Dumpling Hut 4:00 PM - 8:00 PM",
-      "Tuesday, 9/22 Georgia Boys BBQ 4:00 PM - 8:00 PM"
+      "Tuesday, 9/22 Georgia Boys BBQ 4:00 PM - 8:00 PM",
+      "Wednesday, 9/23 Shell on Wheels 1:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Monday, August 24 - Tacos El Torito Loko",
@@ -45,7 +45,6 @@
     ],
     "Maxline Brewing": [],
     "Mythmaker Brewing": [
-      "Tuesday, Aug 25 - Dero's African Food",
       "Wednesday, Aug 26 - Double Wide Burgers",
       "Thursday, Aug 27 - Santa Elena's",
       "Friday, Aug 28 - NoCo Pizza",
@@ -71,11 +70,12 @@
       "Wednesday, Sep 16 - Jersey Cowboy ",
       "Friday, Sep 18 - The Red Cat Food Truck",
       "Saturday, Sep 19 - Red Cat Food truck",
-      "Sunday, Sep 20 - Crowded Bookshelf Pop Up",
       "Sunday, Sep 20 - Culture Alley",
+      "Sunday, Sep 20 - Crowded Bookshelf Pop Up",
       "Monday, Sep 21 - Red Cat Food Truck",
       "Tuesday, Sep 22 - Dero's African Food",
-      "Wednesday, Sep 23 - Scratch Quisine"
+      "Wednesday, Sep 23 - Scratch Quisine",
+      "Thursday, Sep 24 - La Piadina"
     ],
     "New Belgium": [
       "Wednesday, August 26, 2026 - Las Catrina's",

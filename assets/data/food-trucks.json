@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-08-26 12:11:02",
+  "last_updated": "2026-08-27 15:44:33",
   "breweries": {
     "Stodgy Brewing": [
-      "Tuesday, 8/25 Georgia Boys BBQ 4:00 PM - 8:00 PM",
       "Wednesday, 8/26 Shell on Wheels 1:00 PM - 8:00 PM",
       "Thursday, 8/27 Scrooge Maki 4:00 PM - 8:00 PM",
       "Friday, 8/28 Marchios Grill 1:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Sunday, 9/20 La Campechana 12:00 PM - 7:00 PM",
       "Monday, 9/21 Dumpling Hut 4:00 PM - 8:00 PM",
       "Tuesday, 9/22 Georgia Boys BBQ 4:00 PM - 8:00 PM",
-      "Wednesday, 9/23 Shell on Wheels 1:00 PM - 8:00 PM"
+      "Wednesday, 9/23 Shell on Wheels 1:00 PM - 8:00 PM",
+      "Thursday, 9/24 Scrooge Maki 4:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Monday, August 24 - Tacos El Torito Loko",
@@ -45,7 +45,6 @@
     ],
     "Maxline Brewing": [],
     "Mythmaker Brewing": [
-      "Wednesday, Aug 26 - Double Wide Burgers",
       "Thursday, Aug 27 - Santa Elena's",
       "Friday, Aug 28 - NoCo Pizza",
       "Saturday, Aug 29 - Cousin's Maine Lobster",
@@ -62,8 +61,8 @@
       "Wednesday, Sep 9 - Scratch Quisine",
       "Thursday, Sep 10 - The Red Cat Food Truck",
       "Friday, Sep 11 - NoCo Pizza",
-      "Saturday, Sep 12 - Matador Food Truck",
       "Saturday, Sep 12 - Mythmaker Brewing Oktoberfest Party",
+      "Saturday, Sep 12 - Matador Food Truck",
       "Sunday, Sep 13 - Culture Alley",
       "Monday, Sep 14 - Scratch Quisine",
       "Tuesday, Sep 15 - Dero's African Food",
@@ -75,10 +74,11 @@
       "Monday, Sep 21 - Red Cat Food Truck",
       "Tuesday, Sep 22 - Dero's African Food",
       "Wednesday, Sep 23 - Scratch Quisine",
-      "Thursday, Sep 24 - La Piadina"
+      "Thursday, Sep 24 - La Piadina",
+      "Friday, Sep 25 - NoCo Pizza",
+      "Saturday, Sep 26 - Santa Elana's"
     ],
     "New Belgium": [
-      "Wednesday, August 26, 2026 - Las Catrina's",
       "Friday, August 28, 2026 - Antojitos DelSureste",
       "Monday, August 31, 2026 - Dero's African Food"
     ],

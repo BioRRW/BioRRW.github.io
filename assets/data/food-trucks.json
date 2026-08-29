@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-08-28 16:10:55",
+  "last_updated": "2026-08-29 12:15:03",
   "breweries": {
     "Stodgy Brewing": [
-      "Thursday, 8/27 Scrooge Maki 4:00 PM - 8:00 PM",
       "Friday, 8/28 Marchios Grill 1:00 PM - 8:00 PM",
       "Saturday, 8/29 Yes Chef 11:00 AM - 7:00 PM",
       "Sunday, 8/30 Huka Sushi 12:00 PM - 7:00 PM",
@@ -31,7 +30,8 @@
       "Tuesday, 9/22 Georgia Boys BBQ 4:00 PM - 8:00 PM",
       "Wednesday, 9/23 Shell on Wheels 1:00 PM - 8:00 PM",
       "Thursday, 9/24 Scrooge Maki 4:00 PM - 8:00 PM",
-      "Friday, 9/25 Marchios Grill 1:00 PM - 8:00 PM"
+      "Friday, 9/25 Marchios Grill 1:00 PM - 8:00 PM",
+      "Sunday, 9/27 Huka Sushi 12:00 PM - 7:00 PM"
     ],
     "Zwei Brewing": [
       "Friday, August 28 - Double Wide Burgers",
@@ -40,9 +40,8 @@
       "Monday, August 31 - Southern Soul"
     ],
     "Maxline Brewing": [
-      "Scrooge Maki - Fri Aug 28, 2026 - 3:00 pm - 8:00 pm",
       "Double Wide Burgers (Noon until they run out) - Sat Aug 29, 2026 - 12:00 pm - 8:00 pm",
-      "Georgia Boys Food Truck - Sun Aug 30, 2026 - 12:00 pm - 6:00 pm",
+      "El Torito Loko - Sun Aug 30, 2026 - 12:00 pm - 6:00 pm",
       "The Goodness - Mon Aug 31, 2026 - 4:00 pm - 7:00 pm",
       "El Torito Loko - Tue Sep 1, 2026 - 4:00 pm - 7:00 pm",
       "The Colorado Room Food Cart - Wed Sep 2, 2026 - 4:00 pm - 8:00 pm",
@@ -87,10 +86,10 @@
       "The Goodness - Mon Oct 12, 2026 - 4:00 pm - 7:00 pm",
       "El Torito Loko - Tue Oct 13, 2026 - 4:00 pm - 7:00 pm",
       "The Colorado Room Food Cart - Wed Oct 14, 2026 - 4:00 pm - 8:00 pm",
-      "The Schnitzel Wagon - Thu Oct 15, 2026 - 4:00 pm - 8:00 pm"
+      "The Schnitzel Wagon - Thu Oct 15, 2026 - 4:00 pm - 8:00 pm",
+      "Pig Pickin' BBQ - Fri Oct 16, 2026 - 3:00 pm - 8:00 pm"
     ],
     "Mythmaker Brewing": [
-      "Friday, Aug 28 - NoCo Pizza",
       "Saturday, Aug 29 - Cousin's Maine Lobster",
       "Sunday, Aug 30 - Culture Alley Cuisines",
       "Monday, Aug 31 - Scratch Quisine",
@@ -113,8 +112,8 @@
       "Wednesday, Sep 16 - Jersey Cowboy ",
       "Friday, Sep 18 - The Red Cat Food Truck",
       "Saturday, Sep 19 - Red Cat Food truck",
-      "Sunday, Sep 20 - Culture Alley",
       "Sunday, Sep 20 - Crowded Bookshelf Pop Up",
+      "Sunday, Sep 20 - Culture Alley",
       "Monday, Sep 21 - Red Cat Food Truck",
       "Tuesday, Sep 22 - Dero's African Food",
       "Wednesday, Sep 23 - Scratch Quisine",
@@ -124,7 +123,6 @@
       "Sunday, Sep 27 - Culture Alley"
     ],
     "New Belgium": [
-      "Friday, August 28, 2026 - Antojitos DelSureste",
       "Monday, August 31, 2026 - Dero's African Food"
     ],
     "Purpose Brewing": [

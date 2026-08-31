@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-08-30 12:15:07",
+  "last_updated": "2026-08-31 12:18:27",
   "breweries": {
     "Stodgy Brewing": [
-      "Saturday, 8/29 Yes Chef 11:00 AM - 7:00 PM",
       "Sunday, 8/30 Huka Sushi 12:00 PM - 7:00 PM",
       "Monday, 8/31 The Smoke Post 4:00 PM - 8:00 PM",
       "Tuesday, 9/1 Sweaty Moose 4:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Thursday, 9/24 Scrooge Maki 4:00 PM - 8:00 PM",
       "Friday, 9/25 Marchios Grill 1:00 PM - 8:00 PM",
       "Sunday, 9/27 Huka Sushi 12:00 PM - 7:00 PM",
-      "Monday, 9/28 The Smoke Post 4:00 PM - 8:00 PM"
+      "Monday, 9/28 The Smoke Post 4:00 PM - 8:00 PM",
+      "Tuesday, 9/29 Sweaty Moose 4:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Friday, August 28 - Double Wide Burgers",
@@ -39,58 +39,8 @@
       "Sunday, August 30 - Shell On Wheels",
       "Monday, August 31 - Southern Soul"
     ],
-    "Maxline Brewing": [
-      "El Torito Loko - Sun Aug 30, 2026 - 12:00 pm - 6:00 pm",
-      "The Goodness - Mon Aug 31, 2026 - 4:00 pm - 7:00 pm",
-      "El Torito Loko - Tue Sep 1, 2026 - 4:00 pm - 7:00 pm",
-      "The Colorado Room Food Cart - Wed Sep 2, 2026 - 4:00 pm - 8:00 pm",
-      "YES CHEF! Trailer - Thu Sep 3, 2026 - 4:00 pm - 8:00 pm",
-      "Pig Pickin' BBQ - Fri Sep 4, 2026 - 3:00 pm - 8:00 pm",
-      "Huka Sushi - Sun Sep 6, 2026 - 12:00 pm - 6:00 pm",
-      "The Goodness - Mon Sep 7, 2026 - 4:00 pm - 7:00 pm",
-      "El Torito Loko - Tue Sep 8, 2026 - 4:00 pm - 7:00 pm",
-      "Jersey Cowboy - Wed Sep 9, 2026 - 4:00 pm - 8:00 pm",
-      "La Piadina - Thu Sep 10, 2026 - 4:00 pm - 8:00 pm",
-      "Scrooge Maki - Fri Sep 11, 2026 - 3:00 pm - 8:00 pm",
-      "Double Wide Burgers (Noon until they run out) - Sat Sep 12, 2026 - 12:00 pm - 8:00 pm",
-      "Georgia Boys Food Truck - Sun Sep 13, 2026 - 12:00 pm - 6:00 pm",
-      "The Goodness - Mon Sep 14, 2026 - 4:00 pm - 7:00 pm",
-      "El Torito Loko - Tue Sep 15, 2026 - 4:00 pm - 7:00 pm",
-      "The Colorado Room Food Cart - Wed Sep 16, 2026 - 4:00 pm - 8:00 pm",
-      "The Schnitzel Wagon - Thu Sep 17, 2026 - 4:00 pm - 8:00 pm",
-      "Pig Pickin' BBQ - Fri Sep 18, 2026 - 3:00 pm - 8:00 pm",
-      "Double Wide Burgers (Noon until they run out) - Sat Sep 19, 2026 - 12:00 pm - 8:00 pm",
-      "Huka Sushi - Sun Sep 20, 2026 - 12:00 pm - 6:00 pm",
-      "The Goodness - Mon Sep 21, 2026 - 4:00 pm - 7:00 pm",
-      "El Torito Loko - Tue Sep 22, 2026 - 4:00 pm - 7:00 pm",
-      "Jersey Cowboy - Wed Sep 23, 2026 - 4:00 pm - 8:00 pm",
-      "Corndoggies - Thu Sep 24, 2026 - 4:00 pm - 8:00 pm",
-      "Scrooge Maki - Fri Sep 25, 2026 - 3:00 pm - 8:00 pm",
-      "Double Wide Burgers (Noon until they run out) - Sat Sep 26, 2026 - 12:00 pm - 8:00 pm",
-      "Georgia Boys Food Truck - Sun Sep 27, 2026 - 12:00 pm - 6:00 pm",
-      "The Goodness - Mon Sep 28, 2026 - 4:00 pm - 7:00 pm",
-      "El Torito Loko - Tue Sep 29, 2026 - 4:00 pm - 7:00 pm",
-      "The Colorado Room Food Cart - Wed Sep 30, 2026 - 4:00 pm - 8:00 pm",
-      "YES CHEF! Trailer - Thu Oct 1, 2026 - 4:00 pm - 8:00 pm",
-      "Pig Pickin' BBQ - Fri Oct 2, 2026 - 3:00 pm - 8:00 pm",
-      "Double Wide Burgers (Noon until they run out) - Sat Oct 3, 2026 - 12:00 pm - 8:00 pm",
-      "Huka Sushi - Sun Oct 4, 2026 - 12:00 pm - 6:00 pm",
-      "The Goodness - Mon Oct 5, 2026 - 4:00 pm - 7:00 pm",
-      "El Torito Loko - Tue Oct 6, 2026 - 4:00 pm - 7:00 pm",
-      "Jersey Cowboy - Wed Oct 7, 2026 - 4:00 pm - 8:00 pm",
-      "La Piadina - Thu Oct 8, 2026 - 4:00 pm - 8:00 pm",
-      "Scrooge Maki - Fri Oct 9, 2026 - 3:00 pm - 8:00 pm",
-      "Double Wide Burgers (Noon until they run out) - Sat Oct 10, 2026 - 12:00 pm - 8:00 pm",
-      "Georgia Boys Food Truck - Sun Oct 11, 2026 - 12:00 pm - 6:00 pm",
-      "The Goodness - Mon Oct 12, 2026 - 4:00 pm - 7:00 pm",
-      "El Torito Loko - Tue Oct 13, 2026 - 4:00 pm - 7:00 pm",
-      "The Colorado Room Food Cart - Wed Oct 14, 2026 - 4:00 pm - 8:00 pm",
-      "The Schnitzel Wagon - Thu Oct 15, 2026 - 4:00 pm - 8:00 pm",
-      "Pig Pickin' BBQ - Fri Oct 16, 2026 - 3:00 pm - 8:00 pm",
-      "Double Wide Burgers (Noon until they run out) - Sat Oct 17, 2026 - 12:00 pm - 8:00 pm"
-    ],
+    "Maxline Brewing": [],
     "Mythmaker Brewing": [
-      "Sunday, Aug 30 - Culture Alley Cuisines",
       "Monday, Aug 31 - Scratch Quisine",
       "Tuesday, Sep 1 - Dero's African Food",
       "Wednesday, Sep 2 - Jersey Cowboy ",
@@ -111,8 +61,8 @@
       "Wednesday, Sep 16 - Jersey Cowboy ",
       "Friday, Sep 18 - The Red Cat Food Truck",
       "Saturday, Sep 19 - Red Cat Food truck",
-      "Sunday, Sep 20 - Culture Alley",
       "Sunday, Sep 20 - Crowded Bookshelf Pop Up",
+      "Sunday, Sep 20 - Culture Alley",
       "Monday, Sep 21 - Red Cat Food Truck",
       "Tuesday, Sep 22 - Dero's African Food",
       "Wednesday, Sep 23 - Scratch Quisine",
@@ -120,18 +70,19 @@
       "Friday, Sep 25 - NoCo Pizza",
       "Saturday, Sep 26 - Santa Elana's",
       "Sunday, Sep 27 - Culture Alley",
-      "Monday, Sep 28 - Scratch Quisine"
+      "Monday, Sep 28 - Scratch Quisine",
+      "Tuesday, Sep 29 - Dero's African Food"
     ],
     "New Belgium": [
       "Monday, August 31, 2026 - Dero's African Food"
     ],
     "Purpose Brewing": [
-      "Aug 28 - Shell on Wheels",
       "Sep 4 - Shell on Wheels",
       "Sep 11 - Shell on Wheels",
       "Sep 18 - Shell on Wheels",
       "Sep 25 - Shell on Wheels",
       "Oct 2 - Shell on Wheels",
+      "Aug 28 - Shell on Wheels",
       "Aug 21 - Shell on Wheels",
       "Aug 15 - Saucers Pizza!",
       "Aug 14 - Shell on Wheels",
@@ -160,8 +111,7 @@
       "Mar 20 - Shell on Wheels",
       "Mar 13 - Shell on Wheels",
       "Mar 6 - Shell on Wheels",
-      "Feb 27 - Shell on Wheels",
-      "Feb 20 - Shell on Wheels"
+      "Feb 27 - Shell on Wheels"
     ],
     "Odell Brewing": [
       "Mondays - La Piadina",

@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-09-01 12:17:31",
+  "last_updated": "2026-09-02 12:17:55",
   "breweries": {
     "Stodgy Brewing": [
-      "Monday, 8/31 The Smoke Post 4:00 PM - 8:00 PM",
       "Tuesday, 9/1 Sweaty Moose 4:00 PM - 8:00 PM",
       "Wednesday, 9/2 Yes Chef! 4:00 PM - 8:00 PM",
       "Thursday, 9/3 Scratch Quisine 4:00 PM - 8:00 PM",
@@ -31,13 +30,13 @@
       "Sunday, 9/27 Huka Sushi 12:00 PM - 7:00 PM",
       "Monday, 9/28 The Smoke Post 4:00 PM - 8:00 PM",
       "Tuesday, 9/29 Sweaty Moose 4:00 PM - 8:00 PM",
-      "Wednesday, 9/30 Yes Chef! 4:00 PM - 8:00 PM"
+      "Wednesday, 9/30 Yes Chef! 4:00 PM - 8:00 PM",
+      "Thursday, 10/1 Scratch Quisine 4:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Monday, August 31 - Southern Soul"
     ],
     "Maxline Brewing": [
-      "El Torito Loko - Tue Sep 1, 2026 - 4:00 pm - 7:00 pm",
       "The Colorado Room Food Cart - Wed Sep 2, 2026 - 4:00 pm - 8:00 pm",
       "YES CHEF! Trailer - Thu Sep 3, 2026 - 4:00 pm - 8:00 pm",
       "Pig Pickin' BBQ - Fri Sep 4, 2026 - 3:00 pm - 8:00 pm",
@@ -84,10 +83,10 @@
       "Double Wide Burgers (Noon until they run out) - Sat Oct 17, 2026 - 12:00 pm - 8:00 pm",
       "Huka Sushi - Sun Oct 18, 2026 - 12:00 pm - 6:00 pm",
       "The Goodness - Mon Oct 19, 2026 - 4:00 pm - 7:00 pm",
-      "El Torito Loko - Tue Oct 20, 2026 - 4:00 pm - 7:00 pm"
+      "El Torito Loko - Tue Oct 20, 2026 - 4:00 pm - 7:00 pm",
+      "La Piadina - Thu Oct 22, 2026 - 4:00 pm - 8:00 pm"
     ],
     "Mythmaker Brewing": [
-      "Tuesday, Sep 1 - Dero's African Food",
       "Wednesday, Sep 2 - Jersey Cowboy ",
       "Thursday, Sep 3 - The Dumpling Hut",
       "Friday, Sep 4 - Scratch Quisine",
@@ -103,6 +102,7 @@
       "Sunday, Sep 13 - Culture Alley",
       "Monday, Sep 14 - Scratch Quisine",
       "Tuesday, Sep 15 - Dero's African Food",
+      "Wednesday, Sep 16 - The Dumpling Hut",
       "Thursday, Sep 17 - The Red Cat Truck",
       "Friday, Sep 18 - The Red Cat Food Truck",
       "Saturday, Sep 19 - Red Cat Food truck",
@@ -116,7 +116,9 @@
       "Saturday, Sep 26 - Santa Elana's",
       "Sunday, Sep 27 - Culture Alley",
       "Monday, Sep 28 - Scratch Quisine",
-      "Tuesday, Sep 29 - Dero's African Food"
+      "Tuesday, Sep 29 - Dero's African Food",
+      "Wednesday, Sep 30 - Santa Elena's",
+      "Thursday, Oct 1 - The Dumpling Hut"
     ],
     "New Belgium": [],
     "Purpose Brewing": [

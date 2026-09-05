@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-09-04 12:17:18",
+  "last_updated": "2026-09-05 12:14:35",
   "breweries": {
     "Stodgy Brewing": [
-      "Thursday, 9/3 Scratch Quisine 4:00 PM - 8:00 PM",
       "Friday, 9/4 Las Catrinas 1:00 PM - 8:00 PM",
       "Saturday, 9/5 La Piadina 12:00 PM - 8:00 PM",
       "Sunday, 9/6 La Campechana 12:00 PM - 7:00 PM",
@@ -31,11 +30,10 @@
       "Wednesday, 9/30 Yes Chef! 4:00 PM - 8:00 PM",
       "Thursday, 10/1 Scratch Quisine 4:00 PM - 8:00 PM",
       "Friday, 10/2 Las Catrinas 1:00 PM - 8:00 PM",
-      "Saturday, 10/3 La Piadina 12:00 PM - 8:00 PM"
+      "Saturday, 10/3 La Piadina 12:00 PM - 8:00 PM",
+      "Saturday, 10/3 Sams Bday 6:00 PM - 6:00 PM"
     ],
     "Zwei Brewing": [
-      "Wednesday, September 2 - Huka Sushi",
-      "Thursday, September 3 - Double Wide Burgers",
       "Friday, September 4 - La Piadina",
       "Saturday, September 5 - Schnitzel Wagon",
       "Sunday, September 6 - Santa Elena's",
@@ -67,7 +65,6 @@
     ],
     "Maxline Brewing": [],
     "Mythmaker Brewing": [
-      "Friday, Sep 4 - The Red Cat Food Truck",
       "Saturday, Sep 5 - Santa Elena's",
       "Sunday, Sep 6 - Culture Alley",
       "Monday, Sep 7 - Scrooge Maki",
@@ -84,8 +81,8 @@
       "Thursday, Sep 17 - The Red Cat Truck",
       "Friday, Sep 18 - The Red Cat Food Truck",
       "Saturday, Sep 19 - Red Cat Food truck",
-      "Sunday, Sep 20 - Crowded Bookshelf Pop Up",
       "Sunday, Sep 20 - Culture Alley",
+      "Sunday, Sep 20 - Crowded Bookshelf Pop Up",
       "Monday, Sep 21 - Red Cat Food Truck",
       "Tuesday, Sep 22 - Dero's African Food",
       "Wednesday, Sep 23 - Scratch Quisine",
@@ -98,12 +95,11 @@
       "Wednesday, Sep 30 - Santa Elena's",
       "Thursday, Oct 1 - The Dumpling Hut",
       "Friday, Oct 2 - Scratch Quisine",
-      "Saturday, Oct 3 - Smoke Post Food Truck",
       "Saturday, Oct 3 - RAUCH FEST 2026",
+      "Saturday, Oct 3 - Smoke Post Food Truck",
       "Sunday, Oct 4 - Culture Alley"
     ],
     "New Belgium": [
-      "Friday, September 4, 2026 - Antojitos DelSureste",
       "Saturday, September 5, 2026 - Fat Tomato Inc.",
       "Saturday, September 5, 2026 - Georgia Boys BBQ",
       "Sunday, September 6, 2026 - Fork Yeah!",
@@ -148,11 +144,11 @@
       "Saturday, October 31, 2026 - Fat Tomato Inc."
     ],
     "Purpose Brewing": [
-      "Sep 4 - Shell on Wheels",
       "Sep 11 - Shell on Wheels",
       "Sep 18 - Shell on Wheels",
       "Sep 25 - Shell on Wheels",
       "Oct 2 - Shell on Wheels",
+      "Sep 4 - Shell on Wheels",
       "Aug 28 - Shell on Wheels",
       "Aug 21 - Shell on Wheels",
       "Aug 15 - Saucers Pizza!",
@@ -181,8 +177,7 @@
       "Mar 21 - Average Joe's",
       "Mar 20 - Shell on Wheels",
       "Mar 13 - Shell on Wheels",
-      "Mar 6 - Shell on Wheels",
-      "Feb 27 - Shell on Wheels"
+      "Mar 6 - Shell on Wheels"
     ],
     "Odell Brewing": [
       "Mondays - La Piadina",

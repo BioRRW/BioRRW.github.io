@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-09-05 12:14:35",
+  "last_updated": "2026-09-06 12:14:51",
   "breweries": {
     "Stodgy Brewing": [
-      "Friday, 9/4 Las Catrinas 1:00 PM - 8:00 PM",
       "Saturday, 9/5 La Piadina 12:00 PM - 8:00 PM",
       "Sunday, 9/6 La Campechana 12:00 PM - 7:00 PM",
       "Monday, 9/7 Dumpling Hut 12:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Thursday, 10/1 Scratch Quisine 4:00 PM - 8:00 PM",
       "Friday, 10/2 Las Catrinas 1:00 PM - 8:00 PM",
       "Saturday, 10/3 La Piadina 12:00 PM - 8:00 PM",
-      "Saturday, 10/3 Sams Bday 6:00 PM - 6:00 PM"
+      "Saturday, 10/3 Sams Bday 6:00 PM - 6:00 PM",
+      "Sunday, 10/4 La Campechana 12:00 PM - 7:00 PM"
     ],
     "Zwei Brewing": [
       "Friday, September 4 - La Piadina",
@@ -63,9 +63,57 @@
       "Tuesday, September 29 - Angry Hippie Tacos",
       "Wednesday, September 30 - Charlotte's Lil Kitchen"
     ],
-    "Maxline Brewing": [],
+    "Maxline Brewing": [
+      "Huka Sushi - Sun Sep 6, 2026 - 12:00 pm - 6:00 pm",
+      "The Goodness - Mon Sep 7, 2026 - 4:00 pm - 7:00 pm",
+      "El Torito Loko - Tue Sep 8, 2026 - 4:00 pm - 7:00 pm",
+      "Jersey Cowboy - Wed Sep 9, 2026 - 4:00 pm - 8:00 pm",
+      "La Piadina - Thu Sep 10, 2026 - 4:00 pm - 8:00 pm",
+      "Scrooge Maki - Fri Sep 11, 2026 - 3:00 pm - 8:00 pm",
+      "Double Wide Burgers (Noon until they run out) - Sat Sep 12, 2026 - 12:00 pm - 8:00 pm",
+      "The Goodness - Mon Sep 14, 2026 - 4:00 pm - 7:00 pm",
+      "El Torito Loko - Tue Sep 15, 2026 - 4:00 pm - 7:00 pm",
+      "The Colorado Room Food Cart - Wed Sep 16, 2026 - 4:00 pm - 8:00 pm",
+      "The Schnitzel Wagon - Thu Sep 17, 2026 - 4:00 pm - 8:00 pm",
+      "Pig Pickin' BBQ - Fri Sep 18, 2026 - 3:00 pm - 8:00 pm",
+      "Double Wide Burgers (Noon until they run out) - Sat Sep 19, 2026 - 12:00 pm - 8:00 pm",
+      "Huka Sushi - Sun Sep 20, 2026 - 12:00 pm - 6:00 pm",
+      "The Goodness - Mon Sep 21, 2026 - 4:00 pm - 7:00 pm",
+      "El Torito Loko - Tue Sep 22, 2026 - 4:00 pm - 7:00 pm",
+      "The Colorado Room Food Cart - Wed Sep 23, 2026 - 4:00 pm - 8:00 pm",
+      "Corndoggies - Thu Sep 24, 2026 - 4:00 pm - 8:00 pm",
+      "Scrooge Maki - Fri Sep 25, 2026 - 3:00 pm - 8:00 pm",
+      "Double Wide Burgers (Noon until they run out) - Sat Sep 26, 2026 - 12:00 pm - 8:00 pm",
+      "The Goodness - Mon Sep 28, 2026 - 4:00 pm - 7:00 pm",
+      "El Torito Loko - Tue Sep 29, 2026 - 4:00 pm - 7:00 pm",
+      "The Colorado Room Food Cart - Wed Sep 30, 2026 - 4:00 pm - 8:00 pm",
+      "YES CHEF! Trailer - Thu Oct 1, 2026 - 4:00 pm - 8:00 pm",
+      "Pig Pickin' BBQ - Fri Oct 2, 2026 - 3:00 pm - 8:00 pm",
+      "Double Wide Burgers (Noon until they run out) - Sat Oct 3, 2026 - 12:00 pm - 8:00 pm",
+      "Huka Sushi - Sun Oct 4, 2026 - 12:00 pm - 6:00 pm",
+      "The Goodness - Mon Oct 5, 2026 - 4:00 pm - 7:00 pm",
+      "El Torito Loko - Tue Oct 6, 2026 - 4:00 pm - 7:00 pm",
+      "The Colorado Room Food Cart - Wed Oct 7, 2026 - 4:00 pm - 8:00 pm",
+      "La Piadina - Thu Oct 8, 2026 - 4:00 pm - 8:00 pm",
+      "Scrooge Maki - Fri Oct 9, 2026 - 3:00 pm - 8:00 pm",
+      "Double Wide Burgers (Noon until they run out) - Sat Oct 10, 2026 - 12:00 pm - 8:00 pm",
+      "The Goodness - Mon Oct 12, 2026 - 4:00 pm - 7:00 pm",
+      "El Torito Loko - Tue Oct 13, 2026 - 4:00 pm - 7:00 pm",
+      "The Colorado Room Food Cart - Wed Oct 14, 2026 - 4:00 pm - 8:00 pm",
+      "The Schnitzel Wagon - Thu Oct 15, 2026 - 4:00 pm - 8:00 pm",
+      "Pig Pickin' BBQ - Fri Oct 16, 2026 - 3:00 pm - 8:00 pm",
+      "Double Wide Burgers (Noon until they run out) - Sat Oct 17, 2026 - 12:00 pm - 8:00 pm",
+      "Huka Sushi - Sun Oct 18, 2026 - 12:00 pm - 6:00 pm",
+      "The Goodness - Mon Oct 19, 2026 - 4:00 pm - 7:00 pm",
+      "El Torito Loko - Tue Oct 20, 2026 - 4:00 pm - 7:00 pm",
+      "The Colorado Room Food Cart - Wed Oct 21, 2026 - 4:00 pm - 8:00 pm",
+      "La Piadina - Thu Oct 22, 2026 - 4:00 pm - 8:00 pm",
+      "Scrooge Maki - Fri Oct 23, 2026 - 3:00 pm - 8:00 pm",
+      "Double Wide Burgers (Noon until they run out) - Sat Oct 24, 2026 - 12:00 pm - 8:00 pm",
+      "The Goodness - Mon Oct 26, 2026 - 4:00 pm - 7:00 pm",
+      "El Torito Loko - Tue Oct 27, 2026 - 4:00 pm - 7:00 pm"
+    ],
     "Mythmaker Brewing": [
-      "Saturday, Sep 5 - Santa Elena's",
       "Sunday, Sep 6 - Culture Alley",
       "Monday, Sep 7 - Scrooge Maki",
       "Tuesday, Sep 8 - Dero's African Food",
@@ -74,7 +122,6 @@
       "Friday, Sep 11 - NoCo Pizza",
       "Saturday, Sep 12 - Mythmaker Brewing Oktoberfest Party",
       "Saturday, Sep 12 - Matador Food Truck",
-      "Sunday, Sep 13 - Culture Alley",
       "Monday, Sep 14 - Scratch Quisine",
       "Tuesday, Sep 15 - Dero's African Food",
       "Wednesday, Sep 16 - The Dumpling Hut",
@@ -95,13 +142,12 @@
       "Wednesday, Sep 30 - Santa Elena's",
       "Thursday, Oct 1 - The Dumpling Hut",
       "Friday, Oct 2 - Scratch Quisine",
-      "Saturday, Oct 3 - RAUCH FEST 2026",
       "Saturday, Oct 3 - Smoke Post Food Truck",
-      "Sunday, Oct 4 - Culture Alley"
+      "Saturday, Oct 3 - RAUCH FEST 2026",
+      "Sunday, Oct 4 - Culture Alley",
+      "Monday, Oct 5 - Scrooge Maki"
     ],
     "New Belgium": [
-      "Saturday, September 5, 2026 - Fat Tomato Inc.",
-      "Saturday, September 5, 2026 - Georgia Boys BBQ",
       "Sunday, September 6, 2026 - Fork Yeah!",
       "Wednesday, September 9, 2026 - Las Catrina's",
       "Friday, September 11, 2026 - Antojitos DelSureste",
@@ -144,11 +190,11 @@
       "Saturday, October 31, 2026 - Fat Tomato Inc."
     ],
     "Purpose Brewing": [
+      "Sep 4 - Shell on Wheels",
       "Sep 11 - Shell on Wheels",
       "Sep 18 - Shell on Wheels",
       "Sep 25 - Shell on Wheels",
       "Oct 2 - Shell on Wheels",
-      "Sep 4 - Shell on Wheels",
       "Aug 28 - Shell on Wheels",
       "Aug 21 - Shell on Wheels",
       "Aug 15 - Saucers Pizza!",
@@ -177,7 +223,8 @@
       "Mar 21 - Average Joe's",
       "Mar 20 - Shell on Wheels",
       "Mar 13 - Shell on Wheels",
-      "Mar 6 - Shell on Wheels"
+      "Mar 6 - Shell on Wheels",
+      "Feb 27 - Shell on Wheels"
     ],
     "Odell Brewing": [
       "Mondays - La Piadina",

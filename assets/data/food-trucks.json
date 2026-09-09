@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-09-08 12:17:37",
+  "last_updated": "2026-09-09 12:17:05",
   "breweries": {
     "Stodgy Brewing": [
-      "Monday, 9/7 Dumpling Hut 1:00 PM - 9:00 PM",
       "Tuesday, 9/8 Georgia Boys BBQ 4:00 PM - 8:00 PM",
       "Wednesday, 9/9 Shell on Wheels 1:00 PM - 8:00 PM",
       "Thursday, 9/10 Scrooge Maki 4:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Saturday, 10/3 Sams Bday 6:00 PM - 6:00 PM",
       "Sunday, 10/4 La Campechana 12:00 PM - 7:00 PM",
       "Monday, 10/5 Dumpling Hut 4:00 PM - 8:00 PM",
-      "Tuesday, 10/6 Georgia Boys BBQ 4:00 PM - 8:00 PM"
+      "Tuesday, 10/6 Georgia Boys BBQ 4:00 PM - 8:00 PM",
+      "Wednesday, 10/7 Shell on Wheels 1:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Monday, September 7 - Tacos El Torito Loko",
@@ -61,7 +61,6 @@
       "Wednesday, September 30 - Charlotte's Lil Kitchen"
     ],
     "Maxline Brewing": [
-      "El Torito Loko - Tue Sep 8, 2026 - 4:00 pm - 7:00 pm",
       "Jersey Cowboy - Wed Sep 9, 2026 - 4:00 pm - 8:00 pm",
       "La Piadina - Thu Sep 10, 2026 - 4:00 pm - 8:00 pm",
       "Scrooge Maki - Fri Sep 11, 2026 - 3:00 pm - 8:00 pm",
@@ -108,12 +107,12 @@
       "Scrooge Maki - Fri Oct 23, 2026 - 3:00 pm - 8:00 pm",
       "Double Wide Burgers (Noon until they run out) - Sat Oct 24, 2026 - 12:00 pm - 8:00 pm",
       "The Goodness - Mon Oct 26, 2026 - 4:00 pm - 7:00 pm",
-      "El Torito Loko - Tue Oct 27, 2026 - 4:00 pm - 7:00 pm"
+      "El Torito Loko - Tue Oct 27, 2026 - 4:00 pm - 7:00 pm",
+      "The Colorado Room Food Cart - Wed Oct 28, 2026 - 4:00 pm - 8:00 pm"
     ],
     "Mythmaker Brewing": [
-      "Tuesday, Sep 8 - Dero's African Food",
       "Wednesday, Sep 9 - Scratch Quisine",
-      "Thursday, Sep 10 - The Red Cat Food Truck",
+      "Thursday, Sep 10 - La Tapatia",
       "Friday, Sep 11 - NoCo Pizza",
       "Saturday, Sep 12 - Matador Food Truck",
       "Saturday, Sep 12 - Mythmaker Brewing Oktoberfest Party",
@@ -143,7 +142,8 @@
       "Sunday, Oct 4 - Culture Alley",
       "Monday, Oct 5 - Scrooge Maki",
       "Tuesday, Oct 6 - Dero's African Food",
-      "Wednesday, Oct 7 - Scratch Quisine"
+      "Wednesday, Oct 7 - Scratch Quisine",
+      "Thursday, Oct 8 - Scratch Quisine"
     ],
     "New Belgium": [
       "Wednesday, September 9, 2026 - Las Catrina's",

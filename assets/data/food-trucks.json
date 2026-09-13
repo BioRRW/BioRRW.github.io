@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-12 12:14:37",
+  "last_updated": "2026-09-13 12:15:13",
   "breweries": {
     "Stodgy Brewing": [
       "Saturday, 9/12 Pierogies Factory 12:00 PM - 8:00 PM",
@@ -57,7 +57,6 @@
       "Wednesday, September 30 - Charlotte's Lil Kitchen"
     ],
     "Maxline Brewing": [
-      "Double Wide Burgers (Noon until they run out) - Sat Sep 12, 2026 - 12:00 pm - 8:00 pm",
       "El Torito Loko - Sun Sep 13, 2026 - 12:00 pm - 6:00 pm",
       "The Goodness - Mon Sep 14, 2026 - 4:00 pm - 7:00 pm",
       "El Torito Loko - Tue Sep 15, 2026 - 4:00 pm - 7:00 pm",
@@ -104,11 +103,10 @@
       "The Colorado Room Food Cart - Wed Oct 28, 2026 - 4:00 pm - 8:00 pm",
       "Corndoggies - Thu Oct 29, 2026 - 4:00 pm - 8:00 pm",
       "Pig Pickin' BBQ - Fri Oct 30, 2026 - 3:00 pm - 8:00 pm",
-      "Mi Colombia - Sat Oct 31, 2026 - 12:00 pm - 8:00 pm"
+      "Mi Colombia - Sat Oct 31, 2026 - 12:00 pm - 8:00 pm",
+      "Huka Sushi - Sun Nov 1, 2026 - 12:00 pm - 6:00 pm"
     ],
     "Mythmaker Brewing": [
-      "Saturday, Sep 12 - Matador Food Truck",
-      "Saturday, Sep 12 - Mythmaker Brewing Oktoberfest Party",
       "Sunday, Sep 13 - La Tapatia",
       "Monday, Sep 14 - Scratch Quisine",
       "Tuesday, Sep 15 - Dero's African Food",
@@ -116,7 +114,6 @@
       "Thursday, Sep 17 - The Red Cat Truck",
       "Friday, Sep 18 - The Red Cat Food Truck",
       "Saturday, Sep 19 - Red Cat Food truck",
-      "Sunday, Sep 20 - Crowded Bookshelf Pop Up",
       "Sunday, Sep 20 - Culture Alley",
       "Monday, Sep 21 - Red Cat Food Truck",
       "Tuesday, Sep 22 - Dero's African Food",
@@ -139,10 +136,10 @@
       "Thursday, Oct 8 - Scratch Quisine",
       "Friday, Oct 9 - Noco Pizza ",
       "Saturday, Oct 10 - La Piadina",
-      "Sunday, Oct 11 - Culture Alley"
+      "Sunday, Oct 11 - Culture Alley",
+      "Monday, Oct 12 - Scratch Quisine"
     ],
     "New Belgium": [
-      "Saturday, September 12, 2026 - Fat Tomato Inc.",
       "Sunday, September 13, 2026 - Fork Yeah!",
       "Monday, September 14, 2026 - Dero's African Food",
       "Wednesday, September 16, 2026 - Las Catrina's",

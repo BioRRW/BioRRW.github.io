@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-09-14 12:17:55",
+  "last_updated": "2026-09-15 12:16:52",
   "breweries": {
     "Stodgy Brewing": [
-      "Sunday, 9/13 Huka Sushi 12:00 PM - 7:00 PM",
       "Monday, 9/14 The Smoke Post 4:00 PM - 8:00 PM",
       "Tuesday, 9/15 Sweaty Moose 4:00 PM - 8:00 PM",
       "Wednesday, 9/16 Yes Chef! 4:00 PM - 8:00 PM",
@@ -31,12 +30,10 @@
       "Friday, 10/9 Marchios Grill 1:00 PM - 8:00 PM",
       "Saturday, 10/10 Yes Chef! 1:00 PM - 8:00 PM",
       "Sunday, 10/11 Huka Sushi 12:00 PM - 7:00 PM",
-      "Monday, 10/12 The Smoke Post 4:00 PM - 8:00 PM"
+      "Monday, 10/12 The Smoke Post 4:00 PM - 8:00 PM",
+      "Tuesday, 10/13 Sweaty Moose 4:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
-      "Friday, September 11 - Double Wide Burgers",
-      "Saturday, September 12 - Huka Sushi",
-      "Sunday, September 13 - Fat Tomato",
       "Monday, September 14 - Southern Soul",
       "Tuesday, September 15 - Angry Hippie Tacos",
       "Wednesday, September 16 - Charlotte's Lil Kitchen",
@@ -58,7 +55,6 @@
     ],
     "Maxline Brewing": [],
     "Mythmaker Brewing": [
-      "Monday, Sep 14 - Scratch Quisine",
       "Tuesday, Sep 15 - Dero's African Food",
       "Wednesday, Sep 16 - The Dumpling Hut",
       "Thursday, Sep 17 - The Red Cat Truck",
@@ -77,8 +73,8 @@
       "Wednesday, Sep 30 - Santa Elena's",
       "Thursday, Oct 1 - The Dumpling Hut",
       "Friday, Oct 2 - Scratch Quisine",
-      "Saturday, Oct 3 - Smoke Post Food Truck",
       "Saturday, Oct 3 - RAUCH FEST 2026",
+      "Saturday, Oct 3 - Smoke Post Food Truck",
       "Sunday, Oct 4 - Culture Alley",
       "Monday, Oct 5 - Scrooge Maki",
       "Tuesday, Oct 6 - Dero's African Food",
@@ -88,10 +84,10 @@
       "Saturday, Oct 10 - La Piadina",
       "Sunday, Oct 11 - Culture Alley",
       "Monday, Oct 12 - Scratch Quisine",
-      "Tuesday, Oct 13 - Dero's African Food"
+      "Tuesday, Oct 13 - Dero's African Food",
+      "Wednesday, Oct 14 - Red Cat Truck"
     ],
     "New Belgium": [
-      "Monday, September 14, 2026 - Dero's African Food",
       "Wednesday, September 16, 2026 - Las Catrina's",
       "Thursday, September 17, 2026 - Georgia Boys BBQ",
       "Friday, September 18, 2026 - Antojitos DelSureste",

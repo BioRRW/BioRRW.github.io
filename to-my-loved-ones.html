@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKDEGPV486"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HKDEGPV486');
+    </script>
+
+    <link rel="icon" href="https://rwcustomfurniture.com/assets/images/wood/RW_logo_custom_furniture.png" type="image/png" sizes="any">
+    <link rel="canonical" href="https://rwcustomfurniture.com/to-my-loved-ones">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends & Family Builds | RW Custom Furniture</title>
+    <meta name="description" content="Exclusive friends and family builds at raw material cost by RW Custom Furniture in Fort Collins, Colorado.">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Playfair+Display:400,700" rel="stylesheet">
+    
+    <style>
+        /* Basic Reset & Typography */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        /* Flexbox body with Parallax/Static Background Image Setup */
+        body { 
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif; 
+            line-height: 1.6; 
+            color: #2c2a29; 
+            background-image: url("./assets/images/wood/custom-built-in-wall-bookshelf.jpg");
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: #1a1a1a; margin-bottom: 15px; }
+        a { text-decoration: none; color: inherit; transition: color 0.3s; }
+        a:hover { color: #8b5a2b; }
+        
+        /* Layout Utilities */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .section-padding { padding: 60px 0; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        
+        /* Navigation Header */
+        header { padding: 20px 0; background: #fff; border-bottom: 1px solid #e8e5e1; position: sticky; top: 0; z-index: 100; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.1rem; letter-spacing: 1px; }
+        
+        /* Main Content Wrapper */
+        .main-content { flex: 1; }
+
+        /* Premium Frosted Overlay Block */
+        .content-card-overlay {
+            background-color: rgba(250, 249, 247, 0.95);
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border: 1px solid rgba(232, 229, 225, 0.7);
+        }
+
+        /* Page Header Configuration */
+        .page-header { padding: 20px 20px 30px 20px; text-align: center; }
+        .page-header h1 { font-size: 3.2rem; margin-bottom: 15px; }
+        .page-header p { max-width: 780px; margin: 0 auto; color: #4a3f35; font-size: 1.1rem; line-height: 1.7; }
+
+        /* Header Sample Image */
+        .header-feature-img {
+            max-width: 780px;
+            width: 100%;
+            height: auto;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin: 25px auto 0 auto;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e8e5e1;
+        }
+
+        /* Badge Callout */
+        .badge {
+            display: inline-block;
+            background: #8b5a2b;
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        /* Process Steps */
+        .process-step { margin-bottom: 25px; }
+        .process-step h3 { font-size: 1.25rem; color: #4a3f35; border-bottom: 1px solid #e8e5e1; padding-bottom: 5px; margin-bottom: 10px; }
+        .process-step p { font-size: 0.95rem; color: #555; }
+
+        /* Form Styling */
+        .contact-form { background: #fff; padding: 40px; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e8e5e1; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-size: 0.9rem; font-weight: 700; margin-bottom: 8px; color: #2c2a29; }
+        .form-control { width: 100%; padding: 12px; border: 1px solid #d5dbdb; border-radius: 4px; font-family: inherit; font-size: 1rem; background: #faf9f7; transition: border-color 0.3s; }
+        .form-control:focus { outline: none; border-color: #8b5a2b; background: #fff; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .form-help { font-size: 0.8rem; color: #777; margin-top: 5px; }
+
+        /* Buttons */
+        .btn { display: inline-block; padding: 14px 30px; background: #4a3f35; color: #fff; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; transition: background 0.3s; border: none; cursor: pointer; width: 100%; font-weight: 700; }
+        .btn:hover { background: #2c2a29; color: #fff; }
+
+        @media (max-width: 768px) {
+            .grid-2, .form-row { grid-template-columns: 1fr; gap: 25px; }
+            .content-card-overlay { padding: 20px; }
+            .page-header h1 { font-size: 2.3rem; }
+            .contact-form { padding: 20px; }
+        }
+        
+        /* Footer */
+        footer { background: #1a1a1a; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; border-top: 1px solid #2c2a29; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><strong>RW CUSTOM FURNITURE</strong></div>
+                <div><span style="font-size: 0.85rem; font-weight: 700; color: #8b5a2b; text-transform: uppercase; letter-spacing: 1px;">Friends & Family Program</span></div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="container section-padding">
+            <div class="content-card-overlay">
+                
+                <section class="page-header">
+                    <span class="badge">From My Shop to Your Home</span>
+                    <h1>Custom Builds at Material Cost</h1>
+                    <p>Welcome! Whether you are a friend, a family member, or both, I’m truly honored and thankful you’re here.</p>
+                    <br>
+                    <p>As I grow <strong>RW Custom Furniture</strong>, my goal is twofold: I want to hone my craft and expand my portfolio, but more importantly, I want to help you live in comfort in your own home with items you can trust will last a lifetime and do exactly what they were designed to do. Every piece I build helps me grow my business, and in turn, I hope it helps you surround yourself in a place of peace and comfort.</p>
+                    <br>
+                    <p>Because we have found ourselves together, here, I’m offering to design and build custom items for you strictly <strong>at raw material cost</strong>. My design time and labor are entirely on me. You get custom, solid-wood furniture tailored to your space, and I get the privilege of building something meaningful to grow my shop.</p>
+                    <br>
+                    <p>Please feel free to share this link with your own friends and family—because in the end, we are all family.</p>
+                    
+                    <!-- Feature Image below text -->
+                    <img src="./assets/images/wood/custom-nursery-crib-adjustable.jpg" alt="Custom hard maple nursery crib handcrafted by RW Custom Furniture in Fort Collins CO" class="header-feature-img" loading="lazy">
+                </section>
+
+                <div class="grid-2">
+                    
+                    <!-- Left Column: How It Works & What We Can Build -->
+                    <div>
+                        <h2 style="margin-bottom: 25px;">How It Works</h2>
+                        
+                        <div class="process-step">
+                            <h3>1. Bring Me Your Ideas</h3>
+                            <p>Whether you need a major statement piece like a dining table, coffee table, or built-in bookshelf—or smaller home accents like serving trays, cutting boards, or layout pieces—send me your sketches, dimensions, or links to designs you love (Pinterest, Wayfair, or photos).</p>
+                        </div>
+
+                        <div class="process-step">
+                            <h3>2. Complimentary 3D CAD Design</h3>
+                            <p>I will translate your idea into a full 3D CAD model. We'll refine the proportions, joinery, and wood species together until you can clearly picture the exact piece in your room before a single board is cut.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <h3>3. Raw Material Cost Only</h3>
+                            <p>I calculate the exact board footage of hardwood (hard maple, white oak, walnut, red oak, etc.) and hardware required. You cover the raw material costs—no markup, zero labor fee.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <h3>4. Handcrafted Build & Delivery</h3>
+                            <p>I'll build your piece right here in my Fort Collins shop using traditional joinery methods built to last a lifetime, then deliver and install it in your home.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Request Form -->
+                    <div>
+                        <form action="https://formsubmit.co/reedwoyda@gmail.com" method="POST" class="contact-form">
+                            <!-- Hidden Subject Field for FormSubmit Email Filtering -->
+                            <input type="hidden" name="_subject" value="New Friends & Family Build Request!">
+                            <input type="hidden" name="_template" value="table">
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first_name">First Name</label>
+                                    <input type="text" id="first_name" name="first_name" class="form-control" placeholder="Reed" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last_name">Last Name</label>
+                                    <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Woyda" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="project_scope">What kind of piece are you thinking?</label>
+                                <select id="project_scope" name="project_scope" class="form-control" required>
+                                    <option value="" disabled selected>Select a build type...</option>
+                                    <option value="Dining Table / Bench Set">Dining Table or Bench Set</option>
+                                    <option value="Coffee Table / Side Tables">Coffee Table or End Tables</option>
+                                    <option value="Bookshelf / Storage / Cabinet">Bookshelf or Storage Cabinet</option>
+                                    <option value="Nursery / Bedroom Furniture">Nursery or Bedroom Build</option>
+                                    <option value="Small Accents (Trays, Cutting Boards, Layout)">Small Accent (Serving Tray, Board, etc.)</option>
+                                    <option value="Custom Idea / Other">Other Custom Build</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reference_links">Links to Design Inspiration or Photos</label>
+                                <input type="text" id="reference_links" name="reference_links" class="form-control" placeholder="Paste Pinterest, Wayfair, or web links here...">
+                                <div class="form-help">Have a photo or website link of something similar? Paste it above!</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="details">Describe Your Vision & Space</label>
+                                <textarea id="details" name="details" rows="5" class="form-control" placeholder="Tell me about the room, approximate dimensions, wood preferences (light vs. dark), or problems you want this piece to solve..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn">Submit Request</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Minimal Unlinked Footer -->
+    <footer>
+        <div class="container" style="line-height: 1.8;">
+            <p><strong>RW Custom Furniture — Friends & Family Program</strong></p>
+            <p>Handcrafted in Fort Collins, CO | Built to last a lifetime</p>
+            <p style="margin-top: 15px; font-size: 0.8rem; color: #888;">&copy; 2026 RW Custom Furniture. Private page for friends and family.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friends & Family Builds | RW Custom Furniture</title>
-    <meta name="description" content="Exclusive friends and family builds at raw material cost by RW Custom Furniture in Fort Collins, Colorado.">
+    <meta name="description" content="A win-win offer for custom builds at raw material cost by RW Custom Furniture in Fort Collins, Colorado.">
     
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Playfair+Display:400,700" rel="stylesheet">
     
@@ -24,7 +24,7 @@
         /* Basic Reset & Typography */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
-        /* Flexbox body with Parallax/Static Background Image Setup */
+        /* Flexbox body with Static/Parallax Background Image Setup */
         body { 
             display: flex; 
             flex-direction: column; 
@@ -49,10 +49,10 @@
         .section-padding { padding: 60px 0; }
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
         
-        /* Navigation Header */
+        /* Navigation (Fixed solid white header remains pinned at top) */
         header { padding: 20px 0; background: #fff; border-bottom: 1px solid #e8e5e1; position: sticky; top: 0; z-index: 100; }
         nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.1rem; letter-spacing: 1px; }
+        .nav-links a { margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
         
         /* Main Content Wrapper */
         .main-content { flex: 1; }
@@ -71,7 +71,7 @@
         /* Page Header Configuration */
         .page-header { padding: 20px 20px 30px 20px; text-align: center; }
         .page-header h1 { font-size: 3.2rem; margin-bottom: 15px; }
-        .page-header p { max-width: 780px; margin: 0 auto; color: #4a3f35; font-size: 1.1rem; line-height: 1.7; }
+        .page-header p { max-width: 780px; margin: 0 auto; color: #4a3f35; font-size: 1.05rem; line-height: 1.7; }
 
         /* Header Sample Image */
         .header-feature-img {
@@ -120,6 +120,7 @@
         .btn:hover { background: #2c2a29; color: #fff; }
 
         @media (max-width: 768px) {
+            .nav-links { display: none; }
             .grid-2, .form-row { grid-template-columns: 1fr; gap: 25px; }
             .content-card-overlay { padding: 20px; }
             .page-header h1 { font-size: 2.3rem; }
@@ -132,11 +133,18 @@
 </head>
 <body>
 
+    <!-- Full Main Site Navigation Bar Restored -->
     <header>
         <div class="container">
             <nav>
                 <div class="logo"><strong>RW CUSTOM FURNITURE</strong></div>
-                <div><span style="font-size: 0.85rem; font-weight: 700; color: #8b5a2b; text-transform: uppercase; letter-spacing: 1px;">Friends & Family Program</span></div>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/gallery">Portfolio</a>
+                    <a href="/handyman">Handyman Services</a>
+                    <a href="/consultation">Consultation</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -146,15 +154,12 @@
             <div class="content-card-overlay">
                 
                 <section class="page-header">
-                    <span class="badge">From My Shop to Your Home</span>
+                    <span class="badge">From My Shop To Your Home</span>
                     <h1>Custom Builds at Material Cost</h1>
-                    <p>Welcome! Whether you are a friend, a family member, or both, I’m truly honored and thankful you’re here.</p>
-                    <br>
-                    <p>As I grow <strong>RW Custom Furniture</strong>, my goal is twofold: I want to hone my craft and expand my portfolio, but more importantly, I want to help you live in comfort in your own home with items you can trust will last a lifetime and do exactly what they were designed to do. Every piece I build helps me grow my business, and in turn, I hope it helps you surround yourself in a place of peace and comfort.</p>
-                    <br>
-                    <p>Because we have found ourselves together, here, I’m offering to design and build custom items for you strictly <strong>at raw material cost</strong>. My design time and labor are entirely on me. You get custom, solid-wood furniture tailored to your space, and I get the privilege of building something meaningful to grow my shop.</p>
-                    <br>
-                    <p>Please feel free to share this link with your own friends and family—because in the end, we are all family.</p>
+                    <p>Welcome! Whether you are a friend or a family member I’m truly honored and thankful you’re here.</p>
+                    <p style="margin-top: 15px;">As I grow <strong>RW Custom Furniture</strong>, my goal is twofold: I want to hone my craft and expand my portfolio, but more importantly, I want to help you live in comfort in your own home with items you can trust will last a lifetime and do exactly what they were designed to do. Every piece I build helps me grow my business, and in turn, I hope it helps you surround yourself in a place of peace and comfort.</p>
+                    <p style="margin-top: 15px;">Because we have found ourselves together, here, I’m offering to design and build custom items for you strictly <strong>at raw material cost</strong>. My design time and labor are entirely on me. You get custom, solid-wood furniture tailored to your space, and I get the privilege of building something meaningful to grow my shop.</p>
+                    <p style="margin-top: 15px;">Please feel free to share this link with your own friends and family—because in the end, we are all family.</p>
                     
                     <!-- Feature Image below text -->
                     <img src="./assets/images/wood/custom-nursery-crib-adjustable.jpg" alt="Custom hard maple nursery crib handcrafted by RW Custom Furniture in Fort Collins CO" class="header-feature-img" loading="lazy">
@@ -178,7 +183,7 @@
 
                         <div class="process-step">
                             <h3>3. Raw Material Cost Only</h3>
-                            <p>I calculate the exact board footage of hardwood (hard maple, white oak, walnut, red oak, etc.) and hardware required. You cover the raw material costs—no markup, zero labor fee.</p>
+                            <p>I calculate the exact board footage of hardwood (hard maple, white oak, walnut, cherry, etc.) and hardware required. You cover the raw material costs—no markup, zero labor fee.</p>
                         </div>
 
                         <div class="process-step">
@@ -249,12 +254,13 @@
         </div>
     </div>
 
-    <!-- Minimal Unlinked Footer -->
+    <!-- Full Footer Component -->
     <footer>
         <div class="container" style="line-height: 1.8;">
-            <p><strong>RW Custom Furniture — Friends & Family Program</strong></p>
-            <p>Handcrafted in Fort Collins, CO | Built to last a lifetime</p>
-            <p style="margin-top: 15px; font-size: 0.8rem; color: #888;">&copy; 2026 RW Custom Furniture. Private page for friends and family.</p>
+            <p><strong>RW Custom Furniture & Craftsman Handyman Services</strong></p>
+            <p>Based in Fort Collins, CO | Serving Fort Collins, Loveland, and the Front Range</p>
+            <p style="margin-top: 5px;">Ready to start? <a href="/consultation" style="text-decoration: underline; font-weight: 700;">Request a Consultation</a></p>
+            <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa;">&copy; 2026 RW Custom Furniture. All Rights Reserved.</p>
         </div>
     </footer>
 

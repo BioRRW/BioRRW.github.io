@@ -72,9 +72,15 @@
     </script>
 
     <title>RW Custom Furniture | Custom Woodworking & Craftsman Handyman</title>
-    <link rel="preload" as="image" href="./assets/images/wood/custom-built-in-wall-bookshelf.webp">
+    
+    <!-- Hero Image Preload -->
+    <link rel="preload" as="image" href="./assets/images/wood/custom-built-in-wall-bookshelf.webp" fetchpriority="high">
+    
     <meta name="description" content="Boutique fine furniture design, custom woodworking, and precision craftsman handyman services in Fort Collins, CO. Bringing master-carpenter attention to detail to every home repair.">
     
+    <!-- Google Fonts Preconnects to stop Render Blocking -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Playfair+Display:400,700&display=swap" rel="stylesheet">
     
     <style>
@@ -396,7 +402,7 @@
                         <img src="./assets/images/wood/custom-dresser-dovetail-maple.webp" 
                             alt="Close-up detail of hand-cut sliding dovetail joinery" 
                             style="width: 50%; height: 100%; object-fit: cover;" 
-                            fetchpriority="high">
+                            loading="lazy">
                         <img src="./assets/images/wood/mortise-tenon-custom-furniture.webp" 
                             alt="Mortise and tenon joinery detail" 
                             style="width: 50%; height: 100%; object-fit: cover;" 

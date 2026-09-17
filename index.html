@@ -106,8 +106,20 @@
            2. NAVIGATION
            ========================================= */
         header { padding: 20px 0; background: #fff; border-bottom: 1px solid #e8e5e1; position: sticky; top: 0; z-index: 100; }
-        nav { display: flex; justify-content: space-between; align-items: center; }
+        nav { display: flex; justify-content: space-between; align-items: center; position: relative; }
         .nav-links a { margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+
+        /* Hamburger Button Styling (Hidden on Desktop) */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: #2c2a29;
+            cursor: pointer;
+            padding: 5px;
+            line-height: 1;
+        }
 
         /* =========================================
            3. BACKGROUND IMAGES & PARALLAX SECTIONS
@@ -157,7 +169,31 @@
            ========================================= */
         @media (max-width: 768px) {
             .grid-2, .grid-3 { grid-template-columns: 1fr; }
-            .nav-links { display: none; }
+            .mobile-menu-toggle { display: block; }
+            
+            .nav-links { 
+                display: none; 
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: -20px;
+                right: -20px;
+                background: #ffffff;
+                padding: 20px 0;
+                border-bottom: 1px solid #e8e5e1;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                margin: 12px 0;
+                font-size: 1rem;
+            }
+
             .hero, .parallax-divider, .parallax-divider-2 { background-attachment: scroll; }
         }
         
@@ -272,7 +308,11 @@
                 <div class="logo">
                     <strong>RW Custom Furniture</strong> 
                 </div>
-                <div class="nav-links">
+                
+                <!-- Toggle Button for Mobile -->
+                <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">☰</button>
+                
+                <div class="nav-links" id="nav-links">
                     <a href="/index">Home</a>
                     <a href="/about">About</a>
                     <a href="/gallery">Portfolio</a>
@@ -454,8 +494,21 @@
         </div>
     </div>
 
+    <!-- JavaScript for Mobile Menu Toggle & Newsletter Modal -->
     <script>
     document.addEventListener("DOMContentLoaded", function () {
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+        }
+
+        // Newsletter Modal Logic
         const modal = document.getElementById("newsletter-modal");
         const closeBtn = document.getElementById("close-modal");
         const form = document.getElementById("google-newsletter-form");

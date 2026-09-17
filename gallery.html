@@ -41,7 +41,7 @@
         "@type": "GeoCoordinates",
         "latitude": 40.5853,
         "longitude": -105.0844
-    	},
+        },
       "areaServed": [
         {"@type": "AdministrativeArea", "name": "Fort Collins"},
         {"@type": "AdministrativeArea", "name": "Loveland"},
@@ -66,9 +66,21 @@
         
         /* Navigation */
         header { padding: 20px 0; background: #fff; border-bottom: 1px solid #e8e5e1; position: sticky; top: 0; z-index: 100; }
-        nav { display: flex; justify-content: space-between; align-items: center; }
+        nav { display: flex; justify-content: space-between; align-items: center; position: relative; }
         .nav-links a { margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
         
+        /* Hamburger Button Styling (Hidden on Desktop) */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: #2c2a29;
+            cursor: pointer;
+            padding: 5px;
+            line-height: 1;
+        }
+
         /* Page Header */
         .page-header { padding: 60px 20px 20px 20px; text-align: center; }
         .page-header h1 { font-size: 3.5rem; margin-bottom: 15px; }
@@ -92,17 +104,6 @@
         .gallery-overlay h3 { color: #fff; margin-bottom: 10px; font-size: 1.3rem; transform: translateY(20px); opacity: 0; transition: all 0.4s ease 0.1s; }
         .gallery-item:hover .gallery-overlay h3 { transform: translateY(0); opacity: 1; }
 
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .gallery-grid { grid-template-columns: 1fr; }
-            /* Mobile touch UX enhancement: forces descriptions to display clean on mobile screens */
-            .gallery-overlay { height: auto; background: rgba(26,26,26,0.85); position: relative; padding: 15px 20px; }
-            .gallery-overlay h3 { opacity: 1; transform: translateY(0); font-size: 1.1rem; }
-            .gallery-item { min-height: auto; }
-            .gallery-item img { height: 280px; }
-        }
-        footer { background: #1a1a1a; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; margin-top: 60px; }
-
         /* Styling for the new smaller, italicized subtext */
         .gallery-subtext {
             font-size: 0.9rem;
@@ -122,14 +123,47 @@
             opacity: 1;
         }
 
-        /* Keeps it looking sharp and readable inside your existing mobile styling */
         @media (max-width: 768px) {
+            .mobile-menu-toggle { display: block; }
+            
+            .nav-links { 
+                display: none; 
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: -20px;
+                right: -20px;
+                background: #ffffff;
+                padding: 20px 0;
+                border-bottom: 1px solid #e8e5e1;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                margin: 12px 0;
+                font-size: 1rem;
+            }
+
+            .gallery-grid { grid-template-columns: 1fr; }
+            /* Mobile touch UX enhancement: forces descriptions to display clean on mobile screens */
+            .gallery-overlay { height: auto; background: rgba(26,26,26,0.85); position: relative; padding: 15px 20px; }
+            .gallery-overlay h3 { opacity: 1; transform: translateY(0); font-size: 1.1rem; }
             .gallery-subtext {
                 opacity: 1;
                 transform: translateY(0);
                 font-size: 0.85rem;
             }
+            .gallery-item { min-height: auto; }
+            .gallery-item img { height: 280px; }
+            .page-header h1 { font-size: 2.5rem; }
         }
+        
+        footer { background: #1a1a1a; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; margin-top: 60px; }
     </style>
 </head>
 <body>
@@ -138,7 +172,11 @@
         <div class="container">
             <nav>
                 <div class="logo"><strong>RW Custom Furniture</strong></div>
-                <div class="nav-links">
+                
+                <!-- Toggle Button for Mobile -->
+                <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">☰</button>
+                
+                <div class="nav-links" id="nav-links">
                     <a href="/index">Home</a>
                     <a href="/about">About</a>
                     <a href="/gallery" style="color: #8b5a2b;">Portfolio</a>
@@ -186,16 +224,6 @@
             <figure class="gallery-item"><img src="./assets/images/wood/blum-softclose-drawer-hard-maple.jpg" alt="Hard maple drawer fitted with Blum soft-close hardware" loading="lazy"><figcaption class="gallery-overlay"><h3>Blum Soft-Close Hardware</h3></figcaption></figure>
         </div>
         
-         <!---
-            <div class="category-header">
-                <h2>Craftsman Handyman & Home Repairs</h2>
-            </div>
-            <div class="gallery-grid">
-                <figure class="gallery-item"><img src="./assets/images/wood/fence-gate-repair-fort-collins.jpg" alt="Craftsman Handyman Services - Structural wooden fence and gate repair in Fort Collins CO" loading="lazy"><figcaption class="gallery-overlay"><h3>Fence & Gate Structural Repair</h3></figcaption></figure>
-                <figure class="gallery-item"><img src="./assets/images/wood/deck-board-restoration-repair.jpg" alt="Craftsman Handyman Services - Custom deck framing and outdoor board repairs" loading="lazy"><figcaption class="gallery-overlay"><h3>Deck Restoration & Maintenance</h3></figcaption></figure>
-                <figure class="gallery-item"><img src="./assets/images/wood/tv-mounting-drywall-anchoring.jpg" alt="Craftsman Handyman Services - Secure wall hanging and heavy TV mounting" loading="lazy"><figcaption class="gallery-overlay"><h3>Precision Wall Mounting & Hanging</h3></figcaption></figure>
-            </div>
-        -->
         <div class="category-header">
             <h2>Wedding Arches</h2>
         </div>
@@ -300,6 +328,21 @@
             <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa;">&copy; 2026 RW Custom Furniture. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>

@@ -48,10 +48,22 @@
 
         /* Fixed Navigation Header matching your site theme */
         header.site-header { padding: 20px 0; background: #fff; border-bottom: 1px solid #e8e5e1; position: sticky; top: 0; z-index: 100; width: 100%; }
-        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; position: relative; }
         .logo { font-family: 'Montserrat', sans-serif; }
         .nav-links a { margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; text-decoration: none; color: inherit; transition: color 0.3s; }
         .nav-links a:hover { color: #8b5a2b; }
+
+        /* Hamburger Button Styling (Hidden on Desktop) */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: #2c2a29;
+            cursor: pointer;
+            padding: 5px;
+            line-height: 1;
+        }
 
         /* Main Content Layout Adjustments */
         main { flex: 1; max-width: 800px; width: 100%; margin: 60px auto; padding: 0 20px; }
@@ -84,7 +96,31 @@
         .form-btn ion-icon { font-size: 1.2rem; }
 
         @media (max-width: 768px) {
-            .nav-links { display: none; }
+            .mobile-menu-toggle { display: block; }
+            
+            .nav-links { 
+                display: none; 
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: -20px;
+                right: -20px;
+                background: #ffffff;
+                padding: 20px 0;
+                border-bottom: 1px solid #e8e5e1;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                margin: 12px 0;
+                font-size: 1rem;
+            }
+
             .input-wrapper { grid-template-columns: 1fr; gap: 20px; }
             .content-card-overlay { padding: 30px 20px; }
             main { margin: 30px auto; }
@@ -102,7 +138,11 @@
     <header class="site-header">
         <div class="nav-container">
             <div class="logo"><strong>RW Custom Furniture</strong></div>
-            <div class="nav-links">
+            
+            <!-- Toggle Button for Mobile -->
+            <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">☰</button>
+            
+            <div class="nav-links" id="nav-links">
                 <a href="/">Home</a>
                 <a href="/about">About</a>
                 <a href="/gallery">Portfolio</a>
@@ -136,7 +176,6 @@
 
                         <textarea name="entry.723078861" class="form-input" placeholder="Tell me about your custom furniture commission or residential home care needs..." required></textarea>
 
-                        <!-- Removed the 'disabled' attribute so your users can actually send messages immediately -->
                         <button class="form-btn" type="submit">
                             <ion-icon name="paper-plane"></ion-icon>
                             <span>Send Message</span>
@@ -158,6 +197,21 @@
             <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa;">&copy; 2026 RW Custom Furniture. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+                });
+            }
+        });
+    </script>
 
     <!-- Icon and Functional Support Scripts -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

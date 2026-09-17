@@ -1,0 +1,11 @@
+# robots.txt for RW Custom Furniture (https://rwcustomfurniture.com)
+
+User-agent: *
+Allow: /
+
+# Prevent search engines from indexing the private Friends & Family page
+Disallow: /to-my-loved-ones
+Disallow: /to-my-loved-ones.html
+
+# Sitemap location
+Sitemap: https://rwcustomfurniture.com/sitemap.xml

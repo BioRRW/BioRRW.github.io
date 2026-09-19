@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKDEGPV486"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HKDEGPV486');
+    </script>
+
+    <link rel="icon" href="https://rwcustomfurniture.com/assets/images/wood/RW_logo_custom_furniture.png" type="image/png" sizes="any">
+    <link rel="canonical" href="https://rwcustomfurniture.com/store">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Store | RW Custom Furniture</title>
+    <meta name="description" content="Shop ready-to-own custom woodworking builds, hand-crafted furniture, and local builds in Fort Collins, CO.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Playfair+Display:400,700&display=swap" rel="stylesheet">
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #2c2a29; background-color: #faf9f7; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; margin-bottom: 1rem; color: #1a1a1a; }
+        a { text-decoration: none; color: inherit; transition: color 0.3s; }
+        a:hover { color: #8b5a2b; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .section-padding { padding: 80px 0; }
+        
+        /* Header & Navigation */
+        header { padding: 20px 0; background: #fff; border-bottom: 1px solid #e8e5e1; position: sticky; top: 0; z-index: 100; }
+        nav { display: flex; justify-content: space-between; align-items: center; position: relative; }
+        .nav-links a { margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+        .nav-links a.active { color: #8b5a2b; border-bottom: 2px solid #8b5a2b; padding-bottom: 4px; }
+        
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: #2c2a29;
+            cursor: pointer;
+            padding: 5px;
+            line-height: 1;
+        }
+
+        /* Buttons */
+        .btn { display: inline-block; padding: 12px 30px; background: #4a3f35; color: #fff; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; font-weight: 700; transition: background 0.3s; border: none; cursor: pointer; }
+        .btn:hover { background: #2c2a29; color: #fff; }
+        .btn-outline { background: transparent; border: 2px solid #fff; color: #fff; }
+        .btn-outline:hover { background: #fff; color: #2c2a29; }
+
+        /* Store Specific Styles */
+        .store-hero { background: #2c2a29; color: #fff; padding: 60px 20px; text-align: center; }
+        .store-hero h1 { color: #fff; font-size: 2.8rem; margin-bottom: 10px; }
+        .store-hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 25px auto; color: #dcd7d0; }
+
+        .store-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .product-card {
+            background: #ffffff;
+            border: 1px solid #e8e5e1;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .product-image-wrap {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+            background: #f0eee9;
+        }
+
+        .product-image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Sold Banner Across Bottom of Image */
+        .sold-banner {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(139, 0, 0, 0.88);
+            color: #ffffff;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 0.95rem;
+        }
+
+        .product-details {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title { font-size: 1.3rem; margin-bottom: 8px; }
+        .product-price { font-size: 1.2rem; font-weight: 700; color: #4a3f35; margin-bottom: 12px; }
+        .product-desc { font-size: 0.9rem; color: #555; margin-bottom: 20px; flex-grow: 1; }
+
+        .btn-disabled {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #cccccc;
+            color: #666666;
+            border: none;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-align: center;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle { display: block; }
+            .nav-links { 
+                display: none; 
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: -20px;
+                right: -20px;
+                background: #ffffff;
+                padding: 20px 0;
+                border-bottom: 1px solid #e8e5e1;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+                text-align: center;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { margin: 12px 0; font-size: 1rem; }
+        }
+
+        footer { background: #1a1a1a; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <strong>RW Custom Furniture</strong> 
+                </div>
+                
+                <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">☰</button>
+                
+                <div class="nav-links" id="nav-links">
+                    <a href="/index">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/gallery">Portfolio</a>
+                    <a href="/handyman">Handyman Services</a>
+                    <a href="/store" class="active">Store</a>
+                    <a href="/consultation">Consultation</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="store-hero">
+            <div class="container">
+                <h1>Available Builds & Inventory</h1>
+                <p>Ready-to-own handcrafted wooden builds, bespoke accent pieces, and previous custom items.</p>
+                
+                <!-- CTA Button redirecting to Consultation -->
+                <div>
+                    <a href="/consultation" class="btn btn-outline">Like Something You See? Request a Commission</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="store-grid">
+                    
+                    <!-- Product Card: Custom Wooden Wedding Arch -->
+                    <div class="product-card">
+                        <div class="product-image-wrap">
+                            <img src="./assets/images/wood/custom-wedding-arch-wood.webp" alt="Handcrafted Custom Wooden Wedding Arch">
+                            <div class="sold-banner">SOLD</div>
+                        </div>
+                        <div class="product-details">
+                            <h2 class="product-title">Handcrafted Wooden Wedding Arch</h2>
+                            <div class="product-price">$200</div>
+                            <p class="product-desc">Custom set of wooden wedding arches. Designed to disassemble cleanly for transport and reassembly on site.</p>
+                            <button class="btn-disabled" disabled>Item Sold</button>
+                        </div>
+                    </div>
+
+                <!-- ===== ADD NEW PRODUCTS HERE ======= -->
+
+                <!-- ============================================================== -->
+                <!-- PRODUCT CARD TEMPLATE (Uncomment and duplicate to add a new item) -->
+                <!-- ============================================================== -->
+                <!--
+                <div class="product-card">
+                    <div class="product-image-wrap">
+                        /* Replace src with your image path and alt with item description */
+                        <img src="./assets/images/wood/YOUR-IMAGE-NAME.webp" alt="Description of the custom piece">
+                        
+                        /* OPTIONAL: Uncomment the banner below if the item is sold or on hold */
+                        /* <div class="sold-banner">SOLD</div> */
+                    </div>
+                    <div class="product-details">
+                        <h2 class="product-title">Item Name Here</h2>
+                        <div class="product-price">$000</div>
+                        <p class="product-desc">Short description of materials, joinery methods, dimensions, and finish details.</p>
+                        
+                        /* ACTIVE ITEM BUTTON (Directs client to contact/inquire) */
+                        <a href="/consultation" class="btn" style="text-align: center;">Inquire to Buy</a>
+                        
+                        /* DISABLED ITEM BUTTON (Uncomment if sold, and comment out the active button above) */
+                        /* <button class="btn-disabled" disabled>Item Sold</button> */
+                    </div>
+                </div>
+                -->
+                <!-- ============================================================== -->
+                <!-- END PRODUCT CARD TEMPLATE                                      -->
+                <!-- ============================================================== -->
+
+                
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container" style="line-height: 1.8;">
+            <p><strong>RW Custom Furniture & Craftsman Handyman Services</strong></p>
+            <p>Based in Fort Collins, CO | Serving Fort Collins, Loveland, and the Front Range</p>
+            <p style="margin-top: 5px; font-weight: 500;">
+                <a href="tel:+15073172792" style="color: #fff; text-decoration: underline;">(507) 317-2792</a> | 
+                <a href="mailto:reed@rwcustomfurniture.com" style="color: #fff; text-decoration: underline;">reed@rwcustomfurniture.com</a>
+            </p>
+            <p style="margin-top: 15px;">
+                Ready to start? <a href="/consultation" style="text-decoration: underline; font-weight: 700;">Request a Consultation</a> 
+                &nbsp;|&nbsp; 
+                <a href="/food-trucks" style="text-decoration: underline; font-weight: 700;">Grab a Beer in FoCo</a>
+            </p>
+            <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa;">&copy; 2026 RW Custom Furniture. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+        }
+    });
+    </script>
+</body>
+</html>

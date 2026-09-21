@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-09-20 12:15:31",
+  "last_updated": "2026-09-21 12:16:57",
   "breweries": {
     "Stodgy Brewing": [
-      "Saturday, 9/19 La Piadina 12:00 PM - 8:00 PM",
       "Sunday, 9/20 La Campechana 12:00 PM - 7:00 PM",
       "Monday, 9/21 Dumpling Hut 4:00 PM - 8:00 PM",
       "Tuesday, 9/22 Georgia Boys BBQ 4:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Wednesday, 10/14 Yes Chef! 4:00 PM - 8:00 PM",
       "Thursday, 10/15 Scratch Quisine 4:00 PM - 8:00 PM",
       "Friday, 10/16 Las Catrinas 1:00 PM - 8:00 PM",
-      "Saturday, 10/17 La Piadina 12:00 PM - 8:00 PM"
+      "Saturday, 10/17 La Piadina 12:00 PM - 8:00 PM",
+      "Sunday, 10/18 La Campechana 12:00 PM - 7:00 PM"
     ],
     "Zwei Brewing": [
       "Friday, September 18 - Double Wide Burgers",
@@ -51,7 +51,6 @@
     ],
     "Maxline Brewing": [],
     "Mythmaker Brewing": [
-      "Sunday, Sep 20 - Culture Alley",
       "Monday, Sep 21 - Red Cat Food Truck",
       "Tuesday, Sep 22 - Dero's African Food",
       "Wednesday, Sep 23 - Scratch Quisine",
@@ -64,8 +63,8 @@
       "Wednesday, Sep 30 - Santa Elena's",
       "Thursday, Oct 1 - The Dumpling Hut",
       "Friday, Oct 2 - Scratch Quisine",
-      "Saturday, Oct 3 - RAUCH FEST 2026",
       "Saturday, Oct 3 - Smoke Post Food Truck",
+      "Saturday, Oct 3 - RAUCH FEST 2026",
       "Sunday, Oct 4 - Culture Alley",
       "Monday, Oct 5 - Scrooge Maki",
       "Tuesday, Oct 6 - Dero's African Food",
@@ -81,10 +80,10 @@
       "Friday, Oct 16 - The Dumpling Hut",
       "Saturday, Oct 17 - The Dumpling Hut",
       "Sunday, Oct 18 - Culture Alley",
-      "Monday, Oct 19 - Scrooge Maki"
+      "Monday, Oct 19 - Scrooge Maki",
+      "Tuesday, Oct 20 - Dero's African Food"
     ],
     "New Belgium": [
-      "Sunday, September 20, 2026 - Fork Yeah!",
       "Friday, September 25, 2026 - Antojitos DelSureste",
       "Saturday, September 26, 2026 - Fat Tomato Inc.",
       "Sunday, September 27, 2026 - Fork Yeah!",

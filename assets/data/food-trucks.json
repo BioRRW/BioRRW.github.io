@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-09-21 12:16:57",
+  "last_updated": "2026-09-22 12:16:47",
   "breweries": {
     "Stodgy Brewing": [
-      "Sunday, 9/20 La Campechana 12:00 PM - 7:00 PM",
       "Monday, 9/21 Dumpling Hut 4:00 PM - 8:00 PM",
       "Tuesday, 9/22 Georgia Boys BBQ 4:00 PM - 8:00 PM",
       "Wednesday, 9/23 Shell on Wheels 1:00 PM - 8:00 PM",
@@ -16,7 +15,6 @@
       "Thursday, 10/1 Scratch Quisine 4:00 PM - 8:00 PM",
       "Friday, 10/2 Las Catrinas 1:00 PM - 8:00 PM",
       "Saturday, 10/3 La Piadina 12:00 PM - 8:00 PM",
-      "Saturday, 10/3 Sams Bday 6:00 PM - 6:00 PM",
       "Sunday, 10/4 La Campechana 12:00 PM - 7:00 PM",
       "Monday, 10/5 Dumpling Hut 4:00 PM - 8:00 PM",
       "Tuesday, 10/6 Georgia Boys BBQ 4:00 PM - 8:00 PM",
@@ -31,13 +29,11 @@
       "Thursday, 10/15 Scratch Quisine 4:00 PM - 8:00 PM",
       "Friday, 10/16 Las Catrinas 1:00 PM - 8:00 PM",
       "Saturday, 10/17 La Piadina 12:00 PM - 8:00 PM",
-      "Sunday, 10/18 La Campechana 12:00 PM - 7:00 PM"
+      "Sunday, 10/18 La Campechana 12:00 PM - 7:00 PM",
+      "Monday, 10/19 Dumpling Hut 4:00 PM - 8:00 PM",
+      "Tuesday, 10/20 Georgia Boys BBQ 4:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
-      "Friday, September 18 - Double Wide Burgers",
-      "Saturday, September 19 - Schnitzel Wagon",
-      "Saturday, September 19 - Pierogies Factory",
-      "Sunday, September 20 - Shell On Wheels",
       "Monday, September 21 - Tacos El Torito Loko",
       "Tuesday, September 22 - La Piadina",
       "Wednesday, September 23 - NOCO Pizza Company",
@@ -51,13 +47,11 @@
     ],
     "Maxline Brewing": [],
     "Mythmaker Brewing": [
-      "Monday, Sep 21 - Red Cat Food Truck",
       "Tuesday, Sep 22 - Dero's African Food",
       "Wednesday, Sep 23 - Scratch Quisine",
       "Thursday, Sep 24 - La Piadina",
-      "Friday, Sep 25 - NoCo Pizza",
       "Saturday, Sep 26 - Santa Elana's",
-      "Sunday, Sep 27 - Culture Alley",
+      "Sunday, Sep 27 - The Dumpling Hut",
       "Monday, Sep 28 - Scratch Quisine",
       "Tuesday, Sep 29 - Dero's African Food",
       "Wednesday, Sep 30 - Santa Elena's",
@@ -81,7 +75,8 @@
       "Saturday, Oct 17 - The Dumpling Hut",
       "Sunday, Oct 18 - Culture Alley",
       "Monday, Oct 19 - Scrooge Maki",
-      "Tuesday, Oct 20 - Dero's African Food"
+      "Tuesday, Oct 20 - Dero's African Food",
+      "Wednesday, Oct 21 - Double Wide Burgers"
     ],
     "New Belgium": [
       "Friday, September 25, 2026 - Antojitos DelSureste",

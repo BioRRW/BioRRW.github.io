@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Main Homepage (Updated Today) -->
+  <!-- Main Homepage -->
   <url>
     <loc>https://rwcustomfurniture.com/</loc>
-    <lastmod>2026-06-25T08:00:00+00:00</lastmod>
+    <lastmod>2026-09-23T08:00:00+00:00</lastmod>
     <priority>1.00</priority>
+  </url>
+
+  <!-- Custom Dining Tables Landing Page -->
+  <url>
+    <loc>https://rwcustomfurniture.com/custom-dining-tables-fort-collins</loc>
+    <lastmod>2026-09-23T08:00:00+00:00</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Custom Coffee Tables Landing Page -->
+  <url>
+    <loc>https://rwcustomfurniture.com/custom-coffee-tables-fort-collins</loc>
+    <lastmod>2026-09-23T08:00:00+00:00</lastmod>
+    <priority>0.90</priority>
   </url>
 
   <!-- About Page -->
@@ -15,10 +29,10 @@
     <priority>0.80</priority>
   </url>
 
-  <!-- Portfolio / Gallery (Updated Today) -->
+  <!-- Portfolio / Gallery -->
   <url>
     <loc>https://rwcustomfurniture.com/gallery</loc>
-    <lastmod>2026-06-25T08:00:00+00:00</lastmod>
+    <lastmod>2026-09-23T08:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 

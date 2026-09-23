@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-09-22 12:16:47",
+  "last_updated": "2026-09-23 12:17:16",
   "breweries": {
     "Stodgy Brewing": [
-      "Monday, 9/21 Dumpling Hut 4:00 PM - 8:00 PM",
       "Tuesday, 9/22 Georgia Boys BBQ 4:00 PM - 8:00 PM",
       "Wednesday, 9/23 Shell on Wheels 1:00 PM - 8:00 PM",
       "Thursday, 9/24 Scrooge Maki 4:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Saturday, 10/17 La Piadina 12:00 PM - 8:00 PM",
       "Sunday, 10/18 La Campechana 12:00 PM - 7:00 PM",
       "Monday, 10/19 Dumpling Hut 4:00 PM - 8:00 PM",
-      "Tuesday, 10/20 Georgia Boys BBQ 4:00 PM - 8:00 PM"
+      "Tuesday, 10/20 Georgia Boys BBQ 4:00 PM - 8:00 PM",
+      "Wednesday, 10/21 Shell on Wheels 1:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Monday, September 21 - Tacos El Torito Loko",
@@ -47,7 +47,6 @@
     ],
     "Maxline Brewing": [],
     "Mythmaker Brewing": [
-      "Tuesday, Sep 22 - Dero's African Food",
       "Wednesday, Sep 23 - Scratch Quisine",
       "Thursday, Sep 24 - La Piadina",
       "Saturday, Sep 26 - Santa Elana's",
@@ -76,7 +75,8 @@
       "Sunday, Oct 18 - Culture Alley",
       "Monday, Oct 19 - Scrooge Maki",
       "Tuesday, Oct 20 - Dero's African Food",
-      "Wednesday, Oct 21 - Double Wide Burgers"
+      "Wednesday, Oct 21 - Double Wide Burgers",
+      "Thursday, Oct 22 - Scratch Quisine"
     ],
     "New Belgium": [
       "Friday, September 25, 2026 - Antojitos DelSureste",

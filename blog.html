@@ -10,61 +10,19 @@
     </script>
 
     <link rel="icon" href="https://rwcustomfurniture.com/assets/images/wood/RW_logo_custom_furniture.webp" type="image/png" sizes="any">
-    <link rel="canonical" href="https://rwcustomfurniture.com/faq">
+    <link rel="canonical" href="https://rwcustomfurniture.com/blog">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- FAQPage Schema for Google Rich Snippets -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What areas do you serve?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "RW Custom Furniture is based in Fort Collins, Colorado, and serves homeowners throughout Northern Colorado, including Fort Collins, Loveland, Windsor, Timnath, Berthoud, Longmont, and surrounding Front Range communities."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does a custom furniture build take?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most custom dining tables, coffee tables, and heirloom builds take 3 to 6 weeks from initial 3D CAD design approval to personal home delivery. This timeline allows for proper timber selection, wood acclimation to Colorado's dry climate, precision joinery, and natural oil curing."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why is solid hardwood worth the investment over particle board or MDF?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Mass-produced flat-pack furniture relies on particle board or MDF coated in thin paper veneers. Over 1 to 3 years, engineered wood absorbs atmospheric humidity, sags under weight, peels at the seams, and crumbles when moved. 100% solid regional hardwoods like Red Oak, Hard Maple, and Black Walnut offer unmatched structural strength, will never peel or sag, and can be sanded or refinished for generations."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are VOCs and why do I use zero-VOC, non-toxic finishes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "VOCs (Volatile Organic Compounds) are toxic airborne chemicals found in synthetic polyurethanes, commercial lacquers, and particle board glues that off-gas into your home for months or years. I finish every custom piece with 100% non-toxic, zero-VOC natural oils (such as pure tung oil and hardwax finishes) and shellac. They are food-safe, child-safe, and pet-safe, protecting your family's indoor air quality while accentuating natural wood grain."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <title>Custom Furniture FAQ Fort Collins | RW Custom Furniture</title>
-    <meta name="description" content="Frequently asked questions about custom hardwood furniture builds in Fort Collins, CO. Learn about build timelines, service areas, solid wood benefits, and zero-VOC non-toxic finishes.">
+    <title>Custom Woodworking Blog Fort Collins | RW Custom Furniture</title>
+    <meta name="description" content="Insights from the RW Custom Furniture shop floor. Learn about sustainable materials, zero-VOC finishes, traditional joinery, and custom furniture design in Northern Colorado.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Playfair+Display:400,700&display=swap" rel="stylesheet">
 
     <style>
+        /* GLOBAL STYLES IMPORTED FROM FAQ */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #2c2a29; background-color: #faf9f7;}
         h1, h2, h3 { font-family: 'Playfair Display', serif; margin-bottom: 1rem; color: #1a1a1a; }
@@ -80,8 +38,6 @@
 
         .btn { display: inline-block; padding: 12px 30px; background: #4a3f35; color: #fff; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; transition: all 0.3s ease; border: none; cursor: pointer; font-weight: 700; }
         .btn:hover { background: #2c2a29; color: #fff; }
-        .btn-cta { background: #ffffff; color: #1a1a1a; border: 2px solid #ffffff; box-shadow: 0 4px 15px rgba(255, 255, 255, 0.25); }
-        .btn-cta:hover { background: #f0ebe1; color: #1a1a1a; border-color: #f0ebe1; }
 
         header { padding: 20px 0; background: #fff; border-bottom: 1px solid #e8e5e1; position: sticky; top: 0; z-index: 100; }
         nav { display: flex; justify-content: space-between; align-items: center; }
@@ -99,40 +55,51 @@
         .hero h1 { font-size: 3rem; margin-bottom: 15px; color: #fff; }
         .hero-subhead { max-width: 700px; margin: 0 auto; font-size: 1.1rem; font-weight: 300; }
 
-        /* FAQ Card Styling */
-        .faq-card {
+        /* BLOG CARD STYLING (Adapted from FAQ cards) */
+        .blog-card {
             background: #ffffff;
-            padding: 35px;
+            padding: 40px;
             border-radius: 6px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.04);
             border: 1px solid #e8e5e1;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             text-align: left;
         }
-
-        .faq-card h2 {
-            font-size: 1.4rem;
+        .blog-card h2 {
+            font-size: 1.8rem;
             color: #4a3f35;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
+            margin-bottom: 8px;
+            line-height: 1.3;
         }
-
-        .faq-card h2::before {
-            content: "Q.";
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
+        .blog-meta {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             color: #8b5a2b;
-            font-size: 1.6rem;
-            line-height: 1;
+            margin-bottom: 20px;
+            font-weight: 600;
         }
-
-        .faq-card p {
-            font-size: 0.98rem;
+        .blog-meta span {
+            color: #666;
+        }
+        .blog-card p {
+            font-size: 1rem;
             color: #444;
             line-height: 1.7;
-            padding-left: 32px;
+            margin-bottom: 20px;
+        }
+        .read-more {
+            display: inline-block;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #8b5a2b;
+            padding-bottom: 2px;
+        }
+        .read-more:hover {
+            color: #8b5a2b;
         }
 
         @media (max-width: 768px) {
@@ -141,8 +108,7 @@
             .nav-links.active { display: flex; }
             .nav-links a { margin: 12px 0; }
             .hero h1 { font-size: 2.2rem; }
-            .faq-card { padding: 25px 20px; }
-            .faq-card p { padding-left: 0; margin-top: 8px; }
+            .blog-card { padding: 30px 20px; }
         }
 
         footer { background: #1a1a1a; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; }
@@ -153,7 +119,6 @@
     <header>
         <div class="container">
             <nav>
-
                 <div class="logo">
                     <a href="index.html" class="btn" style="padding: 8px 15px; font-size: 0.85rem;">RW Custom Furniture</a>
                 </div>
@@ -164,8 +129,8 @@
                     <a href="/gallery">Portfolio</a>
                     <a href="/store">Store</a>
                     <a href="/consultation">Consultation</a>
-                    <a href="/blog.html">Blog</a>
-                    <a href="/faq" style="color: #8b5a2b;">FAQ</a>
+                    <a href="/blog" style="color: #8b5a2b;">Blog</a> <!-- Blog is highlighted -->
+                    <a href="/faq">FAQ</a>
                 </div>
             </nav>
         </div>
@@ -175,43 +140,50 @@
         <!-- HERO SECTION -->
         <section class="hero">
             <div class="container">
-                <h1>Frequently Asked Questions</h1>
-                <p class="hero-subhead">Everything you need to know about custom woodworking, material safety, build timelines, and delivery in Fort Collins, Colorado.</p>
+                <h1>From the Shop Floor</h1>
+                <p class="hero-subhead">Insights on sustainable materials, traditional joinery, and custom furniture design in Northern Colorado.</p>
             </div>
         </section>
 
-        <!-- FAQ LIST SECTION -->
+        <!-- BLOG FEED SECTION -->
         <section class="section-padding bg-light">
-            <div class="container">
+            <div class="container" style="max-width: 800px;">
                 
-                <!-- FAQ Item 1: Service Areas -->
-                <article class="faq-card">
-                    <h2>What areas do you serve?</h2>
-                    <p>I am based in Fort Collins, Colorado, and serve homeowners throughout Northern Colorado, including Fort Collins (Old Town, Southeast, Ridgeview), Loveland, Windsor, Timnath, Berthoud, Longmont, and surrounding Front Range communities. I handle direct delivery and in-home setup for all local custom furniture projects.</p>
+                <!-- POST 1: Oct 3 -->
+                <article class="blog-card">
+                    <h2>How much does custom wood furniture cost?</h2>
+                    <div class="blog-meta">
+                        October 3, 2026 | <span>By Reed Woyda - RW Custom Furniture Owner and Builder</span>
+                      </div>
+                    <p>Text Here</p>
                 </article>
 
-                <!-- FAQ Item 2: Build Timeline -->
-                <article class="faq-card">
-                    <h2>How long does a custom furniture build take?</h2>
-                    <p>Most custom dining tables, coffee tables, and heirloom builds take <strong>3 to 6 weeks</strong> from initial 3D CAD design approval to home delivery. This timeline ensures sufficient time for hand-selecting rough lumber, allowing timber to acclimate to Colorado's dry climate, executing rock-solid joinery, and allowing non-toxic natural oil finishes to fully cure.</p>
+                <!-- POST 2: Oct 10 -->
+                <article class="blog-card">
+                    <h2>Who still makes real wood furniture?</h2>
+                    <div class="blog-meta">
+                        October 10, 2026 | <span>By Reed Woyda - RW Custom Furniture Owner and Builder</span>
+                    </div>
+                    <p>Text Here</p>
                 </article>
 
-                <!-- FAQ Item 3: Hardwood vs Particle Board -->
-                <article class="faq-card">
-                    <h2>Why is solid hardwood worth the investment over particle board or MDF?</h2>
-                    <p>Mass-produced retail furniture relies on cheap particle board or MDF held together by glue and covered in paper thin veneers. Over 1 to 3 years, atmospheric moisture causes engineered wood to swell, crack, sag under weight, and crumble at joinery seams. I build exclusively with <strong>100% solid regional hardwoods</strong> like Red Oak, Hard Maple, and Black Walnut. Solid wood handles daily family use without flexing or peeling, can withstand decades of life, and can be sanded or refinished generations down the road.</p>
+                <!-- POST 3: Oct 17 -->
+                <article class="blog-card">
+                    <h2>What is the most durable wood for custom furniture?</h2>
+                    <div class="blog-meta">
+                        October 17, 2026 | <span>By Reed Woyda - RW Custom Furniture Owner and Builder</span>
+                    </div>
+                    <p>Text Here</p>
                 </article>
 
-                <!-- FAQ Item 4: VOCs & Non-Toxic Finishes -->
-                <article class="faq-card">
-                    <h2>What are VOCs and why do I use zero-VOC, non-toxic finishes?</h2>
-                    <p><strong>VOCs (Volatile Organic Compounds)</strong> are toxic airborne chemicals emitted by synthetic polyurethanes, commercial lacquers, and particle board adhesives. Standard factory furniture can off-gas formaldehyde and solvent fumes into your home's air for months. I finish every custom build with 100% non-toxic, zero-VOC natural oils (such as pure tung oil and hardwax finishes) and shellac. They are completely <strong>food-safe, child-safe, and pet-safe</strong>, accentuating deep natural wood grain without releasing harsh chemicals into your living space.</p>
+                <!-- POST 4: Oct 24 -->
+                <article class="blog-card">
+                    <h2>What is the safest wood finish for custom furniture?</h2>
+                    <div class="blog-meta">
+                        October 24, 2026 | <span>By Reed Woyda - RW Custom Furniture Owner and Builder</span>
+                    </div>
+                    <p>Text Here</p>
                 </article>
-
-                <!-- CTA Button -->
-                <div class="text-center" style="margin-top: 40px;">
-                    <a href="/consultation" class="btn" style="border: 2px solid #4a3f35;">Have Another Question? Start a Consultation</a>
-                </div>
 
             </div>
         </section>
@@ -219,7 +191,7 @@
         <!-- BOTTOM CALL TO ACTION -->
         <section class="section-padding bg-dark text-center">
             <div class="container" style="max-width: 800px;">
-                <h2>Ready to Start Your Custom Build?</h2>
+                <h2>Have a custom project in mind?</h2>
                 <p>Let's discuss your space, preferred wood species, and design ideas. I provide full 3D CAD models and room previews before making the first cut.</p>
                 <br>
                 <a href="/consultation" class="btn" style="background: #ffffff; color: #1a1a1a;">Request a Custom Quote</a>

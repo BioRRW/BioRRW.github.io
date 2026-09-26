@@ -10,7 +10,7 @@
     gtag('config', 'G-LJQLZS3597');
     </script>
 
-    <link rel="icon" href="https://rwcustomfurniture.com/assets/images/wood/RW_logo_custom_furniture.png" type="image/png" sizes="any">
+    <link rel="icon" href="https://rwcustomfurniture.com/assets/images/wood/RW_logo_custom_furniture.webp" type="image/png" sizes="any">
     <link rel="canonical" href="https://rwcustomfurniture.com/">
 
     <meta charset="UTF-8">
@@ -271,6 +271,24 @@
             color: #2c2a29;
         }
 
+        .hero-title {
+            font-size: 3rem; 
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        /* 2. Style the new buried H1 so it looks natural in the Focus section */
+        .seo-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #555555;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
         .modal-content h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #1a1a1a; margin-bottom: 0.75rem; }
         .modal-content p { font-size: 0.95rem; line-height: 1.5; color: #555; margin-bottom: 1.25rem; }
         .close-btn { position: absolute; top: 12px; right: 18px; background: none; border: none; font-size: 26px; cursor: pointer; color: #777; transition: color 0.2s; }
@@ -289,7 +307,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <strong>RW Custom Furniture</strong> 
+                    <a href="index.html" class="btn" style="padding: 8px 15px; font-size: 0.85rem;">RW Custom Furniture</a>
                 </div>
                 
                 <!-- Toggle Button for Mobile -->
@@ -297,21 +315,25 @@
                 
                 <!-- Handyman Services removed from main navbar as requested -->
                 <div class="nav-links" id="nav-links">
-                    <a href="/index">Home</a>
+                    <a href="/">Home</a>
                     <a href="/about">About</a>
                     <a href="/gallery">Portfolio</a>
                     <a href="/store">Store</a>
                     <a href="/consultation">Consultation</a>
+                    <a href="/blog.html">Blog</a>
+                    <a href="/faq">FAQ</a>
                 </div>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- HERO SECTION: High-Contrast White Primary CTA -->
+
+    <!-- HERO SECTION: High-Contrast White Primary CTA -->
         <section id="home" class="hero">
             <div class="container">
-                <h1>Keep toxic chemicals and cheap particle board out of your home—invest in 100% solid hardwood designed to handle the beautiful chaos of real life.</h1>
+                <!-- Changed to H2, added a class for styling -->
+                <h2 class="hero-title">Keep toxic chemicals and cheap particle board out of your home—invest in 100% solid hardwood designed to handle the beautiful chaos of real life.</h2>
                 
                 <!-- Contextual Links added to subhead -->
                 <p class="hero-subhead">Boutique woodworking and custom furniture design in Fort Collins, Colorado. Specializing in <a href="/custom-dining-tables-fort-collins" style="text-decoration: underline; font-weight: 600;">solid hardwood dining tables</a>, <a href="/custom-coffee-tables-fort-collins" style="text-decoration: underline; font-weight: 600;">handcrafted coffee tables</a>, and heirloom-quality builds.</p>
@@ -322,6 +344,7 @@
                 </div>
             </div>
         </section>
+    </section>
 
 <!-- REWORKED FOCUS SECTION -->
         <section id="focus" class="section-padding">
@@ -329,6 +352,9 @@
                 
                 <!-- LEFT COLUMN: 4 Value Pillars -->
                 <div>
+                    <!-- NEW buried H1 injected right above the H2 -->
+                    <h1 class="seo-title">Custom solid wood furniture handcrafted in Fort Collins, CO.</h1>
+                    
                     <h2>Why Custom Woodworking Over Mass Production?</h2>
                     
                     <p>Most commercial furniture is designed for cheap flat-pack shipping, not real life. I take the exact opposite approach—engineering pieces with solid local hardwoods and time-tested craftsmanship.</p>
@@ -396,6 +422,7 @@
                 <!-- RIGHT COLUMN: Crib Image -->
                 <div class="crib-image-col">
                     <img src="./assets/images/wood/custom-nursery-crib-adjustable.webp" 
+                         title="ADD ME!"
                          alt="Handcrafted Hard Maple Nursery Crib - Custom Fine Furniture in Fort Collins CO" 
                          style="width: 100%; height: 580px; object-fit: cover; border-radius: 6px; box-shadow: 0 6px 20px rgba(0,0,0,0.08);" 
                          fetchpriority="high">

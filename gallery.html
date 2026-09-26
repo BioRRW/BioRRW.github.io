@@ -10,7 +10,7 @@
     gtag('config', 'G-HKDEGPV486');
     </script>
 
-    <link rel="icon" href="https://rwcustomfurniture.com/assets/images/wood/RW_logo_custom_furniture.png" type="image/png" sizes="any">
+    <link rel="icon" href="https://rwcustomfurniture.com/assets/images/wood/RW_logo_custom_furniture.webp" type="image/png" sizes="any">
 
      <link rel="canonical" href="https://rwcustomfurniture.com/gallery">
 
@@ -149,6 +149,23 @@
                 font-size: 1rem;
             }
 
+            .btn { 
+                display: inline-block; 
+                background: #4a3f35; 
+                color: #fff; 
+                border-radius: 4px; 
+                text-transform: uppercase; 
+                letter-spacing: 1px; 
+                transition: all 0.3s ease; 
+                border: none; 
+                cursor: pointer; 
+                font-weight: 700; 
+            }
+            .btn:hover { 
+                background: #2c2a29; 
+                color: #fff; 
+            }
+
             .gallery-grid { grid-template-columns: 1fr; }
             /* Mobile touch UX enhancement: forces descriptions to display clean on mobile screens */
             .gallery-overlay { height: auto; background: rgba(26,26,26,0.85); position: relative; padding: 15px 20px; }
@@ -171,17 +188,21 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo"><strong>RW Custom Furniture</strong></div>
+                <div class="logo">
+                    <a href="index.html" class="btn" style="padding: 8px 15px; font-size: 0.85rem;">RW Custom Furniture</a>
+                </div>
                 
                 <!-- Toggle Button for Mobile -->
                 <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">☰</button>
                 
                 <div class="nav-links" id="nav-links">
-                    <a href="/index">Home</a>
+                    <a href="/">Home</a>
                     <a href="/about">About</a>
                     <a href="/gallery" style="color: #8b5a2b;">Portfolio</a>
                     <a href="/store">Store</a>
                     <a href="/consultation">Consultation</a>
+                    <a href="/blog.html">Blog</a>
+                    <a href="/faq">FAQ</a>
                 </div>
             </nav>
         </div>

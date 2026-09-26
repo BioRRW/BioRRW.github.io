@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-09-25 12:17:36",
+  "last_updated": "2026-09-26 12:15:30",
   "breweries": {
     "Stodgy Brewing": [
-      "Thursday, 9/24 Scrooge Maki 4:00 PM - 8:00 PM",
       "Friday, 9/25 Marchios Grill 1:00 PM - 8:00 PM",
       "Saturday, 9/26 La Campechana 12:00 PM - 8:00 PM",
       "Sunday, 9/27 Huka Sushi 12:00 PM - 7:00 PM",
@@ -31,13 +30,10 @@
       "Wednesday, 10/21 Shell on Wheels 1:00 PM - 8:00 PM",
       "Thursday, 10/22 Scrooge Maki 4:00 PM - 8:00 PM",
       "Friday, 10/23 Marchios Grill 1:00 PM - 8:00 PM",
-      "Saturday, 10/24 Yes Chef! 12:00 PM - 8:00 PM"
+      "Saturday, 10/24 Yes Chef! 12:00 PM - 8:00 PM",
+      "Sunday, 10/25 Huka Sushi 12:00 PM - 7:00 PM"
     ],
     "Zwei Brewing": [
-      "Monday, September 21 - Tacos El Torito Loko",
-      "Tuesday, September 22 - La Piadina",
-      "Wednesday, September 23 - NOCO Pizza Company",
-      "Thursday, September 24 - Schnitzel Wagon",
       "Friday, September 25 - Huka Sushi",
       "Saturday, September 26 - Pig Pickin’ BBQ",
       "Sunday, September 27 - Fat Tomato",
@@ -80,7 +76,6 @@
       "Sunday, Oct 25 - Culture Alley"
     ],
     "New Belgium": [
-      "Friday, September 25, 2026 - Antojitos DelSureste",
       "Saturday, September 26, 2026 - Fat Tomato Inc.",
       "Sunday, September 27, 2026 - Fork Yeah!",
       "Monday, September 28, 2026 - Dero's African Food",
@@ -111,7 +106,6 @@
       "Saturday, October 31, 2026 - Fat Tomato Inc."
     ],
     "Purpose Brewing": [
-      "Sep 25 - Shell on Wheels",
       "Oct 2 - Shell on Wheels",
       "Oct 9 - Shell on Wheels",
       "Oct 16 - CRAB BOIL - RSVP ONLY",
@@ -139,6 +133,7 @@
       "Mar 19 - Shell on Wheels",
       "Mar 26 - Shell on Wheels",
       "Apr 2 - Shell on Wheels",
+      "Sep 25 - Shell on Wheels",
       "Sep 18 - Shell on Wheels",
       "Sep 4 - Shell on Wheels",
       "Aug 28 - Shell on Wheels",
@@ -167,8 +162,7 @@
       "Mar 31 - Average Joe's",
       "Mar 27 - Shell on Wheels",
       "Mar 21 - Average Joe's",
-      "Mar 20 - Shell on Wheels",
-      "Mar 13 - Shell on Wheels"
+      "Mar 20 - Shell on Wheels"
     ],
     "Odell Brewing": [
       "Mondays - La Piadina",

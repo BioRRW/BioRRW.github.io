@@ -1,9 +1,7 @@
 {
-  "last_updated": "2026-09-23 12:17:16",
+  "last_updated": "2026-09-25 12:17:36",
   "breweries": {
     "Stodgy Brewing": [
-      "Tuesday, 9/22 Georgia Boys BBQ 4:00 PM - 8:00 PM",
-      "Wednesday, 9/23 Shell on Wheels 1:00 PM - 8:00 PM",
       "Thursday, 9/24 Scrooge Maki 4:00 PM - 8:00 PM",
       "Friday, 9/25 Marchios Grill 1:00 PM - 8:00 PM",
       "Saturday, 9/26 La Campechana 12:00 PM - 8:00 PM",
@@ -30,8 +28,10 @@
       "Saturday, 10/17 La Piadina 12:00 PM - 8:00 PM",
       "Sunday, 10/18 La Campechana 12:00 PM - 7:00 PM",
       "Monday, 10/19 Dumpling Hut 4:00 PM - 8:00 PM",
-      "Tuesday, 10/20 Georgia Boys BBQ 4:00 PM - 8:00 PM",
-      "Wednesday, 10/21 Shell on Wheels 1:00 PM - 8:00 PM"
+      "Wednesday, 10/21 Shell on Wheels 1:00 PM - 8:00 PM",
+      "Thursday, 10/22 Scrooge Maki 4:00 PM - 8:00 PM",
+      "Friday, 10/23 Marchios Grill 1:00 PM - 8:00 PM",
+      "Saturday, 10/24 Yes Chef! 12:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Monday, September 21 - Tacos El Torito Loko",
@@ -47,8 +47,6 @@
     ],
     "Maxline Brewing": [],
     "Mythmaker Brewing": [
-      "Wednesday, Sep 23 - Scratch Quisine",
-      "Thursday, Sep 24 - La Piadina",
       "Saturday, Sep 26 - Santa Elana's",
       "Sunday, Sep 27 - The Dumpling Hut",
       "Monday, Sep 28 - Scratch Quisine",
@@ -56,8 +54,8 @@
       "Wednesday, Sep 30 - Santa Elena's",
       "Thursday, Oct 1 - The Dumpling Hut",
       "Friday, Oct 2 - Scratch Quisine",
-      "Saturday, Oct 3 - Smoke Post Food Truck",
       "Saturday, Oct 3 - RAUCH FEST 2026",
+      "Saturday, Oct 3 - Smoke Post Food Truck",
       "Sunday, Oct 4 - Culture Alley",
       "Monday, Oct 5 - Scrooge Maki",
       "Tuesday, Oct 6 - Dero's African Food",
@@ -76,7 +74,10 @@
       "Monday, Oct 19 - Scrooge Maki",
       "Tuesday, Oct 20 - Dero's African Food",
       "Wednesday, Oct 21 - Double Wide Burgers",
-      "Thursday, Oct 22 - Scratch Quisine"
+      "Thursday, Oct 22 - Scratch Quisine",
+      "Friday, Oct 23 - NoCo Pizza",
+      "Saturday, Oct 24 - La Piadina",
+      "Sunday, Oct 25 - Culture Alley"
     ],
     "New Belgium": [
       "Friday, September 25, 2026 - Antojitos DelSureste",

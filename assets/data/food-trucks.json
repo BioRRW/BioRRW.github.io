@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-09-26 12:15:30",
+  "last_updated": "2026-09-27 12:16:13",
   "breweries": {
     "Stodgy Brewing": [
-      "Friday, 9/25 Marchios Grill 1:00 PM - 8:00 PM",
       "Saturday, 9/26 La Campechana 12:00 PM - 8:00 PM",
       "Sunday, 9/27 Huka Sushi 12:00 PM - 7:00 PM",
       "Monday, 9/28 The Smoke Post 4:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Thursday, 10/22 Scrooge Maki 4:00 PM - 8:00 PM",
       "Friday, 10/23 Marchios Grill 1:00 PM - 8:00 PM",
       "Saturday, 10/24 Yes Chef! 12:00 PM - 8:00 PM",
-      "Sunday, 10/25 Huka Sushi 12:00 PM - 7:00 PM"
+      "Sunday, 10/25 Huka Sushi 12:00 PM - 7:00 PM",
+      "Wednesday, 10/28 The Red Cat 4:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Friday, September 25 - Huka Sushi",
@@ -43,15 +43,14 @@
     ],
     "Maxline Brewing": [],
     "Mythmaker Brewing": [
-      "Saturday, Sep 26 - Santa Elana's",
       "Sunday, Sep 27 - The Dumpling Hut",
       "Monday, Sep 28 - Scratch Quisine",
       "Tuesday, Sep 29 - Dero's African Food",
       "Wednesday, Sep 30 - Santa Elena's",
       "Thursday, Oct 1 - The Dumpling Hut",
       "Friday, Oct 2 - Scratch Quisine",
-      "Saturday, Oct 3 - RAUCH FEST 2026",
       "Saturday, Oct 3 - Smoke Post Food Truck",
+      "Saturday, Oct 3 - RAUCH FEST 2026",
       "Sunday, Oct 4 - Culture Alley",
       "Monday, Oct 5 - Scrooge Maki",
       "Tuesday, Oct 6 - Dero's African Food",
@@ -73,10 +72,10 @@
       "Thursday, Oct 22 - Scratch Quisine",
       "Friday, Oct 23 - NoCo Pizza",
       "Saturday, Oct 24 - La Piadina",
-      "Sunday, Oct 25 - Culture Alley"
+      "Sunday, Oct 25 - Culture Alley",
+      "Monday, Oct 26 - Scratch Quisine"
     ],
     "New Belgium": [
-      "Saturday, September 26, 2026 - Fat Tomato Inc.",
       "Sunday, September 27, 2026 - Fork Yeah!",
       "Monday, September 28, 2026 - Dero's African Food",
       "Wednesday, September 30, 2026 - Las Catrina's",

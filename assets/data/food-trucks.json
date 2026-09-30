@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-09-29 12:19:03",
+  "last_updated": "2026-09-30 12:21:44",
   "breweries": {
     "Stodgy Brewing": [
-      "Monday, 9/28 The Smoke Post 4:00 PM - 8:00 PM",
       "Tuesday, 9/29 Sweaty Moose 4:00 PM - 8:00 PM",
       "Wednesday, 9/30 Yes Chef! 4:00 PM - 8:00 PM",
       "Thursday, 10/1 Scratch Quisine 4:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Sunday, 10/25 Huka Sushi 12:00 PM - 7:00 PM",
       "Wednesday, 10/28 The Red Cat 4:00 PM - 8:00 PM",
       "Thursday, 10/29 Scratch Quisine 4:00 PM - 8:00 PM",
-      "Friday, 10/30 Las Catrinas 1:00 PM - 8:00 PM"
+      "Friday, 10/30 Las Catrinas 1:00 PM - 8:00 PM",
+      "Saturday, 10/31 La Piadina 12:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Monday, September 28 - Southern Soul",
@@ -71,7 +71,6 @@
     ],
     "Maxline Brewing": [],
     "Mythmaker Brewing": [
-      "Tuesday, Sep 29 - Dero's African Food",
       "Wednesday, Sep 30 - Santa Elena's",
       "Thursday, Oct 1 - The Dumpling Hut",
       "Friday, Oct 2 - La Tapatia",
@@ -80,6 +79,7 @@
       "Sunday, Oct 4 - Culture Alley",
       "Monday, Oct 5 - Scrooge Maki",
       "Tuesday, Oct 6 - Dero's African Food",
+      "Wednesday, Oct 7 - Mac'N",
       "Thursday, Oct 8 - Scratch Quisine",
       "Friday, Oct 9 - Noco Pizza ",
       "Saturday, Oct 10 - La Piadina",
@@ -94,12 +94,14 @@
       "Monday, Oct 19 - Scrooge Maki",
       "Tuesday, Oct 20 - Dero's African Food",
       "Wednesday, Oct 21 - Double Wide Burgers",
+      "Thursday, Oct 22 - Red Truck ",
       "Friday, Oct 23 - NoCo Pizza",
       "Saturday, Oct 24 - La Piadina",
       "Sunday, Oct 25 - Culture Alley",
       "Monday, Oct 26 - Scratch Quisine",
       "Tuesday, Oct 27 - Dero's African Food",
-      "Wednesday, Oct 28 - La Tapatia"
+      "Wednesday, Oct 28 - La Tapatia",
+      "Thursday, Oct 29 - Southern Soul"
     ],
     "New Belgium": [
       "Wednesday, September 30, 2026 - Las Catrina's",

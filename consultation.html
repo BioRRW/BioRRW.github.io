@@ -21,6 +21,9 @@
     
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Playfair+Display:400,700" rel="stylesheet">
     
+    <!-- Import the central database so the form knows the product names -->
+    <script src="./assets/js/products.js"></script>
+
     <style>
         /* Basic Reset & Typography */
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -229,6 +232,8 @@
                                 <label for="project_type">Project Category</label>
                                 <select id="project_type" name="project_type" class="form-control" required>
                                     <option value="" disabled selected>Select a category...</option>
+                                    <!-- Added a specific option for store items -->
+                                    <option value="store_reservation">Store Reservation / Available Build</option>
                                     <option value="furniture">Custom Fine Furniture</option>
                                     <option value="built_in">Architectural Built-Ins / Closets</option>
                                     <option value="repair">Structural / Architectural Repair</option>
@@ -250,7 +255,7 @@
         </div>
     </div>
 
-    <!-- Optimized Footer Component with Normalized NAP Signals -->
+    <!-- Optimized Footer Component -->
     <footer>
         <div class="container" style="line-height: 1.8;">
             <p><strong>RW Custom Furniture & Craftsman Handyman Services</strong></p>
@@ -260,9 +265,10 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu Toggle -->
+    <!-- JavaScript for Mobile Menu Toggle & Form Auto-Fill -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            // 1. Mobile Menu Logic
             const menuToggle = document.getElementById('menu-toggle');
             const navLinks = document.getElementById('nav-links');
 
@@ -271,6 +277,25 @@
                     navLinks.classList.toggle('active');
                     menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
                 });
+            }
+
+            // 2. Auto-Fill Form Logic based on Store Reservations
+            const urlParams = new URLSearchParams(window.location.search);
+            const requestedItem = urlParams.get('item');
+            const requestedConfig = urlParams.get('config'); // Grabs the user's dropdown choice
+
+            if (requestedItem && typeof productsDatabase !== 'undefined' && productsDatabase[requestedItem]) {
+                const product = productsDatabase[requestedItem];
+                
+                const projectSelect = document.getElementById('project_type');
+                if (projectSelect) projectSelect.value = "store_reservation";
+
+                const detailsBox = document.getElementById('details');
+                if (detailsBox) {
+                    // Include the specific configuration cleanly in the text area
+                    const configText = requestedConfig ? `\nConfiguration: ${requestedConfig}` : "";
+                    detailsBox.value = `Hello! I am interested in reserving the active build for:\n\n[ ${product.title} ]${configText}\n\nI have a few questions regarding...`;
+                }
             }
         });
     </script>

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKDEGPV486"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HKDEGPV486');
+    </script>
+
+    <link rel="icon" href="https://rwcustomfurniture.com/assets/images/wood/RW_logo_custom_furniture.webp" type="image/png" sizes="any">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | RW Custom Furniture</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Playfair+Display:400,700&display=swap" rel="stylesheet">
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #2c2a29; background-color: #faf9f7; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: #1a1a1a; margin-bottom: 1rem; }
+        a { text-decoration: none; color: inherit; transition: color 0.3s; }
+        a:hover { color: #8b5a2b; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header & Navigation (Matched to store.html) */
+        header { padding: 20px 0; background: #fff; border-bottom: 1px solid #e8e5e1; position: sticky; top: 0; z-index: 100; }
+        nav { display: flex; justify-content: space-between; align-items: center; position: relative; }
+        .nav-links a { margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+        .nav-links a.active { color: #8b5a2b; border-bottom: 2px solid #8b5a2b; padding-bottom: 4px; }
+        
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: #2c2a29;
+            cursor: pointer;
+            padding: 5px;
+            line-height: 1;
+        }
+
+        /* Buttons */
+        .btn { display: inline-block; padding: 12px 30px; background: #4a3f35; color: #fff; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; font-weight: 700; transition: background 0.3s; border: none; cursor: pointer; text-align: center; }
+        .btn:hover { background: #2c2a29; color: #fff; }
+
+        /* Product Specific Layout */
+        .product-layout {
+            display: flex;
+            gap: 50px;
+            padding: 60px 0;
+            min-height: 60vh;
+        }
+
+        .product-gallery {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 4px;
+            background: #e8e5e1;
+        }
+
+        .thumbnail-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .thumbnail-row img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border 0.3s ease;
+        }
+
+        .thumbnail-row img:hover, .thumbnail-row img.active {
+            border-color: #8b5a2b;
+        }
+
+        .product-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .breadcrumb {
+            font-size: 0.85rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a:hover { color: #8b5a2b; }
+
+        .prod-title { font-size: 2.4rem; margin-bottom: 10px; line-height: 1.2; }
+        .prod-price { font-size: 1.5rem; font-weight: 700; color: #4a3f35; margin-bottom: 25px; }
+        
+        .specs-box {
+            background: #ffffff;
+            border: 1px solid #e8e5e1;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+
+        /* --- UPDATED SPECS BOX CSS --- */
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 25px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0eee9;
+        }
+        
+        .spec-item:last-child { border-bottom: none; }
+        .spec-label { font-weight: 700; font-size: 0.9rem; text-transform: uppercase; white-space: nowrap; }
+        .spec-value { color: #555; text-align: right; line-height: 1.4; }
+
+        .prod-desc { font-size: 1.05rem; color: #444; margin-bottom: 30px; }
+
+        /* --- NEW ICON PILLARS CSS --- */
+        .feature-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 35px;
+            padding-top: 30px;
+            border-top: 1px solid #e8e5e1;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .feature-icon-badge {
+            background: #4a3f35;
+            min-width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .feature-icon-badge svg {
+            width: 20px;
+            height: 20px;
+            fill: #ffffff;
+        }
+
+        .feature-text h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+        }
+
+        .feature-text p {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle { display: block; }
+            .nav-links { 
+                display: none; 
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: -20px;
+                right: -20px;
+                background: #ffffff;
+                padding: 20px 0;
+                border-bottom: 1px solid #e8e5e1;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+                text-align: center;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { margin: 12px 0; font-size: 1rem; }
+
+            .product-layout { flex-direction: column; gap: 30px; padding: 40px 0; }
+            .main-image { height: 350px; }
+        }
+
+        /* Footer */
+        footer { background: #1a1a1a; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; margin-top: auto; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html" class="btn" style="padding: 8px 15px; font-size: 0.85rem;">RW Custom Furniture</a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">☰</button>
+                
+                <div class="nav-links" id="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/gallery">Portfolio</a>
+                    <a href="/store" style="color: #8b5a2b;">Store</a>
+                    <a href="/consultation">Consultation</a>
+                    <a href="/blog.html">Blog</a>
+                    <a href="/faq">FAQ</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Error State (Hidden by default) -->
+        <div id="error-state" style="display: none; padding: 100px 0; text-align: center; min-height: 50vh;">
+            <h2>Product Not Found</h2>
+            <p>Sorry, we couldn't find the requested build.</p>
+            <a href="/store" class="btn" style="width: auto; margin-top: 20px;">Return to Store</a>
+        </div>
+
+        <!-- Dynamic Product Content -->
+        <div class="product-layout" id="product-content" style="visibility: hidden;">
+            
+            <div class="product-gallery">
+                <!-- Changed to an empty container -->
+                <div id="main-media-container" class="main-image" style="display: flex; justify-content: center; align-items: center; overflow: hidden; background: #e8e5e1; border-radius: 4px;">
+                    <!-- JS will inject the img or video here -->
+                </div>
+                <div class="thumbnail-row" id="thumbnails">
+                    <!-- Thumbnails generated by JS -->
+                </div>
+            </div>  
+
+            <div class="product-info">
+                <div class="breadcrumb">
+                    <a href="/store">Store</a> / <span id="bread-title"></span>
+                </div>
+                
+                <h1 class="prod-title" id="title">Loading...</h1>
+
+                <div class="prod-price" id="price"></div>
+                
+                <div id="options-container" style="display: none; margin-bottom: 25px;">
+                    <label for="product-options" style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 0.9rem; text-transform: uppercase;">Select Configuration</label>
+                    <select id="product-options" style="width: 100%; padding: 12px; border: 1px solid #e8e5e1; border-radius: 4px; font-family: inherit; font-size: 1rem; background: #faf9f7; cursor: pointer;">
+                        <!-- Options injected dynamically by JS -->
+                    </select>
+                </div>
+
+                <div class="specs-box">
+                    <div class="spec-item">
+                        <span class="spec-label">Dimensions</span>
+                        <span class="spec-value" id="spec-dims"></span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Materials</span>
+                        <span class="spec-value" id="spec-mats"></span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Finish</span>
+                        <span class="spec-value" id="spec-finish"></span>
+                    </div>
+                </div>
+
+                <div class="prod-desc" id="description"></div>
+
+                <!-- Passes the product ID to the consultation form to pre-fill intent -->
+                <a id="reserve-btn" href="/consultation" class="btn" style="width: 100%; padding: 15px;">Reserve This Build</a>
+
+                <!-- Value Pillars (Icons) -->
+                <div class="feature-grid">
+                    <!-- Pillar 1: No Particle Board -->
+                    <div class="feature-item">
+                        <div class="feature-icon-badge" title="No Particle Board">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M 2 6 H 11 L 8.5 10 L 11.5 14 L 8.5 18 H 2 Z"/>
+                                <path d="M 22 6 H 13 L 10.5 10 L 13.5 14 L 10.5 18 H 22 Z"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h4>No Particle Board or MDF</h4>
+                            <p>Cheap engineered wood swells with humidity, sags under weight, and crumbles. I use 100% solid, hand-selected hardwoods.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 2: Zero Chemical Off-Gassing -->
+                    <div class="feature-item">
+                        <div class="feature-icon-badge" title="Zero Toxic Off-Gassing">
+                            <svg viewBox="1 1 22 22"><path d="M12 2L3.5 5.2v6.5c0 5.4 3.6 10.4 8.5 11.6 4.9-1.2 8.5-6.2 8.5-11.6V5.2L12 2zm0 15.2l-3.5-3.4c-1.3-1.3-1.3-3.3 0-4.5 1.1-1.1 3-1.1 4.1 0l.6.6.6-.6c1.1-1.1 3-1.1 4.1 0 1.3 1.3 1.3 3.3 0 4.5L12 17.2z"/></svg>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Zero Chemical Off-Gassing</h4>
+                            <!-- Contextual link added to FAQ regarding VOCs and finishes -->
+                            <p>Mass-produced furniture off-gasses formaldehyde and VOCs. I finish every build with <a href="/faq" style="text-decoration: underline; font-weight: 600;">pure, non-toxic tung oil, shellac, and natural sealants</a>.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 3: Gold Standard Hardware & Joinery -->
+                    <div class="feature-item">
+                        <div class="feature-icon-badge" title="Gold-Standard Hardware & Joinery">
+                            <svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.6C.4 7 1 10 3 12c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.4-.4.4-1.1 0-1.3z"/></svg>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Traditional Craft & Gold-Standard Hardware</h4>
+                            <p>No plastic brackets or flimsy cam-locks. Whether cutting traditional joinery or installing heavy-duty soft-close slides and structural fasteners, I use the absolute best hardware and methods for every build.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 4: Heirloom Quality -->
+                    <div class="feature-item">
+                        <div class="feature-icon-badge" title="Heirloom Quality">
+                            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Heirloom Quality</h4>
+                            <p>Built to stop the wasteful cycle of flat-pack furniture. From <a href="/custom-dining-tables-fort-collins" style="text-decoration: underline; font-weight: 600;">custom dining tables</a> for family dinners to <a href="/custom-coffee-tables-fort-collins" style="text-decoration: underline; font-weight: 600;">handcrafted coffee tables</a> and nursery cribs, I build pieces that last generations.</p>
+                        </div>
+                    </div>
+                </div> <!-- /feature-grid -->
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container" style="line-height: 1.8;">
+            <p><strong>RW Custom Furniture & Craftsman Handyman Services</strong></p>
+            <p>Based in Fort Collins, CO | Serving Fort Collins, Loveland, and the Front Range</p>
+            <p style="margin-top: 5px; font-weight: 500;">
+                <a href="tel:+15073172792" style="color: #fff; text-decoration: underline;">(507) 317-2792</a> | 
+                <a href="mailto:reed@rwcustomfurniture.com" style="color: #fff; text-decoration: underline;">reed@rwcustomfurniture.com</a>
+            </p>
+            <p style="margin-top: 15px;">
+                Ready to start? <a href="/consultation" style="text-decoration: underline; font-weight: 700;">Request a Consultation</a> 
+                &nbsp;|&nbsp; 
+                <a href="/food-trucks" style="text-decoration: underline; font-weight: 700;">Grab a Beer in FoCo</a>
+            </p>
+            <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa;">&copy; 2026 RW Custom Furniture. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Database Import -->
+    <script src="./assets/js/products.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Mobile Menu Logic
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+                });
+            }
+
+            // Dynamic Product Logic
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+            const product = productsDatabase[productId];
+
+            if (!product) {
+                document.getElementById('error-state').style.display = 'block';
+                document.getElementById('product-content').style.display = 'none';
+                return;
+            }
+
+            // Populate Text Fields
+            document.title = product.title + " | RW Custom Furniture";
+            document.getElementById('bread-title').textContent = product.title;
+            document.getElementById('title').textContent = product.title;
+            document.getElementById('spec-dims').textContent = product.dimensions;
+            document.getElementById('spec-mats').textContent = product.materials;
+            document.getElementById('spec-finish').textContent = product.finish;
+            document.getElementById('description').textContent = product.description;
+            
+            const priceDisplay = document.getElementById('price');
+            const reserveBtn = document.getElementById('reserve-btn');
+            const optionsContainer = document.getElementById('options-container');
+            const optionsSelect = document.getElementById('product-options');
+
+            // Logic for Dropdown Options & Dynamic Pricing
+            if (product.options && product.options.length > 0) {
+                optionsContainer.style.display = 'block';
+                
+                // Clear existing options in case of reload
+                optionsSelect.innerHTML = '';
+                
+                // Build the dropdown list
+                product.options.forEach((opt, index) => {
+                    let optionElement = document.createElement('option');
+                    optionElement.value = index;
+                    optionElement.textContent = opt.name;
+                    optionsSelect.appendChild(optionElement);
+                });
+
+                // Update price and button URL when a client changes the dropdown
+                optionsSelect.addEventListener('change', function() {
+                    const selectedOpt = product.options[this.value];
+                    const newPrice = product.basePrice + selectedOpt.addedPrice;
+                    
+                    priceDisplay.textContent = "$" + newPrice.toLocaleString('en-US');
+                    // Add the selected option to the URL so the consultation form catches it
+                    reserveBtn.href = "/consultation?item=" + productId + "&config=" + encodeURIComponent(selectedOpt.name);
+                });
+
+                // Trigger a change immediately to set the starting price
+                optionsSelect.dispatchEvent(new Event('change'));
+
+            } else {
+                // If the product has no options (like the entry table), use standard behavior
+                optionsContainer.style.display = 'none';
+                priceDisplay.textContent = product.price;
+                reserveBtn.href = "/consultation?item=" + productId;
+            }
+
+            // Handle Images
+// Handle Images & Video Media
+            const mainMediaContainer = document.getElementById('main-media-container');
+            const thumbContainer = document.getElementById('thumbnails');
+            
+            // Helper function to render media based on file type
+            function renderMainMedia(src) {
+                mainMediaContainer.innerHTML = ''; // Clear current media
+                const isVideo = src.toLowerCase().endsWith('.mp4') || src.toLowerCase().endsWith('.webm');
+                
+                if (isVideo) {
+                    const video = document.createElement('video');
+                    video.src = src;
+                    video.autoplay = true;
+                    video.loop = true;
+                    video.muted = true; // Must be muted to autoplay in most browsers
+                    video.playsInline = true;
+                    video.style.width = "100%";
+                    video.style.height = "100%";
+                    video.style.objectFit = "cover";
+                    mainMediaContainer.appendChild(video);
+                } else {
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.alt = product.title;
+                    img.style.width = "100%";
+                    img.style.height = "100%";
+                    img.style.objectFit = "cover";
+                    mainMediaContainer.appendChild(img);
+                }
+            }
+
+            if (product.images && product.images.length > 0) {
+                // Set the first item as the main display
+                renderMainMedia(product.images[0]);
+                
+                // Clear existing thumbnails
+                thumbContainer.innerHTML = '';
+                
+                // Generate thumbnails
+                product.images.forEach((mediaSrc, index) => {
+                    const isVideo = mediaSrc.toLowerCase().endsWith('.mp4') || mediaSrc.toLowerCase().endsWith('.webm');
+                    
+                    // We still use an image for the thumbnail. For videos, you can show a generic icon, 
+                    // or if you have a poster image, use that. Here we create a generic video thumbnail box.
+                    let thumb = document.createElement('div');
+                    thumb.style.width = "100px";
+                    thumb.style.height = "100px";
+                    thumb.style.borderRadius = "4px";
+                    thumb.style.cursor = "pointer";
+                    thumb.style.border = "2px solid transparent";
+                    thumb.style.transition = "border 0.3s ease";
+                    thumb.style.overflow = "hidden";
+                    thumb.style.flexShrink = "0";
+                    thumb.style.position = "relative";
+                    thumb.style.background = "#e8e5e1";
+                    
+                    if(index === 0) thumb.classList.add('active-thumb');
+                    
+                    if (isVideo) {
+                        // Injects a clean SVG play button centered in the thumbnail box
+                        thumb.innerHTML = `
+                            <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:#e8e5e1;">
+                                <svg viewBox="0 0 24 24" style="width: 36px; height: 36px; fill: #4a3f35; margin-left: 4px;">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>`;
+                    } else {
+                        thumb.innerHTML = `<img src="${mediaSrc}" style="width:100%; height:100%; object-fit:cover;">`;
+                    }
+                    
+                    // Click thumbnail to swap main media
+                    thumb.addEventListener('click', function() {
+                        renderMainMedia(mediaSrc);
+                        
+                        // Manage active border styling
+                        document.querySelectorAll('.thumbnail-row > div').forEach(t => t.style.borderColor = "transparent");
+                        this.style.borderColor = "#8b5a2b";
+                    });
+                    
+                    thumbContainer.appendChild(thumb);
+                });
+                
+                // Set initial active border
+                if(thumbContainer.firstChild) {
+                    thumbContainer.firstChild.style.borderColor = "#8b5a2b";
+                }
+            }
+
+            // Reveal the content once loaded
+            document.getElementById('product-content').style.visibility = 'visible';
+        });
+    </script>
+</body>
+</html>

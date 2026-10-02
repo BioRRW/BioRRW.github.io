@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-10-01 12:19:00",
+  "last_updated": "2026-10-02 12:18:28",
   "breweries": {
     "Stodgy Brewing": [
-      "Wednesday, 9/30 Yes Chef! 4:00 PM - 8:00 PM",
       "Thursday, 10/1 Scratch Quisine 4:00 PM - 8:00 PM",
       "Friday, 10/2 Las Catrinas 1:00 PM - 8:00 PM",
       "Saturday, 10/3 La Piadina 12:00 PM - 8:00 PM",
@@ -31,7 +30,8 @@
       "Thursday, 10/29 Scratch Quisine 4:00 PM - 8:00 PM",
       "Friday, 10/30 Las Catrinas 1:00 PM - 8:00 PM",
       "Saturday, 10/31 La Piadina 12:00 PM - 8:00 PM",
-      "Sunday, 11/1 La Campechana 12:00 PM - 7:00 PM"
+      "Sunday, 11/1 La Campechana 12:00 PM - 7:00 PM",
+      "Monday, 11/2 Dumpling Hut 4:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
       "Monday, September 28 - Southern Soul",
@@ -71,7 +71,6 @@
     ],
     "Maxline Brewing": [],
     "Mythmaker Brewing": [
-      "Thursday, Oct 1 - The Dumpling Hut",
       "Friday, Oct 2 - La Tapatia",
       "Saturday, Oct 3 - RAUCH FEST 2026",
       "Saturday, Oct 3 - Smoke Post Food Truck",
@@ -101,10 +100,11 @@
       "Tuesday, Oct 27 - Dero's African Food",
       "Wednesday, Oct 28 - La Tapatia",
       "Thursday, Oct 29 - Southern Soul",
-      "Friday, Oct 30 - Santa Elena's"
+      "Friday, Oct 30 - Red Truck",
+      "Saturday, Oct 31 - La Tapatia",
+      "Sunday, Nov 1 - Culture Alley"
     ],
     "New Belgium": [
-      "Thursday, October 1, 2026 - Georgia Boys BBQ",
       "Friday, October 2, 2026 - Antojitos DelSureste",
       "Saturday, October 3, 2026 - Fat Tomato Inc.",
       "Sunday, October 4, 2026 - Fork Yeah!",

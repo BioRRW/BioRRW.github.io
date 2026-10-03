@@ -1,8 +1,7 @@
 {
-  "last_updated": "2026-10-02 12:18:28",
+  "last_updated": "2026-10-03 13:45:41",
   "breweries": {
     "Stodgy Brewing": [
-      "Thursday, 10/1 Scratch Quisine 4:00 PM - 8:00 PM",
       "Friday, 10/2 Las Catrinas 1:00 PM - 8:00 PM",
       "Saturday, 10/3 La Piadina 12:00 PM - 8:00 PM",
       "Sunday, 10/4 La Campechana 12:00 PM - 7:00 PM",
@@ -31,13 +30,10 @@
       "Friday, 10/30 Las Catrinas 1:00 PM - 8:00 PM",
       "Saturday, 10/31 La Piadina 12:00 PM - 8:00 PM",
       "Sunday, 11/1 La Campechana 12:00 PM - 7:00 PM",
-      "Monday, 11/2 Dumpling Hut 4:00 PM - 8:00 PM"
+      "Monday, 11/2 Dumpling Hut 4:00 PM - 8:00 PM",
+      "Tuesday, 11/3 Georgia Boys BBQ 4:00 PM - 8:00 PM"
     ],
     "Zwei Brewing": [
-      "Monday, September 28 - Southern Soul",
-      "Tuesday, September 29 - Angry Hippie Tacos",
-      "Wednesday, September 30 - Charlotte's Lil Kitchen",
-      "Thursday, October 1 - La Piadina",
       "Friday, October 2 - Double Wide Burgers",
       "Saturday, October 3 - Schnitzel Wagon",
       "Sunday, October 4 - Santa Elena's",
@@ -71,9 +67,8 @@
     ],
     "Maxline Brewing": [],
     "Mythmaker Brewing": [
-      "Friday, Oct 2 - La Tapatia",
-      "Saturday, Oct 3 - RAUCH FEST 2026",
       "Saturday, Oct 3 - Smoke Post Food Truck",
+      "Saturday, Oct 3 - RAUCH FEST 2026",
       "Sunday, Oct 4 - Culture Alley",
       "Monday, Oct 5 - Scrooge Maki",
       "Tuesday, Oct 6 - Dero's African Food",
@@ -105,7 +100,6 @@
       "Sunday, Nov 1 - Culture Alley"
     ],
     "New Belgium": [
-      "Friday, October 2, 2026 - Antojitos DelSureste",
       "Saturday, October 3, 2026 - Fat Tomato Inc.",
       "Sunday, October 4, 2026 - Fork Yeah!",
       "Monday, October 5, 2026 - Dero's African Food",
@@ -130,7 +124,6 @@
       "Saturday, October 31, 2026 - Fat Tomato Inc."
     ],
     "Purpose Brewing": [
-      "Oct 2 - Shell on Wheels",
       "Oct 9 - Shell on Wheels",
       "Oct 16 - CRAB BOIL - RSVP ONLY",
       "Oct 23 - Shell on Wheels",
@@ -157,6 +150,7 @@
       "Mar 19 - Shell on Wheels",
       "Mar 26 - Shell on Wheels",
       "Apr 2 - Shell on Wheels",
+      "Oct 2 - Shell on Wheels",
       "Sep 25 - Shell on Wheels",
       "Sep 18 - Shell on Wheels",
       "Sep 4 - Shell on Wheels",
@@ -185,8 +179,7 @@
       "Apr 3 - Shell on Wheels",
       "Mar 31 - Average Joe's",
       "Mar 27 - Shell on Wheels",
-      "Mar 21 - Average Joe's",
-      "Mar 20 - Shell on Wheels"
+      "Mar 21 - Average Joe's"
     ],
     "Odell Brewing": [
       "Mondays - La Piadina",

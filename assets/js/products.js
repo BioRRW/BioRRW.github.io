@@ -3,8 +3,8 @@ const productsDatabase = {
     "slim-entryway-console": {
         status: "active",
         title: "The Slim Entryway Console",
-        price: "$850",
-        basePrice: 850,
+        price: "$650",
+        basePrice: 650,
         dimensions: "40\" L x 6.75\" D x 30\" H",
         materials: "Solid White Oak & Red Oak, African Mahogany Wedges",
         finish: "Zero-VOC Plant-Based Hardwax Oil",
